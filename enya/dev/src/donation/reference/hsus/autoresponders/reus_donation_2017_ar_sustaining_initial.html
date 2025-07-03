@@ -1,0 +1,39 @@
+<!--
+[[?//::COMMENT:: Link to manage this file in Convio:
+    https://secure3.convio.net/humane/admin/PageBuilderAdmin?page_id=5818&pagebuilder=page_manage&action=manage
+::]]
+-->
+<table class="wrapper wrapper-padding" style="background-color: #ffffff; margin: 0px auto; width: 87%;" border="0" cellspacing="0" width="87%" align="center">
+  <tbody>
+  <tr bgcolor="#ffffff">
+  <td class="padding-fix" style="text-align: left; font-size: 14px; line-height: 24px; background-color: #ffffff; font-family: Verdana, sans-serif; padding-bottom: 0px;">
+  <p style="font-size: 16px; line-height: 24px; font-family: Verdana, sans-serif; margin: 0;">Dear <convio:choose>
+    <convio:when title="Not empty" test="nempty" selected="selected">
+      <convio:op><convio:session name="1" param="first_name"></convio:session></convio:op>
+      <convio:then><convio:session name="1" param="first_name"></convio:session></convio:then>
+    </convio:when>
+    <convio:otherwise title="Empty">Friend</convio:otherwise>
+  </convio:choose>,
+        </p>
+  <p style="font-size: 16px; line-height: 24px; font-family: Verdana, sans-serif; color: #293941;">Thank you so much for becoming a Humane Hero by making a monthly donation to the Humane Society of the United States! With your donation, you&rsquo;ve joined millions of others from around the world who share our vision of a truly humane society. Your gift summary appears below.</p>
+  <p style="font-size: 16px; line-height: 24px; font-family: Verdana, sans-serif; color: #293941;">We have ambitious goals to protect animals well into the future. That&rsquo;s why your ongoing support is critical to saving the lives of thousands of animals -- and reducing the suffering of countless others.</p>
+  <p style="font-size: 16px; line-height: 24px; font-family: Verdana, sans-serif; color: #293941;">Without you, animals would have no hope of escaping the cruelty of dogfighters and sealers, the tight confinement of factory farms or the misery of puppy mills and laboratories. As a monthly supporter, you are truly a Humane Hero to these animals and others who suffer at the hands of people and institutions.</p>
+  <p style="font-size: 16px; line-height: 24px; font-family: Verdana, sans-serif; color: #293941;">Double your donation: Many employers will match your personal donation to the Humane Society of the United States. To find out if your employer has a matching gift program, go to <a style="color: #293941; font-family: Verdana, sans-serif; font-size: 16px; line-height: 24px; mso-line-height-rule: exactly; text-decoration: none; border-bottom: 2px #00AFD7 solid;" href="http://www.humanesociety.org/matchinggifts">humanesociety.org/matchinggifts</a>.</p>
+  <p style="font-size: 16px; line-height: 24px; font-family: Verdana, sans-serif; color: #293941;">Thank you, again, for becoming a Humane Hero! We're thrilled and grateful that you&rsquo;ve chosen to support us in our mission to celebrate animals and confront cruelty.</p>
+  <convio:session name="51" param="reus_donation_2017_ar_signature"></convio:session>
+      </td>
+  </tr>
+  <tr>
+  <td>
+  <p style="font-size: 16px; line-height: 24px; font-family: Verdana, sans-serif; text-align: left; margin-top: 14px; margin-bottom: 0;">Please save this email for your records.</p>
+  <p class="top-30" style="font-size: 18px; line-height: 30px; font-family: Verdana, sans-serif; text-align: left; color: #00358e; margin-bottom: 0.4em;">Gift Summary</p>
+  <convio:session name="51" param="reus_donation_2017_transaction_summary"></convio:session>
+      </td>
+  </tr>
+  <tr bgcolor="#ffffff">
+  <td>
+  <p class="top-20" style="font-weight: normal; font-size: 13px; line-height: 20px; font-family: Verdana, sans-serif; text-align: left; color: #293941;">Donations of $25 or more include a one-year subscription to <em>All Animals</em>, the HSUS&rsquo;s award-winning bimonthly membership magazine. If you would like to make any changes in regards to your membership or have any other questions, please contact the Donor Care department by phone at <a style="text-decoration: none; font-size: 13px; line-height: 20px; font-family: Verdana, sans-serif; color: #293941;">866-720-2676</a> or by email at <a style="text-decoration: underline; font-size: 13px; line-height: 20px; font-family: Verdana, sans-serif; color: #293941;" href="mailto:donorcare@humanesociety.org">donorcare@humanesociety.org</a>.</p>
+  </td>
+  </tr>
+  </tbody>
+  </table>

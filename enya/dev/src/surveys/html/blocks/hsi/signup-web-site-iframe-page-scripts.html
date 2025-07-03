@@ -1,0 +1,21 @@
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    document.getElementsByTagName('form')[0].setAttribute("id", "iframeform");
+    const form = document.getElementById("iframeform");
+
+    form.addEventListener("submit", function(event) {
+      const response = window.grecaptcha.getResponse();
+      if (!response) {
+        event.preventDefault();
+        const div = document.createElement('div');
+        div.setAttribute('id', "captcha_error");
+        div.innerHTML = "Please check recaptcha checkbox";
+        div.classList.add("en__field__error");
+        document.getElementsByClassName('en__captcha')[0].appendChild(div);
+        return false;
+      } else {
+        form.submit();
+      }
+    });
+  });
+</script>

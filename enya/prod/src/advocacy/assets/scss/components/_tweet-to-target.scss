@@ -1,0 +1,184 @@
+.enya {
+  &.enya-advocacy--ttt.page-2 {
+    h1 {
+      text-align: center;
+      margin-bottom: rem(50);
+      @include mq($md) {
+        margin-bottom: rem(65);
+      }
+    }
+
+    .en__component--column.en__component--advcolumn:not(.hero--full-bleed) {
+      width: 100%;
+    }
+  }
+
+  .copy-ttt {
+    margin-bottom: rem(20);
+  }
+
+  .en__tweet__noHandles {
+    text-align: center;
+  }
+
+  .en__component--tweetcontactblock {
+    .en__contacts {
+      @include mq($md) {
+        align-items: flex-start;
+        justify-content: center;
+        margin-left: 0; //calc(-#{$gutter-x} / 4);
+        margin-right: 0; //calc(-#{$gutter-x} / 4);
+        margin-top: 0; //calc(-#{$gutter-x} / 4);
+      }
+      @include mq($lg) {
+        justify-content: space-between;
+      }
+    }
+
+    + .en__component {
+      margin-top: 3.25rem;
+    }
+  }
+
+  .en__tweetContact {
+    background-color: $form-bg-color;
+    border: 1px solid $input-border-color;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding: rem(25) rem(35) rem(30);
+
+    &:not(:last-child) {
+      margin-bottom: rem(60);
+    }
+
+    @include mq($md) {
+      margin: 0;
+      /*margin-left: calc(#{$gutter-x} / 4);
+      margin-right: calc(#{$gutter-x} / 4);
+      margin-top: calc(#{$gutter-x} / 4);*/
+      //width: calc(50% - (#{$gutter-x} / 2));
+      &:only-of-type {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    @include mq($lg) {
+      max-width: 46.7%;
+    }
+  }
+
+  .en__twitterTarget {
+    background-color: $form-bg-color;
+    padding: 0 0 rem(20);
+    align-item: flex-start;
+    img.en__twitterTarget__image {
+      margin-top: rem(5);
+      margin-right: rem(15);
+      height: rem(64);
+      width: rem(64);
+    }
+    p {
+      line-height: rem(22);
+    }
+    .en__twitterTarget__name {
+      @include font-family("freight-bold");
+      font-size: rem(18);
+    }
+    .en__twitterTarget__party,
+    .en__twitterTarget__handle {
+      @include font-family("freight-regular");
+      font-size: rem(18);
+      a,
+      a:link,
+      a:active,
+      a:visited {
+        background: none;
+        box-shadow: none;
+        transition: none;
+      }
+    }
+  }
+
+  .en__tweetButton {
+    background-color: $form-bg-color;
+    padding: 0;
+  }
+
+  .en__tweetButton__send,
+  .en__tweetButton__sent {
+    padding: 0;
+
+    a {
+      display: inline-block;
+      border: 0;
+      border-radius: rem(2);
+      font-size: rem(18);
+      line-height: 1;
+      color: $white;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      padding: rem(17) rem(41);
+      background-color: $bright-blue;
+      font-size: rem(18);
+      font-weight: 400;
+      user-select: none;
+    }
+  }
+
+  .large-tweet {
+    .en__tweet {
+      textarea {
+        height: 11rem;
+      }
+    }
+  }
+
+  .en__tweet {
+    background-color: $form-bg-color;
+    padding: 0;
+    margin-bottom: rem(30);
+    textarea {
+      border: 1px solid $input-border-color;
+      padding: rem(10) rem(15);
+    }
+  }
+
+  .en__twitterTarget__image {
+    &:before {
+      border: 1px solid $input-border-color;
+    }
+  }
+
+  .post-action-button-container {
+    p {
+      font-weight: 400;
+      margin-bottom: rem(40);
+    }
+  }
+}
+
+.enya-hsi {
+  .en__tweetButton__send,
+  .en__tweetButton__sent {
+    a {
+      background-color: $hsi-dark-green;
+      font-weight: 600;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: $hsi-green;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .en__twitterTarget {
+    .en__twitterTarget__handle {
+      &:hover {
+        box-shadow: inset 0 -0.125em $hsi-green;
+      }
+    }
+  }
+}

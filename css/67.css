@@ -1,0 +1,41 @@
+
+.topBanner {
+    background-image: linear-gradient(to bottom, rgba(0,0, 0, 0) 40%, rgba(0, 0, 0, 0.2) 100%), url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/LP-natale-2023.jpg?v=1702567376000) !important;
+    background-position: 100% 50%;
+    box-shadow: none;
+    position: relative;
+    height: 87vh !important;
+}
+
+.topBanner:before {
+	content: '' !important;
+    background: -moz-linear-gradient(bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 45%) !important;
+    background: -webkit-linear-gradient(bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 45%)  !important;
+    background: linear-gradient(to top, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 45%)  !important;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#162b4b', endColorstr='#162b4b',GradientType=1 );
+width: 100%;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 0;
+
+}
+.cane.refresh {
+    background-image: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/Testata-LP-Tomohon.png?v=1684499325000) !important;
+    padding: 17em 0 0.5em 0!important;
+    box-shadow: none;
+}
+.topBannerThankyou {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI_lp-natale2021-engaging_testata-TP.jpg?v=1637167732000) no-repeat center center;
+    background-size: cover;
+}  
+
+.en__field--628318  label {
+	display: none
+}
+.en__field--628318  label.en__field__label.en__field__label--item {
+	display: block !important;
+	    margin-left: -5px;
+}

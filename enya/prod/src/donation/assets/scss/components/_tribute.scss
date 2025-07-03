@@ -1,0 +1,205 @@
+// -----------------------------------------------------------------------------
+// _tribute.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: Styles for memorial and gift donation forms.
+// -----------------------------------------------------------------------------
+
+.memorial-who-question {
+  font-size: rem(18);
+  margin-top: rem(-15);
+  margin-bottom: rem(10);
+}
+
+.enya.form-type-tribute .en__component--premiumgiftblock {
+  margin: rem(14) 0 rem(38);
+
+  // On tribute forms, we're hiding the "Do Not Send" choice.
+  .en__pg:not(.en__pg--selected) {
+    display: none;
+  }
+  
+  .en__pg__body {
+    justify-content: space-between;
+  }
+
+  .en__pg__select {
+    display: none;
+  }
+
+  .en__pg__detail {
+    flex-basis: 100%;
+
+    .en__pg__description {
+      font-size: 15px;
+      font-weight: 600;
+      margin-top: rem(-2);
+    }
+  
+    .en__pg__optionType {
+      margin: rem(3) 0;
+  
+      select {
+        font-size: rem(18);
+      }
+    }
+  }
+}
+
+.enya.form-type-tribute #en__field_transaction_gftrsn {
+  height: rem(70);
+}
+
+.enya.form-type-tribute h4.your-info-heading {
+  margin-top: rem(36);
+}
+
+.enya.is-tribute-combo h4.recipient-heading {
+  display: none;
+  visibility: hidden;
+}
+
+.enya.is-tribute-combo.is-tribute-gift-selected h4.recipient-heading {
+  display: block;
+  visibility: visible;
+}
+
+.en__field--is-tribute-gift {
+  &.visible-opt-in label.en__field__label {
+    font-size: rem(18);
+  }
+
+  .tribute-checkbox {
+    height: 1.5rem;
+    width: 1.5rem;
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.enya.is-tribute-combo {
+
+  // We hide the premium section on all tribute combo forms.
+  &:not(#en__pagebuilder) .en__component--premiumgiftblock {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  .en__field--trbopts {
+    max-width: 400px;
+  }
+
+  .en__field--trbopts .en__field__input--radio,
+  .en__field--tribute-print-or-ecard .en__field__input--radio {
+    @extend %enya-input-hidden-radio;
+
+    & + .en__field__label--item::before {
+      @extend %enya-input-radio-large-before;
+    }
+  
+    &:focus + .en__field__label--item::before {
+      @extend %enya-input-focus;
+    }
+
+    &:checked + .en__field__label--item::before {
+      @extend %enya-input-radio-large-before-checked;
+
+    }
+  }
+
+  .en__field--trbopts .en__field__element--radio,
+  .en__field--tribute-print-or-ecard .en__field__element--radio {
+    display: flex;
+    justify-content: space-between;
+    max-width: rem(240);
+  }
+
+  .en__field--tribute-print-or-ecard .en__field__element--radio {
+    max-width: rem(320);
+  }
+}
+
+.enya-hsi.is-tribute-combo .en__field--trbopts .en__field__element--radio {
+  max-width: 100%;
+
+  label {
+    text-transform: uppercase;
+    font-size: rem(20);
+    font-style: normal;
+    font-weight: 500;
+  }
+}
+
+.enya.enya-hsi.is-tribute-combo .en__field--trbopts .en__field__input--radio:checked + .en__field__label--item::before { 
+  background-color: $hsi-green;
+  border-color: $hsi-dark-green;
+}
+
+.enya.is-tribute-combo .tribute-card-choices-container {
+  margin-top: 1rem;
+  max-width: 400px;
+
+  h2 {
+    font-size: rem(15);
+    line-height: 1.25;
+    font-style: normal;
+    font-weight: 600;
+    color: $black1;
+    text-transform: none;
+    margin-bottom: rem(10);
+    max-width: 100%;
+    padding: 0;
+    position: relative;
+    width: 100%;
+  }
+}
+
+.enya.is-tribute-combo .tribute-card-choices-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .tribute-card-thumb {
+    flex-basis: 46%;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    
+    &.thumb-active {
+      box-shadow: 0 0 0 6px $bright-blue;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.enya.enya-hsi.is-tribute-combo .tribute-card-thumb.thumb-active {
+  box-shadow: 0 0 0 6px $hsi-green;
+}
+
+
+.enya.is-tribute-combo label[for=en__field_supporter_questions_1441669],
+.enya.is-tribute-combo label[for=en__field_supporter_questions_1464718] {
+  margin-left: 0;
+  pointer-events: none;
+}
+
+.enya.is-tribute-combo .print-ecard-header {
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: rem(18);
+  margin-bottom: rem(14);
+}
+
+.enya.is-tribute-combo .en__field--is-tribute-gift.visible-opt-in label.en__field__label.tribute-checkbox-label {
+  color: #293941;
+  font-size: rem(16);
+  font-weight: 500;
+  letter-spacing: .75px;
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: 0.2rem;
+  text-align: left;
+  text-transform: uppercase;
+}

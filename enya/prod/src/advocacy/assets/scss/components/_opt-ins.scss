@@ -1,0 +1,45 @@
+.en__field--general-email,
+.en__field--universal-email-consent {
+  @extend .visually-hidden;
+}
+
+.en__field__label.en__field__label--opt-in {
+  @extend %enya-opt-in-label;
+  display: block;
+  margin-left: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+  width: 100%;
+
+  p {
+    font-size: inherit;
+    margin: 0 0 rem(10);
+  }
+}
+
+.enya-hsi .en__field__label.en__field__label--opt-in {
+  display: none;
+}
+
+.en__field--sms {
+  .en__field__item {
+    align-items: flex-start;
+  }
+  &.hide-checkbox {
+    input[type="checkbox"] {
+      display: none;
+      & + label.en__field__label {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.en__field__label--opt-in {
+  display: none;
+}
+
+.enya-hsi.is-ca-form .en__field--374.en__field--opt-in label.en__field__label:not(.en__field__label--item) {
+  display: none;
+  visibility: hidden;;
+}

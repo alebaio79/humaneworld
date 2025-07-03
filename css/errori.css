@@ -1,0 +1,27 @@
+.en__field  {
+	margin-top: 5px
+}
+.en__field__input {
+	height: 45px !important
+}
+.en__field:not(.en__hidden) {
+    display: flex;
+    flex-direction: column;
+}
+
+.en__field__error, .valid-error {
+color: #d83c2d !important;
+    font-size: .8125rem !important;
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 0.375rem 0 0;
+    order: 3;
+    position: relative !important;
+	    margin-top: 5px;
+}
+
+.en__field--validationFailed .en__field__input.en__field--textarea, .en__field--validationFailed .en__field__input.en__field__input--email, .en__field--validationFailed .en__field__input.en__field__input--other, .en__field--validationFailed .en__field__input.en__field__input--telephone, .en__field--validationFailed .en__field__input.en__field__input--text, .en__field--validationFailed .en__field__input.en__field__input--textarea, .en__field--validationFailed select, .en__field--validationFailed select.en__field__input--select, .en__field--validationFailed select.en__field__input--splitselect, .en__field--validationFailed select.en__field__input--tripleselect {
+    border-color: #d83c2d;
+    border-width: 2px;
+	border-style: solid;
+}

@@ -1,0 +1,142 @@
+// -----------------------------------------------------------------------------
+// _intro.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: This file contains all styles related to the page's intro content.
+// -----------------------------------------------------------------------------
+
+.headline-block {
+  text-align: left;
+
+  @include mq($md) {
+    text-align: center;
+  }
+
+  @include mq($lg) {
+    text-align: left;
+  }
+}
+
+.headline-block h1 {
+  @include font-family("freight-regular");
+  font-size: rem(30);
+  line-height: 1.1875;
+  color: $humane-blue;
+  margin-top: 0;
+  margin-bottom: rem(14);
+  padding: 0 rem(25);
+  hyphens: none;
+
+  @include mq($md) {
+    margin-bottom: rem(32);
+  }
+
+  @include mq($lg) {
+    font-size: rem(35);
+    line-height: 1.05;
+    padding: 0;
+    margin-bottom: rem(35);
+  }
+}
+
+.enya-wlt .headline-block h1 {
+  color: $wlt-dark-green;
+}
+
+.enya-hsi .headline-block h1 {
+  color: $hsi-dark-green;
+}
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+}
+
+p.hero-credit {
+  @include font-family("freight-regular-italic");
+  font-size: rem(11);
+  line-height: 1.363636;
+  margin-top: 5px;
+  margin-bottom: 0;
+  color: $photo-credit-color;
+  padding-left: rem(25);
+
+  @include mq($md) {
+    padding-left: 0;
+  }
+}
+
+.intro-text-block {
+  margin-top: rem(33);
+  padding: 0 rem(20) 0 rem(25);
+
+  @include mq($md) {
+    padding: 0;
+  }
+
+  p,
+  p strong {
+    @include font-family("freight-regular");
+    font-size: rem(20);
+    line-height: 1.4;
+    color: $text-color;
+    margin-top: 0;
+    margin-bottom: rem(10);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  // Make sure strong text doesn't size up relative to p size.
+  // And keep the text color of the parent.
+  p strong {
+    font-weight: 600;
+    font-size: 1em;
+    line-height: 1;
+    color: inherit;
+  }
+}
+
+// Mobile image styles
+body.enya-donation:not(#en__pagebuilder) {
+  .mobile-hero-container {
+    display: none;
+    visibility: hidden;
+  }
+
+  &.small.show-mobile-hero-banner {
+    .mobile-hero-container {
+      display: block;
+      visibility: visible;
+    }
+
+    .hero-container {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  &.small.hide-mobile-hero {
+    .hero-container,
+    .mobile-hero-container {
+      display: none;
+      visibility: hidden;
+    }
+  }
+}
+
+// Humane Leaders test styles
+.humane-leaders-blurb {
+  p {
+    font-style: italic;
+  }
+
+  p:first-child::before {
+    float: left;
+    content: "";
+    display: block;
+    width: rem(48);
+    height: rem(48);
+    margin: rem(7) rem(5) 0 0;
+    background-image: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2253/puppy-icon.svg");
+  }
+}

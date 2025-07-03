@@ -1,0 +1,57 @@
+.card__elected-official {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  min-height: 200px;
+  width: 100%;
+  border-bottom: 2px solid #DCDEE0;
+  margin-bottom: 14px;
+  padding-bottom: 2px;
+  h3 {
+    font-size: 27px;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0 !important;
+    text-align: left;
+  }
+  p {
+    margin-top: 0;
+    &.subtle {
+      color: #293941;
+      font-size: 19px;
+      margin-bottom: 8px;
+    }
+  }
+  .column {
+    &.container__photo {
+      flex: 0 0 130px;
+      margin-right: 20px;
+      img {
+        width: 100%;
+      }
+    }
+    &.container__content {
+      flex: 1 1 auto;
+    }
+  }
+  .row {
+    &.row__contact-info {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 14px;
+      &.clearfix {
+        align-items: center;
+        display: flex;
+      }
+      .pull-left {
+        width: 33.3333%;
+      }
+      .pull-right {
+        width: 66%;
+      }
+    }
+  }
+  .label__content {
+    font-weight: 600;
+  }
+}

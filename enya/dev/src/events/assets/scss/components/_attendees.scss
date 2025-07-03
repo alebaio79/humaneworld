@@ -1,0 +1,49 @@
+// -----------------------------------------------------------------------------
+// _attendees.scss
+// HSUS Event Forms - Enya 2021
+// Author: Jeremy Hatter
+// Created: Winter 2021
+// Purpose: This file contains styles related to the Events attendees.
+// -----------------------------------------------------------------------------
+
+
+.enya-event .en__registrants {
+  padding: 0;
+  .en__registrants__registrant {
+    width: 100%;
+    padding: 0;
+  }
+  .en__registrants__registrantHead {
+    text-transform: uppercase;
+    font-size: rem(16);
+  }
+
+  .en__registrants__registrantDetails {
+    padding-top: 0;
+  }
+
+  .en__registrants__ticketHead {
+    font-weight:400;
+    color: $humane-blue;
+  }
+}
+
+h4 {
+  &.your-info-heading span.same-as-attendee-checkbox {
+    margin-left: rem(20);
+  }
+  span.same-as-attendee-checkbox {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    input {
+      margin-right: rem(5)
+    }
+    label {
+      font-size: rem(14);
+      text-transform: none;
+      font-weight: 500;
+      letter-spacing: normal;
+    }
+  }
+}

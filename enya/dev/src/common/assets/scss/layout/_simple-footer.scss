@@ -1,0 +1,74 @@
+// -----------------------------------------------------------------------------
+// _simple-footer.scss
+// HSUS Event Forms - Enya 2021
+// Author: Jeremy Hatter
+// Created: Winter 2021
+// Purpose: This file contains styles related to the simple footer structure.
+// -----------------------------------------------------------------------------
+
+#page-footer {
+  display: block;
+  margin-top: 8rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-width: none;
+  background-color: $gray3;
+  padding: 2.8rem 0 2rem;
+  @include font-family("freight-regular");
+  @include mq($md) {
+    display: grid;
+    grid-template-columns: 1fr rem(600) 1fr;
+  }
+  @include mq($lg) {
+    display: grid;
+    grid-template-columns: 1fr rem(930) 1fr;
+  }
+  .footer-nav {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 15rem;
+    padding-left: 0;
+    margin: 0 auto;
+    text-align: center;
+    li {
+      border-left: solid 0.063rem $black2;
+      line-height: 0.85em;
+      flex-grow: 2;
+      font-size: 0.938rem;
+      font-weight: 400;
+      display: inline-block;
+      a {
+        color: $black2;
+        text-decoration: none;
+        box-shadow: none;
+      }
+      &:first-child {
+        border-left: none;
+      }
+      a {
+        &:hover {
+          color: $bright-blue;
+        }
+
+        body.enya-hsi &:hover {
+          color: $hsi-green;
+        }
+      }
+    }
+  }
+  .copyright {
+    font-size: 0.75rem;
+    text-align: center;
+    margin-top: 18px;
+    margin-bottom: 0;
+    color: $black2;
+  }
+}
+
+#page-footer-wrap {
+  grid-column-start: 2;
+}

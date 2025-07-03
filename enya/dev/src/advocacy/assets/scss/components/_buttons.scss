@@ -1,0 +1,53 @@
+.en__submit {
+  button {
+    @include font-family("freight-regular");
+    background-color: $bright-blue;
+    border: 0;
+    border-radius: 2px;
+    font-size: 1.125em;
+    line-height: 1;
+    color: $white;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding: 0.9444em 0 1em;
+    transition: $transition-button;
+    user-select: none;
+    width: 100%;
+
+    &:hover {
+      background-color: $hover-blue;
+      color: $white;
+    }
+
+    .enya-hsi & {
+      background-color: $hsi-dark-green;
+
+      &:hover {
+        background-color: $hsi-green;
+      }
+    }
+  }
+}
+
+.no-redirect-btn {
+  text-align: center;
+
+  button {
+    @include font-family("freight-regular");
+    background-color: $bright-red;
+    border: 0;
+    border-radius: 2px;
+    color: $white;
+    font-size: 1.125em;
+    font-weight: 200;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    padding: 1rem 2rem;
+    user-select: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $hover-red;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+<!-- Begin Upsell Modal -->
+<div class="modal fade container" id="monthly-modal" tabindex="-1" role="dialog" aria-labelledby="monthly-modal" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body clearfix">
+        <div class="monthly-modal-image"></div>
+        <div class="monthly-modal-text">
+          <h4>Thanks for standing up for animals!</h4>
+          <p class="for-desktop-only">Will you consider becoming a Humane Hero with a monthly gift today? By donating each month, you will fight for animals all year long, whenever and wherever they need you.</p>
+          <p class="for-mobile-only">Will you consider joining us as a Humane Hero by making your gift monthly?</p>
+          <div class="clearfix monthly-modal-button-wrapper">
+            <button type="button" class="btn btn-primary btn-info-full upsell-button upsell-yes" id="monthly-modal-yes">
+              <span class="yes-text">Yes!</span>
+              <span class="more-yes-text">Change my gift to <span id="monthly-modal-amount"></span> a month.</span>
+            </button>
+            <span class="change-cancel">You can change or cancel at any time.</span>
+            <button type="button" class="btn btn-primary btn-info-full upsell-button upsell-no" id="monthly-modal-no">
+              <span class="no-text">No thanks.</span>
+              <span class="more-no-text">Process my <span id="one-time-modal-amount"></span> one&#8209;time gift.</span>
+            </button>
+          </div>
+          <div id="monthly-modal-footer" class="clearfix">
+            <div id="monthly-modal-note">You can change or cancel your monthly gift at any time</div>
+            <div id="monthly-modal-norton-logo"></div>
+            <div id="monthly-modal-bbb-logo"></div>
+          </div>
+        </div>
+        <input type="hidden" id="monthly-modal-promo-amount" value="0" />
+        <input type="hidden" id="monthly-modal-promo-processed" value="0" />
+      </div>
+      <!--/.modal-body-->
+    </div>
+  </div>
+</div>
+<!-- End Upsell Modal -->

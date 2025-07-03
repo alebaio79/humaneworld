@@ -1,0 +1,159 @@
+// -----------------------------------------------------------------------------
+// _premium.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: This file contains styles related to the premium section.
+// -----------------------------------------------------------------------------
+
+.enya .en__component--premiumgiftblock {
+  border: none;
+  margin: rem(16) 0 rem(42);
+
+  .en__pg {
+    border: none;
+  }
+
+  .en__pg + .en__pg {
+    margin-top: 1rem;
+
+    @include mq($md) {
+      margin-top: 0;
+    }
+  }
+
+  .en__pgHeader {
+    display: none;
+    visibility: hidden;
+  }
+
+  .en__pg__body {
+    padding: 0;
+    justify-content: space-evenly;
+  }
+
+  .en__pg__detail,
+  .en__pg__display,
+  .en__pg__select {
+    padding: 0;
+  }
+
+  .en__pg--selected .en__pg__image--selected {
+    outline: none;
+  }
+
+  // TODO: Figure out a way to  hide this only for Humane Hero T-shirt.
+  // Right now, this will hide all premium names, on all forms.
+  .en__pg__name {
+    display: none;
+    visibility: hidden;
+  }
+
+  .en__pg__detail {
+    flex: 0 0 50%;
+    order: 2;
+  }
+
+  // Hack alert. We need to set the flex basis to something else on the 
+  // "no shirt" option.
+  div.en__pg:nth-of-type(2) {
+    .en__pg__detail {
+      flex-basis: 94%;
+      margin-right: rem(-10);
+    }
+  }
+
+  .en__pg__display {
+    order: 3;
+    flex-basis: 38%;
+    margin: rem(-15) rem(-5) rem(7) rem(10);
+  }
+
+  .en__pg__description {
+    font-size: rem(13.5);
+    line-height: 1.25;
+    margin-bottom: 0;
+  }
+
+  .en__pg__optionType {
+    width: 100%;
+
+   label {
+    display: none;
+    visibility: hidden;
+   }
+
+   select {
+     font-size: rem(14);
+   }
+  }
+
+  .en__pg__select {
+    margin-right: 0;
+
+    // Set the width of the radios to be the same as our fancy radios.
+    // This is necessary to prevent a flash in the UI when users
+    // select a t-shirt size.
+    input[type=radio] {
+      width: rem(18);
+      height: rem(18);
+      margin: 0 rem(8) 0 0;
+      opacity: 0;
+    }
+  }
+
+  // Enya's premiumManager adds these classes to EN's radios.
+  // That manager also creates and inserts the labels.
+  .en__pg__select .premium-radio {
+    @extend %enya-input-hidden-radio;
+    
+    & + .premium-label::before {
+      @extend %enya-input-radio-large-before;
+      width: rem(18);
+      height: rem(18);
+      min-width: rem(18);
+      margin-top: 0;
+    }
+  
+    &:checked + .premium-label::before {
+      @extend %enya-input-radio-large-before-checked;
+    }
+  }
+
+  .premium-label {
+    @extend %enya-input-radio-large-label;
+  }
+}
+
+// We can't use the & selector for this.
+.enya-wlt .en__component--premiumgiftblock .en__pg__select
+ .premium-radio:checked + .premium-label::before {
+  background-color: $wlt-light-green;
+  border-color: $wlt-dark-green;
+}
+
+// Hide this field when not in page-builder.
+body:not(#en__pagebuilder) .en__field--premium-selection {
+  display: none;
+  visibility: hidden;
+}
+
+
+// Gray out this visually hidden field in page-builder.
+// Show a message so that form editors know this field is there.
+body#en__pagebuilder .en__field--premium-selection {
+  opacity: 0.5;
+
+  label {
+    width: auto;
+  }
+
+  &::before {
+    content: "[Hidden Premium QMR]";
+    display: block;
+  }
+}
+
+
+
+
+

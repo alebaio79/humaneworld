@@ -1,0 +1,16 @@
+<!-- DDTV pixel for donation conversion -->
+<script src="https://js.adsrvr.org/up_loader.1.1.0.js" type="text/javascript"></script>
+<script type="text/javascript">
+  ttd_dom_ready( function() {
+    if (typeof TTDUniversalPixelApi === 'function') {
+      var universalPixelApi = new TTDUniversalPixelApi();
+      universalPixelApi.init("qbd6ayq", ["eabyn0s"], "https://insight.adsrvr.org/track/up", {
+        "td1": "{{dlv - EN campaign ID}}",
+        "td2": "{{dlv - EN transaction ID}}",
+        "td3": "{{dlv - giftType}}",
+        "v": "{{dlv - giftAmountFB}}"
+      });
+    }
+  });
+</script>
+<!-- End DDTV pixel for donation conversion ->

@@ -1,0 +1,32 @@
+// -----------------------------------------------------------------------------
+// _skip-to-main.scss
+// HSUS Engaging Networks Forms - Enya 2022
+// Created: Spring 2022
+// Purpose: Styles related to our Skip to Main Content link
+// -----------------------------------------------------------------------------
+
+#skip a {
+  color: $humane-blue;
+  height: 1px;
+  left: -10000px;
+  overflow: hidden;
+  position: absolute;
+  top: auto;
+  width: 1px;
+
+  .enya-hsi & {
+    color: $hsi-dark-green;
+  }
+
+  &:focus {
+    box-shadow: none;
+    display: inline-block;
+    height: auto;
+    left: 1rem;
+    padding: 0.5rem;
+    position: relative;
+    top: 0.5rem;
+    width: auto;
+    z-index: 3000;
+  }
+}

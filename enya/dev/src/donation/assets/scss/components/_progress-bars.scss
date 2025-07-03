@@ -1,0 +1,50 @@
+// -----------------------------------------------------------------------------
+// _progress-bars.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: Styles for donation form progress bars.
+// -----------------------------------------------------------------------------
+
+// Scope styles to donation forms only.
+.enya-donation .enWidget--progressBar {
+  padding: rem(5) rem(25);
+
+  @include mq($md) {
+    padding: rem(5) 0;
+  }
+
+  .enWidget__progress {
+    border-radius: 6px;
+    min-width: auto;
+    min-height: auto;
+
+    .enWidget__fill {
+      border-radius: 6px;
+    }
+  }
+
+  .enWidget__copy--above,
+  .enWidget__copy--below {
+    margin: 0;
+  }
+
+  .donate-progress-copy {
+    @include font-family('freight-regular');
+    font-size: rem(24);
+    line-height: 1;
+    text-align: center;
+    margin-bottom: rem(12);
+
+    &.percentage-value {
+      font-size: rem(20);
+      margin: 0;
+    }
+  }
+
+  .percentage-wrapper {
+    display: none;
+    visibility: hidden;
+    justify-content: space-between;
+  }
+
+}

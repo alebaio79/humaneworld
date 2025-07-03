@@ -1,0 +1,31 @@
+.topBanner {
+    background-image: linear-gradient(to bottom, rgba(0,0, 0, 0) 40%, rgba(0, 0, 0, 0.2) 100%), url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/testata-lp.JPG?v=1666792395000) !important;
+    background-position: 100% 50%;
+    box-shadow: none;
+    position: relative;
+    height: 87vh !important;
+}
+
+.topBannerThankyou {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/romania.jpg?v=1666794925000) no-repeat center center;
+    background-size: cover;
+}
+
+.sloganarea {
+	width: 90%
+}
+
+
+@media (min-width: 1000px) and (max-width: 1480px) {
+.h-50vh  h1 {
+ font-size: 1.3rem
+}
+	
+	.h-50vh  h2 {
+ font-size: 1.2rem
+}
+	.h-25vh p {
+    font-size: 14px !important;
+    font-weight: 600;
+}
+}

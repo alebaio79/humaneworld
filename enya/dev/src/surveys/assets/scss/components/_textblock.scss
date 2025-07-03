@@ -1,0 +1,100 @@
+// -----------------------------------------------------------------------------
+// _textblock.scss
+// HSUS Signup and Survey Forms - Enya 2021
+// Author: Vishnu Singamsetty
+// Created: Winter 2021
+// Purpose: This file contains styles related to the Survey and signup forms text block content.
+// -----------------------------------------------------------------------------
+
+/*----------Text block -----------*/
+
+.signup-img {
+  margin-bottom: auto;
+  padding-top: 6px;
+  border-style: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: auto;
+  @include mq2() {
+    width: 61%;
+  }
+  @include mq1(600) {
+    width: 95%;
+  }
+}
+
+p.signup-para {
+  font-size: 1.19em;
+  font-variant-numeric: lining-nums !important;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #293941;
+  @include font-family("freight-regular");
+  text-align: left;
+  margin-top: rem(20);
+  margin-left: auto;
+  @include mq2() {
+    width: 58%;
+    margin-left: 19.5%;
+  }
+  @include mq1(600) {
+    width: 95%;
+    margin-left: 3%;
+  }
+
+  & + & {
+    margin-top: 0;
+  }
+}
+
+h3.signup-h3,
+.signup-h3 {
+  margin-bottom: 1.5rem !important;
+  text-align: center;
+  font-size: 27px;
+  margin-left: 29px;
+  font-weight: 500 !important;
+  color: $humane-blue;
+  line-height: 1.2;
+  @include font-family("freight-regular");
+  font-feature-settings: "lnum" 1;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+ 
+  @include mq2() {
+    width: 62%;
+  }
+  
+  @include mq1(600) {
+    width: 88%;
+  }
+
+  .enya-hsi & {
+    color: $hsi-dark-green;
+  }
+}
+
+p.image-credit {
+  font-size: rem(11);
+  @include font-family("freight-regular-italic");
+  line-height: 1.4;
+  margin-bottom: 0;
+  color: $photo-credit-color;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  padding-top: 8px;
+  @include mq2() {
+    width: 58%;
+    margin-left: 19.5%;
+  }
+  @include mq1(600) {
+    width: 97%;
+    margin-left: 3%;
+    
+  }
+}

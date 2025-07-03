@@ -1,0 +1,166 @@
+[[?//::COMMENT::
+Set some session variables that we'll need for this transaction summary.
+::]]
+[[?//::COMMENT:: Set one-time or monthly::]]
+[[U0:thanksGiftType=]]
+[[?xx::x[[S120:dc:recurringTotalPaymentAmount]]x::
+[[U0:thanksGiftType=One-time]]
+[[U0:thanksGiftTypeLowercase=one-time]]
+::
+[[U0:thanksGiftType=Monthly]]
+[[U0:thanksGiftTypeLowercase=monthly]]
+]]
+[[?//::COMMENT:: Set payment type::]]
+[[U0:thanksPaymentType=[[S120:dc:paymentMode]]]]
+[[?//::COMMENT:: We want to use some different words from what the Convio paymentMode spits out.
+- PayPal paymentMode comes out as XCheckout. Reword to "PayPal".
+- Change "Credit Card" to "Credit card"
+- Change "ACH" to "Bank"
+::]]
+[[?xXCheckoutx::x[[S80:thanksPaymentType]]x::
+[[U0:thanksPaymentType=PayPal]]
+::
+[[?xCredit Cardx::x[[S80:thanksPaymentType]]x::
+[[U0:thanksPaymentType=Credit card]]
+::
+[[?xACHx::x[[S80:thanksPaymentType]]x::
+[[U0:thanksPaymentType=Bank]]
+::]]
+]]
+]]
+<!--S80:thanksPaymentType: [[S80:thanksPaymentType]]-->
+<!--S120:dc:paymentMethod: [[S120:dc:paymentMethod]]-->
+<!--S120:dc:paymentMode: [[S120:dc:paymentMode]]-->
+<div class="transaction-summary-entries">
+    <div class="transaction-summary-entry">
+        <p class="entry-value" style="margin: 0; font-family: Verdana, sans-serif; font-size: 16px; line-height: 24px; color: #293941; text-decoration: none;">[[S120:dc:name]]</p>
+    </div>
+    <div class="transaction-summary-entry">
+        <p class="entry-value" style="margin: 0; font-family: Verdana, sans-serif; font-size: 16px; line-height: 24px; color: #293941; text-decoration: none;"><a class="entry-value" style="text-decoration: none; color: #293941;" href="">[[S120:dc:email]]</a></p>
+    </div>
+    <div class="transaction-summary-entry">
+        <p class="entry-value" style="margin: 0; font-family: Verdana, sans-serif; font-size: 16px; line-height: 24px; color: #293941; text-decoration: none;"><a class="entry-value" style="text-decoration: none; color: #293941;" href="">[[S120:dc:street1]]</a></p>
+    </div>
+    [[?//::COMMENT:: Show this entry only when street2 is not blank.::]]
+    [[?xx::x[[S120:dc:street2]]x::::
+    <div class="transaction-summary-entry">
+        <p class="entry-value" style="margin: 0; font-family: Verdana, sans-serif; font-size: 16px; line-height: 24px; color: #293941; text-decoration: none;"><a class="entry-value" style="text-decoration: none; color: #293941;" href="">[[S120:dc:street2]]</a></p>
+    </div>
+    ]]
+    <div class="transaction-summary-entry">
+        <p class="entry-value" style="margin: 0; font-family: Verdana, sans-serif; font-size: 16px; line-height: 24px; color: #293941; text-decoration: none;">[[S120:dc:city]], [[S120:dc:stateProvince]] [[S120:dc:postalCode]]</p>
+    </div>
+    [[?//::COMMENT:: Show this entry only if not blank.::]]
+    [[?xx::x[[S120:dc:country]]x::::
+    <div class="transaction-summary-entry">
+        <p class="entry-value" style="margin: 0; font-family: Verdana, sans-serif; font-size: 16px; line-height: 24px; color: #293941; text-decoration: none;">[[S120:dc:country]]</p>
+    </div>
+    ]]
+    <div class="transaction-summary-entry">
+        <p class="entry-value top-20" style="margin-bottom: 0; font-family: Verdana, sans-serif; font-size: 16px; line-height: 24px; color: #293941; text-decoration: none;">Contribution date: [[S120:dc:transactionDate]]</p>
+    </div>
+    <!--<div class="transaction-summary-entry">
+            <p class="entry-value" style="margin: 0;">Gift type: [[S80:thanksGiftType]]</p>
+        </div>-->
+    <div class="transaction-summary-entry">
+        <p class="entry-value" style="margin: 0; font-family: Verdana, sans-serif; font-size: 16px; line-height: 24px; color: #293941; text-decoration: none;">Gift amount: [[S120:dc:giftAmount]] [[S80:thanksGiftTypeLowercase]]</p>
+    </div>
+    <!-- <div class="transaction-summary-entry">
+            <p class="entry-value" style="margin: 0; font-family: Verdana, sans-serif; font-size: 16px; line-height: 24px; color: #293941; text-decoration: none;">Tax-deductible amount: [[S120:dc:giftAmount]]</p>
+        </div> -->
+    [[?//::COMMENT::
+    Show this entry only when payment is recurring.
+    Note that our t-shirt premium is a custom field in the Donations module.
+    See this KB article for how to find the custom string value:
+    https://kb.blackbaud.com/articles/Article/66760
+    ::]]
+    [[?xMonthlyx::x[[S80:thanksGiftType]]x::
+    <div class="transaction-summary-entry">
+        <p class="entry-label" style="margin: 0; font-family: Verdana, sans-serif; font-size: 16px; line-height: 24px; color: #293941; text-decoration: none; display: inline;">Humane Hero shirt size: [[S120:dc:custom:custom_string100]]</p>
+    </div>
+    ::]]
+    <div class="transaction-summary-entry">
+        <p class="entry-label" style="margin: 0; font-family: Verdana, sans-serif; font-size: 16px; line-height: 24px; color: #293941; text-decoration: none; display: inline;">Payment type: [[S80:thanksPaymentType]]</p>
+    </div>
+    [[?//::COMMENT:: Show these entries only when payment type is credit card.::]]
+    [[?xCredit cardx::x[[S80:thanksPaymentType]]x::
+    <div class="transaction-summary-entry">
+        <p class="entry-label" style="margin: 0; font-family: Verdana, sans-serif; font-size: 16px; line-height: 24px; color: #293941; text-decoration: none; display: inline;">Card type: [[S120:dc:creditCardType]]</p>
+    </div>
+    <div class="transaction-summary-entry">
+        <p class="entry-label" style="margin: 0; font-family: Verdana, sans-serif; font-size: 16px; line-height: 24px; color: #293941; text-decoration: none; display: inline;">Card number: [[S120:dc:creditCardNumber]]</p>
+    </div>
+    ::]]
+    [[?//::COMMENT:: Show this entry only when payment type is bank
+    and when echeckAccountNumber is not blank.
+    ::]]
+    [[?xBankx::x[[S80:thanksPaymentType]]x::
+    [[?xx::x[[S120:dc:echeckAccountNumber]]x::::
+    <div class="transaction-summary-entry">
+        <p class="entry-label" style="margin: 0; font-family: Verdana, sans-serif; font-size: 16px; line-height: 24px; color: #293941; text-decoration: none; display: inline;">Bank account number: [[S120:dc:echeckAccountNumber]]</p>
+    </div>
+    ]]
+    ::]]
+    <div class="transaction-summary-entry">
+        <p class="entry-label top-20" style="margin-bottom: 0; font-family: Verdana, sans-serif; font-size: 16px; line-height: 24px; color: #293941; text-decoration: none;">The Humane Society of the United States Tax ID: [[S0:SITE_TAX_ID]]</p>
+    </div>
+    <div class="transaction-summary-entry">
+        <p class="entry-label top-20" style="margin-bottom: 0; font-family: Verdana, sans-serif; font-size: 16px; line-height: 24px; color: #293941; text-decoration: none;">Tracking code: [[S120:dc:trackingCode]]</p>
+    </div>
+    [[?//::COMMENT::
+    For tote-bag-offer form, we need to show tote-bag selection.
+    Custom donation field name: DM Tote Bag Selection
+    Custom string variable name: custom_string154
+    ::]]
+    <!-- DM Tote Bag Selection: [[S120:dc:custom:custom_string154]]-->
+    [[?xxNo tote bag - use this money to help more animalsxnonexNonex::x[[S120:dc:custom:custom_string154]]x::
+    [[?//::COMMENT::Do nothing if selection is empty or "none". ::]]
+    ::
+    [[?//::COMMENT::Otherwise, show the choice. ::]]
+    <div class="transaction-summary-entry" style="margin-top: 10px;">
+        <p class="entry-label top-20" style="margin-bottom: 0; font-family: Verdana, sans-serif; font-size: 16px; line-height: 24px; color: #293941; text-decoration: none;">Gift selected: [[S120:dc:custom:custom_string154]]</p>
+    </div>
+    ]]
+    [[?//::COMMENT::
+    For T-shirt offer form, we need to show t-shirt selection.
+    Custom donation field name: DM T Shirt Selection
+    Custom string variable name: custom_string155
+    ::]]
+    <!-- DM T Shirt Selection: [[S120:dc:custom:custom_string155]]-->
+    [[?xxNo shirt - use this money to help more animalsxnonexNonex::x[[S120:dc:custom:custom_string155]]x::
+    [[?//::COMMENT::Do nothing if selection is empty or "none". ::]]
+    ::
+    [[?//::COMMENT::Otherwise, show the choice. ::]]
+    <div class="transaction-summary-entry" style="margin-top: 10px;">
+        <p class="entry-label top-20" style="margin-bottom: 0; font-family: Verdana, sans-serif; font-size: 16px; line-height: 24px; color: #293941; text-decoration: none;">Gift selected: [[S120:dc:custom:custom_string155]]</p>
+    </div>
+    ]]
+    [[?//::COMMENT::
+    For calendar offer form, we need to show calendar selection.
+    Custom donation field name: MM Calendar Selection
+    Custom string variable name: custom_string156
+    ::]]
+    <!-- MM Calendar Selection: [[S120:dc:custom:custom_string156]]-->
+    [[?xxNo calendar - use this money to help more animalsxnonexNonex::x[[S120:dc:custom:custom_string156]]x::
+    [[?//::COMMENT::Do nothing if selection is empty or "none". ::]]
+    ::
+    [[?//::COMMENT::Otherwise, show the choice. ::]]
+    <div class="transaction-summary-entry" style="margin-top: 10px;">
+        <p class="entry-label top-20" style="margin-bottom: 0; font-family: Verdana, sans-serif; font-size: 16px; line-height: 24px; color: #293941; text-decoration: none;">Gift selected: [[S120:dc:custom:custom_string156]]</p>
+    </div>
+    ]]
+    [[?//::COMMENT::
+    For stuffed animal offer form, we need to show stuffed animal selection.
+    Custom donation field name: Stuffed animal Selection
+    Custom string variable name: custom_string159
+    ::]]
+    <!-- MM Calendar Selection: [[S120:dc:custom:custom_string159]]-->
+    [[?xxNo calendar - use this money to help more animalsxnonexNonex::x[[S120:dc:custom:custom_string159]]x::
+    [[?//::COMMENT::Do nothing if selection is empty or "none". ::]]
+    ::
+    [[?//::COMMENT::Otherwise, show the choice. ::]]
+    <div class="transaction-summary-entry" style="margin-top: 10px;">
+        <p class="entry-label top-20" style="margin-bottom: 0; font-family: Verdana, sans-serif; font-size: 16px; line-height: 24px; color: #293941; text-decoration: none;">Gift selected: [[S120:dc:custom:custom_string159]]</p>
+    </div>
+    ]]
+</div>

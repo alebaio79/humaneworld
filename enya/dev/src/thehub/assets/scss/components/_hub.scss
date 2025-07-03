@@ -1,0 +1,111 @@
+$hub-gadget-breakpoint: 600px;
+$hub-gadget-spacing: .8333rem;
+a[href*="/logout"] {
+  @extend %enya-link;
+  box-shadow: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  &:hover {
+    @extend %enya-link;
+    color: $bright-blue;
+  }
+}
+
+.enya-hub {
+  .en__component--copyblock:not(.additional-content) {
+    margin-bottom: 1.3333rem;
+  }
+  h2 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    margin-bottom: 1.667rem;
+    text-transform: none;
+  }
+  .en__component--hubgadget {
+    border-color: $humane-blue;
+    box-shadow: none;
+    cursor: pointer;
+    margin: 0;
+    &:hover {
+      background-color: $baby-blue-light;
+    }
+    @media screen and (min-width: $hub-gadget-breakpoint) {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding-top: 1.25rem;
+    }
+    a {
+      text-decoration: none;
+    }
+    >img {
+      height: auto;
+      margin-bottom: .5rem;
+    }
+    span {
+      color: $humane-blue;
+      font-size: 1.125rem;
+      font-weight: 600;
+      line-height: 1.4444;
+      margin-top: auto;
+    }
+    &[data-componenttype="PLEDGE"],
+    &[data-componenttype="TXN_GIVING"] {
+      >img {
+        display: none;
+      }
+      & span::before {
+        display: block;
+      }
+    }
+    &[data-componenttype="PLEDGE"] {
+      @media screen and (min-width: $hub-gadget-breakpoint) {
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+      }
+      & span {
+        @media screen and (min-width: $hub-gadget-breakpoint) {
+          align-items: center;
+          display: flex;
+          justify-content: center;
+        }
+        &::before {
+          content: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2253/icon-gift-alt.svg?v=1622738679000);
+          @media screen and (min-width: $hub-gadget-breakpoint) {
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+    &[data-componenttype="TXN_GIVING"] {
+      & span::before {
+        content: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2253/icon-screen.svg?v=1622738683000);
+      }
+    }
+  }
+  &.page-2 {
+    .en__component--page {
+      max-width: $max-width--content;
+    }
+    .en__component--advrow + .en__component--advrow {
+      .en__component--copyblock:first-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .en__hubPledge__panel--donate .en__field--recurrfreq, .en__hubPledge__panel--donate .en__field--recurrfreq + .en__field.en__field--text {
+    display: none;
+  }
+}
+
+.hubgadget-row {
+  margin-left: -$hub-gadget-spacing;
+  margin-right: -$hub-gadget-spacing;
+  &:last-child {
+    margin-bottom: 4.5rem;
+  }
+}
+
+.hubgadget-column {
+  padding: $hub-gadget-spacing;
+}

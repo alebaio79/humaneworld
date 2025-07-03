@@ -1,0 +1,99 @@
+<!--
+[[?//::COMMENT:: Link to manage this file in Convio:
+    https://secure3.convio.net/humane/admin/PageBuilderAdmin?page_id=5935&pagebuilder=page_manage&action=manage
+::]]
+-->
+
+
+[[?//::COMMENT:: Set payment type::]]
+[[U0:adPixelPaymentType=]]
+[[?xx::x[[S120:dc:creditCardNumber]]x::
+  [[?xx::x[[S120:dc:echeckAccountNumber]]x::
+    [[U0:adPixelPaymentType=paypal]]
+  ::
+    [[U0:adPixelPaymentType=bank]]
+  ]]
+::
+  [[U0:adPixelPaymentType=credit card]]
+]]
+
+<!--
+Tracking Code: [[S120:dc:trackingCode]]
+Gift Type: [[S80:adPixelGiftType]]
+Payment Amount: [[S120:dc:giftAmount]]
+Payment Type: [[S80:adPixelPaymentType]]
+First Name: [[S120:dc:firstName]]
+Last Name: [[S120:dc:lastName]]
+Email: [[S120:dc:email]]
+Street1: [[S120:dc:street1]]
+Street2: [[S120:dc:street2]]
+City: [[S120:dc:city]]
+State: [[S120:dc:stateProvince]]
+Zip Code: [[S120:dc:postalCode]]
+Country: [[S120:dc:country]]
+Communication Opt-In: [[S120:dc:optIn]]
+
+recurringTotalPaymentAmount: [[S120:dc:recurringTotalPaymentAmount]]
+recurringCurrentStatusString: [[S120:dc:recurringCurrentStatusString]]
+recurringFrequencyLabel: [[S120:dc:recurringFrequencyLabel]]
+recurringFrequencyUnit: [[S120:dc:recurringFrequencyUnit]] 
+-->
+<script data-keep="true">
+  window.DonaConversionValues = {
+    trackingCode: "[[S120:dc:trackingCode]]",
+    giftType: "[[?xx::x[[S120:dc:recurringFrequencyLabel]]x::one-time::monthly]]",
+    giftFrequency: "[[S120:dc:recurringFrequencyLabel]]",
+    giftAmount: "[[S120:dc:giftAmount]]",
+    giftAmountFB: formatGiftAmountForFacebook("[[S120:dc:giftAmount]]"),
+    campaignName: "[[S120:dc:campaignName]]",
+    campaignId: "[[S120:dc:campaignId]]",
+    paymentType: "[[S80:adPixelPaymentType]]",
+    firstName: "[[S120:dc:firstName]]",
+    lastName: "[[S120:dc:lastName]]",
+    email: "[[S120:dc:email]]",
+    street1: "[[S120:dc:street1]]",
+    street2: "[[S120:dc:street2]]",
+    city: "[[S120:dc:city]]",
+    state: "[[S120:dc:stateProvince]]",
+    zip: "[[S120:dc:postalCode]]",
+    country: "[[S120:dc:country]]",
+    optIn: "[[S120:dc:optIn]]",
+  }
+
+  var dataLayer = window.dataLayer = window.dataLayer || [];
+  dataLayer.push(window.DonaConversionValues);
+
+  // Function that formats gift amount according to FB guidelines.
+  function formatGiftAmountForFacebook(giftAmount) {
+    if (typeof giftAmount === "undefined") {
+      giftAmount = "";
+    }
+
+    var formattedGiftAmount = giftAmount;
+
+    // Make sure amount is not blank.
+    if (formattedGiftAmount.trim() === "") {
+      formattedGiftAmount = "0.00";
+    }
+
+    // Strip commas from amount
+    // Strip dollar sign from amount
+    formattedGiftAmount = formattedGiftAmount.replace(/\$|,/g, "");
+
+    // After we strip dollar sign and comma, if we don't have a number, set to 0.00.
+    if (isNaN(formattedGiftAmount)) {
+      formattedGiftAmount = "0.00";
+    }
+
+    // If the number has no decimal, add ".00"
+    if (formattedGiftAmount.indexOf(".") === -1) {
+      formattedGiftAmount += ".00";
+    } else if (formattedGiftAmount.charAt(formattedGiftAmount.length - 1) === ".") {
+      // If the string ends in a decimal, add two zeros.
+      formattedGiftAmount += "00";
+    }
+
+    return formattedGiftAmount;
+
+  }
+</script>

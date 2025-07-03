@@ -1,0 +1,103 @@
+.en__component--column.en__component--advcolumn.form {
+  background-color: $form-bg-color;
+  border: 1px solid $form-border-color;
+  margin-left: calc(#{$gutter-x} / 2);
+  margin-right: calc(#{$gutter-x} / 2);
+  padding-bottom: 2.5rem;
+  padding-left: 0;
+  padding-right: 0;
+  width: calc(100% - #{$gutter-x});
+
+  @include mq($lg) {
+    flex: none;
+    width: calc(47% - #{$gutter-x});
+  }
+}
+
+.form {
+  .en__component--copyblock {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .en__component--formblock {
+    padding-left: calc(2rem - #{$field-spacing});
+    padding-right: calc(2rem - #{$field-spacing});
+  }
+
+  .en__component--copyblock {
+    h2 {
+      color: $text-color;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.75px;
+      line-height: 1.125;
+      margin: 1.5rem 0 0;
+      text-transform: uppercase;
+    }
+
+    + .en__component--formblock {
+      padding-top: 0.6667rem;
+    }
+  }
+
+  .en__component--formblock {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .en__field,
+  .en__submit {
+    flex: none;
+    padding-left: $field-spacing;
+    padding-right: $field-spacing;
+    width: 100%;
+  }
+
+  // Select with Other fields have different HTML structure
+  .en__field--select.en__field--withOther {
+    .en__field__element--select .en__field__item {
+      width: 100%;
+    }
+  }
+
+  .en__field--region,
+  .en__field--NOT_TAGGED_37,
+  .en__field--NOT_TAGGED_38 {
+    width: 100%;
+
+    @include mq1($ph) {
+      flex: auto;
+    }
+
+    @include mq(500) {
+      width: 65%;
+      padding-right: 0;
+    }
+  }
+
+  .en__field--postcode,
+  .region-postcode-wrapper {
+    width: 100%;
+  }
+
+  .region-postcode-wrapper {
+    .en__field--postcode {
+      width: 100%;
+
+      @include mq1($ph) {
+        flex: auto;
+      }
+    }
+  }
+
+  .page-error-container {
+    padding: rem(30) rem(30) 0;
+    margin-bottom: 0;
+  }
+
+  .page-error-container h2 {
+    color: $bright-red;
+  }
+}

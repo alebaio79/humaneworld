@@ -1,0 +1,54 @@
+Luminate Splash
+https://secure.humanesociety.org/site/SPageServer?pagename=splash
+https://secure.humanesociety.org/site/SPageServer?pagename=splash&c=ari
+https://secure.humanesociety.org/site/SPageServer?pagename=splash&c=fap
+https://secure.humanesociety.org/site/SPageServer?pagename=splash&c=puppymills
+https://secure.humanesociety.org/site/SPageServer?pagename=splash&c=wildlife
+https://secure.humanesociety.org/site/SPageServer?pagename=iheart_splash&s_src=helpprotectanimals
+https://secure.humanesociety.org/site/SPageServer?pagename=iheart_splash&s_src=joinhumanesociety
+https://secure.humanesociety.org/site/SPageServer?pagename=iheart_splash&s_src=preventcruelty
+https://secure.humanesociety.org/site/SPageServer?pagename=iheart_splash&s_src=rescueanimalsnow
+https://secure.humanesociety.org/site/SPageServer?pagename=f2f_splash
+
+Luminate Splash with Test Param for Redirect
+https://secure.humanesociety.org/site/SPageServer?pagename=splash&test=1
+https://secure.humanesociety.org/site/SPageServer?pagename=splash&c=ari&test=1
+https://secure.humanesociety.org/site/SPageServer?pagename=splash&c=fap&test=1
+https://secure.humanesociety.org/site/SPageServer?pagename=splash&c=puppymills&test=1
+https://secure.humanesociety.org/site/SPageServer?pagename=splash&c=wildlife&test=1
+https://secure.humanesociety.org/site/SPageServer?pagename=iheart_splash&s_src=helpprotectanimals&test=1
+https://secure.humanesociety.org/site/SPageServer?pagename=iheart_splash&s_src=joinhumanesociety&test=1
+https://secure.humanesociety.org/site/SPageServer?pagename=iheart_splash&s_src=preventcruelty&test=1
+https://secure.humanesociety.org/site/SPageServer?pagename=iheart_splash&s_src=rescueanimalsnow&test=1
+https://secure.humanesociety.org/site/SPageServer?pagename=f2f_splash&test=1
+
+Luminate Donation
+https://secure.humanesociety.org/site/Donation2?24655.donation=form1&df_id=24655&s_src=helpprotectanimals
+https://secure.humanesociety.org/site/Donation2?24653.donation=form1&df_id=24653&s_src=joinhumanesociety
+https://secure.humanesociety.org/site/Donation2?24652.donation=form1&df_id=24652&s_src=preventcruelty
+https://secure.humanesociety.org/site/Donation2?24654.donation=form1&df_id=24654&s_src=rescueanimalsnow
+
+EN Splash Direct Response
+https://secured.humanesociety.org/page/84815/action/1?ea.tracking.id=helpprotectanimals
+https://secured.humanesociety.org/page/84815/action/1?ea.tracking.id=joinhumanesociety
+https://secured.humanesociety.org/page/84815/action/1?ea.tracking.id=preventcruelty
+https://secured.humanesociety.org/page/84815/action/1?ea.tracking.id=rescueanimalsnow
+
+EN Donation Sample URLs
+https://secured.humanesociety.org/page/82421/donate/1?ea.tracking.id=helpprotectanimals_ad_splash&transaction.recurrpay=N&transaction.donationAmt=25&ea.profile.id=33348&mode=DEMO
+https://secured.humanesociety.org/page/82421/donate/1?ea.tracking.id=joinhumanesociety_ad_splash&transaction.recurrpay=N&transaction.donationAmt=25&ea.profile.id=33347&mode=DEMO
+https://secured.humanesociety.org/page/82421/donate/1?ea.tracking.id=preventcruelty_ad_splash&transaction.recurrpay=N&transaction.donationAmt=25&ea.profile.id=33350&mode=DEMO
+https://secured.humanesociety.org/page/82421/donate/1?ea.tracking.id=rescueanimalsnow_ad_splash&transaction.recurrpay=N&transaction.donationAmt=25&ea.profile.id=33346&mode=DEMO
+
+EN Donation Bare URLs
+https://secured.humanesociety.org/page/82421/donate/1?ea.profile.id=33348&mode=DEMO
+https://secured.humanesociety.org/page/82421/donate/1?ea.profile.id=33347&mode=DEMO
+https://secured.humanesociety.org/page/82421/donate/1?ea.profile.id=33350&mode=DEMO
+https://secured.humanesociety.org/page/82421/donate/1?ea.profile.id=33346&mode=DEMO
+
+EN Main Splash with UTM
+https://secured.humanesociety.org/page/84818/action/1?mode=DEMO&ea.tracking.id=test-tracking-id&utm_source=test_utm_source&utm_medium=test_utm_medium&utm_campaign=test_utm_campaign&utm_content=test_utm_content&utm_term=test_utm_term
+
+results in donation form URL:
+
+https://secured.humanesociety.org/page/81880/donate/1?ea.tracking.id=test-tracking-id_ad_splash_top-button-o&transaction.recurrpay=N&transaction.donationAmt=60&utm_source=test_utm_source&utm_medium=test_utm_medium&utm_campaign=test_utm_campaign&utm_content=test_utm_content&utm_term=test_utm_term&mode=DEMO

@@ -1,0 +1,14 @@
+
+
+.topBanner {
+    background-image: linear-gradient(to bottom, rgba(0,0, 0, 0) 40%, rgba(0, 0, 0, 0.2) 100%), url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/testata_web.jpg?v=1669374912000) !important;
+    background-position: 100% 50%;
+    box-shadow: none;
+    position: relative;
+    height: 87vh !important;
+}
+
+.topBannerThankyou {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI_lp-natale2021-engaging_testata-TP.jpg?v=1637167732000) no-repeat center center;
+    background-size: cover;
+}  

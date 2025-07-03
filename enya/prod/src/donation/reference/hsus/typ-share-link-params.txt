@@ -1,0 +1,8 @@
+Facebook:
+ea.tracking.id=sh_fbty_donate_[formID]&utm_source=fb&utm_medium=share
+
+Twitter:
+ea.tracking.id=sh_twty_donate_[formID]&utm_source=tw&utm_medium=share
+
+Email:
+ea.tracking.id=sh_emty_donate_[formID]&utm_source=email&utm_medium=share

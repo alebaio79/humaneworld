@@ -1,0 +1,56 @@
+@charset 'UTF-8';
+// -----------------------------------------------------------------------------
+// main.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Fall 2021
+// Purpose: Main entry point for Sass styles.
+// -----------------------------------------------------------------------------
+
+
+// 1. Configuration and helpers, from common
+@import 'commonStyles/abstracts/variables',
+'commonStyles/abstracts/functions',
+'commonStyles/abstracts/mixins',
+'commonStyles/abstracts/extends',
+'abstracts/variables',
+'commonStyles/base/en-overrides',
+'commonStyles/components/tooltips';
+
+
+// 2. Sanitize (includes normalize.css)
+@import '~sanitize.css';
+
+// 3. Base stuff
+@import 'commonStyles/base/base',
+'commonStyles/base/fonts',
+'commonStyles/base/typography',
+'commonStyles/base/helpers',
+'commonStyles/base/print';
+
+// 4. Components
+@import 'commonStyles/components/buttons',
+'commonStyles/components/fields',
+'commonStyles/components/validation',
+'commonStyles/components/opt-ins',
+'commonStyles/components/misc',
+'commonStyles/components/character-count',
+'components/buttons',
+'components/hero',
+'components/preview';
+
+
+// 5. Layout-related sections
+@import 'commonStyles/layout/header',
+'commonStyles/layout/simple-footer',
+'commonStyles/layout/simple-page';
+
+// 6. Helper classes
+@import 'helpers/helpers';
+
+// 7. Page specific
+@import 'extend',
+'layout/header',
+'layout/page',
+'layout/intro',
+'pages/thanks',
+'pages/confirm-delivery';

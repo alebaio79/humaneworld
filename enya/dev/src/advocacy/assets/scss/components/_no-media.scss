@@ -1,0 +1,14 @@
+.no-media {
+  .en__component--column.en__component--advcolumn.copy {
+    margin-top: 1.25rem;
+  }
+
+  @include mq($lg) {
+    .en__component--column.en__component--advcolumn {
+      &.copy,
+      &.form {
+        margin-top: 2.5rem;
+      }
+    }
+  }
+}

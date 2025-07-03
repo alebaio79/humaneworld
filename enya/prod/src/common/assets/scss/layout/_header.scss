@@ -1,0 +1,173 @@
+// -----------------------------------------------------------------------------
+// _header.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: This file contains all styles related to the page header.
+// -----------------------------------------------------------------------------
+
+#page-header {
+  background-color: $header-bg-color;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.09);
+}
+
+.logo-header {
+  margin: auto;
+  height: rem(49);
+  position: relative;
+  text-align: center;
+
+  span {
+    text-indent: -9999px;
+    float: left;
+    display: inline;
+  }
+
+  @include mq($md) {
+    height: rem(64);
+  }
+
+  @include mq($lg) {
+    height: rem(81);
+  } 
+  
+}
+
+.logo-header a.hsus-logo {
+  display: inline-block;
+  margin-top: rem(10);
+  width: rem(200);
+  height: 54.5%;
+  background-image: url("#{$hsus-base-files}/hsus-logo-blue.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  box-shadow: none;
+
+  @include mq($md) {
+    margin-top: rem(15);
+    height: 60%;
+  }
+
+  &.hsi-logo-on-hsus {
+    display: none;
+    visibility: hidden;
+
+    .enya.is-cobranded-hsus-hsi & {
+      display: inline-block;
+      visibility: visible;
+    }
+  }
+}
+
+// The WLT logo is a different aspect ratio from HSUS logo.
+// Logo image is 656x149. Aspect ratio is 4.40268.
+.enya-wlt .logo-header a.hsus-logo {
+  width: rem(140);
+  height: 65%;
+  background-image: url("#{$wlt-base-files}/Wildlife-Land-Trust-logo.svg");
+  box-shadow: none;
+
+  @include mq($md) {
+    width: rem(167);
+    height: 60%;
+  }
+
+  @include mq($lg) {
+    width: rem(213);
+  }
+}
+
+.enya-hsi .logo-header a.hsi-logo {
+  display: inline-block;
+  margin-top: rem(9);
+  width: rem(140);
+  height: 65%;
+  background-image: url("#{$hsi-base-files}/hsi-logo-green.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  box-shadow: none;
+
+  @include mq($md) {
+    margin-top: rem(10);
+    width: rem(200);
+    height: 70%;
+  }
+
+  @include mq($lg) {
+    margin-top: rem(13);
+  }
+}
+
+.enya-hsi.enya-advocacy.is-uk-form .logo-header a.hsi-logo,
+.enya-hsi.enya-advocacy.use-logo-uk .logo-header a.hsi-logo,
+.enya-hsi.enya-surveys.use-logo-uk .logo-header a.hsi-logo,
+.enya-hsi.enya-donation.use-logo-uk .logo-header a.hsi-logo {
+  background-image: url("#{$hsi-base-files}/hsi-uk-logo-h-green.svg");
+}
+
+.enya-hsi.enya-advocacy.is-ca-form .logo-header a.hsi-logo,
+.enya-hsi.enya-surveys.is-ca-form .logo-header a.hsi-logo {
+  background-image: url("#{$hsi-base-files}/hsi-canada-logo-h-green.svg");
+}
+
+.enya-hsi.enya-donation.is-friends-hsi-form .logo-header a.hsi-logo {
+  background-image: url("#{$hsi-base-files}/friends-of-hsi-logo.svg");
+}
+
+.enya-hsi.enya-advocacy.use-logo-india .logo-header a.hsi-logo,
+.enya-hsi.enya-surveys.use-logo-india .logo-header a.hsi-logo {
+  background-image: url("#{$hsi-base-files}/hsi-india-logo-h-green.svg");
+}
+
+// This element is added via a text block, in HSI advos only, and then Enya
+// moves it into place. To the user, it looks like it's in the header.
+#page-content .language-link {
+  position: fixed;
+  right: 1rem;
+  top: rem(11);
+  z-index: 10000;
+  pointer-events: none;
+
+  @include mq($md) {
+    position: relative;
+    grid-column: 2/3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    right: initial;
+    top: initial;
+    margin-top: rem(-65);
+  }
+
+  @include mq($lg) {
+    margin-top: rem(-82);
+    margin-right: auto;
+    margin-left: auto;
+    width: 58rem;
+  }
+
+  a {
+    font-size: rem(14);
+    pointer-events: auto;
+
+    @include mq($md) {
+      position: fixed;
+    }
+  }
+}
+
+body#en__pagebuilder .language-link {
+  position: relative;
+  margin-top: 0;
+  z-index: auto;
+
+  & a {
+    position: relative;
+  }
+}

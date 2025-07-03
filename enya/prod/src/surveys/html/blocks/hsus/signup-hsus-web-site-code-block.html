@@ -1,0 +1,43 @@
+<style>
+  .hsusfooter {
+    background: none;
+  }
+</style>
+<script>
+  var ele = document.getElementsByClassName('enya');
+  for (var a = 0; a < ele.length; a++) {
+    ele[a].classList.add('hsusfooter');
+  }
+
+  window.iFrameResizer = {
+    heightCalculationMethod: function () {
+      var challengeh = document.querySelector('[title^="recaptcha challenge"]')
+      if (challengeh) {
+        var grandparent = document.querySelector('[title^="recaptcha challenge"]').parentElement.parentElement;
+        var height = parseInt(document.querySelector('[title^="recaptcha challenge"]').style.height);
+        if (height <= 250 || grandparent.style.visibility == 'hidden') {
+          return 250;
+        }
+        else {
+          return 500;
+        }
+      }
+    },
+    widthCalculationMethod: function () {
+      var challengew = document.querySelector('[title^="recaptcha challenge"]')
+      if (challengew) {
+        var grandparent = document.querySelector('[title^="recaptcha challenge"]').parentElement.parentElement;
+        var width = parseInt(document.querySelector('[title^="recaptcha challenge"]').style.width);
+
+        if (width <= 250 || grandparent.style.visibility == 'hidden') {
+          parentIFrame.sendMessage('no-captcha');
+          return 250;
+        }
+        else {
+          parentIFrame.sendMessage('has-captcha');
+          return width;
+        }
+      }
+    }
+  }
+</script>

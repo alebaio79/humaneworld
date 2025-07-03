@@ -1,0 +1,68 @@
+@charset 'UTF-8';
+// -----------------------------------------------------------------------------
+// main.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Splash Pages
+// Created: Summer 2021
+// Purpose: Main entry point for Sass styles for splash pages.
+// -----------------------------------------------------------------------------
+
+// Bootstrap
+// If we need to override any Bootstrap Sass variable, place variable overrides 
+// first, then import just the Bootstrap styles we need. Some Bootstrap 
+// stylesheets are required no matter what.
+
+// One example of how to override Bootstrap default
+// $body-color: #333;
+
+@import "bootstrap/scss/bootstrap-grid"; 
+@import "bootstrap/scss/bootstrap-reboot"; 
+@import "bootstrap/scss/forms/form-control"; 
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/accordion";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/popover";
+
+
+// Configuration and helpers, from common
+@import
+  'commonStyles/abstracts/variables',
+  './abstracts/variables',
+  'commonStyles/abstracts/functions',
+  'commonStyles/abstracts/mixins',
+  'commonStyles/abstracts/extends',
+  'commonStyles/base/en-overrides',
+  'commonStyles/components/tooltips',
+  'commonStyles/components/misc';
+
+// Sanitize (includes normalize.css)
+@import '~sanitize.css';
+
+// Base stuff
+@import
+  'commonStyles/base/base',
+  './components/base',
+  'commonStyles/base/fonts',
+  'commonStyles/base/typography',
+  'commonStyles/base/helpers',
+  'commonStyles/base/print';
+
+// Components
+@import
+  'commonStyles/components/buttons',
+  'commonStyles/components/fields',
+  'commonStyles/components/validation',
+  './components/buttons',
+  './components/top-section',
+  './components/intro',
+  './components/popovers',
+  './components/campaign',
+  './components/questions',
+  './components/bottom-donate';
+
+// Layout-related sections
+@import
+'commonStyles/layout/header',
+'commonStyles/layout/simple-footer',
+'commonStyles/layout/simple-page',
+'./layout/page';

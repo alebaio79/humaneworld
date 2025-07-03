@@ -1,0 +1,39 @@
+<script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+
+        var msg = sessionStorage.getItem('rtscore')
+
+        dis = dogresult(msg);
+        document.getElementById('resultdisplay').innerHTML = dis;
+        function dogresult(msg) {
+            if (msg == 0) {
+                a =
+                    '<h3 class="signup-h3">You got B.B. the miniature poodle!</h3><img class="signup-img" src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2253/quiz-results-bb-375613.jpg"><p class="image-credit">Jamie Linder/ The HSUS</p><p class="signup-para">Just like B.B., you are dignified and carry yourself! You thrive on being the center of attention, but you are also extremely loving. You might be a little stubborn sometimes, but you are incredibly loyal to those you care about. You are also spunky, intelligent and playful, like B.B.! B.B. was rescued from a puppy mill in North Carolina where she spent her whole life in a tiny cage, forced to have litter after litter. Now B.B. lives in her forever home where she is surrounded toys (which she treats like the puppies that were repeatedly taken from her) and lots of love.</p>';
+                return a;
+
+            } else if (msg == 1) {
+                a =
+                    '<h3 class="signup-h3">You got Teddy the beagle!</h3><img class="signup-img" src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2253/quiz-results-teddy-482120.jpg"><p class="image-credit">Bryan Mitchell/AP Images for The HSUS</p><p class="signup-para">Just like Teddy, you are kind and gentle! You can be extremely determined when you have a goal, but you are also even-tempered and never lose your cool. You maintain a &#8220;happy-go-lucky&#8221; attitude and are very loyal to those you care about. You thrive when you&#8217;re surrounded by energy, love and attention. You are also loving and curious, like Teddy! Teddy was rescued from a lab in Michigan where he was held in a barren cage, scared and alone, and force-fed pesticides every day. Now he lives with a loving family and loves running around outside and chasing tennis balls.</p>';
+                return a;
+
+            } else if (msg == 2) {
+                a =
+                    '<h3 class="signup-h3">You got Cassie the Australian shepherd mix!</h3><img class="signup-img" src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2253/quiz-results-cassie-500600.jpg"><<p class="image-credit">Brandi Simons/AP Images for The HSUS</p><p class="signup-para">Just like Cassie, you are extremely intelligent and thrive on companionship! You are at your happiest when you&#8217;re interacting with people, especially those closest to you. You love to be active and can&#8217;t get enough of the outdoors. You are also outgoing and friendly, like Cassie! Cassie was rescued from an alleged cruelty situation in Kansas. When she was found by our Animal Rescue Team, she was suffering from a severe skin condition and had barely any fur. Now Cassie enjoys a life of love and affection, playing in the yard, taking long walks and getting lots of belly rubs.</p>';
+                return a;
+            } else if (msg == 3) {
+                a =
+                    '<h3 class="signup-h3">You got Winnie the corgi mix!</h3><img class="signup-img" src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2253/quiz-results-winnie-489159.jpg"><p class="image-credit">Nicole Jaworski/HSIdit</p><p class="signup-para">Just like Winnie, you have a larger-than-life personality and a lot of energy! You are extremely cheerful and love to have fun. You tend to be very trusting and are quick to offer affection to others. You thrive on being the center of attention and want to be a part of everything. While you can seem bossy at times, it&#8217;s just because you are incredibly strong-willed. You are also very intuitive and independent, like Winnie! Winnie was rescued from a South Korean dog meat farm where she was confined to a small, dirty cage. Today, she has been adopted into a loving home with five dog siblings. She enjoys walks, belly rubs and playing in the backyard.</p>';
+                return a;
+            } else if (msg == 4) {
+                a =
+                    '<h3 class="signup-h3">You got Cinder the German shepherd!</h3><img class="signup-img" src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2253/quiz-results-cinder-467939.jpg"> <p class="image-credit">Meredith Lee/The HSUS</p><p class="signup-para">Just like Cinder, you are incredibly intelligent and assured! You come across as powerful and confident but are also very loving. You tend to be a little aloof and reserved, but you are extremely loyal to those you care about. You are also quiet and calm, like Cinder! Cinder was rescued from a large-scale breeding operation in Maryland where she had been living without access to food, clean water or adequate veterinary care. Today, Cinder is learning how to play with toys and getting lots of love in her forever home. She loves the outdoors, the sun and her warm, fluffy bed.</p>';
+                return a;
+            } else if (msg == 5) {
+                a =
+                    '<h3 class="signup-h3">You got Sandie the Labrador retriever mix!</h3><img class="signup-img" src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2253/quiz-results-sandie-494406.jpg"><p class="image-credit">Sandie (right) by Richard Jennings/For HSI</p><p class="signup-para"> Just like Sandie, you exude enthusiasm and happiness! You&#8217;re very trusting and love being around others. You especially thrive when spending time with family and friends. You are very even-tempered and don&#8217;t get angry or frustrated easily. You are also sociable and gentle, like Sandie! Sandie was rescued along with 200 other dogs from a dog meat farm in South Korea where she spent her time in a small, metal cage. Now, Sandie lives with a loving family in the United Kingdom and enjoys spending time outdoors, running along the beach and lots of cuddles.</p>';
+                return a;
+            }
+        }
+    });
+</script>
+<div id="resultdisplay">&nbsp;</div>

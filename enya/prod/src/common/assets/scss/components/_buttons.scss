@@ -1,0 +1,51 @@
+// -----------------------------------------------------------------------------
+// _buttons.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: This file contains all styles related to buttons component.
+// But look for other button styles inside particular section files.
+// And see the common directory for more.
+// h/t: ThinkShout
+// -----------------------------------------------------------------------------
+
+// Buttons that look like links.
+// Used for tooltip triggers, for one.
+.button-link {
+  @extend %enya-button-link;
+
+  &:hover {
+    @extend %enya-button-link-hover;
+  }
+
+  &:focus {
+    @extend %enya-button-link-focus;
+  }
+}
+
+.enya-hsi .button-link {
+  box-shadow: none;
+  font-weight: 600;
+  color: $hsi-green;
+
+  &:hover {
+    box-shadow: inset 0 -0.125em $hsi-green;
+  }
+}
+
+// Used for modals.
+$button-close-color: encodecolor($black1);
+$button-close-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$button-close-color}'><path d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/></svg>");
+$button-close-width: rem(15);
+$button-close-height: $button-close-width;
+
+.button-close {
+  background: transparent $button-close-bg center/rem(15) auto no-repeat;
+  border: 0;
+  color: $black1;
+  cursor: pointer;
+  box-sizing: content-box;
+  height: $button-close-width;
+  margin: -0.5rem -0.5rem -0.5rem auto;
+  padding: 0.5rem 0.5rem;
+  width: $button-close-width;
+}

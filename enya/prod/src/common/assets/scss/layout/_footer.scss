@@ -1,0 +1,63 @@
+// -----------------------------------------------------------------------------
+// _footer.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: This file contains all styles related to the page footer.
+// -----------------------------------------------------------------------------
+
+#page-footer {
+  @include mq($md) {
+    margin-top: rem(18);
+    border-top: 1px solid $gray3;
+  }
+
+  @include mq($lg) {
+    margin-top: rem(40);
+  }
+}
+
+#page-footer footer {
+  display: flex;
+  flex-direction: column;
+  margin: rem(34) 0 rem(30) 0;
+  padding: 0 rem(20) 0 rem(22);
+  color: $footer-text-color;
+  font-size: rem(13);
+  line-height: 1.230769230769231; // 16px/13px
+  
+  @include mq($md) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: rem(40);
+    max-width: rem(768);
+    margin: 0 auto rem(20);
+    padding: rem(58) rem(15) 0 rem(30);
+  }
+
+  @include mq($lg) {
+    width: 95%;
+    max-width: none;
+    grid-template-columns: 52% 1fr rem(455);
+    grid-column-gap: 0;
+    margin: 0 auto rem(45);
+    padding: rem(64) rem(15) 0 rem(25);
+  }
+
+  @include mq($xl) {
+    grid-template-columns: rem(650) rem(400);
+    grid-column-gap: rem(130);
+    width: rem(1180);
+    padding: rem(64) rem(15) 0 0;
+  }
+  
+  p {
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    margin-bottom: rem(20);
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}

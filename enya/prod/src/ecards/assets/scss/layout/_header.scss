@@ -1,0 +1,39 @@
+// -----------------------------------------------------------------------------
+// _header.scss
+// HSUS Engaging Networks Forms - Enya 2022
+// Created: Spring 2022
+// Purpose: Extra styles for ecard page header
+// -----------------------------------------------------------------------------
+
+.enya {
+  .logo-header {
+    height: 5.0625rem;
+
+    @include mq1($md) {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    a.hsus-logo {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      max-width: calc(50% - 2rem);
+      
+      &.hsi-logo-on-hsus {
+        background-image: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2253/HSI-green-H-logo.svg);
+        height: 56%;
+        width: rem(156);
+      }
+
+      @include mq1($md) {
+        margin-top: 0;
+      }
+
+      @include mq($md) {
+        margin-left: 2rem;
+        margin-right: 2rem;
+      }
+    }
+  }
+}

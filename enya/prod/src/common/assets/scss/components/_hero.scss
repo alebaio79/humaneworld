@@ -1,0 +1,106 @@
+// -----------------------------------------------------------------------------
+// _hero.scss
+// HSUS Common - Enya 2021
+// Author: Jeremy Hatter
+// Created: Winter 2021
+// Purpose: This file contains styles related to the full-bleed Hero image.
+// Notes
+// - Some page types use their own _hero.scss partial.
+// -----------------------------------------------------------------------------
+
+.has-hero--full-bleed {
+
+  .en__component--row.en__component--advrow:first-of-type,
+  .en__errorHeader~.en__component--row.en__component--advrow:nth-last-child(2) {
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.en__component--column.en__component--advcolumn.hero--full-bleed {
+  flex: none;
+  margin-left: 50%;
+  margin-top: 0;
+  margin-bottom: rem(10);
+  max-width: rem(2000);
+  padding: 0;
+  position: relative;
+  transform: translateX(-50%);
+  width: 100vw;
+  overflow-x: hidden;
+
+  @include mq($md) {
+    margin-bottom: 2.5rem;
+  }
+
+  @include mq($lg) {
+    margin-left: 0;
+    transform: none;
+  }
+
+  @include mq($xl) {
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @include mq($md) {
+    display: block;
+
+    .hero--full-bleed__img1 {
+      display: block;
+    }
+
+    .en__component--copyblock {
+      & > div {
+        overflow: hidden;
+        max-height: rem(500);
+      }
+
+      &>p {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include mq($xxl) {
+    .en__component--copyblock {
+      & > div {
+        max-height: rem(600);
+      }
+    }
+  }
+
+  .en__component--imageblock {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 0;
+  }
+
+  p.hero-credit {
+    @include font-family("freight-regular-italic");
+    color: $photo-credit-color;
+    font-size: rem(11);
+    font-weight: 400;
+    line-height: 1.363636;
+    margin-top: rem(10);
+    display: block;
+    text-align: left;
+    padding-left: rem(26);
+    padding-right: rem(26);
+
+    @include mq($md) {
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 0;
+      padding-right: 0;
+      max-width: 35rem;
+    }
+
+    @include mq($lg) {
+      max-width: 58rem;
+    }
+  }
+}

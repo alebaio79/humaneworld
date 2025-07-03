@@ -1,0 +1,20 @@
+.enya-hub.last-page {
+  .en__component--copyblock {
+    background-color: $white;
+    margin: auto;
+    max-width: 420px;
+    padding: 5.25rem 2.8125rem 5.25rem;
+    width: 100%;
+    p {
+      color: $humane-blue;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: auto;
+      max-width: 11.4em;
+    }
+    a.button {
+      padding-left: 1.2rem;
+      padding-right: 1.2rem;
+    }
+  }
+}

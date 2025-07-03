@@ -1,0 +1,87 @@
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            var ele = document.getElementsByTagName('button');
+                
+                  for (var a = 0; a < ele.length; a++) {
+                    ele[a].setAttribute('id','btn');
+                  }
+            const btn = document.getElementById('btn');
+          
+            btn.onclick = function () { 
+                const qtn = document.querySelectorAll('.en__field__label--positionabove');
+               
+                Array.from(qtn).forEach((item, index) => {
+                    str = item.htmlFor;
+                    mstr = str.split('_')
+                    
+                    const rbs = document.querySelectorAll('input[name="transaction.svblock.' + mstr[5] + '.svquestion.' + mstr[7] + '"]');
+                    var i = 0;
+                    //let selectedValue;
+                    for (const rb of rbs) {
+                        i++;
+                        if (rb.checked) {
+                          
+                            rtscore = Clanscount.staticMethod(i)
+                            break;
+                        }
+                    }
+                    
+                }); 
+                idx = Clanscount.getIndex();
+                sessionStorage.setItem('rtscore', idx)
+                
+            };
+        });
+
+
+        class Clanscount {
+
+  static aaa = 0;
+  static bbb = 0;
+  static ccc = 0;
+  static ddd = 0;
+  static eee = 0;
+  static fff = 0;
+  
+  static staticMethod(k) {
+    
+    if (k == 1) {
+
+                this.aaa++;
+              } else if (k == 2) {
+
+                this.bbb++;
+              } else if (k == 3) {
+
+                this.ccc++;
+              } else if (k == 4) {
+
+                this.ddd++;
+              } else if (k == 5) {
+
+                this.eee++;
+              } else if (k == 6) {
+
+                this.fff++;
+              }
+              
+              return Math.max(this.aaa, this.bbb, this.ccc, this.ddd, this.eee, this.fff);
+  }
+  
+  static getIndex() {
+      var score = [this.aaa, this.bbb, this.ccc, this.ddd, this.eee, this.fff];
+              var maxIndex = 0;
+              var mxans = Math.max(this.aaa, this.bbb, this.ccc, this.ddd, this.eee, this.fff);
+
+              for (var i = 0; i < score.length; i++) {
+                if (mxans == score[i]) {
+                  maxIndex = i;
+                }
+              }
+              
+      return maxIndex + 1;
+  }
+  
+  
+  }
+  </script>

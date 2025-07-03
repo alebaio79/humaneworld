@@ -1,0 +1,34 @@
+// -----------------------------------------------------------------------------
+// _videos.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: This file contains styles related to videos.
+// See this supportal article for details:
+// https://engagingnetworks.support/knowledge-base/adding-videos-to-your-pages/
+// -----------------------------------------------------------------------------
+
+.video-container {
+  position: relative;
+  padding-top: 56.25%;
+  height: 0;
+  
+  iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+
+.video-block,
+.videoblock {
+  margin-bottom: 0;
+
+  @include mq($lg) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+

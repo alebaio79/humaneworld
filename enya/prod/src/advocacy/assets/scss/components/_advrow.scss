@@ -1,0 +1,25 @@
+.en__component--row.en__component--advrow {
+  align-items: flex-start;
+  margin-left: calc(#{$gutter-x} / -2);
+  margin-top: calc(#{$gutter-y} * -1);
+  margin-right: calc(#{$gutter-x} / -2);
+    
+  &:first-child {
+    margin-top: 5.75rem;
+  }
+  @include mq($lg) {
+    flex-direction: column;
+  }
+}
+
+.en__component--column.en__component--advcolumn {
+  flex-shrink: 0;
+  margin-top: $gutter-y;
+  max-width: 100%;
+  padding-left: calc(#{$gutter-x} / 2);
+  padding-right: calc(#{$gutter-x} / 2);
+
+  &:first-child:last-child {
+    width: 100%;
+  }
+}

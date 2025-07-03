@@ -1,0 +1,103 @@
+// -----------------------------------------------------------------------------
+// _general.scss
+// HSUS Event Forms - Enya 2021
+// Author: Jeremy Hatter
+// Created: Winter 2021
+// Purpose: This file contains general styles related to the Events.
+// -----------------------------------------------------------------------------
+
+@mixin mq2() {
+  @media (min-width: rem(602)) and (max-width: rem(1000)) {
+    @content;
+  }
+}
+
+html {
+  height: 100%;
+}
+body {
+  position: relative;
+  margin: 0;
+  min-height: calc(100% - 8.1rem);
+}
+
+h1 {
+  @include font-family("freight-regular");
+  color: $humane-blue;
+  margin-top: 0;
+  font-size: rem(40);
+  line-height: rem(42);
+  padding: 0;
+  margin-bottom: rem(10);
+}
+h2 {
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  font-feature-settings: "lnum" 1;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  @include font-family("freight-semibold");
+  font-size: 20px;
+
+  -webkit-text-size-adjust: none;
+  color: $humane-blue;
+  padding: 0px 35px 10px 35px;
+  background-color: $white;
+  @include mq2() {
+    width: 62%;
+    padding: 0px;
+  }
+  @include mq1(600) {
+    width: 88%;
+    padding: 0px;
+  }
+}
+h3 {
+  font-size: rem(30);
+  line-height: rem(36);
+  @include font-family("freight-regular");
+  color: $humane-blue;
+  margin-bottom: 0;
+}
+h4 {
+  @include font-family("freight-bold");
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: none;
+  font-size: rem(20);
+  &.payment-heading, &.your-info-heading {
+    text-transform: uppercase;
+    font-size: rem(16);
+    font-weight: 500;
+    line-height: 1.1;
+    text-align: left;
+    margin: 0;
+    margin-bottom: rem(10);
+    color: $black1;
+    letter-spacing: 0.75px;  
+  }
+}
+h5 {
+  @include font-family("freight-regular");
+  margin-top: 0;
+  font-size: rem(20);
+}
+a {
+  box-shadow: inset 0 -0.125em $bright-blue;
+  color: $black1;
+  text-decoration: none;
+  background-size: 1px 1em;
+}
+a:hover {
+  color: $bright-blue;
+}
+.hidden {
+  display:none !important;
+}
+p {
+  font-size: rem(19);
+  margin-top: 0
+}
+
+

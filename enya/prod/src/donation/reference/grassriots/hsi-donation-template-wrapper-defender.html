@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+  <title>${page~title}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@HSIGlobal" />
+  <meta name="twitter:creator" content="@HSIGlobal" />
+  <link rel="shortcut icon" href="https://i1.wp.com/www.hsi.org/wp-content/uploads/2018/11/cropped-favicon.png?fit=32%2C32&amp;ssl=1" type="image/x-icon" sizes="32x32">
+
+  <script>
+    var dataLayer = [];
+  </script>   
+  
+  <!-- Typekit -->
+  <script defer src="https://use.typekit.net/ndo1yxz.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  
+  <script class="360matchProScript"></script>
+
+  <!-- Google Tag Manager -->
+  <script defer>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-59PDSH');</script>
+  <!-- End Google Tag Manager -->
+
+
+</head>
+
+<style>
+
+.send_ecard{
+    max-width: 140px;
+    margin-top: 40px;
+    color: #FFFFFF;
+    background:transparent;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 2px;
+    position: relative;
+}
+
+.send_ecard_link{
+    color: #FFFFFF !important;
+    font-weight: bold !important; 
+    font-size: 16px !important;
+}
+
+.send_ecard:hover   {
+	color: #ffffff !important;
+    text-decoration: none !important;
+}
+.send_ecard:active  {
+	color: #ffffff !important;
+    text-decoration: none !important;
+ }
+
+.send_ecard_link:hover   {
+	color: #ffffff !important;
+    text-decoration: none !important;
+}
+.send_ecard_link:active  {
+	color: #ffffff !important;
+    text-decoration: none !important;
+ }
+ 
+ .ecard_btn{
+    padding: 15px 80px 15px 80px;
+    background: #164734;
+    font-family: "freight-sans-pro", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 4px; 
+ 	display: inline-block;
+    margin-bottom: 0;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    line-height: 1.42857;
+    user-select: none;
+    max-width: 295px;
+ }
+ 
+ 
+ .ecard_btn:hover, .ecard_btn:active, .ecard_btn:link:hover, .ecard_btn:link:active, .ecard_btn:visited:hover, .ecard_btn:visited:active {
+    background: #164734;
+    text-decoration: none !important;
+    }
+  
+ 
+@media screen and (min-width: 768px){
+.send_ecard{
+	float: right;
+    display: inline-block;
+    margin: 0;
+    margin-top: 0;
+}
+
+}
+</style>
+
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59PDSH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  
+    <!-- Error Modal -->
+  <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Error processing donation</h5>
+        </div>
+        <div class="modal-body">
+          The following error occurred while trying to process your gift:
+          <div class='modalErrorMessage'></div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" aria-label="Close">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Error Modal -->
+ 
+  <!-- Template Header Ends -->
+
+  
+  
+  <!-- Footer Template Starts -->
+
+  <div class="modal fade" id="validErrModal" tabindex='-1'>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!--button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button-->
+                <h4 class="modal-title">Please correct the errors indicated below.</h4>
+            </div>
+            <div class="modal-body error-list"><!-- dynamic content --></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" aria-label="Close">Close</button>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <script> 
+    var DDCONF = { API_KEY: "ZjUwNjAyOTEtOTM1"}
+  </script>
+  <script defer src="https://doublethedonation.com/api/js/ddplugin.js"></script>
+  <link href="https://doublethedonation.com/api/css/ddplugin.css" rel="stylesheet"/>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+.download-link {
+  @include font-family("freight-semibold");
+  box-shadow: none;
+  
+  padding-left: 2.2rem;
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: 1rem;
+  background-image: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2253/icon-arrow-bright-blue.png?v=1612891198000");
+  background-repeat: no-repeat;
+  content: "";
+  height: 2rem;
+  background-position: 8rem 34%;
+  
+ @include mq2() {
+   width: 74%;
+  }
+ @include mq1(600) {
+   padding-left: 1.2rem;
+   width:99%;
+   background-position: 7rem 34%;
+   
+  }
+
+  
+}
+.download-link a {
+  box-shadow: none;
+  color: #243e86;
+}
+.download-link a:hover {
+  color: #009ed0;
+}
+
+
+.thankyou-para {
+  font-size: 1.19em;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 1.4;
+  color: #293941;
+  @include font-family("freight-regular");
+  text-align: left;
+  width: 44.6%;
+  
+  @include mq2() {
+    width: 62%;
+  }
+  @include mq1(600) {
+    width: 88%;
+  }
+}

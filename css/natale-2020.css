@@ -1,0 +1,87 @@
+.topBanner {
+			background-image: linear-gradient(to bottom, rgba(0,0, 0, 0) 40%, rgba(0, 0, 0, 0.9) 100%), url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/IMG_TESTATA.jpg?v=1607110326000) !important;
+	    background-position: 100% 100%;
+
+}
+
+.cane {
+    background-image: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/Herd_Dinokeng_126_521197.jpg?v=1607707032000);
+	text-align: left;
+	position: relative;
+	padding: 0 0 4em 0 !important;
+}
+.cane {
+    background-position: 80% !important;
+}
+.cane p {
+	font-size: 22px !important;
+	line-height: 1.5em;
+	font-weight:600
+}
+.testo-citazione {
+padding-top: 35%;
+    padding-left: 4em;
+    padding-right: 4em;
+    color: #fff;
+}
+.topBannerThankyou {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/THANK_YOU_PAGE.jpg?v=1607110621000) no-repeat 35% -390px;
+}
+
+.decorazioni-uno {
+	position: relative !important;
+	padding-top: 8em !important
+} 
+.decorazioni-uno:before {
+	content: '';
+	background: url('https://www.hsi-europe.org/engaging-networks/img/fascia-verde.svg') no-repeat top center;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 25%;
+    background-size: cover;
+}
+.decorazioni-due {
+	background: url('https://www.hsi-europe.org/engaging-networks/img/fascia-footer.svg') no-repeat top center;
+	height: 125px;
+	width: 100%;
+  background-size: cover;
+}
+.h-50vh {
+	background: #024731 url('https://www.hsi-europe.org/engaging-networks/img/fascia-verde.svg') no-repeat top center;
+	padding-top: 100px !important
+}
+.banner-kit-mobile {
+	display: none
+}
+@media (max-width: 767px) {
+.topBanner {
+	    background-position: 25% 100%;
+
+}
+.cane p {
+    font-size: 18px !important;
+
+}
+.topBannerThankyou {
+    background-position:35% 80%
+}
+	.testo-citazione {
+    padding-top: 35%;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    color: #fff;
+}
+.banner-kit-mobile {
+	display: block
+}
+.banner-kit {
+	display: none
+}
+.decorazioni-uno:before {
+
+    height: 15%;
+
+}
+}

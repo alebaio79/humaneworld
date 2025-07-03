@@ -1,0 +1,12 @@
+.topBanner {
+    background-image: linear-gradient(to bottom,rgba(0,0, 0, 0) 40%, rgba(0, 0, 0, 0.2) 100%), url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/header-fur-free-philipp-plein.png?v=1714140140000) !important;
+}
+
+
+
+
+.testata-thank-you-petizione.de {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/thannkyou-page-philipp.png?v=1714140137000) top no-repeat !important;
+    background-size: cover !important;
+    height: 75vh;
+}

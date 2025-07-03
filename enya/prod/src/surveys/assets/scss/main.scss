@@ -1,0 +1,56 @@
+@charset 'UTF-8';
+// -----------------------------------------------------------------------------
+// main.scss
+// HSUS Signup and Survey forms- Enya 2021
+// Author: Vishnu Singamsetty
+// Created: Winter 2021
+// Purpose: Main entry point for Sass styles.
+// -----------------------------------------------------------------------------
+
+// 1. Configuration and helpers, from common
+@import 
+  "commonStyles/abstracts/variables", 
+  "commonStyles/abstracts/functions", 
+  "commonStyles/abstracts/mixins", 
+  "commonStyles/layout/page",
+  "commonStyles/layout/header", 
+  "commonStyles/abstracts/extends",
+  "commonStyles/components/tooltips",
+  "commonStyles/base/base",
+  "commonStyles/base/helpers",
+  "commonStyles/base/typography",
+  "commonStyles/base/en-overrides",
+  'commonStyles/components/fields',
+  'commonStyles/components/skip-to-main',
+  'commonStyles/components/modal-base',
+  'commonStyles/components/consent-modal';
+
+
+// 2. Sanitize (includes normalize.css)
+@import "~sanitize.css";
+
+//style
+@import
+  "components/general",
+  'commonStyles/components/fields',
+  "components/fields",
+  "components/opt-ins",
+  "components/template",
+  "components/textblock",
+  "components/page",
+  "components/thankyoupage",
+  'commonStyles/components/buttons',
+  "components/buttons",
+  "components/contesttextblock",
+  "components/generalthankyoupage",
+  "components/errors",
+  "components/hsus-web-site-signup",
+  "components/hsi-web-site-signup",
+  "components/humaneprointegration",
+  "components/pg-upsell-form",
+  "components/footer";
+
+
+//subscription management page styles
+@import "components/hero";
+@import "components/subscriptionmanagement";

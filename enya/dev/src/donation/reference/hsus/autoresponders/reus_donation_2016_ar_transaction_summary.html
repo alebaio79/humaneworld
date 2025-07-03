@@ -1,0 +1,109 @@
+[[?//::COMMENT::
+    Set some session variables that we'll need for this transaction summary.
+::]]
+[[?//::COMMENT:: Set one-time or monthly::]]
+[[U0:thanksGiftType=]]
+[[?xx::x[[S120:dc:recurringTotalPaymentAmount]]x::
+    [[U0:thanksGiftType=One-time]]
+    [[U0:thanksGiftTypeLowercase=one-time]]
+::
+    [[U0:thanksGiftType=Monthly]]
+    [[U0:thanksGiftTypeLowercase=monthly]]
+]]
+
+[[?//::COMMENT:: Set payment type::]]
+[[U0:thanksPaymentType=]]
+[[?xx::x[[S120:dc:creditCardNumber]]x::
+    [[?xx::x[[S120:dc:echeckAccountNumber]]x::
+        [[U0:thanksPaymentType=PayPal]]
+    ::
+        [[U0:thanksPaymentType=Bank]]
+    ]]
+::
+    [[U0:thanksPaymentType=Credit card]]
+]]
+    <div class="transaction-summary-entries">
+      <div class="transaction-summary-entry">
+          <span class="entry-value">[[S120:dc:name]]</span>
+      </div>
+      <div class="transaction-summary-entry">
+          <span class="entry-value">[[S120:dc:street1]]</span>
+      </div>
+[[?//::COMMENT:: Show this entry only when street2 is not blank.::]]
+[[?xx::x[[S120:dc:street2]]x::::
+      <div class="transaction-summary-entry">
+          <span class="entry-value">[[S120:dc:street2]]</span>
+      </div>
+]]
+      <div class="transaction-summary-entry">
+          <span class="entry-value">[[S120:dc:city]], [[S120:dc:stateProvince]] [[S120:dc:postalCode]]</span>
+      </div>
+[[?//::COMMENT:: Show this entry only if not blank.::]]
+[[?xx::x[[S120:dc:country]]x::::
+      <div class="transaction-summary-entry">
+          <span class="entry-value">[[S120:dc:country]]</span>
+      </div>
+]]
+
+        <div class="transaction-summary-entry top-10">
+            <span class="entry-label">Contribution date:</span>
+            <span class="entry-value">[[S120:dc:transactionDate]]</span>
+        </div>
+        <div class="transaction-summary-entry">
+            <span class="entry-label">Gift amount:</span>
+            <span class="entry-value">[[S120:dc:giftAmount]] [[S80:thanksGiftTypeLowercase]]</span>
+        </div>
+
+[[?//::COMMENT::
+    Show this entry only when payment is recurring.
+    Note that our t-shirt premium is a custom field in the Donations module.
+    See this KB article for how to find the custom string value:
+    https://kb.blackbaud.com/articles/Article/66760
+::]]
+[[?xMonthlyx::x[[S80:thanksGiftType]]x::
+        <div class="transaction-summary-entry top-10">
+            <span class="entry-label">Humane Hero shirt size:</span>
+            <span class="entry-value">[[S120:dc:custom:custom_string100]]</span>
+        </div>
+::]]
+        <div class="transaction-summary-entry top-10">
+            <span class="entry-label">Payment type:</span>
+            <span class="entry-value">[[S80:thanksPaymentType]]</span>
+        </div>
+
+[[?//::COMMENT:: Show these entries only when payment type is credit card.::]]
+[[?xCredit cardx::x[[S80:thanksPaymentType]]x::
+        <div class="transaction-summary-entry">
+            <span class="entry-label">Card type:</span>
+            <span class="entry-value">[[S120:dc:creditCardType]]</span>
+        </div>
+        <div class="transaction-summary-entry">
+            <span class="entry-label">Card number:</span>
+            <span class="entry-value">[[S120:dc:creditCardNumber]]</span>
+        </div>
+::]]
+
+[[?//::COMMENT:: Show this entry only when payment type is bank.::]]
+[[?xBankx::x[[S80:thanksPaymentType]]x::
+        <div class="transaction-summary-entry">
+            <span class="entry-label">Bank account number:</span>
+            <span class="entry-value">[[S120:dc:echeckAccountNumber]]</span>
+        </div>
+::]]
+        <div class="transaction-summary-entry top-10">
+            <span class="entry-label">The Humane Society of the United States Tax ID:</span>
+            <span class="entry-value">[[S0:SITE_TAX_ID]]</span>
+        </div>
+        <div class="transaction-summary-entry top-10">
+            <span class="entry-label">Tracking code:</span>
+            <span class="entry-value">[[S120:dc:trackingCode]]</span>
+        </div>
+    </div>
+
+[[?//::COMMENT:: Show the monthly cancellation policy only to monthly donors.::]]
+[[?xMonthlyx::x[[S80:thanksGiftType]]x::
+    <div class="transaction-cancellation">
+        <h5>Cancellation Policy</h5>
+        <p>Your monthly donation may be cancelled by contacting our Donor Care team at 1-866-720-2676 Monday through Friday 8 a.m. to 11 p.m. or Saturday and Sunday 9 a.m. to 6 p.m. If any of the details shown here are incorrect, please contact us immediately at 1-866-720-2676. If the details are correct, you do not need to do anything further and your monthly donation will start within 3 business days.</p>
+    </div>
+::]]

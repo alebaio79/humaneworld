@@ -1,0 +1,64 @@
+// -----------------------------------------------------------------------------
+// _read-more.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Fall 2021
+// Purpose: Style the collapsed read more text and its button.
+// -----------------------------------------------------------------------------
+
+.enable-read-more {
+  &.collapsed {
+    max-height: 22rem;
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+      background: linear-gradient(to top, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 0) 40%);
+      bottom: 0;
+      content: "";
+      height: 5rem;
+      pointer-events: none;
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  // Different specs for donation forms.
+  .enya-donation &.collapsed {
+    max-height: 18rem;
+  }
+
+  &.expanded {
+    max-height: none;
+    overflow: auto;
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.read-more-button {
+  cursor: pointer;
+  color: $humane-blue;
+  font-size: 1rem;
+
+  .enya-hsi & {
+    color: $hsi-green;
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: 600;
+
+    &:hover {
+      box-shadow: inset 0 -0.125em $hsi-green;
+    }
+  }
+
+  .enya-donation & {
+    margin-left: rem(25);
+
+    @include mq($md) {
+      margin-left: 0;
+    }
+  }
+}

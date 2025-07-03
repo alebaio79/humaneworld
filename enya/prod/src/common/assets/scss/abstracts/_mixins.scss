@@ -1,0 +1,131 @@
+// -----------------------------------------------------------------------------
+// _mixins.scss
+// HSUS EN Forms - Enya 2021
+
+// Created: Winter 2021
+// Purpose: This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+/// Media queries
+/// h/t: ThinkShout
+@mixin mq($query) {
+  @media (min-width: rem($query)) {
+    @content;
+  }
+}
+// TODO: Rename this mixin something more meaningful, like "mqmax".
+@mixin mq1($query) {
+  @media screen and (max-width: rem($query)) {
+    @content;
+  }
+}
+
+// TODO: Rename this mixin with a better name. "mq600-1025"? Ugh.
+@mixin mq2() {
+  @media (min-width: rem(600)) and (max-width: rem(1025)) {
+    @content;
+  }
+}
+
+// Used by surveys pages.
+@mixin formflex() {
+  display: flex;
+  flex-direction: column;
+}
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+/// Helper to generate font styles.
+/// Usage: @include font-family('os-regular');
+/// h/t: ThinkShout
+@mixin font-family($font-style) {
+  @if ($font-style == "freight-regular") {
+    font-family: "freight-sans-pro", Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+  } @else if ($font-style == "freight-regular-italic") {
+    font-family: "freight-sans-pro", Verdana, sans-serif;
+    font-style: italic;
+    font-weight: 500;
+  } @else if ($font-style == "freight-semibold") {
+    font-family: "freight-sans-pro", Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+  } @else if ($font-style == "freight-semibold-italic") {
+    font-family: "freight-sans-pro", Verdana, sans-serif;
+    font-style: italic;
+    font-weight: 600;
+  } @else if ($font-style == "freight-bold") {
+    font-family: "freight-sans-pro", Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+  } @else if ($font-style == "freight-bold-italic") {
+    font-family: "freight-sans-pro", Verdana, sans-serif;
+    font-style: italic;
+    font-weight: 700;
+  } @else if ($font-style == "humane-script") {
+    font-family: "humane-script", "freight-sans-pro", Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+  }
+}
+
+// Display a close button that looks like an X
+//
+// $size  : px or em
+// $color : color
+// $thickness : px
+@mixin close-button($size: 1rem, $color: currentColor, $thickness: 1px, $cursor: pointer, $position: absolute) {
+  cursor: $cursor;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  position: $position;
+  width: $size;
+  height: $size;
+  overflow: hidden;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: calc(($size - $thickness) / 2);
+    left: 0;
+    right: 0;
+    height: $thickness;
+    background: $color;
+    border-radius: $thickness;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+
+  span {
+    display: block;
+  }
+}

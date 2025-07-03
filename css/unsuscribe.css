@@ -1,0 +1,6 @@
+@media (max-width: 767px) {
+#main-content img {
+    height: auto;
+    width: 80px !important;
+}
+} 

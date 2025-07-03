@@ -1,0 +1,74 @@
+// -----------------------------------------------------------------------------
+// _tooltips.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: This file contains styles related to tooltips.
+// -----------------------------------------------------------------------------
+
+// See this doc with details about Tippy themes.
+// https://atomiks.github.io/tippyjs/v6/themes/
+
+.tippy-box[data-theme~='enya'] {
+  border-radius: 0;
+  background-color: $humane-blue;
+  padding: rem(10) rem(15) rem(13);
+}
+
+.tippy-box[data-theme~='enya'] .tippy-content {
+  padding: 0;
+}
+
+.tippy-box[data-theme~='enya'] p {
+  color: white;
+  @include font-family("freight-regular");
+  font-size: rem(15);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.tippy-box[data-theme~='enya'][data-placement^='top'] > .tippy-arrow::before {
+  border-top-color: $humane-blue;
+}
+
+.tippy-box[data-theme~='enya'][data-placement^='bottom'] > .tippy-arrow::before {
+  border-bottom-color: $humane-blue;
+}
+
+.tippy-box[data-theme~='enya'][data-placement^='left'] > .tippy-arrow::before {
+  border-left-color: $humane-blue;
+}
+
+.tippy-box[data-theme~='enya'][data-placement^='right'] > .tippy-arrow::before {
+  border-right-color: $humane-blue;
+}
+
+.tippy-box[data-theme~='enya'] a {
+  text-decoration: underline;
+  color: white;
+  background: none;
+  box-shadow: none;
+  transition: none;
+}
+
+.tippy-box[data-theme~='enya'] a:hover {
+  color: white;
+}
+
+.tippy-box[data-theme~='enya'] .close-button {
+  float: right;
+  color: white;
+  font-family: sans-serif;
+  font-size: rem(20);
+  line-height: 0.8;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: rem(-8);
+  margin-right: rem(-10);
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.tippy-box[data-theme~='enya'] .close-button:focus {
+  outline: none;
+}

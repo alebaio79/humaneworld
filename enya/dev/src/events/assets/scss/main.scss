@@ -1,0 +1,44 @@
+@charset 'UTF-8';
+// -----------------------------------------------------------------------------
+// main.scss
+// HSUS Event forms- Enya 2021
+// Author: Jeremy Hatter
+// Created: Winter 2021
+// Purpose: Main entry point for Sass styles.
+// -----------------------------------------------------------------------------
+
+// 1. Configuration and helpers, from common
+@import "commonStyles/abstracts/variables",
+  "commonStyles/abstracts/functions",
+  "commonStyles/abstracts/mixins",
+  "commonStyles/layout/page",
+  "commonStyles/abstracts/extends",
+  "commonStyles/components/tooltips",
+  "commonStyles/base/typography",
+  "commonStyles/base/en-overrides",
+  "abstracts/variables";
+
+// 2. Sanitize (includes normalize.css)
+@import "~sanitize.css";
+
+// 3. Common Components
+@import "commonStyles/components/fields",
+  "commonStyles/components/opt-ins",
+  "commonStyles/components/credit-card",
+  "commonStyles/components/hero",
+  "commonStyles/components/supporter-info";
+
+//style
+@import "components/general", 
+  "components/fields", 
+  "components/template",
+  "components/textblock", 
+  "components/page", 
+  "components/thankyoupage",
+  "components/buttons",
+  "components/errors",
+  "components/footer",
+  "components/hero",
+  "components/ticketcart",
+  "components/attendees",
+  "commonStyles/components/payment-section";

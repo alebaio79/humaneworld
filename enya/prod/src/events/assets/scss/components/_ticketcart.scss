@@ -1,0 +1,329 @@
+// -----------------------------------------------------------------------------
+// _ticketcart.scss
+// HSUS Event Forms - Enya 2021
+// Author: Jeremy Hatter
+// Created: Winter 2021
+// Purpose: This file contains styles related to the Events ticket cart.
+// -----------------------------------------------------------------------------
+
+.page-1 {
+  .en__component--eventtickets {
+    margin-top: rem(40);
+    padding-left: rem(30);
+    padding-right: rem(30);
+    @include mq($md) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .en__ticketBlock {
+      padding-left: rem(20);
+      padding-right: rem(20);
+      padding-bottom: rem(20);
+      @include mq($md) {
+        padding-left: rem(40);
+        padding-right: rem(40);
+        padding-bottom: rem(40);
+      }
+
+      &.disabled {
+        opacity: 0.4;
+        pointer-events: none;
+      }
+    }
+    .en__tickets {
+      padding-left: 0;
+      padding-right: 0;
+      display: block;
+      @include mq($md) {
+        display: table;
+      }
+      .en__ticket {
+        display: flex;
+        flex-wrap: wrap;
+        @include mq($md) {
+          display: table-row;
+        }
+
+        .en__ticket__field {
+          display: block;
+          border-bottom: none;
+          input[type="text"] {
+            @extend %enya-input-text;
+            width: rem(50);
+            display: inline-block;
+            @include mq($ph) {
+              width: rem(75);
+            }
+            &.en__ticket__quantity--invalid {
+              border: 1px solid $bright-red;
+            }
+            &:focus {
+              @extend %enya-input-focus;
+            }
+          }
+          &.en__ticket__field--info {
+            flex: 0 0 100%;
+            padding-left: 0;
+            padding-right: 0;
+            @include mq($md) {
+              padding-right: rem(14);
+              display: table-cell;
+            }
+          }
+          &.en__ticket__field--cost {
+            flex: 0 0 45%;
+            padding-left: 0;
+            padding-right: 0;
+            text-align: left;
+            @include mq($md) {
+              text-align: center;
+              width: rem(100);
+            }
+          }
+          &.en__ticket__field--quantity {
+            flex: 0 0 55%;
+            padding-right: 0;
+            text-align: right;
+            @include mq($md) {
+              display: table-cell;
+              width: rem(140);
+            }
+          }
+          @include mq($md) {
+            display: table-cell;
+          }
+        }
+        &:not(:nth-last-child(2)) .en__ticket__field {
+          &.en__ticket__field--info {
+            border-bottom: none;
+            @include mq($md) {
+              border-bottom: 1px solid #d2d2d2;
+            }
+          }
+          &.en__ticket__field--quantity,
+          &.en__ticket__field--cost {
+            border-bottom: 1px solid #d2d2d2;
+          }
+        }
+
+        &.disabled {
+          > .en__ticket__field:not(.en__ticket__field--info),
+          > .en__ticket__field--info > * {
+            opacity: 0.4;
+            pointer-events: none;
+            position: relative;
+          }
+        }
+      }
+    }
+    .en__ticket__name {
+      font-weight: 600;
+      font-size: rem(19);
+      color: $humane-blue;
+    }
+    .en__ticket__desc {
+      font-weight: 500;
+      font-size: rem(16);
+      line-height: rem(22);
+    }
+    .en__ticket__field--cost {
+      .en__ticket__price,
+      .en__ticket__currency {
+        font-weight: 500;
+        color: $humane-blue;
+        font-size: rem(26.6);
+        line-height: rem(36);
+      }
+    }
+    .en__ticket__field {
+      vertical-align: middle;
+      &.en__ticket__field--info {
+        vertical-align: top;
+      }
+      .en__ticket__selector {
+        font-size: 0;
+      }
+      .en__ticket__minus,
+      .en__ticket__plus {
+        border: none;
+        background: none;
+        font-size: rem(15);
+        width: auto;
+        &:before {
+          line-height: rem(32);
+          color: $humane-blue;
+        }
+      }
+      .en__ticket__minus {
+        margin-right: rem(10);
+        &:before {
+          content: "-";
+          font-size: rem(40);
+        }
+      }
+      .en__ticket__plus {
+        margin-left: rem(10);
+        &:before {
+          content: "+";
+          font-size: rem(30);
+        }
+      }
+    }
+    .en__additional {
+      display: none;
+      flex-wrap: wrap;
+      @include mq($md) {
+        display: none;
+      }
+      .en__additional__label {
+        display: block;
+        flex: 0 0 100%;
+        color: $humane-blue;
+        font-size: rem(20);
+        font-weight: 400;
+        @include mq($md) {
+          display: table-cell;
+        }
+      }
+      .en__additional__amount {
+        font-size: 0; //hide the currency text
+        display: block;
+        flex: 0 0 100%;
+        @include mq($md) {
+          display: table-cell;
+        }
+        input[type="text"] {
+          width: 100%;
+          font-size: rem(24);
+          padding: 0;
+          line-height: 2.5em;
+          &::placeholder {
+            text-align: center;
+          }
+        }
+      }
+      .en__additional__empty {
+        display: none;
+        @include mq($md) {
+          display: table-cell;
+          padding: rem(10);
+          width: 10em;
+        }
+      }
+    }
+    .en__additional__promo {
+      display: inline-block;
+      flex: 0 0 45%;
+      vertical-align: middle;
+      width: 100%;
+      margin-bottom: 0;
+      @include mq($md) {
+        flex: none;
+        width: rem(118);
+      }
+      input[type="text"] {
+        @extend %enya-input-text;
+        &:focus {
+          @extend %enya-input-focus;
+        }
+        width: 100%;
+        font-size: rem(13);
+        padding: rem(8) rem(4);
+        line-height: rem(22);
+        &::placeholder {
+          font-size: rem(13);
+          line-height: rem(22);
+          text-transform: uppercase;
+          text-align: center;
+        }
+      }
+    }
+    .en__ticketSummary {
+      display: flex;
+      justify-content: space-between;
+      padding-top: rem(25);
+      padding-left: 0;
+      padding-right: 0;
+      @include mq($md) {
+        display: block;
+        text-align: right;
+      }
+      .en__ticketSummary__checkout {
+        flex: 0 0 45%;
+        padding-left: rem(3);
+        padding-right: rem(3);
+        @include mq($md) {
+          width: auto;
+          margin-left: rem(24);
+          padding-left: rem(25);
+          padding-right: rem(25);
+        }
+      }
+      &.free-only-event {
+        .en__additional__promo {
+          display: none;
+        }
+        .en__ticketSummary__checkout {
+          flex: 0 0 100%;
+        }
+      }
+    }
+    // .en__error {
+    //   background-color: $bright-red;
+    //   color: $white;
+    //   font-size: rem(18);
+    //   font-weight: 500;
+    //   margin-bottom: 1rem;
+    //   opacity: 1;
+    //   padding: 0.5rem;
+    // }
+  }
+}
+
+.page-2,
+.page-3 {
+  .en__component--eventtickets {
+    margin-bottom: rem(30);
+    .en__orderSummary {
+      padding: 0;
+      font-size: rem(18);
+      .en__orderSummary__header {
+        color: $humane-blue;
+        font-size: rem(18);
+        font-weight: 500;
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          padding-right: 0;
+        }
+        @include mq($md) {
+          font-size: rem(20);
+        }
+      }
+      .en__orderSummary__data {
+        font-weight: 500;
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+      .en__orderSummary__data--cost,
+      .en__orderSummary__data--totalAmount,
+      .en__orderSummary__header--cost {
+        text-align: right;
+      }
+      .en__orderSummary__additional {
+        display: none;
+      }
+      .en__orderSummary__total {
+        .en__orderSummary__data--totalLabel,
+        .en__orderSummary__data--totalAmount {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

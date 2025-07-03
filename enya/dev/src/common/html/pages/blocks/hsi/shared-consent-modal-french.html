@@ -1,0 +1,35 @@
+<!-- Begin Consent Modal -->
+<!-- a11y-dialog sample markup here: https://a11y-dialog.netlify.app/usage/markup -->
+<div class="page-builder-note">[Consent Modal]</div>
+
+<div aria-hidden="true" class="dialog-container" id="consent-modal" role="alertdialog">
+  <!-- The dialog overlay -->
+  <div class="dialog-overlay">&nbsp;</div>
+  <!-- The actual dialog -->
+
+  <div aria-labelledby="consent-modal-title" class="dialog-content">
+    <div role="document">
+      <div class="modal-content">
+        <div class="modal-close"><button aria-label="Close" class="button-close" type="button"></button></div>
+
+        <div class="modal-header">
+          <h1 id="consent-modal-title">Nous demandons votre autorisation pour vous envoyer des alertes exclusives par courriel.</h1>
+        </div>
+
+        <div class="modal-body">
+          <ul>
+            <li><span aria-hidden="true" class="icon list-icon">&nbsp;</span> <span><strong>Faites partie des premières personnes informées : </strong>Recevez les appels à l’action les plus récents et les plus urgents.</span></li>
+            <li><span aria-hidden="true" class="icon lock-icon">&nbsp;</span> <span><strong>Sécurité : </strong>Les renseignements vous concernant sont stockés en toute sécurité et utilisés uniquement pour vous envoyer le contenu le plus pertinent possible.</span></li>
+            <li><span aria-hidden="true" class="icon unsubscribe-icon">&nbsp;</span> <span><strong>Sans engagement : </strong> Désabonnez-vous des alertes par courriel à tout moment.</span></li>
+          </ul>
+        </div>
+
+        <div class="modal-footer">
+          <div class="modal-checkbox"><input id="consent-modal-yes" type="checkbox" /> <label for="consent-modal-yes">Cochez cette case pour recevoir des courriels de Humane Society International.</label></div>
+          <button class="button-link" id="consent-modal-no" type="button">Non merci, <span id="js-consent-modal-no-text">&nbsp;</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Consent Modal -->

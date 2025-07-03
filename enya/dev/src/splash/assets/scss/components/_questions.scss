@@ -1,0 +1,186 @@
+// -----------------------------------------------------------------------------
+// _questions.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Summer 2021
+// Purpose: Styles for the FAQ section of splash pages.
+// Includes overrides for Bootstrap accordion styles.
+// -----------------------------------------------------------------------------
+
+.questions-section-block {
+  margin-top: rem(50);
+
+  @include mq($bs-small) {
+    padding-right: rem(15);
+    padding-left: rem(15);
+  }
+
+  @include mq($lg) {
+    max-width: rem(1100);
+  }
+
+  h2 {
+    @include font-family('freight-regular');
+    font-size: rem(40);
+    line-height: rem(46);
+    color: $humane-blue;
+    margin-bottom: 0;
+    padding: 0;
+
+    &::after {
+      @extend %enya-short-gray-bar;
+      margin-bottom: rem(20);
+    }
+
+    @include mq($bs-small) {
+      margin-bottom: rem(30);
+    }
+  }
+
+  h3 { 
+    @include font-family('freight-regular');
+    font-size: rem(22);
+    line-height: rem(26);
+    color: $humane-blue;
+    margin: 0 rem(5) rem(10);
+    padding: 0;
+
+    @include mq($bs-small) {
+      font-size: rem(20);
+      margin: rem(10) 0 rem(10) rem(5);
+      padding-top: rem(15);
+    }
+  }
+
+  p {
+    color: $black1;
+    @include font-family('freight-regular');
+    font-size: rem(16);
+    line-height: 1.5;
+    margin-bottom: rem(10); 
+  }
+}
+
+.questions-panels-row {
+  @include mq($bs-large) {
+    margin-left: rem(-30);
+  }
+}
+
+.questions-panel {
+  text-align: left;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 0;
+
+  @include mq($bs-small) {
+    padding: 0 rem(28) rem(14) rem(28);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: rem(14);
+  }
+
+  @include mq($lg) {
+    min-height: rem(485);
+  }
+
+  &#aboutHSUSQuestions {
+    @include mq($bs-large) {
+      margin-right: rem(10);
+    }
+  }
+
+  &#donationQuestions {
+    margin-top: rem(50);
+
+    @include mq($md) {
+      margin-top: 0;
+    }
+
+    @include mq($bs-large) {
+      margin-left: rem(10);
+    }
+  } 
+}
+
+.accordion-item {
+  border: none;
+}
+
+.accordion-header {
+  border-bottom: 1px solid #ccc;
+}
+
+.accordion-button {
+  color: $humane-blue;
+  @include font-family('freight-regular');
+  font-size: rem(20);
+  line-height: rem(22);
+  padding: rem(10) rem(5) ;
+
+  &::after {
+    font-family: "bootstrap-icons";
+    font-size: rem(15);
+    content: "\f64d"; // plus
+    background-image: none;
+    padding-left: rem(15);
+    color: $humane-gray;
+    width: auto;
+    height: auto;
+  }
+
+  &:not(.collapsed) {
+    background-color: transparent;
+    color: $humane-blue;
+    box-shadow: none;
+
+    &::after {
+      content: "\f63b"; // minus
+      background-image: none;
+      transform: none;
+    }
+  }
+
+  &:focus {
+    z-index: 3;
+    border-color: transparent;
+    outline: 0;
+    box-shadow: none;
+  }
+}
+
+.accordion-body {
+  text-align: left;
+  padding: rem(15) rem(5);
+}
+
+.questions-section-block ul {
+  position: relative;
+  overflow: hidden;
+  @include font-family('freight-regular');
+  color: $black1;
+  font-size: rem(16);
+  line-height: 1.4;
+  margin: 0 0 rem(20);
+  padding-left: rem(24);
+  list-style-type: none;
+
+  li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: rem(9);
+    height: rem(9);
+    background-color: $humane-blue;
+    margin-top: 0.45em;
+  }
+
+  li + li {
+    margin-top: rem(5);
+  }
+}
+
+.questions-section-block blockquote {
+  line-height: rem(22);
+  padding-top: 0;
+}
+

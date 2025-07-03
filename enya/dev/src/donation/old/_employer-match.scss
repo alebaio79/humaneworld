@@ -1,0 +1,51 @@
+// -----------------------------------------------------------------------------
+// _employer-match.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: Styles for the Double the Donation lookup and results widgets.
+// -----------------------------------------------------------------------------
+
+// Gray out the hidden fields in page-builder, but show them and add a message
+// so that form editors know they're there.
+// Our hidden-opt-in class isn't getting added in page-builder. Don't know why.
+// Spelling out field IDs here to make sure this works in PB.
+body#en__pagebuilder {
+  .employer-match-hidden-fields-block {
+    opacity: 0.5;
+
+    &::before {
+      content: "[Hidden Employer Match Fields]";
+      display: block;
+    }
+  }
+}
+
+// Hide certain fields when not in page-builder.
+body:not(#en__pagebuilder) {
+  .employer-match-hidden-fields-block {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+// Note that the Double the Donation widget uses inconsistent abbreviations in 
+// their class and ID names. Sometimes "dtd-" and sometimes "dd-".
+.dd-lookup-wrapper {
+  margin: 0;
+  padding-top: rem(28);
+  border-top: solid 1px $gray1;
+}
+
+.dtd-search-input {
+  @extend %enya-input-text;
+
+  &:focus {
+    @extend %enya-input-focus;
+  }
+}
+
+p.dd-company-selected {
+  font-size: rem(16);
+  margin-top: 0;
+}
+

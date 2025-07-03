@@ -1,0 +1,19 @@
+// -----------------------------------------------------------------------------
+// _confirm-delivery.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: This file contains styles related to the ecard confirm delivery page
+// -----------------------------------------------------------------------------
+.enya-ecard #main-content > p {
+  font-size: rem(30);
+  line-height: 1.2;
+  font-weight: 500;
+  color: $humane-blue;
+  margin: rem(48) auto rem(12);
+  max-width: 34rem;
+  text-align: center;
+}
+
+.enya-ecard.enya-hsi #main-content > p {
+  color: $hsi-dark-green;
+}

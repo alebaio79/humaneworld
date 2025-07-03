@@ -1,0 +1,58 @@
+p {
+  text-align: left;
+  font-size: 12px; 
+  line-height: 1.5em; 
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  color: #000000;
+  margin-bottom:1em;
+  }
+  .shares p {
+  line-height: normal;
+  }
+  
+  .hsus .footer {
+  text-align: center;
+  font-size: 10px;  
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  color: #ffffff !important;
+  line-height:4em;
+  }
+  .footer-link-fix a { color: #ffffff !important; }
+  .hsus a {color:#000000 ;text-decoration:none;}
+  .hsus a:hover {text-decoration:underline;}
+  
+  .ar-resize {
+       width: 620px !important;
+       max-width: 620px;
+  }
+  
+  .appleLinksBlack a {
+       color: #000000 !important; 
+       text-decoration: none;
+  }
+  
+  @media only screen and (max-width: 560px) {
+  .hide-mobile {display: none;}
+  div, p, a, li, td { -webkit-text-size-adjust:none; }
+  .padding-fix {padding: 0px !important;}
+  .padding-fix-sides {padding: 0px !important;}
+  .ar-resize {
+       width: 100% !important;
+  }
+  
+  .ar-footer-text p{
+       font-size: 11px !important;
+  }
+  
+  .ar-image {
+       width: 100% !important;
+  }
+  
+  img[class=mobile-email-logo] {
+      height: 30px !important;
+      width: auto !important;
+      margin: 0px auto !important;
+      text-align: center !important;
+  }
+  }
+  #cv-poweredBy {text-align: center;}

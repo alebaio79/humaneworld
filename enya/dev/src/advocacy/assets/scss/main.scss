@@ -1,0 +1,66 @@
+@charset 'UTF-8';
+// -----------------------------------------------------------------------------
+// main.scss
+// HSI Advocacy Forms - Enya 2022
+// Author: Deron Hurst (deron@zurigroup.com)
+// Created: Spring 2022
+// Purpose: This file contains all styles related to the advocacy pages.
+// -----------------------------------------------------------------------------
+
+// Adding new variables instead of common for now
+$transition-button: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+// 1. Configuration and helpers, from common
+@import
+  'commonStyles/abstracts/functions',
+  'commonStyles/abstracts/mixins',
+  'commonStyles/abstracts/variables',
+  'commonStyles/abstracts/extends',
+  'commonStyles/base/en-overrides',
+  'abstracts/variables';
+
+// 2. Sanitize (includes normalize.css)
+@import '~sanitize.css';
+
+// 3. Base stuff
+@import
+  'commonStyles/base/base',
+  'commonStyles/base/fonts',
+  'commonStyles/base/typography',
+  'commonStyles/base/helpers',
+  'commonStyles/base/print',
+  'base/typography';
+
+// 4. Components
+@import
+  'commonStyles/components/buttons',
+  'commonStyles/components/consent-modal',
+  'commonStyles/components/error-landing-page',
+  'commonStyles/components/fields',
+  'commonStyles/components/validation',
+  'commonStyles/components/misc',
+  'commonStyles/components/modal-base',
+  'commonStyles/components/opt-ins',
+  'commonStyles/components/tooltips',
+  'components/buttons',
+  'components/checkboxes',
+  'components/email-to-target',
+  'components/form',
+  'commonStyles/components/supporter-info',
+  'commonStyles/components/hero',
+  'components/no-media',
+  'components/opt-ins',
+  'commonStyles/components/read-more',
+  'components/widgets',
+  'commonStyles/components/skip-to-main',
+  'components/tooltips',
+  'components/tweet-to-target',
+  'components/videos';
+
+// 5. Layout, from common
+@import
+  'commonStyles/layout/header',
+  'commonStyles/layout/page',
+  'layout/footer',
+  'layout/page',
+  'layout/thankyou';  

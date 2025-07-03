@@ -1,0 +1,455 @@
+/* elementi generali*/
+
+body,
+p, li {
+
+	 font-weight: normal!important;
+    font-style: normal!important;
+	line-height: 1.4em !important;
+	font-size: 18px !important
+}
+h1,h2,h3 {
+	font-weight: bold !important
+}
+
+
+#vaialform h1 {
+font-weight: bold;
+    font-size: 35px;
+    color: #024731;
+    text-transform: uppercase;
+}
+#vaialform p {
+line-height: 1.4rem !important;}
+.img-box picture {
+	position: relative;
+	float: left;
+	width: 100%;
+    margin-bottom: 25px;
+}
+.img-box picture img {
+	width: 100%
+}
+.en__field--628318 label.en__field__label.en__field__label--item {
+	display: block !important
+}
+
+.en__field--628318 {
+    margin-bottom:0 !important;
+}
+/*
+.img-box picture:before {
+	content: '';
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	height: 100%;
+	width: 100%;
+	border: 1px solid #fff
+}
+*/
+
+b{
+	font-weight: bold !important
+}
+
+.custom_donation_content p {
+    font-weight: bold !important;
+    color: #024731;
+    line-height: 1em !important;
+    max-width: 90%;
+    margin-top: 15px;
+    text-transform: uppercase;
+    font-size: 16px !important;
+}
+.topBanner {
+	box-shadow: none
+}
+.topBanner:before {
+    width: 100%;
+    content: '';
+    display: block;
+    background: rgb(0,0,0);
+    background: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 45%);
+    background: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 45%);
+    background: linear-gradient(to right, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 45%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#162b4b', endColorstr='#162b4b',GradientType=1 );
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 0;
+}
+
+.step span{
+	font-weight: bold;
+	
+}
+div#FormStepSlider ul:before {
+
+    top: 30px;
+
+}
+div#FormStepSlider ul:after {
+    top: 30px;
+	box-shadow: none
+}
+.paymentDetails .button-group a.btn-theme:hover, .paymentDetails .button-group a.btn-theme.active {
+	box-shadow: none
+}
+.donation-amount input[type="radio"]:checked+label,
+.donation-amount input[is_selected=true]+label{
+	box-shadow: none
+}
+
+.donation-amount .en__field {
+    padding-bottom: 0;
+}
+
+.donation-amount .en__field__item {
+
+	margin-bottom: 0
+}
+
+.en__field--withOther .en__field__element--radio .en__field__item:nth-of-type(3) {
+	padding-top: 0 !important
+}
+.en__field--withOther .en__field__item--other {
+	padding-top: 0 !important
+}
+.footer-copyright {
+font-size: 14px
+}
+
+.donation-amount .en__field__item label {
+	border: none
+}
+
+.en__field--recurrpay  .en__field__item {
+    /* width: 33.33%; */
+    text-align: center;
+    flex: 0 0 48%;
+    max-width: 48%;
+    margin-bottom: 5px;
+}
+.en__field--recurrpay  .en__field__item:nth-of-type(1) {
+	margin-right: 4%
+}
+.en__field--withOther .en__field__item {
+    /* width: 33.33%; */
+    text-align: center;
+    flex: 0 0 48%;
+    max-width: 48%;
+    margin-bottom: 5px;
+	margin-top: 10px
+}
+
+.en__field--withOther .en__field__item:nth-of-type(1),
+.en__field--withOther  .en__field__item:nth-of-type(3)  {
+	margin-right: 4%
+}
+.en__field--withOther  .en__field__item:nth-of-type(3)  {
+	margin-top: 3px
+}
+.en__field--withOther  .en__field__item--other  {
+	margin-top:2px !important
+}
+.en__field--withOther  .en__field__item--other input {
+	border-radius: 0 !important;
+	    border: 1px solid #ccc;
+	    margin-left: 0;
+}
+#main-content .custom_donation_content img {
+    border-radius: 50%;
+    width: 70px !important;
+}
+#main-content .en__component--column.fixed_div_right {
+    padding-top: 30px !important;
+}
+.cane span {
+    font-weight: bold !important;
+    letter-spacing: 1.2px;
+}
+.cane .vertical-align {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+    color: #fff;
+    font-size: 1.8em;
+    font-style: italic;
+    line-height: 1.2em;
+}
+
+.img-custom-amount.active {
+	display: block !important
+}
+/**/
+
+
+
+.custom_donation_content.single .active {
+	display: block !important
+}
+
+.monthly .active {
+	display: block !important
+}
+	
+	
+.topBanner {
+			background-image: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/JC_HAEMI+FARM+17_OCTOBER_248_527612.JPG?v=1656324854000) !important;
+	    background-position: 100% 50%;
+
+}
+
+.topBanner:after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    background: url(https://hsieuropedev.wpengine.com/wp-content/uploads/2021/11/decorazioni.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    height: 150px;
+}
+.bg-green h3:after {
+    display:none;
+}
+.cane {
+    background-image: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/ALI_0620_550875.JPG?v=1655982179000);
+	padding: 10em 0 2em 0 !important
+
+}
+
+.cane.refresh {
+    background-image: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI_lp-natale2021-engaging_immagine02.jpg?v=1637164586000 );
+padding: 10em 0 2em 0 !important;
+	box-shadow: none
+
+}
+.topBannerThankyou {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/EKY_0894_553029.jpg?v=1656600847000) no-repeat center center;
+	background-size: cover;
+}
+.green {
+	color: #004831 !important
+}
+.bg-grey {
+	background: #F6F6F6 !important
+}
+.bg-grey p { 
+	color: #004831 !important
+}
+.bg-grey h3:after {
+	display: none
+}
+.logo-white {
+    left: 3em;
+}
+.sloganarea {
+position: absolute;
+    bottom: 25px;
+    left: 3em;
+    right: auto;
+    width: 100%;
+    text-align: left;
+}
+
+.card-header {
+    padding: 0.75rem 0rem;
+    margin-bottom: 0;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+.card-header h3 {
+font-size: 1.6rem;
+	cursor: pointer;
+	    position: relative;
+}
+.card-header h3:before {
+    content: '';
+    right: 0;
+    width: 14px;
+    height: 2px;
+    background-color: #004831 ;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    transition: all 0.3s ease-in-out;
+    right: 0;
+	display: block !important
+}
+.card-header h3:after {
+    content: "";
+    width: 14px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #004831 ;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+	    left: auto;
+		display: block !important
+}
+.card-header h3[aria-expanded="true"]:before{
+  display: none !important
+}
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem 0;
+}
+.accordion>.card {
+    overflow: hidden;
+    background: transparent;
+    border: none;
+}
+.accordion>.card .card-header {
+    margin-bottom: 0;
+}
+.accordion h4 {
+	position: relative;
+	font-size: 1.2rem;
+	cursor: pointer;
+	font-weight: 600;
+	    width: auto;
+    display: table;
+}
+.accordion h4:before {
+    content: '';
+    right: 0;
+    width: 14px;
+    height: 2px;
+    background-color: #004831 ;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    transition: all 0.3s ease-in-out;
+    right: -20px;
+} 
+.accordion h4:after {
+    content: "";
+    width: 14px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #004831 ;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -20px;
+}
+.accordion h4[aria-expanded="true"]:before{
+  display: none
+}
+
+@media (min-width: 1025px) {
+.sloganarea {
+    width: 90%;
+
+}
+}
+.sloganarea h1 {
+    font-size: 2em;
+    line-height: 1em;
+}
+.bg-grey-gradient {
+    background: rgb(241,241,241);
+    background: -moz-linear-gradient(top, rgba(241,241,241,1) 0%, rgba(255,255,255,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(241,241,241,1) 0%,rgba(255,255,255,1) 100%);
+    background: linear-gradient(to bottom, rgba(241,241,241,1) 0%,rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1f1f1', endColorstr='#ffffff',GradientType=0 );
+}
+.punti {
+    position: relative;
+    padding-bottom: 6em !important;
+}
+.punti figure {
+    margin-top: -155px;
+    margin-bottom: 25px;
+}
+.punti figure img {
+    width: 250px;
+}
+.punti h3 {
+	font-weight: 800
+}
+
+
+
+
+.img-torta img {
+    width: 565px !important;
+    margin-top: 120px;
+    height: auto !important;
+;
+}
+
+.en__field--1321857,
+.en__field--1322393 {
+	display: none
+}
+@media (max-width: 767px) {
+.topBanner {
+	    background-position:center !important;
+
+}
+	.sloganarea h1 {
+    font-size: 1.3em !important;
+
+}
+		.sloganarea h1 br {
+    display: none !important;
+
+}
+
+.sloganarea {
+    bottom: 25px;
+	    padding: 0 25px;
+	    left: 0;
+    text-align: center;
+}
+	.sloganarea h3  {
+   font-size: 1.5rem
+		
+}
+	.donation-amount .en__field__item label {
+    font-size: 16px !important
+	}
+	.cane {
+		padding: 15em 0 0 0 !important;
+		background-position: 10% !important
+	}
+	.cane .vertical-align{
+		font-size: 20px !important;
+		zoom:0.8 !important
+	}
+	
+	.img-siamo-hsi {
+		height: 450px;
+		    margin-bottom: 20px;
+	}
+	.cane span {
+		text-align: center !important
+	}
+	.logo-white {
+    left: 0;
+}
+}
+@media (max-width: 520px) {
+
+	.cane {
+		padding: 15em 0 0 0 !important;
+		background-position: 43% !important
+	}
+
+}
+
+.nascondi {
+	display: none !important
+		
+}

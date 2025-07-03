@@ -1,0 +1,21 @@
+(function(){
+
+	var en = {};
+
+	en.dependencies = [{"conditions":[{"condition":"AND","target":"field:842107","comparator":"!=","value":"Y"}],"actions":[{"type":"setValue","target":"field:842103","value":"N"}]},{"conditions":[{"condition":"AND","target":"field:842107","comparator":"==","value":"Y"}],"actions":[{"type":"setValue","target":"field:842103","value":"Y"}]}];
+
+	en.altLists = [];
+
+	en.validators = [{"componentId":883246,"type":"REQ","format":null,"errorMessage":"Please enter your last name."},{"componentId":883247,"type":"EMAL","format":null,"errorMessage":"Please enter a valid email address."},{"componentId":883248,"type":"REQ","format":null,"errorMessage":"Please enter your first name."},{"componentId":883249,"type":"REQ","format":null,"errorMessage":"Please enter your postal code."},{"componentId":883250,"type":"REQ","format":null,"errorMessage":"Please select your state."},{"componentId":883252,"type":"REQ","format":null,"errorMessage":"Please enter your address."},{"componentId":883253,"type":"REQ","format":null,"errorMessage":"Please enter your city."},{"componentId":1048684,"type":"REQ","format":null,"errorMessage":"Please select your title."},{"componentId":956976,"type":"CUST","format":"(^[0-9]{3}-?[0-9]{3}-?[0-9]{4}$)","errorMessage":"Please enter your mobile phone number in the format XXX-XXX-XXXX."}];
+
+	en.alerts = [{"type":"MFE","content":"is a mandatory form field."},{"type":"PSO","content":"Unfortunately, it looks like this product is now sold out."},{"type":"GPE","content":"This transaction has failed as there has been an error in processing your payment."}];
+
+	en.premiumGifts = {};
+
+    en.paymentGateways = [];
+
+    en.feeCover = {};
+
+	window.EngagingNetworks = en;
+
+})()

@@ -1,0 +1,81 @@
+// -----------------------------------------------------------------------------
+// _pg-upsell-modal.scss
+// HSUS Engaging Networks Forms - Enya 2022
+// Created: Summer 2022
+// Purpose: 
+// -----------------------------------------------------------------------------
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(10%);
+  }
+}
+
+#pg-upsell-modal {
+  &:not([aria-hidden="true"]) {
+    .dialog-overlay {
+      animation: fade-in 200ms both;
+    }
+
+    /**
+    * 1. Add an animation delay equal to the overlay animation duration to
+    *    wait for the overlay to appear before animation in the dialog.
+    */
+    .dialog-content {
+      animation: fade-in 400ms 200ms both, slide-up 400ms 200ms both;
+    }
+  }
+
+  .close-button {
+    @include mq1($md) {
+      @include close-button(24px, black, 2px);
+    }
+
+    @include mq($md) {
+      @include close-button(24px, white, 2px);
+    }
+    right: rem(8);
+    top: rem(8);
+  }
+
+  .dialog-content {
+    max-width: calc(100% - #{rem(16)});
+
+    @include mq1($md) {
+      width: rem(300);
+    }
+
+    @include mq($md) {
+      width: rem(665);
+    }
+  }
+
+  // For iframeResizer (https://github.com/davidjbradshaw/iframe-resizer)
+  iframe {
+    width: 1px;
+    min-width: 100%;
+
+    @include mq1($md) {
+      min-height: rem(485);
+    }
+
+    @include mq($md) {
+      min-height: rem(445);
+      width: rem(665);
+    }
+  }
+
+  &.is-thanks-page {
+    .close-button {
+      @include mq1($md) {
+        @include close-button(24px, white, 2px);
+      }
+    }
+  }
+}

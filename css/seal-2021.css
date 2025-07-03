@@ -1,0 +1,80 @@
+
+
+.topBanner {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/Testata-foche.jpg?v=1646049953000) no-repeat center 0;
+  
+    background-size: cover !important;
+
+}
+.cane {
+    background-image: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/Seal-Hunt-2009_209755.jpg?v=1617183522000);
+    padding: 18em 0 2em 0 !important;
+    box-shadow: inset 0 0 0 2000px rgb(0 10 10 / 30%);
+}
+
+.en__field--627986 {
+	clear: both;
+	line-height: 20px;
+	margin-bottom: 15px;
+}
+.en__field--628318 {
+	    line-height: 20px;
+}
+.topBannerThankyou {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/LiveSealPups4_56645.jpg?v=1646050024000) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+}
+@media (min-width: 1000px) and (max-width: 1480px) {
+label.en__field__label.en__field__label--item {
+    font-size: 15px !important;
+}
+	
+.en__field--627986 {
+    clear: both;
+    line-height: 20px;
+    margin-bottom: 35px;
+    font-size: 12px;
+}
+	.en__field--627986 label {
+		margin-top: -8px
+	}
+	.en__field--606305 {
+		    clear: both;
+    line-height: 20px;
+    padding-bottom: 85px !important;
+    font-size: 12px;
+	}
+	.en__field--628318,
+.en__field--606233{
+		margin-bottom: 30px
+	}
+.h-50vh {
+    height: 30vh;
+    padding: 2em;
+}
+.h-50vh h1 {
+    font-size: 1.5em;
+}
+
+.h-25vh {
+    height: 28vh;
+    padding: 0.5em !important;
+}
+	.ciaiutera.h-25vh {
+		height: 42vh;
+	}
+	.h-25vh h2 {
+    font-size: 20px;
+}
+	h5 {
+		font-size: 18px
+			
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1001px) {
+label.en__field__label.en__field__label--item {
+    font-size: 13px !important;
+}
+}

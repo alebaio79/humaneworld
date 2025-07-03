@@ -1,0 +1,19 @@
+// -----------------------------------------------------------------------------
+// main.scss
+// HSUS Engaging Networks Forms - Enya 2022
+// Created: Spring 2022
+// Purpose: Main entry point for styles for the legislative lookup page.
+// This page uses the surveys wrapper and its CSS and JS builds. There is no 
+// "legislative-lookup" wrapper. So we've got both the surveys outputs and the 
+// legislative-lookup outputs in a single page.
+// -----------------------------------------------------------------------------
+
+@import "commonStyles/abstracts/variables";
+@import 'commonStyles/abstracts/functions';
+@import 'commonStyles/abstracts/mixins';
+@import "commonStyles/abstracts/extends";
+@import "page";
+@import "forms";
+@import "tabs";
+@import "elected-official-cards";
+@import "helpers";

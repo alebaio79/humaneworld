@@ -1,0 +1,371 @@
+[[U0:analyticsGTMTransComplete=FALSE]]
+[[?//::Comment:: The following GA data layer code runs on Donation pages only (S4 = 9) ::]]
+[[?x9x::x[[S4]]x::
+
+    <!-- begin Google Tag Manager dataLayer -->
+    <script data-keep="true" id="gtm-transaction-code">
+      /* eslint-disable */
+        var dataLayer = window.dataLayer = window.dataLayer || [];
+        //Flags to mark whether user has completed certain steps of the donation process.
+        var hasChosenDonationAmount, hasBillingFired, hasSelectedPaymentType, hasSubmittedForm, makeItMonthlySelectedValue;
+        //Use an object to gather properties of this form
+        var formProperties = {};
+    
+        [[?//::Comment:: Fire this transaction code only on thank-you pages ::]]
+        [[?x1x::x[[?[[?[[S8]]::_thanks::1::0]][[?[[S8]]::donation=completed::1::0]]::1::1::0]]x::
+        
+            [[?//::Comment::  Setting some local variables in case other analytics need them ::]]
+            [[U0:analyticsGTMTransComplete=TRUE]]
+            [[U0:analyticsGTMOrderId=[[T6:[[S120:dc:trackingCode]]]]]]
+            [[U0:analyticsGTMAffiliation=[[T6:[[S120:dc:donFormId]]]]]]
+            
+            [[?//::Comment:: Remove leading $ and commas from giftAmount ::]]
+            [[U0:analyticsGTMTransAmount=[[E130:"[[S120:dc:giftAmount]]" 1 "[[S120:dc:giftAmount]]" length substring "," "" replaceall]]]]
+            
+            [[?//::Comment:: Set our threshold for what we consider a major donation ::]]
+            [[U0:analyticsGTMMajorDonationThreshold=1000.00]]
+            
+            [[?//::Comment:: Is this gift a major donation? ::]]
+            [[U0:analyticsGTMIsMajorDonation=[[E130:[[S80:analyticsGTMTransAmount]] int [[S80:analyticsGTMMajorDonationThreshold]] int < !]]]]
+           
+            [[?//::Comment:: Convert the boolean to Yes or No ::]]    
+            [[?x1x::x[[?x1x::x[[S80:analyticsGTMIsMajorDonation]]x::1::0]]x::
+                [[U0:analyticsGTMIsMajorDonation=Yes]]
+            ::
+                [[U0:analyticsGTMIsMajorDonation=No]]
+            ]]
+            
+            [[?//::Comment:: Capture whether this is a one-time or monthly transaction ::]]    
+            [[?xMonthly (ongoing)x::x[[S120:dc:recurringFrequencyLabel]]x::
+                [[U0:analyticsGTMMonthlyOrOneTime=monthly]]
+            ::
+                [[U0:analyticsGTMMonthlyOrOneTime=one-time]]
+            ]]      
+        
+            
+            dataLayer.push({
+                'event': 'transactionEvent',
+                'majorDonation': '[[S80:analyticsGTMIsMajorDonation]]',	 //set to 'Yes' if over our threshold, which was set above
+                'ecommerce': {
+                    'purchase': {
+                        'actionField': {
+                            'id': '[[S80:analyticsGTMOrderId]]',    // Transaction ID. Required for purchases and refunds.
+                            'affiliation': '[[S80:analyticsGTMAffiliation]]',
+                            'revenue': '[[S80:analyticsGTMTransAmount]]',     // Total transaction value (incl. any tax and shipping)
+                            'tax': '0.00',
+                            'shipping': '0.00',
+                            'coupon': ''  //This is optional
+                        },
+                        'products': [{
+                            'name': '[[S80:analyticsGTMAffiliation]]',    // Name or ID is required
+                            'id': '[[S80:analyticsGTMOrderId]]',    // Name or ID is required
+                            'brand': '',
+                            'category': '[[S80:analyticsGTMMonthlyOrOneTime]]',
+                            'quantity': 1,
+                            'price': '[[S80:analyticsGTMTransAmount]]'
+                        }]
+                    }
+                }
+            });
+
+
+        ::
+        [[?//::Comment:: This code runs on form pages only, not on thank-you pages ::]]
+            (function($) {
+                $(document).ready(function() {
+                    formProperties.id = "[[S120:dc:donFormId]]";
+                    formProperties.name = "[[S120:dc:donationFormName]]";
+                    formProperties.type = "";
+                    
+                    //See if we can fill in the formType.
+                    //The formName should have the type in it.
+                    if (formProperties.name !== "") {
+                        if (formProperties.name.indexOf("onetime") > -1) {
+                            formProperties.type = "onetime";                        
+                        } else if (formProperties.name.indexOf("monthly") > -1) {
+                            formProperties.type = "monthly";                        
+                        }                  
+                    }
+                    
+                              
+                    //Fire Step 1 (Choose Donation Amount) if any donation amount is preselected
+                    $('input[id*="level_standard"]').each(function() {
+                       if ($(this).is(":checked")) {
+                            if(hasChosenDonationAmount) return;
+                           
+                            dataLayer.push({
+                                'event': 'checkout',
+                                'ecommerce': {
+                                    'checkout': {
+                                        'actionField': {'step': 1},
+                                        'products': [{
+                                            'name': formProperties.id, // Name or ID is required.
+                                            'id': '', // The ID of the product, must be consistent
+                                            'category': formProperties.type,
+                                            'quantity': 1
+                                        }]
+                                    }
+                                }
+                            });
+                            hasChosenDonationAmount = true;
+                            return false;
+                       }                       
+                    });
+                                    
+                    // Step 1 (Choose Donation Amount): trigger event for completion of step 1
+                    $('input[id*="level_standard"], select[id*="level_standard"]').click(function() {            
+                        if(hasChosenDonationAmount) return;
+                                    
+                        dataLayer.push({
+                            'event': 'checkout',
+                            'ecommerce': {
+                                'checkout': {
+                                    'actionField': {'step': 1},
+                                    'products': [{
+                                        'name': formProperties.id, // Name or ID is required.
+                                        'id': '', // The ID of the product, must be consistent
+                                        'category': formProperties.type,
+                                        'quantity': 1
+                                    }]
+                                }
+                            }
+                        });
+                        hasChosenDonationAmount = true;
+                    });
+                    
+                    // Step 2 (Billing): trigger event for completion of step 2            
+                    $('input[id*="billing"], select[id*="billing"]').click(function() {                
+                        if(hasBillingFired) return;
+                    
+                        dataLayer.push({
+                            'event': 'checkout',
+                            'ecommerce': {
+                                'checkout': {
+                                    'actionField': {'step': 2},
+                                    'products': [{
+                                        'name': formProperties.id, // Name or ID is required.
+                                        'id': '', // The ID of the product, must be consistent
+                                        'category': formProperties.type,
+                                        'quantity': 1
+                                    }]
+                                }
+                            }
+                        });
+                        hasBillingFired = true;
+                    });
+                    
+                    // Step 3 (Payment Type): trigger event for completion of step 3
+                    $('input[id*="payment_type"], select[id*="payment_type"]').click(function() {                             
+                        if(hasSelectedPaymentType) return;
+                    
+                        dataLayer.push({
+                            'event': 'checkout',
+                            'ecommerce': {
+                                'checkout': {
+                                    'actionField': {'step': 3},
+                                    'products': [{
+                                        'name': formProperties.id, // Name or ID is required.
+                                        'id': '', // The ID of the product, must be consistent
+                                        'category': formProperties.type,
+                                        'quantity': 1
+                                    }]
+                                }
+                            }
+                        });
+                        hasSelectedPaymentType = true;
+                    });
+
+                    var checkedInput = $('input[name=level_standardexpanded]:checked').next().html();
+
+                    $('input[name=level_standardexpanded]').change(function() {
+                        checkedInput = $('input[name=level_standardexpanded]:checked').next().html();
+                    });
+
+                    $('#level_standardauto_repeatname').prop('checked', true).click();
+
+                    if($('#frequency-one-time').is(':checked')) {
+                        //$('#level_standardauto_repeatname').prop('checked', false);
+                        var frequencyType = 'frequency-one-time';
+                    } else if($('#frequency-monthly').is(':checked')) {
+                        //
+                        var frequencyType = 'frequency-monthly';
+                    }
+                    
+
+                    $('.new-button-style .radio-custom').change(function() {
+                        if($('#frequency-one-time').is(':checked')) { console.log('one time is checked');
+                            $('#level_standardauto_repeatname').prop('checked', false);
+                            frequencyType = 'frequency-one-time';
+                        } else if($('#frequency-monthly').is(':checked')) { console.log('monthly is checked');
+                            $('#level_standardauto_repeatname').prop('checked', true);
+                            frequencyType = 'frequency-monthly';
+                        }
+                    });
+                    
+
+                    // Step 4 (Form Submission): trigger event for completion of step 4
+                    $('#pstep_finish, button.donate-submit').click(function(e) {
+
+
+                        var form = $( "#ProcessForm" );
+
+                        if(form.valid() == true) {
+                            console.log(form.valid());
+                            dataLayer.push({
+                                'event': 'formSubmit',
+                                'donationType': frequencyType, //radio id: frequency-monthly or frequency-one-time
+                                'donationAmount': checkedInput //donation amount selected from span
+                            });
+                        } else {
+                            console.log('not valid');
+                            console.log(frequencyType);
+                            console.log(checkedInput);
+                        }
+
+                        var monthlyPromoAmount = $('#monthly-modal-promo-amount').val();
+
+                        $('#monthly-modal-yes').click(function(){
+                          console.log('monthly is cool');
+                          dataLayer.push({
+                              'event': 'buttonClick',
+                              'donationType': 'frequency-monthly', //radio id: frequency-monthly or frequency-one-time
+                              'buttonType': 'monthly-modal-yes', //button id: monthly-modal-yes or monthly-modal-no
+                              'updatedAmount': '$'+Math.round(monthlyPromoAmount) //donation amount selected from monthly-modal-amount
+                          });
+                        });
+
+                        $('#monthly-modal-no').click(function() {
+                          console.log('one time is cool');
+                          dataLayer.push({
+                              'event': 'buttonClick',
+                              'donationType': 'frequency-one-time', //radio id: frequency-monthly or frequency-one-time
+                              'buttonType': 'monthly-modal-no', //button id: monthly-modal-yes or monthly-modal-no
+                              'updatedAmount': '$'+Math.round(checkedInput) //donation amount selected from monthly-modal-amount
+                          });
+                        });
+                      
+                        var wsIsActive = false; //assume that WS doesn't exist, to start 
+                        
+                        //If this bit of WS code exists, then assume WS is active 
+                        if ($('#windowshade-promo-processed').length || $('#monthly-modal-promo-processed').length) { //check if windowshade code exists on this form
+                            wsIsActive = true;
+                        }
+                        
+                        //Now test to see if Willow has turned WS off
+                        if (typeof WillowModule !== "undefined") {
+                            if (typeof WillowModule.thisPage.showMonthlyWindowshade !== "undefined" && WillowModule.thisPage.showMonthlyWindowshade == false) {
+                                wsIsActive = false;
+                            }
+                        }                        
+                                   
+                        //If WS is active, we need to check to make sure it has appeared, before counting this step as complete
+                        if (wsIsActive) {
+                            if ($('#windowshade-promo-processed').val() == '1' ||
+                                  $('#monthly-modal-promo-processed').val() == '1') {
+                                //WS has been processed. If we've already submitted, return. If not, proceed with event tracking.
+                                if(hasSubmittedForm) return;
+                                
+                                if ($('#windowshade_monthly_donor_radio').is(":checked")) {
+                                    makeItMonthlySelectedValue = "Yes - Upsell";
+
+                                } else {
+                                    makeItMonthlySelectedValue = "No - Upsell"; 
+                                }
+                            //If user selected checkbox manually, WS-processed marker will stay set to 0, but form will submit 
+                            } else if (
+                              ($('#windowshade-promo-processed').val() == '0' || 
+                                $('#monthly-modal-promo-processed').val() == '0') && 
+                                ($("#level_standardauto_repeatname").is(":checked"))) {
+                                if(hasSubmittedForm) return;                
+                                
+                                makeItMonthlySelectedValue = "Yes - Checkbox";                      
+                            } else {
+                                //WS hasn't been processed yet, so return without doing anything
+                                return;                        
+                            }
+                        } else {
+                            //there's no upsell WS on this form
+                            if(hasSubmittedForm) return;                
+                            
+                            
+                            if ($("#level_standardauto_repeatname").length) {  //check for existence of checkbox                  
+                                if ($("#level_standardauto_repeatname").is(":checked")) {
+                                    makeItMonthlySelectedValue = "Yes - Checkbox";                    
+                                } else {
+                                    makeItMonthlySelectedValue = "No - Checkbox"; 
+                                }
+                            } else { //checkbox does not exist
+                                makeItMonthlySelectedValue = "N/A - No monthly checkbox on form";
+                            }
+                        }
+
+                        console.log(makeItMonthlySelectedValue);
+                        
+                        dataLayer.push({
+                            'event': 'checkout',
+                            'makeItMonthlySelected': makeItMonthlySelectedValue,  // whether or not user chose to repeat this gift each month                    
+                            'ecommerce': {
+                                'checkout': {
+                                    'actionField': {'step': 4},
+                                    'products': [{
+                                        'name': formProperties.id, // Name or ID is required.
+                                        'id': '', // The ID of the product, must be consistent
+                                        'category': formProperties.type,
+                                        'quantity': 1
+                                    }]
+                                }
+                            }
+                        });
+
+                        hasSubmittedForm = true;
+                    });
+
+                  /*var monthlyPromoAmount = $('#monthly-modal-promo-amount').val();
+                  $("#ProcessForm").submit(function(event) {
+                    if($('#frequency-one-time').is(':checked')) { 
+                      $('#frequencytypehidden').val('oneTime');
+                          dataLayer.push({
+                              'event': 'buttonClick',
+                              'donationType': 'frequency-one-time', //radio id: frequency-monthly or frequency-one-time
+                              'buttonType': 'monthly-modal-no', //button id: monthly-modal-yes or monthly-modal-no
+                              'updatedAmount': checkedInput //donation amount selected from monthly-modal-amount
+                          });
+                    } else if($('#frequency-monthly').is(':checked')) {
+                      $('#frequencytypehidden').val('monthly');
+                          dataLayer.push({
+                              'event': 'buttonClick',
+                              'donationType': 'frequency-monthly', //radio id: frequency-monthly or frequency-one-time
+                              'buttonType': 'monthly-modal-yes', //button id: monthly-modal-yes or monthly-modal-no
+                              'updatedAmount': monthlyPromoAmount //donation amount selected from monthly-modal-amount
+                          });
+                    }
+                  });*/
+
+
+
+                                        
+
+                    
+                });
+            })(jQuery);
+        ]] 
+       /* eslint-disable */
+   
+    </script>
+    <!-- end Google Tag Manager dataLayer -->  
+::
+]]
+[[?//::Comment:: End data layer code, which runs only on donation pages::]]
+
+<!-- Google Optimize --> 
+<script src="https://www.googleoptimize.com/optimize.js?id=OPT-WDBC552"></script>
+<!-- End Google Optimize -->
+
+<!-- Google Tag Manager -->
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TS9VRT');</script>
+<!-- End Google Tag Manager -->

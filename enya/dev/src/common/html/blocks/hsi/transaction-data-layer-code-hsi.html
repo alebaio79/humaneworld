@@ -1,0 +1,173 @@
+<!-- 
+  Note: We have to use an online minifier on this file before pasting it into an
+  EN code block, because it exceeds 4000 characters. Here's one:
+  https://www.toptal.com/developers/javascript-minifier
+-->
+<script>
+  if (typeof window.Enya !== "undefined") {
+    initDataLayerConversionValues();
+  } else {
+    document.addEventListener("enyaReady", function() {
+      initDataLayerConversionValues();
+    });
+  }
+
+  async function initDataLayerConversionValues() {
+    // Note that some of HSI's user data fields have slightly different names
+    // than HSUS's. Like "First Name" for HSI and "First name" for HSUS.
+    window.donationConversionValues = {
+      trackingCode: getReceiptDataFor("txId"),
+      giftType: getGiftType(),
+      giftFrequency: getReceiptDataFor("recurringFrequency"),
+      giftAmount: getReceiptDataFor("amount~[en1]"),
+      giftAmountFB: formatGiftAmountForFacebook(
+        getReceiptDataFor("amount~[en1]")
+      ),
+      // We're using EN's pageName value for this.
+      campaignName: getPageJsonFor("pageName"),
+      // We're using EN's campaignPageId value for this.
+      campaignId: getPageJsonFor("campaignPageId"),
+      trackingId: getPageJsonFor("trackingId"),
+      paymentSource: getUserDataFor("Payment Source").toLowerCase(),
+      paymentType: getPageJsonFor("paymentType"),
+      firstName: getUserDataFor("First Name"),
+      lastName: getUserDataFor("Last Name"),
+      email: getUserDataFor("Email"),
+      emailHashed: await getEnyaHash(getUserDataFor("Email")),
+      street1: getUserDataFor("Address 1"),
+      street2: getUserDataFor("Address 2"),
+      city: getUserDataFor("City"),
+      state: getUserDataFor("Province"),
+      zip: getUserDataFor("Postal Code"),
+      country: getUserDataFor("Country"),
+      supporterId: getPageJsonFor("supporterId"),
+      supporterIdHashed: await getEnyaHash(getPageJsonFor("supporterId")),
+      currency: getPageJsonFor("currency"),
+      phone: getUserDataFor("Mobile Phone Number")
+    };
+
+    // See this page for details:
+    // https://support.google.com/tagmanager/answer/6107169?hl=en
+    window.eCommerceConversionValues = {
+      transactionId: getReceiptDataFor("txId"),
+      transactionAffiliation: "" + window.pageJson.campaignPageId,
+      transactionTotal: window.pageJson.amount,
+      transactionProducts: [{
+        name: "" + window.pageJson.campaignPageId,
+        sku: "" + window.pageJson.donationLogId,
+        category: getGiftType(),
+        price: window.pageJson.amount,
+        quantity: 1
+      }]
+    };
+
+    const dataLayer = window.dataLayer = window.dataLayer || [];
+    dataLayer.push(window.donationConversionValues);
+    dataLayer.push(window.eCommerceConversionValues);
+  }
+
+  function getGiftType() {
+    if (window.Enya.state.thisPage.isOneTimeGift) {
+      return "one-time";
+    } else if (window.Enya.state.thisPage.isMonthlyGift) {
+      return "monthly";
+    } else {
+      return "";
+    }
+  }
+
+  // Function that formats gift amount according to FB guidelines.
+  function formatGiftAmountForFacebook(giftAmount) {
+    if (typeof giftAmount === "undefined") {
+      giftAmount = "";
+    }
+
+    let formattedGiftAmount = giftAmount;
+
+    // Make sure amount is not blank.
+    if (formattedGiftAmount.trim() === "") {
+      formattedGiftAmount = "0.00";
+    }
+
+    // Strip commas from amount
+    // Strip dollar sign from amount
+    formattedGiftAmount = formattedGiftAmount.replace(/\$|,/g, "");
+
+    // After we strip dollar sign and comma, if we don't have a number, 
+    // set to 0.00.
+    if (isNaN(formattedGiftAmount)) {
+      formattedGiftAmount = "0.00";
+    }
+
+    // If the number has no decimal, add ".00"
+    if (formattedGiftAmount.indexOf(".") === -1) {
+      formattedGiftAmount += ".00";
+    } else if (formattedGiftAmount.charAt(formattedGiftAmount.length - 1) === ".") {
+      // If the string ends in a decimal, add two zeros.
+      formattedGiftAmount += "00";
+    }
+
+    return formattedGiftAmount;
+  }
+
+  // Wrap pageJson lookups with error checking.
+  function getPageJsonFor(key) {
+    if (!key) return "";
+    if (typeof window.pageJson[key] !== "undefined") {
+      return window.pageJson[key];
+    } else {
+      return "";
+    }
+  }
+
+  // Wrap receipt_data lookups with error checking.
+  function getReceiptDataFor(key) {
+    /* eslint-disable dot-notation */
+    if (!key) return "";
+    const receiptData = {};
+    receiptData["amount~[en1]"] = "{receipt_data~amount~[en1]}";
+    receiptData["txId"] = "{receipt_data~txId}";
+    receiptData["recurringFrequency"] = "{receipt_data~recurringFrequency}";
+    if (typeof receiptData[key] === "undefined") {
+      return "";
+    }
+    if (receiptData[key] === "{" + "receipt_data" + "~" + key + "}") {
+      return "";
+    }
+    return receiptData[key];
+  }
+
+  // Wrap user_data lookups with error checking.
+  // Note: This HSI version of the function has different keys than the HSUS/WLT
+  // one. That's necessary because HSI's account data structure uses slightly
+  // different names.
+  function getUserDataFor(key) {
+    /* eslint-disable dot-notation */
+    if (!key) return "";
+    const userData = {};
+    userData["First Name"] = "{user_data~First Name}";
+    userData["Last Name"] = "{user_data~Last Name}";
+    userData["Email"] = "{user_data~Email}";
+    userData["Address 1"] = "{user_data~Address 1}";
+    userData["Address 2"] = "{user_data~Address 2}";
+    userData["City"] = "{user_data~City}";
+    userData["Province"] = "{user_data~Province}";
+    userData["Postal Code"] = "{user_data~Postal Code}";
+    userData["Country"] = "{user_data~Country}";
+    userData["Payment Source"] = "{user_data~Payment Source}";
+    userData["Mobile Phone Number"] = "{user_data~Mobile Phone Number}";
+    if (typeof userData[key] === "undefined") {
+      return "";
+    }
+    if (userData[key] === "{" + "user_data" + "~" + key + "}") {
+      return "";
+    }
+    return userData[key];
+  }
+
+  async function getEnyaHash(text = "") {
+    if (!window.Enya || !window.Enya.utils) return "";
+    if (typeof window.Enya.utils.getSHA256Hash === "undefined") return "";
+    return await window.Enya.utils.getSHA256Hash(text);
+  }
+</script>

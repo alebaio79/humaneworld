@@ -1,0 +1,53 @@
+.en__field--1424280 {
+	display: none
+}
+
+.en__field--withOther .en__field__item--other input {
+    font-size: 13px;
+}
+
+.topBanner {
+    background-image: linear-gradient(to bottom, rgba(0,0, 0, 0) 40%, rgba(0, 0, 0, 0.2) 100%), url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/testata-palline.jpg?v=1666958379000) !important;
+    background-position: 100% 50%;
+    box-shadow: none;
+    position: relative;
+    height: 87vh !important;
+}
+.topBanner:before {
+	display: none
+}
+
+.sloganarea {
+    width: 90%;
+}
+
+.decorazioni-uno:before {
+    content: '';
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/pattern-fascia.png?v=1666959249000) no-repeat top center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height:40px;
+    background-size: cover;
+}
+
+.decorazioni-uno {
+    position: relative !important;
+    padding-top: 5em !important;
+	
+    padding-bottom: 2em;
+
+}
+
+.decorazioni-due {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/pattern-fascia.png?v=1666959249000) no-repeat top center;
+    height: 50px;
+    width: 100%;
+    background-size: cover;
+}
+
+.h-50vh {
+    background: #024731 url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/pattern-fascia.png?v=1666959249000) no-repeat top center;
+    padding-top: 100px !important;
+}

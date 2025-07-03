@@ -1,0 +1,58 @@
+<script>
+  /**
+   * This code block reads in ecard parameters saved from the
+   * donation form, loads the values into the ecard form
+   * and submits it
+   */
+  (() => {
+    // make sure values from the donation form are present
+    if (localStorage.getItem('ecardValues')) {
+      const ecardValues = JSON.parse(localStorage.getItem('ecardValues'));
+      const previewIframe = document.querySelector('.en__ecarditems__prevwrap iframe');
+
+      const getEcard = () => {
+        const index = ecardValues.excludeAmount
+          ? (Number(ecardValues.select) + (Number(document.querySelectorAll(
+              '.en__ecarditems__thumb').length) / 2))
+          : ecardValues.select;
+
+        return document.querySelector(`.en__ecarditems__thumb:nth-child(${index})`);
+      };
+
+      const processEcard = (mutations) => {
+        const ecard = getEcard();
+
+        // stop observing
+        observer.disconnect();
+        // select ecard
+        ecard.click();
+        // set message
+        document.querySelector('.en__ecardmessage__default').value = ecardValues.message;
+        // set send date
+        document.querySelector('.en__ecardrecipients__futureDelivery input').value = ecardValues.date;
+        // set recipient
+        document.querySelector('.en__ecardrecipients__name input').value = ecardValues.name;
+        document.querySelector('.en__ecardrecipients__email input').value = ecardValues.email;
+        document.querySelector('.en__ecarditems__addrecipient').click();
+        // get ecard preview URL (after filling fields)
+        previewIframe.addEventListener('load', e => {
+          localStorage.setItem('previewUrl', e.target.src);
+        });
+        document.querySelector('.en__ecarditems__showprev').click();
+        // cleanup
+        localStorage.removeItem('ecardValues');
+        // submit
+        setTimeout(() => {
+          document.querySelector('.en__submit button').click();
+        }, 1000);
+      };
+
+      // need to wait for the preview iframe to be functional
+      const observer = new MutationObserver(processEcard);
+      observer.observe(previewIframe, {
+        attributes: true,
+        attributeFilter: ['src']
+      });
+    }
+  })();
+</script>

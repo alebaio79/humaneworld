@@ -1,0 +1,87 @@
+// -----------------------------------------------------------------------------
+// _errors.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: This file contains all styles related to errors.
+// -----------------------------------------------------------------------------
+
+// We set field elements to flex display in the fields partial.
+// Set order to force error messages to the bottom of the element.
+// Hide certain fields when not in page-builder.
+body:not(#en__pagebuilder) {
+  // Enya's optInsManager adds this class to opt-ins that we don't show to the
+  // user.
+  .hidden-opt-in {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+// Gray out the hidden fields in page-builder, but show them and add a message
+// so that form editors know they're there.
+// Our hidden-opt-in class isn't getting added in page-builder. Don't know why.
+// Spelling out field IDs here to make sure this works in PB.
+body#en__pagebuilder {
+  .hidden-opt-in,
+  .en__field--842107,
+  .en__field--842104,
+  .en__field--842105,
+  .en__field--842109 {
+    opacity: 0.5;
+
+    label {
+      width: auto;
+    }
+
+    &::before {
+      content: "[Hidden Opt-in]";
+      display: block;
+    }
+  }
+}
+.enya .en__field:not(.enya .en__hidden) {
+  display: flex;
+  flex-direction: column;
+}
+.en__field__error, .valid-error {
+  display: inline-block !important;
+  order: 3;
+  color: $error-color;
+  font-size: rem(13);
+  font-weight: 600;
+  line-height: 1.1;
+  margin: rem(6) 0 0;
+}
+
+// Add red border to fields with errors.
+.en__field--validationFailed {
+  .en__field__input.en__field__input--text,
+  .en__field__input.en__field__input--calendar,
+  .en__field__input.en__field__input--select,
+  .en__field__input.en__field__input--email,
+  .en__field__input.en__field__input--telephone,
+  .en__field__input.en__field__input--other,
+  .en__field__input.enya.en__field__input--select {
+    border-color: $error-color;
+    border-width: 2px;
+
+    // But change border to blue when focused.
+    &:focus {
+      @extend %enya-input-focus;
+    }
+  }
+}
+.valid-error {
+  color: $error-color;
+}
+
+.en__errorList .en__error {
+  list-style: none;
+  font-size: rem(18);
+  line-height: 1.333333333333333; // 24 / 18
+  color: $error-color;
+
+  + .en__error {
+    margin-top: rem(10);
+  }
+}

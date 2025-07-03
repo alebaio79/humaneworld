@@ -1,0 +1,380 @@
+// -----------------------------------------------------------------------------
+// _thanks.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: This file contains styles related to the thanks page and the
+// transaction summary.
+// -----------------------------------------------------------------------------
+
+.is-thanks-page #page-container {
+  overflow: visible;
+}
+
+.is-thanks-page #page-content {
+  margin: 5vw;
+
+  @include mq($md) {
+    grid-template-columns: 1fr rem(650) 1fr;
+  }
+
+  @include mq($lg) {
+    grid-template-columns: 1fr rem(750) 1fr;
+    margin: 0;
+  }
+}
+
+.is-thanks-page h1 {
+  color: $humane-blue;
+  font-size: rem(40);
+  line-height: 1.05;
+  font-weight: 500;
+  text-align: center;
+
+  &::after {
+    @extend %enya-short-gray-bar;
+  }
+}
+
+.is-thanks-page h2 {
+  font-size: rem(30);
+  line-height: 1.2;
+  font-weight: 500;
+  color: $humane-blue;
+  margin: rem(15) auto rem(12);
+}
+
+.is-thanks-page.enya-wlt h1,
+.is-thanks-page.enya-wlt h2 {
+  color: $wlt-dark-green;
+}
+
+.is-thanks-page.enya-hsi h1,
+.is-thanks-page.enya-hsi h2 {
+  color: $hsi-dark-green;
+}
+
+
+.is-thanks-page h5 {
+  font-size: rem(20);
+  line-height: 1.1;
+  font-weight: 500;
+  color: $text-color;
+  margin: rem(25) auto rem(10);
+}
+
+.is-thanks-page p {
+  color: $text-color;
+  font-size: rem(20);
+  line-height: 1.3;
+  font-weight: 500;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.is-thanks-page h5 + p {
+  margin-top: 0;
+}
+
+.thanks-intro-container {
+  margin: rem(74) auto rem(30);
+
+  // EN page CSS has a media query for rows at 600px that makes this necessary.
+  @include mq(600) {
+    margin-top: rem(30);
+  }
+
+  @include mq($md) {
+    margin-top: rem(24);
+  }
+
+  @include mq($lg) {
+    margin-top: rem(70);
+  }
+
+  h1 {
+    margin-top: 0;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: rem(700);
+  }
+}
+
+.amazon-smile-container {
+  margin-top: rem(30);
+}
+
+#amznCharityBanner {
+  margin-left: rem(-8);
+}
+
+.thanks-shares-container {
+  margin: 0 0 rem(18);
+
+  @include mq($md) {
+    margin-bottom: rem(26);
+  }
+
+  @include mq($lg) {
+    margin-bottom: rem(60);
+  }
+
+  .share-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .share-intro-container {
+    flex: 1 0 100%;
+  }
+
+  .share-intro-container > p {
+    margin-top: 0;
+  }
+
+  .share-preview-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    border: 1px solid $gray1;
+    background-color: white;
+    width: 100%;
+    max-width: rem(600);
+    margin: rem(30) 0 rem(10);
+
+    @include mq($md) {
+      width: rem(668);
+      margin-top: rem(20);
+      flex-wrap: nowrap;
+      max-width: none;
+    }
+  }
+
+  .share-preview-image {
+    flex: 1 0 100%;
+
+    @include mq($md) {
+      flex-basis: 32%;
+    }
+
+    img {
+      height: auto !important;
+      max-width: 100%;
+    }
+  }
+
+  .share-preview-text {
+    flex: 1 0 60%;
+    padding: 3.5%;
+
+    @include mq($md) {
+      padding: rem(50);
+    }
+
+    p {
+      font-size: rem(16);
+      line-height: 1.25;
+      margin-top: 0;
+
+      @include mq($md) {
+        font-size: rem(18);
+        line-height: 1.444444444444444;
+      }
+    }
+  }
+
+  .share-buttons-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+    @include mq($md) {
+      flex-direction: row;
+      justify-content: space-between;
+      max-width: rem(668);
+    }
+  }
+
+  .share-button a {
+    display: inline-block;
+    border-radius: 2px;
+    width: rem(210);
+    height: rem(42);
+    margin: .5em auto;
+    color: white;
+    text-decoration: none;
+    text-transform: none;
+    text-align: left;
+    @include font-family("freight-semibold");
+    font-size: rem(16);
+    line-height: 2.5625;
+    box-shadow: none;
+    user-select: none;
+  }
+
+  .share-button a.facebook-share {
+    background-color: #1877f2;
+    border: 1px solid #1877f2;
+  }
+  
+  .share-button a.facebook-share:hover {
+    background-color: #3956ad;
+    border-color: #3956ad;
+  }
+  
+  .share-button a.twitter-share {
+    background-color: #1d9bf0;
+    border: 1px solid #1d9bf0;
+  }
+  
+  .share-button a.twitter-share:hover {
+    background-color: #2AAFF8;
+    border-color: #2AAFF8;
+  }
+  
+  .share-button a.email-share {
+    background-color: #818386;
+    border: 1px solid #818386;
+  }
+  
+  .share-button a.email-share:hover {
+    background-color: #949598;
+    border-color: #949598;
+  }
+}
+
+.share-button-icon img {
+  width: 30px;
+  height: 30px;
+  margin: -2px 15px 0 10px;
+}
+
+// Hide the built-in EN share block. We're cannibalizing it for our buttons,
+// but we're not showing it.
+body:not(#en__pagebuilder) .en__component--socialshareblock {
+  display: none;
+  visibility: hidden;
+}
+
+// But make sure the block is visible in page-builder.
+body#en__pagebuilder .en__component--socialshareblock {
+  display: block;
+}
+
+.transaction-summary-wrapper {
+  margin-left: 50%;
+  max-width: none;
+  padding: 0;
+  position: relative;
+  transform: translateX(-50%);
+  width: calc(100vw - 17px);
+  overflow-x: hidden;
+  background-color: $gray3;
+}
+
+.transaction-summary-container {
+  margin: 0 auto;
+  padding: 7vw;
+
+  @include mq($md) {
+    width: 90%;
+    max-width: rem(650);
+    padding: rem(60) 0 rem(86) 0;
+  }
+
+  @include mq($lg) {
+    max-width: rem(750);
+  }
+}
+
+.transaction-summary-entries {
+  margin-top: rem(15);
+}
+
+.transaction-summary-entry {
+  .entry-label, .entry-value {
+    display: inline-block;
+    color: $text-color;
+    font-size: rem(20);
+    line-height: 1.3;
+    font-weight: 500;
+  }
+}
+
+// Hide the monthly word on the transaction summary.
+.transaction-summary-entry .entry-flag-monthly {
+  display: none;
+  visibility: hidden;
+}
+
+// Show the monthly word on the transaction summary when body flag has been set.
+body.is-monthly-gift .transaction-summary-entry .entry-flag-monthly {
+  display: inline-block;
+  visibility: visible;
+}
+
+body:not(.is-friends-hsi-form) .transaction-summary-entry {
+  &.tax-id-entry-main-hsi {
+    display: block;
+    visibility: visible;
+  }
+
+  &.tax-id-entry-friends-hsi {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+body.is-friends-hsi-form .transaction-summary-entry {
+  &.tax-id-entry-main-hsi {
+    display: none;
+    visibility: hidden;
+  }
+
+  &.tax-id-entry-friends-hsi {
+    display: block;
+    visibility: visible;
+  }
+}
+
+.transaction-cancellation,
+.thanks-gift-aid-text {
+  display: none;
+  visibility: hidden;
+}
+
+body.is-monthly-gift .transaction-cancellation,
+body.is-uk-form .thanks-gift-aid-text {
+  display: block;
+  visibility: visible;
+}
+
+.transaction-cancellation,
+.thanks-gift-aid-text {
+  p {
+    font-size: rem(16);
+    line-height: 1.3125;
+    font-weight: 500;
+  }
+}
+
+.is-thanks-page #page-footer {
+  border-top: none;
+  margin-top: 0;
+
+  footer {
+    padding-top: rem(15);
+
+    @include mq($md) {
+      padding-top: rem(8);
+    }
+
+    @include mq($lg) {
+      padding-top: rem(46);
+    }
+  }
+}
+
+

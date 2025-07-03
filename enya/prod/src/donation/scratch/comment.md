@@ -1,0 +1,1 @@
+@claudiadavila  I found a great package to replace the deprecated jquery.payment library that we used on Dona, for credit card number formatting and error-checking. It's called Cleave.js, and it's working on the EN dev form now.

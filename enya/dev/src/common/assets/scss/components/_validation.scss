@@ -1,0 +1,97 @@
+// -----------------------------------------------------------------------------
+// _validation.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: This file contains styles related to errors.
+// -----------------------------------------------------------------------------
+
+// We set field elements to flex display in the fields partial.
+// Set order to force error messages to the bottom of the element.
+.en__field__error,
+.valid-error {
+  order: 3;
+  color: $error-color;
+  font-size: rem(13);
+  font-weight: 600;
+  line-height: 1.1;
+  margin: rem(6) 0 0;
+}
+
+.en__field--validationFailed {
+  .en__field__input.en__field__input--text,
+  .en__field__input.en__field__input--email,
+  .en__field__input.en__field__input--telephone,
+  .en__field__input.en__field__input--other,
+  .en__field__input.en__field__input--textarea,
+  .en__field__input.en__field--textarea,
+  select,
+  select.en__field__input--select,
+  select.en__field__input--splitselect,
+  select.en__field__input--tripleselect {
+    border-color: $error-color;
+    border-width: 2px;
+
+    // But change border to blue when focused.
+    &:focus {
+      @extend %enya-input-focus;
+    }
+  }
+}
+
+// Hide the page error by default. We'll show it when we detect an error page.
+.page-error-container {
+  display: none;
+  visibility: hidden;
+  margin-bottom: rem(30);
+  color: $error-color;
+  font-weight: 500;
+  font-size: rem(18);
+}
+
+// The donation pageManager component adds "is-error-page" class when error is 
+// detected. See detectErrorPage in pageManager.js (in donation folder).
+// TODO: move that function to common.
+body.is-error-page .page-error-container {
+  display: block;
+  visibility: visible;
+}
+
+.en__errorHeader h2 {
+  @include font-family('freight-semibold');
+  font-size: rem(20);
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: rem(10);
+  text-transform: none;
+}
+
+.enya .en__errorList {
+  margin-left: 1.2rem;
+
+  li {
+    line-height: 1.33333;
+  }
+}
+
+.en__errorList .en__error {
+  list-style: none;
+  font-size: rem(18);
+  line-height: 1.333333333333333; // 24 / 18
+
+  + .en__error {
+    margin-top: rem(10);
+  }
+}
+
+// The block of text below the processing error messages.
+.error-contact p {
+  font-size: rem(16);
+  line-height: 1.25; // 20/16
+  color: $text-color;
+}
+
+// Adjust margin for other amount validation message.
+.en__field--donationAmt .valid-error, 
+.en__field--donationAmt .en__field__error {
+  margin: rem(-16) 0 rem(16);
+}

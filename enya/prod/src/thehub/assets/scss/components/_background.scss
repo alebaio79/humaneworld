@@ -1,0 +1,17 @@
+:root {
+  --page-background: white;
+}
+
+.background {
+  .en__component--imageblock {
+    display: none;
+  }
+}
+
+#page-container {
+  background: var(--page-background);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

@@ -1,0 +1,85 @@
+<html>
+<head>
+	<title>Thank you!</title>
+</head>
+<body data-gramm="false">
+<table border="0" cellpadding="0" cellspacing="0" style="width:500px;" width="767">
+	<tbody>
+		<tr>
+			<td>
+			<table align="left;" width="767">
+				<tbody>
+					<tr style="background-color: #f3f3f3;">
+						<td class="logo-text-align" style="padding: 20px 0; text-align: center;" valign="middle"><img alt="HSI Logo" border="0" class="mobile-email-logo" height="51" src="https://secure3.convio.net/humane/images/content/pagebuilder/hsi-email-logo.png" width="169" /></td>
+					</tr>
+					<tr>
+						<td valign="middle"><img alt="thank you" src="https://secure3.convio.net/humane/images/content/pagebuilder/hsi_sdd_donation_responsive_dsk2.jpg" style="display: block; border: 0;" width="767" /></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p style="font-family:Arial, Helvetica, sans-serif; font-size: 20px; line-height: 22px; color: #154734">Thank you for your generosity!</p>
+
+			<p>{user_data~First Name} {user_data~Last Name}<br />
+			{user_data~Address 1}<br />
+			{user_data~Address 2}<br />
+			{user_data~City}<br />
+			{user_data~Province}<br />
+			{user_data~Postal Code}<br />
+			{user_data~Country}</p>
+
+			<table class="enTable__table" style="width: 90%; max-width: 100%; margin-bottom: 20px; border-spacing: 0px; border-collapse: collapse; border: 1px solid rgb(221, 221, 221);">
+				<thead>
+					<tr>
+						<th style="border: 1px solid rgb(221, 221, 221); padding: 10px;">Date</th>
+						<th style="border: 1px solid rgb(221, 221, 221); padding: 10px;">Amount</th>
+						<th style="border: 1px solid rgb(221, 221, 221); padding: 10px;">Currency</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="enTransactionRow">
+						<td style="border: 1px solid rgb(221, 221, 221); padding: 10px;">{receipt_data~createdOn}</td>
+						<td style="border: 1px solid rgb(221, 221, 221); padding: 10px;">{receipt_data~amount}</td>
+						<td style="border: 1px solid rgb(221, 221, 221); padding: 10px;">{receipt_data~currency}</td>
+					</tr>
+					<tr>
+						<td style="border: 1px solid rgb(221, 221, 221); padding: 10px;">&nbsp;</td>
+						<td style="border: 1px solid rgb(221, 221, 221); padding: 10px;">&nbsp;</td>
+						<td style="border: 1px solid rgb(221, 221, 221); padding: 10px;">Total: {receipt_data~totalAmount}</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p style="font-family:Arial, Helvetica, sans-serif; font-size: 10px; word-wrap: break-word; line-height: 12px; color: #000000;">Contributions to Humane Society International are tax-deductible to the extent permitted by law in your country. HSI&#39;s tax identification number is 52-1769464.<br />
+			Donations made from the UK: HSI UK is registered in England and Wales as charity number 1098925, company number 4610194.<br />
+			Donations made from the Netherlands: HSI UK is regarded as an ANBI Charity under Dutch Fiscal Number 8241.63.072.<br />
+			Donations made in Canada: donations to HSI Canada are not tax-deductible. Non-profit organizations in Canada that lobby to change government policy<br />
+			are generally denied charitable status.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table align="center" bgcolor="#044a1e" border="0" cellpadding="0" cellspacing="0" style="text-align: center;" width="767">
+	<tbody>
+		<tr>
+			<td>
+			<table align="center" border="0" cellpadding="0" cellspacing="0" class="inner-table-content" style="margin: 10px auto;" width="767">
+				<tbody>
+					<tr>
+						<td class="email_links" style="padding: 10px 10px 20px; text-align: center; font-family: sans-serif; font-size: 10px; line-height: 18px;color: #ffffff !important;" valign="middle">&copy; 2016 Humane Society International | All rights reserved<br />
+						1255 23rd Street, NW, Suite 450 | Washington, DC 20037 USA | 301-258-3010 | info@hsi.org<br />
+						4035 Saint-Ambroise Street, Suite 320 | Montreal, QC H4C 2E1 | 514-395-2914 | info@hsicanada.ca<br />
+						5 Underwood Street | London, UK N17LY | 020-7490-5288 | info@hsiuk.org</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>

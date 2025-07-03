@@ -1,0 +1,132 @@
+// -----------------------------------------------------------------------------
+// _opt-ins.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: Responsible for opt-in and question styles.
+// -----------------------------------------------------------------------------
+
+// Hide certain fields when not in page-builder.
+body:not(#en__pagebuilder) {
+  // Enya's optInsManager adds this class to opt-ins that we don't show to the
+  // user.
+  .hidden-opt-in {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+// Gray out the hidden fields in page-builder, but show them and add a message
+// so that form editors know they're there.
+// Our hidden-opt-in class isn't getting added in page-builder. Don't know why.
+// Spelling out field IDs here to make sure this works in PB.
+body#en__pagebuilder {
+  .hidden-opt-in,
+  .en__field--sms,
+  .en__field--general-email {
+    opacity: 0.5;
+
+    label {
+      width: auto;
+    }
+
+    &::before {
+      content: "[Hidden Opt-in]";
+      display: block;
+    }
+  }
+}
+
+// Enya's optInsManager adds this class to opt-ins that the user sees.
+.visible-opt-in {
+  // Set flex layout for checkboxes and their labels.
+  .en__field__element--checkbox .en__field__item {
+    display: flex;
+    align-items: flex-start;
+    line-height: 1;
+  }
+
+  /* stylelint-disable-next-line */
+  label.en__field__label {
+    @extend %enya-opt-in-label;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  // SMS label gets special treatment.
+  &.en__field--sms {
+    margin-top: rem(-6);
+
+    label {
+      margin-left: 0;
+      cursor: default;
+    }
+  }
+
+  // HSI SMS checkbox state is set by user country and is always hidden. We
+  // can't set pointer-events to none here, because the label contains clickable
+  // links. Instead, we remove the "for" attribute from the label with JS.
+  .enya-hsi &.en__field--sms {
+    .en__field__label--item {
+      cursor: default;
+    }
+  }
+
+  input[type="checkbox"] {
+    margin-top: rem(2);
+  }
+
+  p {
+    margin: 0;
+    line-height: 1.5;
+  }
+}
+
+.mobile-legal-note-block {
+  margin: rem(-2) 0 rem(20);
+
+  p {
+    margin: 0;
+  }
+}
+
+.gift-aid-block {
+  margin: rem(20) 0;
+  padding-top: rem(20);
+  border-top: solid 1px $gray1;
+
+  .visible-opt-in label.en__field__label.gift-aid-logo {
+    margin-left: 0;
+  }
+
+  label.gift-aid-logo::before {
+    content: "";
+    display: block;
+    width: rem(126);
+    height: rem(59);
+    background-image: url("#{$hsi-base-files}/gift-aid.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+body:not(#en__pagebuilder) {
+  &.enya-hsi .mobile-msg {
+    display: none;
+    visibility: hidden;
+  }
+
+  &.enya-hsi.is-selected-country-us .mobile-msg {
+    display: block;
+    visibility: visible;
+  }
+}
+
+// The Friends of HSI form can't have a main HSI email opt-in on it. So hide it.
+.enya-hsi.is-friends-hsi-form .en__field--374 {
+  display: none;
+  visibility: hidden;
+}
+
+
+
+

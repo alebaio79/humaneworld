@@ -1,0 +1,56 @@
+// -----------------------------------------------------------------------------
+// _misc.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: This file contains miscellaneous styles.
+// -----------------------------------------------------------------------------
+
+
+.raquo {
+  text-decoration: none !important;
+}
+
+.raquo:hover {
+  text-decoration: none !important;
+}
+
+.raquo:hover span {
+  text-decoration: underline !important;
+}
+
+#noscript-warning {
+  font-family: sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 101;
+  text-align: center;
+  font-weight: bold;
+  font-size: 120%;
+  color: #fff;
+  background-color: #123e68;
+  padding: 5px 0 5px 0
+}
+
+// Use the click and tap classes on a span to swap the words "click" and "tap" 
+// on mobile and desktop.
+.click-text {
+  display: none;
+  visibility: hidden;
+
+  @include mq($lg) {
+    display: inline;
+    visibility: visible;
+  }
+}
+
+.tap-text {
+  display: inline;
+  visibility: visible;
+  
+  @include mq($lg) {
+    display: none;
+    visibility: hidden;
+  }
+}

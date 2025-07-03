@@ -1,0 +1,35 @@
+// -----------------------------------------------------------------------------
+// _intro.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Summer 2021
+// Purpose: Styles for intro text section of splash pages.
+// -----------------------------------------------------------------------------
+
+.intro-text-section-block {
+  margin-top: rem(35);
+
+  @include mq($md) {
+    margin-top: rem(15);
+  }
+
+  h2 {
+    @include font-family('freight-regular');
+    font-size: rem(40);
+    line-height: rem(46);
+    color: $humane-blue;
+    margin-bottom: rem(30);
+    padding: 0;
+  }
+
+  p {
+    @include font-family('freight-regular');
+    font-size: rem(22);
+    line-height: rem(28);
+    color: $black1;
+    text-align: center;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

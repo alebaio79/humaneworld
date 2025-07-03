@@ -1,0 +1,26 @@
+.tooltip-trigger-icon {
+  background-color: $humane-blue;
+  border-radius: 50%;
+  color: $white;
+  cursor: pointer;
+  font-family: Helvetica, Verdana, Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  height: 15px;
+  letter-spacing: 0.4px;
+  line-height: 1.2;
+  margin-top: 0.3rem;
+  margin-right: 0.1rem;
+  outline-style: none;
+  padding-top: 1px;
+  padding-left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  user-select: none;
+  width: 15px;
+}
+
+body.enya-hsi .tooltip-trigger-icon {
+  background-color: $hsi-dark-green;
+}

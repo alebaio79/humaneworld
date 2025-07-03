@@ -1,0 +1,26 @@
+ul.findreps-tabs {
+  display: flex;
+  margin-bottom: 26px;
+  margin-left: -4.75px;
+  padding-left: 0;
+  li {
+    align-items: center;
+    border: 1px solid #D5D5D5;
+    border-radius: 0;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    margin: 0 4.75px;
+    padding: 2.5px 10px;
+    &:hover,
+    &.active {
+      background-color: #D7F8FF;
+    }
+  }
+}
+
+@media screen and (max-width: 30em) {
+  ul.findreps-tabs li {
+    font-size: 12px;
+  }
+}

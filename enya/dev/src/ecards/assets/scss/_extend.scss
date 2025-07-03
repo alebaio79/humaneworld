@@ -1,0 +1,11 @@
+%headline {
+  @include font-family("freight-regular");
+  line-height: 1.1875;
+  color: $humane-blue;
+  margin-top: 0;
+  hyphens: none;
+  @include mq($lg) {
+    line-height: 1.05;
+    padding: 0;
+  }
+}

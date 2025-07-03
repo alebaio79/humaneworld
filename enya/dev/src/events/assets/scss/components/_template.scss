@@ -1,0 +1,60 @@
+// -----------------------------------------------------------------------------
+// _template.scss
+// HSUS Event Forms - Enya 2021
+// Author: Jeremy Hatter
+// Created: Winter 2021
+// Purpose: This file contains styles related to the Event Header structure.
+// -----------------------------------------------------------------------------/*-------------------------- Header Logo-------------------------------*/
+
+#page-header {
+  background-color: $header-bg-color;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.09);
+}
+
+.logo-header {
+  margin: auto;
+  height: rem(49);
+  position: relative;
+  text-align: center;
+
+  span {
+    text-indent: -9999px;
+    float: left;
+    display: inline;
+  }
+
+  @include mq($md) {
+    height: rem(64);
+  }
+
+  @include mq($lg) {
+    height: rem(81);
+  } 
+  
+}
+
+.logo-header a.hsus-logo {
+  display: inline-block;
+  margin-top: rem(10);
+  width: rem(200);
+  height: 54.5%;
+  background-image: url("#{$hsus-base-files}/hsus-logo-blue.svg?v=1607617971000");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  box-shadow: none;
+
+  @include mq($md) {
+    margin-top: rem(15);
+    height: 60%;
+  }
+  
+  @include mq($lg) {
+  
+  }
+}

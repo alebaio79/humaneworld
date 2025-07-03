@@ -1,0 +1,110 @@
+// -----------------------------------------------------------------------------
+// _hero.scss
+// HSUS Event Forms - Enya 2021
+// Author: Jeremy Hatter
+// Created: Winter 2021
+// Purpose: This file contains styles related to the Events Hero image.
+// -----------------------------------------------------------------------------
+
+.en__component--column.en__component--advcolumn.hero--full-bleed p.hero-credit {
+  padding-left: $body-content-padding--mobile;
+  padding-right: $body-content-padding--mobile;
+  max-width: $max-width--content;
+  margin-left: auto;
+  margin-right: auto;
+  @include mq($md) {
+    padding-left: $body-content-padding--desktop;
+    padding-right: $body-content-padding--desktop;
+    max-width: 35rem;
+  }
+  @include mq($lg) {
+    max-width: $max-width--content;
+  }
+}
+
+.page-2 {
+  .en__component--column.en__component--advcolumn.hero--full-bleed p.hero-credit {
+    max-width: $max-width--form;
+    @include mq($md) {
+      max-width: $max-width--form;
+    }
+    @include mq($lg) {
+      max-width: $max-width--form;
+    }
+  }
+}
+/*.has-hero--full-bleed {
+  .en__component--row.en__component--advrow:first-of-type,
+  .en__errorHeader ~ .en__component--row.en__component--advrow:nth-last-child(2) {
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+  }  
+}
+
+.en__component--column.en__component--advcolumn.hero--full-bleed {
+  flex: none;
+  margin-left: 50%;
+  margin-top: -3.5rem;
+  margin-bottom: 3.75rem;
+  max-width: none;
+  padding: 0;
+  position: relative;
+  transform: translateX(-50%);
+  width: 100vw;
+  overflow-x: hidden;
+
+  .en__component--copyblock {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    //padding-left: 1.5rem;
+    display: block;
+
+    .hero--full-bleed__img1 {
+      display: none;
+    }
+
+    .hero--full-bleed__img2 {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+   // padding-left: 1.5rem;
+    display: block;
+
+    .hero--full-bleed__img1 {
+      display: block;
+    }
+
+    .hero--full-bleed__img2 {
+      display: none;
+    }
+  }
+  
+  .en__component--imageblock {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 0;
+
+  }
+  
+  cite {
+    display: block;
+
+    @include mq($md) {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 35rem;      
+    }
+
+    @include mq($lg) {
+      max-width: 58rem;      
+    }
+  }
+}*/

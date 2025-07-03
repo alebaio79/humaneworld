@@ -1,0 +1,24 @@
+<script>
+  // If Enya's state object isn't ready yet, wait for it.
+  if (typeof window.Enya !== "undefined") {
+    initSymGiftsDataLayerConversionValues();
+  } else {
+    document.addEventListener("enyaReady", function() {
+      initSymGiftsDataLayerConversionValues();
+    });
+  }
+
+  function initSymGiftsDataLayerConversionValues() {
+    window.symGiftsDonationConversionValues = {
+      selectedSymbolicGifts: getSelectedItemsFromStorage()
+    };
+
+    const dataLayer = window.dataLayer = window.dataLayer || [];
+    dataLayer.push(window.symGiftsDonationConversionValues);
+  }
+
+  function getSelectedItemsFromStorage() {
+    const storedItems = JSON.parse(sessionStorage.getItem("selectedItems"));
+    return storedItems;
+  }
+</script>

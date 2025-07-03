@@ -1,0 +1,213 @@
+.last-page.enya-advocacy--thank-you {
+  #page-content {
+    @media only screen and (min-width: rem($md)) and (max-width: rem($lg - 1)) {
+      grid-template-columns: 1fr minmax(48rem, 58rem) 1fr;
+    }
+  }
+  
+  .en__component--page {
+    @include mq($lg) {
+      max-width: 66rem;
+    }
+  }
+  #page-footer {
+    margin-top: 3.35rem;
+  }
+}
+
+.advo-page {
+  p {
+    line-height: rem(28);
+  }
+
+  .advo-main {
+    margin: 3.5rem 0 0 0;
+    h3 {
+      font-size: rem(30);
+      line-height: 1.2;
+      font-weight: 500;
+      color: $humane-blue;
+      margin: 0 auto;
+      max-width: rem(500);
+      text-align: center;
+      padding-bottom: 0;
+
+      body.enya-hsi & {
+        color: $hsi-dark-green;
+      }
+    }
+  }
+
+  &.closed-page .advo-main {
+    h3 {
+      &::after {
+        background-color: $gray3;
+        content: "";
+        display: block;
+        height: rem(5);
+        margin: rem(14) auto;
+        width: rem(57);
+      }
+    }
+    p {
+      max-width: rem(490);
+      margin: 0 auto rem(18);
+      text-align: center;
+    }
+  }
+
+  br.d-break {
+    display: none;
+    @include mq($md) {
+      display: block;
+    }
+  }
+
+  .advo-mid-wrap {
+    margin: 0 0 2.25rem 0;
+    display: block;
+    grid-row-gap: 0px;
+    @include mq($md) {
+      display: grid;
+      grid-template-columns: 1fr 90% 1fr;
+      grid-row-gap: 8rem;
+    }
+  }
+
+  .advo-mid {
+    margin: rem(40) 0 rem(20);
+    display: block;
+    max-width: none;
+    @include mq($md) {
+      display: grid;
+      grid-template-columns: 48% 47%;
+      grid-column-gap: 5%;
+      grid-row-gap: rem(20);
+      grid-column-start: 2;
+      margin: 0;
+    }
+    &:first-child {
+      @include mq($md) {
+        margin-top: rem(82);
+      }
+    }
+  }
+
+  .advo-left-col {
+    float: none;
+    width: auto;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-column-gap: rem(4);
+    padding-left: 0;
+    grid-column-start: 1;
+    margin-bottom: 40px;
+    @include mq($md) {
+      margin-bottom: 0;
+    }
+    div {
+      background-repeat: no-repeat;
+      &.advo-donate-icon {
+        background-color: var(--enya-icon-color);
+        height: rem(35);
+        margin-top: rem(7);
+        mask-image: $donate-icon;
+        width: rem(35);
+      }
+      &.advo-phone-icon {
+        background-color: var(--enya-icon-color);
+        height: rem(66);
+        margin-top: rem(7);
+        mask-image: $phone-icon;
+        width: rem(34);
+      }
+    }
+  }
+
+  .advo-right-col {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-column-gap: rem(4);
+    margin-right: rem(50);
+    margin: auto;
+    height: 100%;
+    div {
+      mask-repeat: no-repeat;
+      mask-size: rem(40);
+
+      &.advo-email-icon {
+        background-color: var(--enya-icon-color);
+        height: rem(36);
+        margin-top: rem(7);
+        mask-image: $email-icon;
+        width: rem(41);
+      }
+
+      &.advo-share-icon {
+        background-color: var(--enya-icon-color);
+        height: rem(42);
+        margin-top: rem(7);
+        mask-image: $share-icon;
+        width: rem(42);
+      }
+    }
+  }
+
+  .advo-cta-text p {
+    display: inline;
+    &.expire-message {
+      font-size: rem(13);
+      line-height: 1.5;
+      @include font-family("freight-regular");
+      display: block;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    &.blueArrow {
+      display: block;
+    }
+  }
+
+  div.advo-share-text a.blueArrowlink {
+    border-bottom: 0;
+  }
+
+  /* Blue Arrow */
+  p.blueArrow {
+    @include font-family("freight-semibold");
+    display: block;
+    margin-right: rem(5);
+    margin-top: rem(8);
+    margin-bottom: 0;
+    line-height: rem(36);
+    font-size: rem(22);
+    letter-spacing: rem(0.8);
+    &::after {
+      background-color: var(--enya-icon-color-light);
+      content: "";
+      display: inline-block;
+      height: 1rem;
+      margin-left: 0.4rem;
+      mask-image: $arrow-icon;
+      mask-repeat: no-repeat;
+      vertical-align: middle;
+      width: 1rem;
+    }
+    a.blueArrowlink {
+      box-shadow: none;
+      color: $humane-blue;
+
+      body.enya-hsi & {
+        color: $hsi-dark-green;
+      }
+
+      &:hover {
+        color: $bright-blue;
+      }
+
+      body.enya-hsi &:hover {
+        color: $hsi-green;
+      }
+    }
+  }
+}

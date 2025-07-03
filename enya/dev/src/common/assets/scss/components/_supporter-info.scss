@@ -1,0 +1,38 @@
+// -----------------------------------------------------------------------------
+// _supporter-info.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: Styles for the Your Information section.
+// -----------------------------------------------------------------------------
+
+.region-postcode-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  @include mq($ph) {
+    flex-direction: row;
+  }
+
+  .en__field--region,
+  .enya-hsi & .en__field--NOT_TAGGED_37,
+  .enya-hsi & .en__field--NOT_TAGGED_38 {
+    flex-basis: 63%;
+  }
+
+  .en__field--postcode {
+    flex-basis: 35%;
+  }
+}
+
+.enya-wlt .universal-email-consent-block {
+  margin-top: rem(16);
+}
+
+// On HSI French pages, set the text of the province field a little
+// smaller, on large screens only. The initial text gets cut off otherwise.
+.enya.enya-hsi.is-lang-french select#en__field_supporter_NOT_TAGGED_38 {
+  @include mq($lg) {
+    font-size: rem(16);
+  }
+}

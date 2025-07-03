@@ -1,0 +1,131 @@
+// -----------------------------------------------------------------------------
+// _widgets.scss
+// HSUS Engaging Networks Forms - Enya 2022
+// Created: Spring 2022
+// Purpose: Styles for supporter counter, thermometer, and other widgets.
+// -----------------------------------------------------------------------------
+
+.enWidget.enWidget--thermometer {
+  background-color: $baby-blue;
+  border-bottom: 1px solid $form-border-color;
+  font-family: inherit !important;
+  height: auto !important;
+  padding: .4165rem 1rem .75rem;
+
+  .enya-hsi & {
+    background-color: $hsi-green;
+  }
+
+  &::before,
+  &::after {
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    left: 50%;
+    pointer-events: none;
+    position: absolute;
+    top: calc(100% - 1px);
+    width: 0;
+  }
+
+  &::before {
+    border-color: rgba(151, 151, 151, 0);
+    border-top-color: $form-border-color;
+    border-width: 12px 13px 12px 13px;
+    margin-left: -13px;
+  }
+
+  &::after {
+    border-color: rgba(204, 238, 247, 0);
+    border-top-color: $baby-blue;
+    border-width: 11px 12px 11px 12px;
+    margin-left: -12px;
+
+    .enya-hsi & {
+      border-top-color: $hsi-green;
+    }
+  }
+}
+
+.enWidget__copy.enWidget__copy--before {
+  color: $text-color;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+
+  .enya-hsi & {
+    color: white;
+  }
+
+  > * {
+    text-align: center;
+  }
+
+  h2,
+  p {
+    color: inherit;
+  }
+  
+  h2 {
+    font-size: 2.375rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1;
+    margin: 0 0 .625rem;
+    visibility: hidden;
+    &.counting-up {
+      visibility: visible;
+    }    
+  }
+
+  p {
+    font-size: 1rem;
+    margin: -.5rem 0 0;
+
+    .enya-hsi & {
+      font-size: rem(19);
+      font-weight: 600;
+    }
+  }
+}
+
+.enWidget__total,
+.enWidget__thermometer {
+  display: none;
+}
+
+// The mobile version of the widget is inside the "copy" block. The
+// actionCounter JS module clones a copy of the widget and inserts it into the
+// "copy" block.
+.copy {
+  .en__component--widgetblock {
+    display: block;
+    margin-left: -26px;
+    margin-right: -26px;
+    margin-top: 2rem;
+
+    @include mq($md) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    @include mq($lg) {
+      display: none;
+    }
+
+    .enWidget.enWidget--thermometer {
+      border-top: 1px solid $form-border-color;
+    }
+  }
+}
+
+// The desktop version of the supporter counter is inside the "form" block.
+.form {
+  .en__component--widgetblock {
+    display: none;
+    
+    @include mq($lg) {
+      display: block;
+    }
+  }
+}

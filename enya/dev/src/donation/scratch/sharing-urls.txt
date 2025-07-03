@@ -1,0 +1,11 @@
+EN FB URL
+https://www.facebook.com/sharer.php?u=https%3A%2F%2Fsecured.humanesociety.org%2Fpage%2F75088%2Fdonate%2F1%3Fmode%3DDEMO%26locale%3Den-US%26en_chan%3Dfb%26en_ref%3D201431243
+
+Dona FB URL
+https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsecure.humanesociety.org%2Fsite%2FDonation2%3Fdf_id%3D1001%261001.donation%3Dform1%26s_src%3Dsh_fbtyDona1001
+
+EN Twitter URL
+https://twitter.com/intent/tweet?text=&amp;url=https%3A%2F%2Fsecured.humanesociety.org%2Fpage%2F75088%2Fdonate%2F1%3Fmode%3DDEMO%26locale%3Den-US%26en_chan%3Dtw%26en_ref%3D201431243
+
+Dona Twitter URL
+https://twitter.com/intent/tweet?url=https%3A%2F%2Fsecure.humanesociety.org%2Fsite%2FDonation2%3Fdf_id%3D1001%261001.donation%3Dform1%26s_src%3Dsh_twtyDona1001&amp;ct=0&amp;via=humanesociety&amp;text=I+just+donated+to+%40HumaneSociety+to+help+animals+%28and+you+can+too%21%29%3A+

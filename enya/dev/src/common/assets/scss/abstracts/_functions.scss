@@ -1,0 +1,26 @@
+// -----------------------------------------------------------------------------
+// _functions.scss
+// HSUS EN Forms - Enya 2021
+
+// Created: Winter 2021
+// Purpose: This file contains all application-wide Sass functions.
+// -----------------------------------------------------------------------------
+
+/// Returns size in rem.
+/// Assumes that root size is 16px.
+@function rem($size) {
+  $remSize: calc($size / 16);
+  @return #{$remSize}rem;
+}
+
+/// URL-encode color SASS function
+@function encodecolor($string) {
+  @if type-of($string) == "color" and str-index(#{$string}, "#") == 1 {
+    $hex: str-slice(ie-hex-str($string), 4);
+    $string: unquote("#{$hex}");
+
+    @return "%23" + $string;
+  }
+
+  @return $string;
+}

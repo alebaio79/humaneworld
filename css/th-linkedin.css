@@ -1,0 +1,20 @@
+.en__field--1131201,
+.en__field--1131204{
+	clear: both
+}
+
+@media (min-width: 1024px) {
+.en__field--1131201,
+	.en__field--1131204{
+    float: left;
+    width: 48%;
+    margin: 0 5px  0 0;
+}
+
+.en__field--1131200,
+	.en__field--1131205 {
+		float: left;
+    width: 48%;
+    margin: 0 5px 0 0;
+}
+}

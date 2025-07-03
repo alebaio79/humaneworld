@@ -1,0 +1,79 @@
+@charset 'UTF-8';
+// -----------------------------------------------------------------------------
+// main.scss
+// HSUS Engaging Networks Forms - Enya 2021// Created: Winter 2021
+// Purpose: Main entry point for Sass styles.
+// -----------------------------------------------------------------------------
+
+// 0. Import custom fonts first.
+@import 'commonStyles/base/fonts';
+
+
+// 1. Configuration and helpers, from common
+@import
+  'commonStyles/abstracts/variables',
+  'commonStyles/abstracts/functions',
+  'commonStyles/abstracts/mixins',
+  'commonStyles/abstracts/extends',
+  'commonStyles/base/en-overrides',
+  'commonStyles/components/tooltips';
+
+// 2. Sanitize (includes normalize.css)
+@import '~sanitize.css';
+
+// 3. Base stuff
+@import
+  'commonStyles/base/base',
+  'commonStyles/base/typography',
+  'commonStyles/base/helpers',
+  'commonStyles/base/print';
+
+// 4. Components
+@import
+  'commonStyles/components/buttons',
+  'components/nudge',
+  'components/premium',
+  'commonStyles/components/fields',
+  'commonStyles/components/validation',
+  'components/amount-section',
+  'components/other-amounts',
+  'commonStyles/components/opt-ins',
+  'components/employer-match',
+  'commonStyles/components/supporter-info',
+  'commonStyles/components/payment-section',
+  'commonStyles/components/credit-card',
+  'components/submit-section',
+  'commonStyles/components/misc',
+  'commonStyles/components/modal-base',
+  'components/monthly-modal',
+  'components/pg-upsell-modal',
+  'commonStyles/components/consent-modal',
+  'components/tooltips',
+  'commonStyles/components/read-more',
+  'commonStyles/components/spinner',
+  'components/videos',
+  'components/tribute',
+  'components/progress-bars',
+  'commonStyles/components/character-count',
+  'components/digital-wallets',
+  'components/ecard-donation',
+  'components/ecard-delivery',
+  'components/symbolic-gifts',
+  'components/fee-cover',
+  'commonStyles/components/skip-to-main';
+
+// 5. Layout-related sections
+@import
+'commonStyles/layout/header',
+'commonStyles/layout/footer',
+'layout/intro',
+'layout/footer',
+'commonStyles/layout/page';
+
+// 6. Page-specific styles
+@import
+  'pages/thanks';
+
+// 7. Themes
+@import
+  'themes/default';

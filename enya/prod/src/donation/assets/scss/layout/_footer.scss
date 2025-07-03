@@ -1,0 +1,82 @@
+// -----------------------------------------------------------------------------
+// _footer.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: This file contains styles related to the page footer for donation
+//  forms only.
+// -----------------------------------------------------------------------------
+
+#page-footer footer {
+  .donor-care-text {
+    order: 1; 
+    
+    @include mq($md) {
+      grid-column: 2 / 3;
+      grid-row: 1 / 3;
+      margin-top: rem(3);
+    }
+
+    @include mq($lg) {
+      // This aligns the block with the left edge of form fields.
+      grid-column: 3 / 4;
+      width: rem(345);
+      justify-self: flex-end;
+    }
+
+    @include mq($xl) {
+      grid-column: 2 / 3;
+      justify-self: start;
+    }
+
+    h5 {
+      margin: 0; 
+      font-size: inherit;
+      line-height: inherit;
+  
+      & + p {
+        margin-top: 0;
+      }
+    }
+
+    blockquote {
+      padding: 0;
+      margin-top: 0.5em;
+      margin-bottom: rem(25);
+    }
+  
+  }
+
+  .legal-text {
+    order: 2;
+
+    @include mq($md) {
+      order: 1;
+    }
+  }
+
+  .copyright-text {
+    order: 3;
+
+    @include mq($lg) {
+      grid-row-start: 2;
+      grid-row-end: 4;
+    }
+  }
+}
+
+#page-footer .bank-payment-text {
+  display: none;
+  visibility: hidden;
+}
+
+body.is-payment-bank #page-footer .bank-payment-text {
+  display: block;
+  visibility: visible;
+}
+
+// Each form can set a flag (in pageConfigSettings) that will hide the UK Direct
+// Debit paragraph in the footer.
+body.enya-hsi.hide-uk-direct-debit-link p.uk-direct-debit-link {
+  display: none;
+  visibility: hidden;
+}

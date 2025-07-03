@@ -1,0 +1,11 @@
+.en__field--checkbox {
+  .en__field__item {
+    display: flex;    
+  }
+
+  .en__field__label {
+    @extend %enya-opt-in-label;
+    cursor: pointer;    
+    margin-top: -.125rem;
+  }
+}

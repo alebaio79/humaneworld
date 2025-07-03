@@ -1,0 +1,68 @@
+.en__field--1192695 label.en__field__label {
+	font-size: 14px;
+    transform: none;
+    width: 95%;
+    margin-left: 1%;
+    vertical-align: text-top;
+    font-weight: 400;
+    padding-left: 10px;
+    color: #212529 !important;
+}
+.en__field--1192695 {
+	position: relative
+}
+.en__field--1192695 .en__field__element--checkbox label:before {
+	top:5px;
+	border-radius: 0 !important
+}
+	
+#en__field_supporter_questions_1192695,
+#en__field_supporter_questions_1192695,
+#en__field_supporter_NOT_TAGGED_390,
+#en__field_supporter_NOT_TAGGED_391,
+#en__field_supporter_NOT_TAGGED_392,
+#en__field_supporter_NOT_TAGGED_393,
+#en__field_supporter_NOT_TAGGED_394,
+#en__field_supporter_NOT_TAGGED_395{
+    float: left;
+    width: auto !important;
+    float: left;
+    margin: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute; 
+    width: 1px;
+    white-space: nowrap;
+}
+.en__field__element--checkbox {
+	width: 100%
+}
+.en__field--checkbox input{
+	display: none
+}
+.en__field--checkbox label.en__field__label.en__field__label--item:before {
+	border-radius: 0 !important
+}
+.en__field--1258745 label:before {
+		border-radius: 0 !important
+}
+
+
+.en__field__element--text,
+.en__field__element--select{
+    display: inline-block;
+    width: 100%;
+}
+.en__field__input--select {
+    min-width: 250px; 
+    width: 100%;
+}
+.en__field__input--calendar, .en__field__input--email, .en__field__input--number, .en__field__input--password, .en__field__input--range, .en__field__input--telephone, .en__field__input--text, .en__field__input--textarea, .en__rangeFieldLabels {
+     width: 100%;
+}

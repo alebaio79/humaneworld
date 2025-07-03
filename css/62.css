@@ -1,0 +1,70 @@
+.topBanner {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI_FFF23_16x9_Landing-02_IT.png?v=1699538343000) no-repeat center center !important;
+    background-size: cover !important;
+}
+
+.testata-thank-you-petizione.ita {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI_FFF23_ThankYou_IT.png?v=1699370006000) top no-repeat !important;
+    background-size: cover !important;
+	    height: 75vh;
+}
+
+
+.testata-thank-you-petizione.de {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI_FFF23_16x9_ThankYou_DE+copia.png?v=1699369785000) top no-repeat !important;
+    background-size: cover !important;
+	    height: 75vh;
+}
+
+
+.testata-thank-you-petizione.eng {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI_FFF23_16x9_ThankYou_EU.png?v=1699369879000) top no-repeat !important;
+    background-size: cover !important;
+	    height: 75vh;
+}
+
+
+.testata-thank-you-petizione.rom {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI_FFF23_16x9_ThankYou_RO.png?v=1699369952000) top no-repeat !important;
+    background-size: cover !important;
+	    height: 75vh;
+}
+
+
+.testata-thank-you-petizione.pol {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI_FFF23_16x9_ThankYou_PL.png?v=1699370079000) center center no-repeat !important;
+    background-size: cover !important;
+	    height: 75vh;
+}
+
+.en__field--860069 {
+	clear: both;
+	position: relative
+}
+
+.en__field--860069 label:before {
+	display: none
+}
+
+
+.en__field--860069 label.en__field__label--item:before {
+	display: block
+}
+@media (max-width: 767px) {
+	.grazie h1 {
+     font-size: 1.7em;
+}
+	.sloganarea {
+    max-width: 100%;
+
+	}
+	.topBanner {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI_FFF23_4x5_Landing_IT.png?v=1699537178000) no-repeat center center !important;
+    background-size: cover !important;
+}
+	.testata-thank-you-petizione.ita {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI_FFF23_4x5_Landing_IT.png?v=1699537178000) center center no-repeat !important;
+    background-size: cover !important;
+}
+
+}

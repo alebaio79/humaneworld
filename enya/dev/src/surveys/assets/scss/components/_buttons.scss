@@ -1,0 +1,14 @@
+
+// Buttons that look like links. 
+// Used for tooltip triggers, for one.
+.button-link {
+    @extend %enya-button-link;
+  
+    &:hover {
+      @extend %enya-button-link-hover;
+    }
+  
+    &:focus {
+      @extend %enya-button-link-focus;
+    }
+  }

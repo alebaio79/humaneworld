@@ -1,0 +1,74 @@
+// -----------------------------------------------------------------------------
+// _employer-match.scss
+// HSUS and HSI Engaging Networks Forms - Enya 2021
+// Created: Winter 2021/Summer 2022
+// Purpose: Styles for the Double the Donation lookup and results widgets.
+// -----------------------------------------------------------------------------
+
+.en__component--dd360search {
+  margin: 0 0 rem(38);
+  padding-top: rem(20);
+  border-top: solid 1px $gray1;
+
+  body.enya.is-hidden-premium & {
+    padding-top: 0;
+  }
+
+  p {
+    @extend %enya-label;
+    line-height: 1.5;
+    color: $black1;
+    margin-top: rem(16);
+  }
+
+  .dtd-search-input {
+    @extend %enya-input-text;
+  
+    &:focus {
+      @extend %enya-input-focus;
+
+      .enya-hsi & {
+        border-color: $hsi-green;
+      }
+    }
+  }
+  
+  p.dd-company-selected {
+    font-size: rem(16);
+    margin-top: 0;
+    font-weight: 500;
+  }
+}
+
+.en__component--dd360confirmation {
+  margin-bottom: rem(40);
+}
+
+// For HSI, hide the DTD widget for all countries except US.
+body:not(#en__pagebuilder).enya-hsi {
+  & .en__component--dd360search,
+  & .en__component--dd360confirmation {
+   display: none;
+   visibility: hidden;
+ }
+} 
+
+body:not(#en__pagebuilder).enya-hsi.is-detected-country-us,
+body:not(#en__pagebuilder).enya-hsi.is-selected-country-us {
+  & .en__component--dd360search,
+  & .en__component--dd360confirmation {
+    display: block;
+    visibility: visible;
+  }
+}
+
+// When the employer match results container is hidden, on the thanks page, we
+// need to adjust the top margin of the Amazon Smile container and heading.
+body:not(#en__pagebuilder):not(.is-detected-country-us).enya-hsi,
+body:not(#en__pagebuilder).enya-hsi.is-uk-form {
+  & .amazon-smile-container,
+  & .amazon-smile-container h2 {
+    margin-top: 0;
+  }
+}
+

@@ -1,0 +1,122 @@
+html, body {
+  overflow-x: hidden;
+}
+
+.enya-subscription-management {
+  #page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  #page-container {
+    overflow: visible;
+    flex: 1 0 auto;
+    margin-top: rem(49);
+    @include mq($md) {
+      margin-top: 4rem;
+    }
+    @include mq($lg) {
+      margin-top: rem(81);
+    }
+    min-height: 0;
+  }
+
+  #main-content {
+    min-height: 0;
+  }
+
+  .en__component--row.en__component--advrow {
+    padding-top: 0;
+    @include mq($lg) {
+      flex-direction: column;
+    }
+  }
+  h2 {
+    font-size: rem(27);
+    font-weight: 500;
+    width: 100%;
+    margin-top: 0;
+    & + p {
+      margin-top: 0;
+    }
+  }
+  .en__component--copyblock {
+    /*width: 42%;*/
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    @include mq1(600) {
+      width: 100% !important;
+    }
+  }
+  .en__component--formblock {
+    .en__field--emailAddress {
+      margin-bottom: 2.5rem;
+    }
+    .en__field--checkbox {
+      .en__field__label {
+        font-size: rem(20);
+        @include mq1(600) {
+          width: 100%;
+        }
+      }
+      .en__field__input--checkbox {
+        margin-top: rem(9);
+        margin-right: rem(5); 
+      }
+    }
+  }
+
+  .en__field__element--checkbox .en__field__item {
+    display: inline-flex;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  #page-header {
+    position: fixed;
+    width: 100%;
+  }
+
+  #page-footer {
+    @include mq($md) {
+      grid-template-columns: 1fr rem(600) 1fr;
+    }
+
+    @include mq($lg) {
+      grid-template-columns: 1fr rem(930) 1fr;
+    }
+  }
+
+  &.last-page .en__component--page {
+    margin-top: 2rem;
+  }
+}
+
+.en__component--column.en__component--advcolumn.hero--full-bleed p.hero-credit {
+  width: 100%;
+  max-width: 58rem;
+  padding-left: rem(26);
+  padding-right: rem(26);
+  @include mq($md) {
+    max-width: 58rem;
+    padding-left: rem(26);
+    padding-right: rem(26);
+  }
+  @include mq($lg) {
+    max-width: 58rem;
+    padding-left: rem(26);
+    padding-right: rem(26);
+  }
+}
+
+body.enya-subscription-management:not(#en__pagebuilder) .hidden-except-pb {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+body.enya-subscription-management#en__pagebuilder .hidden-except-pb {
+  display: block;
+}

@@ -1,0 +1,47 @@
+// -----------------------------------------------------------------------------
+// _other-amounts.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: Styles for the other amount input(s).
+// -----------------------------------------------------------------------------
+
+// Special treatment to show the other text field all the time.
+.en__field--donationAmt.en__field--withOther .en__field__element--radio .en__field__item:nth-last-child(1) {
+  display: flex !important;
+}
+
+// And hide the Other label all the time.
+.en__field--donationAmt.en__field--withOther .en__field__element--radio .en__field__item:nth-last-child(2) {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+// Add currency symbol inside Other amount field.
+.en__field--donationAmt .en__field__item--other::before {
+  display: block;
+  content: "$";
+  position: relative;
+  width: 0;
+  height: 0;
+  left: rem(13);
+  top: rem(7);
+  color: $black1;
+  font-weight: 500;
+  font-size: rem(18);
+
+  .enya-hsi.is-currency-eur & {
+    content: "€";
+  }
+
+  .enya-hsi.is-currency-gbp & {
+    content: "£";
+  }
+}
+
+.en__field--donationAmt .en__field__input--other {
+  padding-bottom: rem(8);
+  padding-left: rem(25);
+  // The Other field is slightly shorter than other inputs, to match the height
+  // of the donation amount buttons.
+  height: rem(42);
+}

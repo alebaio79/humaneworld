@@ -1,0 +1,108 @@
+// -----------------------------------------------------------------------------
+// _helpers.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+
+/**
+ * Clear inner floats
+ */
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+
+/**
+ * Hide text while making it readable for screen readers
+ * 1. Needed in WebKit-based browsers because of an implementation bug;
+ *    See: https://code.google.com/p/chromium/issues/detail?id=457146
+ */
+.hide-text {
+  overflow: hidden;
+  padding: 0; /* 1 */
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+/**
+ * Hide element while making it readable for screen readers Shamelessly borrowed
+ * from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+ * Also see https://www.tpgi.com/the-anatomy-of-visually-hidden/
+ */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+ 	white-space: nowrap; 
+  width: 1px;
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.not-visible {
+  visibility: hidden !important;
+}
+
+// HTML elements with the hidden property set to true get a "hidden" attribute 
+// added to them.
+[hidden] {
+  display: none !important;
+}
+
+body:not(#en__pagebuilder) .hidden-except-pb {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+body#en__pagebuilder .hidden-except-pb {
+  display: block;
+}
+
+.bottom-0 {
+  margin-bottom: 0 !important;
+}
+
+.top-10 {
+  margin-top: 10px;
+}
+
+.top-25 {
+  margin-top: 25px;
+}
+ 
+@keyframes fadeIn {
+  from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+// Visible only in Page-builder.
+body:not(#en__pagebuilder) .page-builder-note {
+  display: none;
+  visibility: hidden;
+}
+
+body#en__pagebuilder .page-builder-note {
+  font-size: 16px;
+}
+
+p.generic-small-note {
+  font-size: rem(15);
+}

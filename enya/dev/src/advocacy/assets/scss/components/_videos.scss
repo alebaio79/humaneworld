@@ -1,0 +1,38 @@
+.video-container {
+  position: relative;
+  padding-top: 56.25%;
+  height: 0;
+  
+  iframe {
+    height: 100%;
+    left: 0;    
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.videoblock {
+
+  margin-top: rem(20);
+  margin-bottom: rem(20);
+
+  @include mq($md) {
+    margin-top: rem(60);
+    margin-bottom: rem(60);
+  }
+
+  @include mq($lg) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+  }
+}
+
+
+.en__component--column.en__component--advcolumn.videoblock-container {
+  width: 100%;
+}
+
+
+

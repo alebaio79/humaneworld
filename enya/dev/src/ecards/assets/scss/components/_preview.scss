@@ -1,0 +1,36 @@
+  .enya {
+    .en__ecarditems__preview {
+      z-index: 9999;
+    }
+    .en__ecarditems__prevwrap {
+      align-items: center;
+      background-color: #fff;
+      display: flex;
+      flex-wrap: wrap;
+      height: auto;
+      margin: 1rem !important;
+      max-width: calc(100% - 2rem);
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 9999;
+      @include mq($bs-small) {
+        margin: 1.75rem auto !important;
+        max-width: 500px;
+      }
+    }
+    .en__ecarditems__prevclose {
+      font-size: 1.25rem;
+      font-weight: 700;
+      height: auto;
+      right: 1rem;
+      top: 0.25rem;
+      width: auto;
+    }
+    .en__ecarditems__prevwrap iframe {
+      height: auto;
+      min-width: 100%;
+      width: 1px;
+    }
+  }

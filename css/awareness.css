@@ -1,0 +1,35 @@
+.topBanner {
+    background-image: linear-gradient(to bottom,rgba(0,0, 0, 0) 40%, rgba(0, 0, 0, 0.2) 100%), url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/testata-lola.jpg?v=1682496163000) !important;
+	background-size: cover !important;
+	    height: 70vh !important;
+    width: 100%;
+}
+    
+.testata-thank-you-petizione {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/testata_web.jpg?v=1669374912000) center center no-repeat !important;
+}
+
+.cane {
+    /* background-image: url(https://aaf1a18…-c27fdab….ssl.cf5.rackcdn.com/2207/img-landing-dogmeat16.jpg?v=1582647458000); */
+    background-image: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/fullwidth-koala.jpg?v=1682496142000);
+    background-position: bottom;
+    padding: 12em 0 3em 0!important;
+    box-shadow: inset 0 0 0 2000px rgba(0, 10, 10, 0.3) !important;
+}
+.cane .vertical-align {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+    color: #fff;
+    font-size: 1.8em;
+    font-style: italic;
+    line-height: 1.2em;
+}
+
+.cane p {
+	    font-size: 1.8rem !important;
+    font-style: italic !important;
+}

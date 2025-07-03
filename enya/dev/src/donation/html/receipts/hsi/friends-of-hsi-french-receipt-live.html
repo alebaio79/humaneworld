@@ -1,0 +1,189 @@
+<html>
+
+<head>
+  <title>Transaction Receipt | Friends of Humane Society International</title>
+</head>
+
+<body data-gramm="false">
+  <div class="page-wrapper" style="margin-left: 30px; margin-top: 0;">
+    <div style="text-align: center;"><img alt="HSI Logo" class="emailImage hsi-logo" height="46"
+        src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/104/Friends-of-HSI-Logo-RGB.png"
+        width="160" /></div>
+
+    <h1 style="color: #024731; font-size: 18px; line-height: 22px; font-weight: bold;">Transaction receipt</h1>
+
+    <p style="color: #293941; font-size: 12px; line-height: 14px;">Please print a copy of this receipt for your records.</p>
+    <!-- Donor information table -->
+
+    <table border="0" cellpadding="0" cellspacing="0" style="width: 500px;">
+      <thead>
+        <tr>
+          <th colspan="2" scope="col">
+            <h2 style="color: #024731; font-size: 14px; line-height: 16px; margin-top: 10px; margin-bottom: 10px; text-align: left;">Donor
+              information</h2>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td width="25%">
+            <h3 style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">Name</h3>
+          </td>
+          <td>
+            <p style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">{user_data~First Name} {user_data~Last Name}</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3 style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">Email</h3>
+          </td>
+          <td>
+            <p style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">{user_data~Email}</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="2" valign="top">
+            <h3 style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">Street</h3>
+          </td>
+          <td>
+            <p style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">{user_data~Address 1}</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">{user_data~Address 2}</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3 style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">City</h3>
+          </td>
+          <td>
+            <p style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">{user_data~City}</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3 style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">State/Province</h3>
+          </td>
+          <td>
+            <p style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">{user_data~Province}</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3 style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">Postal code</h3>
+          </td>
+          <td>
+            <p style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">{user_data~Postal Code}</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3 style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">Country</h3>
+          </td>
+          <td>
+            <p style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">{user_data~Country}</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- End Donor information table --><!-- Transaction information table -->
+
+    <table border="0" cellpadding="0" cellspacing="0" style="width: 500px; margin-top: 10px;">
+      <thead>
+        <tr>
+          <th colspan="2" scope="col">
+            <h2 style="color: #024731; font-size: 14px; line-height: 16px; margin-top: 10px; margin-bottom: 10px; text-align: left;">
+              Transaction information</h2>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td width="25%">
+            <h3 style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">Amount</h3>
+          </td>
+          <td>
+            <p style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">{receipt_data~amount~[en1]}</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3 style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">Date</h3>
+          </td>
+          <td>
+            <p style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">{receipt_data~createdOn~[MM/dd/yy]}</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3 style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">Transaction ID</h3>
+          </td>
+          <td>
+            <p style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">{receipt_data~txId}</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3 style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">Payment type</h3>
+          </td>
+          <td>
+            <p style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">{user_data~Payment Source}</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- End Transaction information table --><!-- Additional information table -->
+
+    <table border="0" cellpadding="0" cellspacing="0" style="width: 500px; margin-top: 10px;">
+      <thead>
+        <tr>
+          <th colspan="2" scope="col">
+            <h2 style="color: #024731; font-size: 14px; line-height: 16px; margin-top: 10px; margin-bottom: 10px; text-align: left;">
+              Additional information</h2>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td width="25%">
+            <h3 style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">Registration Number</h3>
+          </td>
+          <td>
+            <p style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">137412102 RR0001</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table border="0" cellpadding="0" cellspacing="0" style="width:auto; margin-top: 30px; ">
+      <tbody>
+        <tr>
+          <td>
+            <p style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">Friends of Humane Society International is a registered
+              charity in Canada (Registration #137412102 RR0001). Contributions to Friends of HSI are tax-deductible in Canada.<br />
+              If you have any questions about donating to us online, please <a href="mailto:info@friendsofhsi.ca" style="color: #293941;"
+                target="_blank">send us an email</a> or call 866-614-4371.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- End Additional information table --><!-- Begin country office addresses -->
+
+    <table border="0" cellpadding="0" cellspacing="0" style="width:auto; margin-top: 30px; ">
+      <tbody>
+        <tr>
+          <td valign="top" width="30%">
+            <p style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;"><strong>Friends of HSI</strong><br />
+              4035 Saint-Ambroise Street, Suite 320<br />
+              Montreal, QC H4C 2E1</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- End country office addresses -->
+  </div>
+</body>
+
+</html>

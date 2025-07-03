@@ -1,0 +1,28 @@
+:root {
+  --hero: white;
+}
+
+.en__component--column.en__component--advcolumn.hero {
+  background: var(--hero);
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex: none;
+  left: 50%;
+  max-width: 100vw;
+  padding: 38% 0 0;
+  position: relative;
+  transform: translateX(-50%);
+  width: 100vw;
+  @include mq($md) {
+    padding-top: 27.3vw;
+  }
+  @include mq($lg) {
+    left: 50vw;
+  }
+  @include mq($xl) {
+    left: 50%;
+  }
+  .en__component--imageblock {
+    display: none;
+  }
+}

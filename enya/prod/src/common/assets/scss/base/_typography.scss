@@ -1,0 +1,50 @@
+// -----------------------------------------------------------------------------
+// _typography.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: This file contains typography-specific styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $text-color;
+  @include font-family('freight-regular');
+}
+
+/* Use lining figures, not old-style, for numerals */
+p,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+span,
+input,
+form,
+label,
+li,
+select,
+textarea,
+button {
+  font-feature-settings: "lnum" 1;
+  font-variant-numeric: lining-nums !important;
+}
+
+// h4.your-info-heading,
+// h4.payment-heading {
+h4 {
+  text-transform: uppercase;
+  font-size: rem(16);
+  font-weight: 500;
+  line-height: 1.1;
+  text-align: left;
+  margin-bottom: 1em;
+  color: $black1;
+  letter-spacing: 0.75px;  
+}

@@ -1,0 +1,18 @@
+.topBanner {
+    background-image: linear-gradient(to bottom, rgba(0,0, 0, 0) 40%, rgba(0, 0, 0, 0.2) 100%), url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/IMG_3214+copia.jpg?v=1730287488000) !important;
+    background-position: 100% 50%;
+    box-shadow: none;
+    position: relative;
+    height: 87vh !important;
+}
+
+@media (max-width: 768px) {
+    .topBanner {
+        background-position: 25% !important;
+        background-size: cover !important
+    }
+    .img-siamo-hsi {
+        height: 340px !important;
+    }
+}
+ 

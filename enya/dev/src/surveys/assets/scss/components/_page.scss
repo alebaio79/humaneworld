@@ -1,0 +1,84 @@
+// -----------------------------------------------------------------------------
+// _page.scss
+// HSUS Signup and Survey Forms - Enya 2021
+// Author: Vishnu Singamsetty
+// Created: Winter 2021
+// Purpose: This file contains styles related to the page structure.
+// -----------------------------------------------------------------------------
+
+#main-container {
+
+  @include mq1(600) {
+    padding-left: 3%;
+    padding-right: 2.9%;
+  }
+}
+
+#page-container {
+  min-height: 24.375rem;
+}
+
+#page-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 4rem;
+  background-color: #ffffff;
+  margin: rem(43) auto 0;
+
+
+  @include mq($md) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 3rem;
+    /*margin-top: 5rem;*/
+  }
+
+  @include mq($lg) {
+    margin-top: rem(32);
+    width: auto;
+    max-width: rem(2000);
+  }
+}
+
+#main-container {
+  @include mq2() {
+    grid-column: 1 / 4;
+  }
+}
+
+.error-contact {
+  display: none;
+}
+
+.en__errorList {
+  margin: -1rem;
+}
+
+.en__component--advrow {
+  margin: auto;
+  width: 100%;
+  padding-top: 2rem;
+}
+
+#page-content {
+  max-width: 100%;
+  min-width: 0px;
+}
+
+.enya .en__component--column {
+  min-width: 0px;
+}
+
+#main-content {
+  width: 40%;
+  margin: auto;
+  min-height: 100vh;
+
+  @include mq1(600) {
+    width: 100%;
+  }
+
+  @include mq2() {
+    width: 82%;
+  }
+}

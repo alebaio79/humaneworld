@@ -1,0 +1,21 @@
+// -----------------------------------------------------------------------------
+// _tooltips.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: See the _tooltips partial in /src/common for the main styles.
+// Use this file to tweak the main styles for donation forms only.
+// -----------------------------------------------------------------------------
+
+.enya.enya-hsi:not(#en__pagebuilder) {
+  // Make sure the Gift Aid tooltip content stays hidden unless it's inside a
+  // Tippy.
+  .tooltip-content-gift-aid {
+    display: none;
+    visibility: hidden;
+  }
+
+  .tippy-box .tooltip-content-gift-aid {
+    display: block;
+    visibility: visible;
+  }
+}

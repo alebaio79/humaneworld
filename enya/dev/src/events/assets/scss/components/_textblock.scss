@@ -1,0 +1,32 @@
+// -----------------------------------------------------------------------------
+// _textblock.scss
+// HSUS Signup and Survey Forms - Enya 2021
+// Author: Vishnu Singamsetty
+// Created: Winter 2021
+// Purpose: This file contains styles related to the Survey and signup forms text block content.
+// -----------------------------------------------------------------------------
+
+/*----------Text block -----------*/
+
+p.image-credit {
+  @include font-family("freight-regular-italic");
+  font-size: rem(11);
+  line-height: 1.363636;
+
+  margin-bottom: 0;
+  color: $photo-credit-color;
+  padding-left: rem(25);
+  margin-left: 29%;
+
+  @include mq($md) {
+    padding-left: 0;
+    margin-top: auto;
+  }
+  @include mq1(600) {
+    margin-top: 0%;
+    margin-left: -1.2em;
+  }
+  @include mq2() {
+    margin-left: 20%;
+  }
+}

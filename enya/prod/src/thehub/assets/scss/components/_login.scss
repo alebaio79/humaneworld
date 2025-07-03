@@ -1,0 +1,67 @@
+%hub-heading {
+  color: $humane-blue;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+$hub-login-padding-x: 2.8125rem;
+.enya {
+  .en__component--hublogin {
+    margin-top: calc(rem(49) / -2);
+    @include mq($md) {
+      margin-top: calc(4rem / -2);
+    }
+    @include mq($lg) {
+      margin-top: calc(rem(81) / -2);
+    }
+    h2 {
+      @extend %hub-heading;
+      margin-bottom: .5rem;
+      text-transform: none;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.25;
+      margin-top: 0;
+    }
+    .en__button--submit {
+      width: auto;
+      padding-left: 1.2rem;
+      padding-right: 1.2rem;
+    }
+  }
+  .en__supporterHubLogin {
+    border: 0;
+    border-radius: 0;
+    max-width: 420px;
+    width: 100%;
+  }
+  .en__supporterHubLogin__header {
+    @extend %hub-heading;
+    background: $white;
+    border-bottom: 0;
+    padding: 2.25rem $hub-login-padding-x 0;
+  }
+  .en__supporterHubLogin__body {
+    padding: .75rem $hub-login-padding-x 1.75rem;
+  }
+  .en__hubgadget__response--success {
+    color: $humane-blue;
+    font-weight: 600;
+  }
+  .en__hubgadget__response--failure {
+    color: $bright-red;
+    font-weight: 600;
+  }
+  .en__supporterHubLogin__form {
+    margin-bottom: 3.25rem;
+  }
+  .en__supporterHubLogin__emailAddress {
+    min-width: 100%;
+    display: block;
+  }
+  .en__field--hublogin {
+    margin-bottom: 1.5rem;
+  }
+}

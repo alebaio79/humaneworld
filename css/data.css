@@ -1,0 +1,67 @@
+body {
+background: rgb(5,53,36) !important;
+background: -moz-linear-gradient(top, rgba(5,53,36,1) 0%, rgba(0,79,58,1) 100%) !important;
+background: -webkit-linear-gradient(top, rgba(5,53,36,1) 0%,rgba(0,79,58,1) 100%) !important;
+background: linear-gradient(to bottom, rgba(5,53,36,1) 0%,rgba(0,79,58,1) 100%) !important;
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#053524', endColorstr='#004f3a',GradientType=0 );
+	
+}
+
+.white-image {
+	filter: brightness(0) invert(1);
+}
+form,
+#main-content{
+	background: transparent
+}
+label {
+	color: #fff !important
+}
+
+#main-content .en__submit button {
+    background: #F5363B !important;
+}
+
+#main-content .en__submit:hover button {
+    background: #84BD00 !important;
+    border-color: #84BD00 !important;
+}
+
+#main-content .en__submit {
+    clear: both;
+	padding-top:30px
+}
+
+.stretto {
+	max-width: 52%
+}
+
+.stretto h1 {
+	text-align: center!important;
+	text-transform: uppercase!important;
+	font-size: 30px !important;
+	margin-bottom: 30px !important
+}
+.en__component--formblock {
+	clear: both
+} 
+
+.en__captcha, .en__field {
+    padding-bottom: 0 !important;
+}
+
+.footer {
+	background-color: #dddddd !important
+}
+.en__field--606300 .en__field__label--item,
+.en__field--628318 .en__field__label--item {
+	margin-left: -15px !important
+}
+
+
+.testata-tp {
+	background: url('https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI_aggiornaprofilo_IMG.jpg?v=1638287370000') center center no-repeat;
+	background-size: cover;
+	height: 70vh;
+	 box-shadow: inset 0 0 0 2000px rgb(0 0 0 / 10%);
+}

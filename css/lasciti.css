@@ -1,0 +1,65 @@
+.topBanner {
+    background-image: linear-gradient(to bottom, rgba(0,0, 0, 0) 40%, rgba(0, 0, 0, 0.2) 100%), url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/Image+for+Landing+Page.JPG?v=1663149086000) !important;
+    background-position: center center;
+    box-shadow: none;
+    position: relative;
+    height: 87vh !important;
+	    background-size: cover;
+}
+
+
+.sloganarea {
+    position: absolute;
+    bottom: 60px;
+    left: 4em;
+	right: 4em;
+}
+
+#vaialform h2 {
+    font-weight: bold;
+    font-size: 30px;
+    color: #024731;
+    text-transform: uppercase;
+}
+
+#main-content a {
+    color:#024731;
+}
+
+.logo-white {
+    position: absolute;
+    z-index: 11;
+    top: 30px;
+    left: 4em;
+}
+
+
+textarea,
+input[type="text"],
+input[type="button"],
+input[type="submit"] {
+     -webkit-appearance: none;
+     border-radius: 0;
+}
+.en__submit button {
+	text-transform: none !important
+}
+@media (max-width: 767px) {
+	.logo-white {
+    left: 0;
+    right: 0;
+}
+	#main-content .logo-white img{
+		width: 200px !important
+	}
+	.sloganarea {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+}
+.sloganarea h1 {
+    font-size: 2.2em !important;
+	margin: 0 !important
+}
+}

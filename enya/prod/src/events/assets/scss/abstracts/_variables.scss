@@ -1,0 +1,15 @@
+// -----------------------------------------------------------------------------
+// _variables.scss
+// HSUS EN Event Forms - Enya 2021
+
+// Created: Winter 2021
+// Purpose: This file contains all application-wide Sass variables.
+// Note: Define color primitives up top, then use those primitives with
+// descriptive labels below.
+// -----------------------------------------------------------------------------
+
+$max-width--content: rem(720);
+$max-width--form: rem(560);
+
+$body-content-padding--mobile: rem(30);
+$body-content-padding--desktop: rem(20);

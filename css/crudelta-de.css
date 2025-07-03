@@ -1,0 +1,45 @@
+body, p, li {
+    font-size: 16px !important;
+}
+
+#main-content .bg-light h3 {
+	color:#024731 !important
+}
+
+.h-50vh {
+    height: 60vh;
+       padding: 0 2em;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.h-25vh {
+    height: 40vh;
+	       padding: 0 2em;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.topBanner:before {
+	display: none !important
+}
+.sloganarea h1,
+.sloganarea h2 {
+	color: #024731 !important
+}
+@media (max-width: 767px) { 
+		.topBanner {
+
+    background-position: center !important;
+}
+	.sloganarea {
+    width: 100%;
+}
+.h-50vh,
+.h-25vh{
+    height: auto;
+    padding: 2em;
+	}
+}

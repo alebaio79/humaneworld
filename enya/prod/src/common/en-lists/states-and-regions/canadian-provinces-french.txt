@@ -1,0 +1,14 @@
+Sélectionnez une province~
+Alberta~AB
+Colombie-Britannique~BC
+Île-du-Prince-Édouard~PE
+Manitoba~MB
+Nouveau-Brunswick~NB
+Nouvelle-Écosse~NS
+Nunavut~NU
+Ontario~ON
+Québec~QC
+Saskatchewan~SK
+Terre-Neuve-et-Labrador~NL
+Territoires du Nord-Ouest~NT
+Yukon~YT

@@ -1,0 +1,45 @@
+<script>
+  window.mrGetParameter = function (param) {
+    var regex = new RegExp("[\\?&]" + param.replace(/\[/, "\\\[").replace(/\]/, "\\\]") + "=([^&#]*)");
+    var result = regex.exec(window.location.href);
+    return (result == null) ? "" : result[1];
+  };
+
+  $(document).ready(function () {
+    var autologinHash = window.mrGetParameter("hash");
+    if (autologinHash != "") {
+      // Decode hash:
+      try {
+        autologinHashArray = atob(autologinHash).split("%");
+        for (var i = 0; i < autologinHashArray.length; i++) {
+          autologinHashArray[i] = atob(autologinHashArray[i]);
+        }
+
+        // only populate fields if they're empty:
+        if ($("#billing_first_namename").val().length == 0)
+          $("#billing_first_namename").val(autologinHashArray[0]);
+        if ($("#billing_last_namename").val().length == 0)
+          $("#billing_last_namename").val(autologinHashArray[1]);
+        if ($("#donor_email_addressname").val().length == 0)
+          $("#donor_email_addressname").val(autologinHashArray[2]);
+        if ($("#billing_addr_country").val() == "United States" && autologinHashArray[8] != "")
+          $("#billing_addr_country").val(autologinHashArray[8]).change();
+        if ($("#billing_addr_state").val().length == 0) {
+          $("#billing_addr_state").val(autologinHashArray[6]).change();
+        }
+        if ($("#billing_addr_zipname").val().length == 0)
+          $("#billing_addr_zipname").val(autologinHashArray[7]);
+        if ($("#billing_addr_street1name").val().length == 0) {
+          $("#billing_addr_street1name").val(autologinHashArray[3]);
+          $("#billing_addr_street2name").val(autologinHashArray[4]);
+        }
+        if ($("#billing_addr_cityname").val().length == 0)
+          $("#billing_addr_cityname").val(autologinHashArray[5]);
+
+        if (window.history.replaceState) {
+          window.history.replaceState({}, '', window.location.href.replace(/&?hash[^&]+/g, ''));
+        }
+      } catch (e) {}
+    }
+  });
+</script>

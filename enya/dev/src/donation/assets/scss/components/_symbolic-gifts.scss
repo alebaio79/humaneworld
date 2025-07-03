@@ -1,0 +1,576 @@
+// -----------------------------------------------------------------------------
+// _symbolic-gifts.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Fall 2021
+// Purpose: Styles for the symbolic gifts page.
+// -----------------------------------------------------------------------------
+
+.symbolic-gifts-container {
+  .gifts-section-header {
+    text-align: center;
+    color: $humane-blue;
+    font-size: rem(30);
+    line-height: rem(34);
+    font-weight: 500;
+    margin-top: 2.5rem;
+    padding-left: 2px;
+    padding-right: 2px;
+
+    @include mq($md) {
+      margin-top: 2rem;
+    }
+  }
+  .gifts-intro-text { 
+    max-width: rem(750);
+    margin: 0 auto rem(24);
+  }
+
+  .gifts-outro-text {
+    max-width: rem(750);
+    margin: rem(24) auto 0;
+    padding: 0 rem(20) 0 rem(25);
+
+    @include mq($md) {
+      padding: 0;
+    }
+
+    p,
+    p strong {
+      @include font-family("freight-regular");
+      font-size: rem(20);
+      line-height: 1.4;
+      color: $text-color;
+      margin-top: 0;
+      margin-bottom: rem(10);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    // Make sure strong text doesn't size up relative to p size.
+    // And keep the text color of the parent.
+    p strong {
+      font-weight: 600;
+      font-size: 1em;
+      line-height: 1;
+      color: inherit;
+    }
+  }
+
+  .gifts-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include mq($md) {
+      margin: 0 -7rem;
+    }
+
+    @include mq($lg) {
+      margin: 0;
+    }
+  }
+
+  .gift-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 1 100%;
+    margin: 10px;
+    padding: 0;
+    border: solid $gray1 1px;
+
+    @include mq(500) {
+      flex-basis: 45%;
+    }
+
+    @include mq($lg) {
+      flex-basis: 30%;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .gift-card.card-additional-amount {
+    background-color: $gray3;
+    min-height: rem(275);
+  }
+
+  .gift-card .additional-gift-icon {
+    flex-basis: 50%;
+    width: 100%;
+    background-image: url("#{$hsus-base-files}/hand-heart-giving-icon-bright-blue.svg");
+    background-repeat: no-repeat;
+    background-size: 32%;
+    background-position: center 75%;
+    min-height: 150px;
+  }
+
+  .gift-headline {
+    margin-bottom: 1rem;
+    text-align: center;
+    flex-basis: 22%;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: rem(18);
+  }
+
+  .gift-card.card-additional-amount .gift-headline {
+    margin: 0;
+    flex-basis: 10%;
+  }
+
+  .gift-image-wrapper {
+    position: relative;
+  }
+
+  .photo-credit {
+    @include font-family('freight-regular-italic');
+    font-size: rem(11);
+    line-height: 1.363636;
+    color: white;
+    margin: rem(-18) rem(5) rem(5) rem(12);
+    text-shadow: 0 0 3px #000;
+  }
+
+  .gift-amount {
+    position: absolute;
+    bottom: rem(10);
+    right: rem(10);
+    background-color: $bright-blue;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: rem(24);
+  }
+
+  .gift-quantity-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: rem(40);
+  }
+
+  .gift-quantity-input {
+    @extend %enya-input-text;
+    font-size: rem(24);
+    flex-basis: 30%;
+    height: rem(35);
+    padding: rem(2) rem(12) rem(4) rem(12);
+    width: rem(60);
+    text-align: center;
+    color: #3b3b3b;
+
+    &:focus {
+      @extend %enya-input-focus;
+    }
+  }
+
+  .quantity-header {
+    margin: 2px 0 10px;
+    text-transform: none;
+  }
+
+  .btn-quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid $bright-blue 1px;
+    background-color: transparent;
+    width: rem(35);
+    height: rem(35);
+    font-size: rem(18);
+    line-height: 1;
+    margin-left: rem(5);
+    color: $bright-blue;
+    touch-action: none;
+
+    &.btn-decrease {
+      padding-top: 0;
+      margin-left: 0;
+      margin-right: rem(5);
+    }
+
+    &:hover {
+      border-color: $bright-blue;
+      background-color: $bright-blue;
+      color: white;
+    }
+
+    &:active {
+      margin-top: 2px;
+      margin-bottom: -2px;
+    }
+  }
+
+  .gift-item-total-header {
+    margin-top: rem(10);
+  }
+
+  .gift-item-total-amount {
+    font-size: rem(24);
+    font-weight: 600;
+  }
+
+  .additional-amount-field {
+
+    &::before {
+      display: block;
+      content: "$";
+      position: relative;
+      width: 0;
+      height: 0;
+      left: .8125rem;
+      top: .5625rem;
+      color: #293941;
+      font-weight: 500;
+      font-size: 1.125rem;
+    }
+  }
+
+  input.gift-additional-amount {
+    @extend %enya-input-text;
+    padding-left: rem(25);
+    &:focus {
+      @extend %enya-input-focus;
+    }
+  }
+}
+
+// We need this long-a** selector to override something in the main EN CSS.
+.is-symbolic-giving-page .en__component--column.en__component--advcolumn.total-and-amount-row {
+  width: auto;
+}
+
+.is-symbolic-giving-page .total-and-amount-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 2rem 10px 0.5rem;
+  background-color: $gray3;
+  max-width: 890px;
+  width: auto;
+  border: solid $gray1 1px;
+
+  @include mq($bs-small) {
+    flex-direction: row;
+    height: 13rem;
+  }
+
+  @include mq($md) {
+    margin: 2rem -4rem 0.5rem;
+  }
+
+  @include mq($lg) {
+    margin: 2rem auto 0.5rem;
+  }
+
+  .total-section-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 40%;
+    background-color: $bright-blue;
+  }
+
+  .total-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    color: white;
+    padding: rem(34) 1rem;
+  }
+
+  .total-amount {
+    @include font-family('freight-semibold');
+    font-size: rem(56);
+    line-height: 1;
+    display: block;
+  }
+
+  .total-header {
+    @include font-family('freight-semibold');
+    font-size: rem(24);
+    line-height: 1;
+    color: white;
+    text-transform: none;
+    letter-spacing: initial;
+    margin-top: 2px;
+    margin-bottom: 0;
+  }
+
+  .amount-section-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 42%;
+    padding: 2rem 0.5rem 2rem 1.5rem;
+
+    @include mq($bs-small) {
+      flex-basis: 55%;
+      margin-left: 1rem;
+      padding: 3rem 1rem;
+    }
+
+    @include mq($lg) {
+      flex-basis: 47%;
+      margin-left: 2.4rem;
+    }
+  }
+
+  .monthly-nudge {
+    margin-bottom: 0;
+  }
+}
+
+.is-symbolic-giving-page {
+  #en__field_transaction_recurrpay {
+    opacity: 0;
+
+    & + label::after {
+      content: none;
+    }
+
+    &:checked + label::after {
+      content: "";
+    }
+  }
+
+  label[for='en__field_transaction_recurrpay'] {
+    text-transform: none;
+    margin-left: 5px;
+    left: rem(10);
+
+    &::before {
+      content: "";
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      border: 1px solid $gray1;
+      position: absolute;
+      top: 0;
+      left: -1.7rem
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 10px;
+      width: 21px;
+      border-left: 3px solid $bright-blue;
+      border-bottom: 3px solid $bright-blue;
+      transform: rotate(-45deg);
+      position: absolute;
+      top: 0;
+      left: -1.5rem
+    }
+  }
+
+  .en__field--recurrpay .en__field__item {
+    display: flex;
+    align-items: center;
+  }
+
+  .en__component--column.en__component--advcolumn.symbolic-gifts-your-information-section,
+  .en__component--column.en__component--advcolumn.symbolic-gifts-payment-section {
+    flex: 0 1 40%;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include mq($md) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .en__component--column.en__component--advcolumn.symbolic-gifts-payment-section {
+    margin-top: 2rem;
+    width: 100%;
+
+    @include mq($lg) {
+      margin-top: 0;
+    }
+  }
+
+  h2.form-section-header {
+    font-size: rem(30);
+    font-weight: 500;
+    color: $humane-blue;
+    text-align: center;
+  }
+
+  h4.your-info-heading,
+  .payment-heading-block {
+    margin-top: 0;
+  }
+
+  &.is-apple-pay-enabled h4.your-info-heading {
+    margin-top: rem(40);
+  }
+
+  .secure-marker {
+    max-height: 17px;
+  }
+}
+
+// Ugly selector needed to override other styles.
+.enya.is-symbolic-giving-page .en__field.en__field--recurrpay {
+  margin-bottom: 0;
+}
+
+body.is-symbolic-giving-page:not(#en__pagebuilder) .en__field--donationAmt {
+  display: none;
+  visibility: hidden;
+}
+
+// Gray out this visually hidden field in page-builder.
+// Show a message so that form editors know this field is there.
+body.is-symbolic-giving-page#en__pagebuilder .en__field--donationAmt {
+  opacity: 0.5;
+
+  label {
+    width: auto;
+  }
+
+  &::before {
+    content: "[Visually Hidden Field]";
+    display: block;
+  }
+}
+
+body.is-symbolic-giving-page .page-error-container {
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+// Animations
+.heart-x-move {
+  width: 13px;
+  height: 11px;
+  position: absolute;
+  left: 0;
+  top: -20px;
+  visibility: hidden
+}
+
+.heart-y-move-enter .heart-x-move,
+.heart-y-move-enter-active .heart-x-move {
+  visibility: visible
+}
+
+.heart-holder {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  transform-origin: 50% 50%;
+}
+
+.is-symbolic-giving-page .additional-amount-field .heart-holder {
+  align-self: flex-start;
+  margin-top: -1rem;
+  margin-left: -1rem;
+}
+
+.heart-y-move-enter {
+  will-change: transform, opacity
+}
+
+.heart-y-move-enter-active {
+  animation: heart-y-move 2.5s forwards linear;
+  animation-delay: 50ms
+}
+
+@-webkit-keyframes heart-y-move {
+  0% {
+    transform: translate(0, 0) rotate(0);
+    opacity: 1
+  }
+
+  5% {
+    transform: translate(0, 0) scale(1.7)
+  }
+
+  60% {
+    transform: translate(0, -65px) rotate(25deg) scale(1.7)
+  }
+
+  80% {
+    transform: translate(0 -76px) rotate(0) scale(1.7);
+    opacity: 1
+  }
+
+  100% {
+    transform: translate(0, -95px) scale(2) rotate(0);
+    opacity: 0
+  }
+}
+
+@keyframes heart-y-move {
+  0% {
+    transform: translate(0, 0) rotate(0);
+    opacity: 1
+  }
+
+  5% {
+    transform: translate(0, 0) scale(1.7)
+  }
+
+  60% {
+    transform: translate(0, -65px) rotate(25deg) scale(1.7)
+  }
+
+  80% {
+    transform: translate(0 -76px) rotate(0) scale(1.7);
+    opacity: 1
+  }
+
+  100% {
+    transform: translate(0, -95px) scale(2) rotate(0);
+    opacity: 0
+  }
+}
+
+@-webkit-keyframes heart-x-move {
+  0% {
+    transform: translate(0, -50%) rotate(0)
+  }
+
+  33% {
+    transform: translate(-7px, -50%) rotate(23deg)
+  }
+
+  67% {
+    transform: translate(7px, -50%) rotate(-23deg)
+  }
+
+  100% {
+    transform: translate(0, -50%) rotate(0)
+  }
+}
+
+@keyframes heart-x-move {
+  0% {
+    transform: translate(0, -50%) rotate(0)
+  }
+
+  33% {
+    transform: translate(-7px, -50%) rotate(23deg)
+  }
+
+  67% {
+    transform: translate(7px, -50%) rotate(-23deg)
+  }
+
+  100% {
+    transform: translate(0, -50%) rotate(0)
+  }
+}
+

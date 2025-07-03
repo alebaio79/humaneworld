@@ -1,0 +1,124 @@
+// -----------------------------------------------------------------------------
+// _base.scss
+// HSUS Engaging Networks Forms - Enya 2021// Created: Winter 2021
+// Purpose: This file contains base styles.
+// -----------------------------------------------------------------------------
+
+a,
+a:link,
+a:active,
+a:visited {
+  @extend %enya-link;
+
+  .enya-wlt & {
+    box-shadow: inset 0 -0.125em $wlt-light-green;
+  }
+
+  // Font weight is bold on all HSI links to meet accessibility standards with
+  // the green HSI color.
+  .enya-hsi & {
+    box-shadow: none;
+    font-weight: 600;
+    color: $hsi-green;
+  }
+}
+
+a:focus,
+a:hover {
+  @extend %enya-link-hover;
+
+  .enya-wlt & {
+    color: $wlt-light-green;
+  }
+
+  .enya-hsi & {
+    box-shadow: inset 0 -0.125em $hsi-green;
+    color: $hsi-green;
+  }
+}
+
+// In Page-Builder, don't add underlines to toolbar links.
+body#en__pagebuilder .en__toolbar {
+  a,
+  a:link,
+  a:active,
+  a:visited {
+    box-shadow: none;
+  }
+}
+
+// Enable ligatures and kerning in some fonts.
+* {
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: none repeat-x scroll left top #fff;
+  @include font-family("freight-regular");
+}
+
+h3 {
+  font-size: 20px;
+  color: #333;
+  line-height: 1.25em;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+p {
+  font-size: 13px;
+  color: #0d0d0d;
+  line-height: 1.25em;
+}
+
+strong {
+  font-weight: 600;
+}
+
+em {
+  font-style: italic;
+}
+
+blockquote {
+  padding: 10px 20px;
+  margin: 0;
+  font-size: inherit;
+  border: none;
+}
+
+// Override fieldset in normalize.css
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="number"],
+textarea {
+  /* Remove iOS shadows */
+  appearance: none;
+}
+
+textarea {
+  max-width: 100%;
+}
+
+/* Enya tablet will look like Enya desktop, so breakpoint will be at top end of mobile */
+@media screen and (min-width: 768px) {
+  .for-mobile-only {
+    display: none;
+  }
+}
+
+.for-desktop-only {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .for-desktop-only {
+    display: inherit;
+  }
+}

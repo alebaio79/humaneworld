@@ -1,0 +1,59 @@
+<!-- Wrapper is needed to make a full-bleed background. -->
+<div class="transaction-summary-wrapper">
+  <div class="transaction-summary-container">
+    <h2>Résumé de votre don</h2>
+    <p class="transaction-summary-intro">Votre don a été envoyé par courriel à {user_data~Email~votre adresse courriel}.</p>
+    <div class="transaction-summary-entries">
+      <div class="transaction-summary-entry">
+        <span class="entry-value">{user_data~First Name} {user_data~Last Name}</span>
+      </div>
+      <div class="transaction-summary-entry">
+        <span class="entry-value">{user_data~Address 1}</span>
+      </div>
+      <div class="transaction-summary-entry entry-address-2">
+        <span class="entry-value">{user_data~Address 2}</span>
+      </div>
+      <div class="transaction-summary-entry">
+        <span class="entry-value">{user_data~City}, {user_data~Province} {user_data~Postal Code} {user_data~Country}</span>
+      </div>
+      <div class="transaction-summary-entry top-25">
+        <span class="entry-label">Date de la contribution :</span>
+        <span class="entry-value">{receipt_data~createdOn~[MM/dd/yyyy]}</span>
+      </div>
+      <!-- This field is visually hidden, but we use its value for other purposes. -->
+      <div class="transaction-summary-entry entry-transaction-type hidden">
+        <span class="entry-label">Transaction type:</span>
+        <span class="entry-value">{receipt_data~type}</span>
+      </div>
+      <div class="transaction-summary-entry">
+        <span class="entry-label">Montant du don :</span>
+        <span class="entry-value">{receipt_data~amount~[en1]} </span>
+        <span class="entry-value entry-flag-monthly">mensuel</span>
+      </div>
+      <!-- Note that we're using the Payment Source value here, not EN's payment type. -->
+      <div class="transaction-summary-entry entry-payment-type">
+        <span class="entry-label">Type de paiement :</span>
+        <span class="entry-value">{user_data~Payment Source}</span>
+      </div>
+      <div class="transaction-summary-entry">
+        <span class="entry-label">Identifiant de la transaction :</span>
+        <span class="entry-value">{receipt_data~txId}</span>
+      </div>
+      <div class="transaction-summary-entry top-25 tax-id-entry-friends-hsi">
+        <span class="entry-label">Numéro d’enregistrement de Les Amis de HSI :</span>
+        <span class="entry-value">137412102 RR0001</span>
+      </div>
+    </div>
+
+    <!-- This section is hidden by default, and revealed only for monthly gifts. -->
+    <div class="transaction-cancellation">
+      <h5>Politique d’annulation</h5>
+      <p>Vous pouvez annuler votre don mensuel en contactant notre équipe d’assistance aux donateurs au 1-866-614-4371, du lundi au vendredi de 8 h à 23 h ou le samedi et le dimanche de 9 h à 18 h (heure de l’Est). Si l'un des détails indiqués ici est incorrect, veuillez nous contacter immédiatement au 1-866-614-4371. Si les données sont correctes, vous n’avez rien à faire et votre don mensuel commencera dans les trois jours ouvrables.</p>
+    </div>
+    <!-- This section is hidden by default, and revealed only for UK donors. -->
+    <div class="thanks-gift-aid-text">
+      <p>If you agreed to Gift Aid your donation, Humane Society International will reclaim tax back on any donations you make in the future
+        or have made in the past four years. Thank you.</p>
+    </div>
+  </div> <!-- /.transaction-summary-container -->
+</div> <!-- /.transaction-summary-wrapper -->

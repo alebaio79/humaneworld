@@ -1,0 +1,149 @@
+@import url(https://use.typekit.net/zbh3jtp.css);
+body,
+p, li,
+.en__contactMessage__htmlDisplay iframe,
+.en__contactMessage__plainText{
+	font-family: freight-sans-pro, sans-serif !important;
+	 font-weight: normal!important;
+    font-style: normal!important;
+	line-height: 1.4em !important;
+	font-size: 18px !important
+}
+h1,
+h2,h3 {
+		font-family: freight-sans-pro, sans-serif !important;
+	 font-weight: bold!important;
+    font-style: normal!important;
+}
+.en__component.en__component--formblock {
+	clear: both
+}
+.en__field__helpText, .en__field__label {
+    padding: 3px 0 !important;
+	margin-bottom: 0;
+    font-size: 14px;
+ 
+}
+.en__field__element--calendar, .en__field__element--checkbox, .en__field__element--email, .en__field__element--number, .en__field__element--password, .en__field__element--radio, .en__field__element--range, .en__field__element--rating, .en__field__element--select, .en__field__element--splitselect, .en__field__element--splittext, .en__field__element--telephone, .en__field__element--text, .en__field__element--textarea, .en__field__element--tripleselect, .en__field__element--tripletext, .en__field__item,
+.en__field__input--calendar, .en__field__input--email, .en__field__input--number, .en__field__input--password, .en__field__input--range, .en__field__input--telephone, .en__field__input--text, .en__field__input--textarea, .en__rangeFieldLabels {
+	width: 100% !important
+}
+.en__field__input--calendar, .en__field__input--email, .en__field__input--number, .en__field__input--other, .en__field__input--password, .en__field__input--select, .en__field__input--splitselect, .en__field__input--splittext, .en__field__input--telephone, .en__field__input--text, .en__field__input--textarea, .en__field__input--tripleselect, .en__field__input--tripletext {
+    padding: 1px !important;
+}
+
+.topBanner {
+			background-image: linear-gradient(to bottom, rgba(0,0, 0, 0) 40%, rgba(0, 0, 0, 0.9) 100%), url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/visoni.jpg?v=1606317148000) !important;
+	background-position: center;
+
+    height: 64vh !important;
+    background-size: cover !important;
+	box-shadow: none !important
+}
+.en__field--privacy-policy-opt-in-ita {
+	padding-bottom: 0 !important
+}
+.en__field--606233 {
+	margin-bottom: 35px
+}
+#main-content .en__submit button {
+    background: #F5363B !important;
+    border: 1px solid #F5363B;
+    color: #fff;
+    padding: 8px 55px;
+}
+#main-content .en__submit button:hover {
+    background: #770e22 !important;
+    border: 1px solid #770e22;
+
+}
+.en__contactMessage__htmlDisplay iframe, .en__contactMessage__plainText {
+    width: 100%;
+    box-sizing: border-box;
+    height: 530px !important;
+}
+.sloganarea {
+    position: absolute;
+    bottom: 20px;
+    left: 4em;
+		right: 4em
+}
+#vaialform h2 {
+font-weight: bold;
+    font-size: 26px !important;
+    color: #024731;
+    text-transform: uppercase;
+}
+#vaialform p {
+line-height: 1.4rem !important;} 
+.img-box picture { 
+	position: relative;
+	float: left;
+    margin-bottom: 25px;
+}
+
+input#en__field_supporter_questions_860068 {
+	display: none
+}
+
+.en__field--606233 .en__field__item,
+.en__field--606305 .en__field__item,
+.en__field--860068 .en__field__item{
+	padding: 0 !important
+}
+
+.en__field--checkbox.en__field--question.en__field--606305 label:before, .en__field--checkbox.en__field--question.en__field--559851 label:before, .en__field--checkbox.en__field--question.en__field--606233 label:before, .en__field--checkbox.en__field--question.en__field--553181 label:before, .en__field.en__field--checkbox.en__field--question.en__field--606233.en__field--privacy-policy-opt-in-ita label:before,
+.en__field--checkbox.en__field--question.en__field--860068 label:before
+
+{
+    top: 10px !important;
+
+}
+/*
+.fixed_div_right {
+    overflow-y: scroll;
+    max-width: 30%;
+    height: 100vh;
+}
+.fixed_div_right  .en__field__input--textarea {
+    height: 70px !important
+}
+*/
+
+.en__component--socialshareblock {
+	margin-top: 20px
+}
+
+.grazie .en__socialShares img{
+	    filter: brightness(0) invert(1);
+}
+
+.en__field.en__field--checkbox.en__field--606305,
+
+.en__field.en__field--checkbox.en__field--860068 
+
+{
+    padding-bottom: 30px !important;
+}
+
+.testata-thank-you-petizione {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/dreamstime_mink_36614341_188311.jpg?v=1606404531000) center center no-repeat !important;
+
+}
+
+.en__component--contactblock textarea {
+	padding: 40px !important
+}
+
+.en__field__error {
+    color: red;
+    font-size: 10px;
+    position: relative;
+    bottom: -15px !important;
+}
+
+@media (max-width: 767px) {
+.topBanner {
+    background-position: 100% !important;
+}
+}

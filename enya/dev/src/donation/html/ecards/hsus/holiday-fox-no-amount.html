@@ -1,0 +1,357 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>Peace</title>
+  <style type="text/css">
+    /****** EMAIL CLIENT BUG FIXES - BEST NOT TO CHANGE THESE ********/
+    /* Forces Outlook.com to display emails at full width */
+    .ExternalClass {
+      width: 100%;
+    }
+
+    /* Forces Outlook.com to display normal line spacing, here is more on that: http://www.emailonacid.com/forum/viewthread/43/ */
+    .ExternalClass,
+    .ExternalClass p,
+    .ExternalClass span,
+    .ExternalClass font,
+    .ExternalClass td,
+    .ExternalClass div {
+      line-height: 100%;
+    }
+
+    /* Prevents Webkit and Windows Mobile platforms from changing default font sizes. */
+    body {
+      -webkit-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+    }
+
+    /* Resets all body margins and padding to 0 for good measure */
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      outline: 0;
+    }
+
+    /*This resolves the Outlook 07, 10, and Gmail td padding issue. Heres more info: http://www.ianhoar.com/2008/04/29/outlook-2007-borders-and-1px-padding-on-table-cells http://www.campaignmonitor.com/blog/post/3392/1px-borders-padding-on-table-cells-in-outlook-07 */
+    table td {
+      border-collapse: collapse;
+      border-spacing: 0px;
+      border: 0px none;
+      vertical-align: top;
+    }
+
+    /****** END BUG FIXES ********/
+    /****** RESETTING DEFAULTS, IT IS BEST TO OVERWRITE THESE STYLES INLINE ********/
+    /*The "body" is defined here for Yahoo Beta because it does not support your body tag. Instead, it will create a wrapper div around your email and that div will inherit your embedded body styles. The "#body_style" is defined for AOL because it does not support your embedded body definition nor your body tag, we will use this class in our wrapper div. The "min-height" attribute is used for AOL so that your background does not get cut off if your email is short. We are using universal styles for Outlook 2007, including them in the wrapper will not effect nested tables*/
+    body,
+    #body_style {
+      /* background: #fff; */
+      min-height: 1000px;
+      color: #000;
+      font-family: 'Verdana Regular', Verdana, Geneva, sans-serif;
+      font-size: 16px;
+    }
+
+    /* This looks insane, but all we're doing here is setting a default height for BRs because outlook.com doesn't support margin bottom. Other tags are reset to sensible defaults below... */
+    html,
+    body {
+      line-height: 1.5;
+    }
+
+    /* ...and seriously, never use p tags - outlook.com will drive you insane with its insistence on adding a 1.35em bottom margin (thanks Microsoft!) Use span to mark text areas, br's for spacing, and the line-height on html, body to set the height of those br's */
+    p {
+      font-size: 100px !important;
+      font-family: cursive !important;
+      color: green !important;
+      background-color: magenta !important;
+    }
+
+    span {
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    i,
+    b,
+    a,
+    ul,
+    li,
+    blockquote,
+    hr,
+    img,
+    div,
+    span,
+    strong {
+      line-height: 1.2;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: 18px;
+      color: black;
+    }
+
+    /* A more sensible default for H1s */
+    h1 {
+      font-size: 24px;
+      color: black;
+    }
+
+    /* This is the embedded CSS link color for Gmail. This will overwrite Outlook.com and Yahoo Beta's embedded link colors and make it consistent with Gmail. You must overwrite this color inline */
+    a,
+    a:link {
+      color: #2A5DB0;
+      text-decoration: underline;
+    }
+
+    /** Some email clients add space below images by default, which is problematic if you’re tiling images. Be aware that, by setting images to block-level elements, you can’t align them without resorting to the float or position CSS properties, which aren’t widely supported */
+    img {
+      display: block;
+      border: 0 none;
+      outline: none;
+      line-height: 100%;
+      outline: none;
+      text-decoration: none;
+      vertical-align: bottom;
+    }
+
+    a img {
+      border: 0 none;
+    }
+
+    small {
+      font-size: 11px;
+      line-height: 1.4;
+    }
+
+    small a {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    span.yshortcuts {
+      color: #000;
+      background-color: none;
+      border: none;
+    }
+
+    /*When Yahoo! Beta came out, we thought we could put those days behind us but we might have celebrated a little too soon. Here's more: http://www.emailonacid.com/blog/details/C13/yahoo_shortcuts_are_baaaaaaaack */
+    span.yshortcuts:hover,
+    span.yshortcuts:active,
+    span.yshortcuts:focus {
+      color: #000;
+      background-color: none;
+      border: none;
+    }
+
+    /*Optional:*/
+    /* There is no way to set these inline so you have the option of adding pseudo class definitions here. They won't work for Gmail nor older versions of Lotus Notes but its a nice addition for all other clients. */
+    a:visited {
+      color: #3c96e2;
+      text-decoration: none
+    }
+
+    a:focus {
+      color: #3c96e2;
+      text-decoration: underline
+    }
+
+    a:hover {
+      color: #3c96e2;
+      text-decoration: underline
+    }
+
+    /*** EMBEDDED CSS NOTES *** 
+      1.) Be aware that Gmail will not read any of your embedded CSS
+      2.) Although I have seen the !important priority used in other examples, it is not necessary. If you use "!important" you can no longer overwrite your styles inline which is required for Gmail.
+      3.) The Android does not support "class" declarations outside of the media query. Here is more info on that: http://www.emailonacid.com/blog/the_android_mail_app_and_css_class_declarations/
+      4.) You might want to consider duplicating your embedded CSS after the closing body tag for Yahoo! Mail in IE7 & 8. 
+      *** END EMBEDDED CSS NOTES***/
+
+    img {
+      height: auto !important;
+      max-width: 100%;
+    }
+
+    /* Dark mode styles */
+    @media (prefers-color-scheme: dark) {
+
+      body,
+      #body_style {
+        color: #fff;
+      }
+
+      span.logo {
+        position: relative;
+        display: block;
+      }
+
+      .logo>img {
+        display: none !important;
+      }
+
+      span.logo::after {
+        content: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2253/hsus-logo-white.png?v=1638127991000);
+        height: 100%;
+      }
+    }
+
+    /* Print only styles */
+    @media print {
+      body {
+        min-height: 0;
+      }
+    }
+  </style>
+  <!--[if lt IE 8]>
+    <style>
+      /* IE-Based Email Clients */
+      .container560{
+      width: 560px;
+      }
+    </style>
+    <![endif]-->
+</head>
+
+<body data-gr-ext-installed="" data-gramm="false" data-new-gr-c-s-check-loaded="14.1037.0"><!-- Email content goes here -->
+  <table border="0" cellpadding="0" cellspacing="0" class="d-none-browser">
+    <tbody>
+      <tr>
+        <td style="width:100%;mso-hide:all;font-size:0px;line-height:0px;max-height:0px;opacity:0;overflow:hidden;">&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <center><!--[if gte mso 9]>
+      <table width="560" cellpadding="0" cellspacing="0"><tr><td>
+      <![endif]-->
+    <table border="0" cellpadding="0" cellspacing="0" class="container560" height="100%" style="max-width:560px;margin:0 auto;"
+      width="100%">
+      <tbody>
+        <tr>
+          <td style="border:1px solid #d1d1d1;text-align:left;" width="100%">
+            <table border="0" cellpadding="0" cellspacing="0" style="border:1px solid #d1d1d1;border-spacing:0;margin:0 auto;width:100%;"
+              width="100%">
+              <tbody>
+                <tr>
+                  <td align="center" valign="top" width="100%"><img
+                      alt="A card showing a fox with its eyes closed and the word &quot;Peace.&quot;"
+                      src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2253/fox-card-landscape.jpg?v=1638224687000"
+                      style="display:block;height:auto;max-width:100%;" /></td>
+                </tr>
+                <tr>
+                  <td height="40" style="font-size:40px; line-height:40px;" width="100%">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td style="padding-left:40px;padding-right:40px;" width="100%"><span
+                      style="color: #000;font-family:'Verdana Regular',Verdana,Geneva,sans-serif;font-size:16px;line-height:24px;">Dear
+                      {campaign_data~xref1},</span>
+                    <table border="0" cellpadding="0" cellspacing="0" style="width:100%;" width="100%">
+                      <tbody>
+                        <tr>
+                          <td height="24" style="font-size:24px; line-height:24px;" width="100%">&nbsp;</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <span style="color: #000;font-family:'Verdana Regular',Verdana,Geneva,sans-serif;font-size:16px;line-height:24px;">As a
+                      special gift, a donation has been made to the Humane Society of the United States in your name.</span>
+
+                    <table border="0" cellpadding="0" cellspacing="0" style="width:100%;" width="100%">
+                      <tbody>
+                        <tr>
+                          <td height="24" style="font-size:24px; line-height:24px;" width="100%">&nbsp;</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <span
+                      style="color: #000;font-family:'Verdana Regular',Verdana,Geneva,sans-serif;font-size:16px;line-height:24px;">{campaign_data~comments}</span>
+
+                    <table border="0" cellpadding="0" cellspacing="0" style="width:100%;" width="100%">
+                      <tbody>
+                        <tr>
+                          <td height="24" style="font-size:24px; line-height:24px;" width="100%">&nbsp;</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <span
+                      style="color: #000;font-family:'Verdana Regular',Verdana,Geneva,sans-serif;font-size:16px;line-height:24px;">{user_data~First
+                      name}</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td height="24" style="font-size:24px; line-height:24px;" width="100%">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td width="100%">
+                    <table border="0" cellpadding="0" cellspacing="0" style="border-spacing:0;margin:0 auto;width:100%;max-width:100%;"
+                      width="100%">
+                      <tbody>
+                        <tr>
+                          <td height="1" style="font-size:1px;line-height:1px;width:40px;" width="40">&nbsp;</td>
+                          <td height="1" style="border-top:1px solid #d1d1d1;border-spacing:0;font-size:1px;line-height:1px;">&nbsp;</td>
+                          <td height="1" style="font-size:1px;line-height:1px;width:40px;" width="40">&nbsp;</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td height="30" style="font-size:30px; line-height:30px;" width="100%">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td align="center" style="padding-left:40px;padding-right:40px;" width="100%"><span class="logo"><a
+                        href="https://www.humanesociety.org"><img alt="HSUS logo"
+                          src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2253/hsus-logo-on-white.png?v=1638128801000"
+                          style="display:block;height:auto;max-width:225px;" /></a></span></td>
+                </tr>
+                <tr>
+                  <td height="30" style="font-size:30px; line-height:30px;" width="100%">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td align="center" style="padding-left:40px;padding-right:40px;" width="100%"><span
+                      style="color: #000;font-family:'Verdana Regular',Verdana,Geneva,sans-serif;font-size:11px;line-height:17px;">Together
+                      with millions of supporters, we fight all forms of animal cruelty to achieve the vision behind our name: a humane
+                      society. And we can&#39;t do it without you.</span></td>
+                </tr>
+                <tr>
+                  <td height="40" style="font-size:40px; line-height:40px;" width="100%">&nbsp;</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!--[if gte mso 9]>
+          </td></tr></table>
+      <![endif]-->
+  </center>
+
+  <div><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></div>
+
+  <div><!-- allow messaging between preview iframe and confirmation page -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.contentWindow.min.js"
+      integrity="sha512-14SY6teTzhrLWeL55Q4uCyxr6GQOxF3pEoMxo2mBxXwPRikdMtzKMYWy2B5Lqjr6PHHoGOxZgPaxUYKQrSmu0A==" crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+  </div>
+</body>
+
+</html>

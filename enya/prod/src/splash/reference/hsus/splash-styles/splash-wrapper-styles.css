@@ -1,0 +1,824 @@
+/*
+ * splash-wrapper-styles.css
+ * CSS for HSUS Ad Splash Page Wrapper
+ * Author: Christopher Keane (chris@ckweb.com)
+ * Created: Spring 2018
+*/
+
+/**
+ * CSS Style Sheet Table of Contents
+
+    Body, Global, and Elements
+    Page Structure
+    Page Header
+    Form Fields
+      Errors
+    Page Footer
+    Miscellaneous
+*/
+
+
+/* =============================================================================
+    Body, Global, and Elements
+============================================================================= */
+
+/* Override style set in Convio CustomStyle.css */
+/* stylelint-disable */
+*,
+html,
+body,
+form,
+input,
+input.AddressBookButtons,
+input.Advocacy,
+input.btn,
+input.btnLg,
+input.btnMed,
+input.btnMini,
+input.btnSm,
+select,
+select.Advocacy,
+textarea,
+legend,
+ul,
+ol,
+li,
+option,
+table,
+tr,
+th,
+th.rfl_infoStatus,
+td,
+td.AlertListDescription,
+td.cstmBack,
+p,
+p.cstmBtnText,
+p.cstmFrame,
+p.cstmHeading,
+p.cstmText,
+p.cstmTitle,
+p.dividerHeading,
+p.scrollingText,
+span.cstmHeading,
+a,
+a.btn,
+a.btn:visited,
+a.cstmBtnText:hover,
+a.cstmBtnText:link,
+a.cstmBtnText:visited,
+#navList,
+.AdvocacyInstructions,
+.AdvocacyNSFix,
+.BlogHeader,
+.Button,
+.Divider,
+.FieldLabels,
+.FormBox,
+.FormBox06,
+.FormBoxHeader,
+.Hint,
+.Instructions,
+.Instructions,
+.ListItem0,
+.ListItem1,
+.NetscapeFix,
+.NoteText,
+.ObjTitle,
+.PhotoLinks,
+.Premiums,
+.ProgressBox,
+.ProgressBoxCurrent,
+.SectionHead,
+.SmallButton,
+.Smaller,
+.SmallerC,
+.TribBtnText1,
+.Upgrades,
+.WhatNext,
+.alphacube_content,
+.dialog_content,
+.dialog_title,
+.explicit,
+.fr_register_another,
+.paraBlueSansSmall,
+.smallBlack,
+.smallSans,
+.smallSansBold,
+.smallWhiteBoldSans,
+.smallWhiteSans,
+.smallestBlackSans,
+.popover-title {
+  font-family: "freight-sans-pro", Verdana, sans-serif;
+}
+
+/* stylelint-enable */
+
+/* To position footer at page bottom, we need these styles for HTML and BODY */
+html {
+  height: 100%;
+  font-size: 10px;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  min-height: calc(100% - 8.1rem);
+  background: none repeat-x scroll left top #ffffff;
+  font-family: "freight-sans-pro", Verdana, sans-serif;
+
+  /* Pad the bottom of the body to prevent content from disappearing behind sticky footer. */
+  padding-bottom: 10rem;
+}
+
+p {
+  font-size: 13px;
+  line-height: 1.154em;
+  color: #293941;
+}
+
+/* Override bootstrap default */
+
+.small {
+  font-size: 14px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+blockquote {
+  padding: 10px 20px;
+  margin: 0;
+  font-size: inherit;
+  border: none;
+}
+
+.bottom-0 {
+  margin-bottom: 0 !important;
+}
+
+.top-10 {
+  margin-top: 10px;
+}
+
+/* Use lining figures, not old-style, for numerals */
+p,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+span,
+input,
+form,
+p,
+label,
+input,
+li {
+  -moz-font-feature-settings: "lnum"1;
+  -ms-font-feature-settings: "lnum"1;
+  -o-font-feature-settings: "lnum"1;
+  -webkit-font-feature-settings: "lnum"1;
+  font-feature-settings: "lnum"1;
+  font-variant-numeric: lining-nums !important;
+}
+
+form.hsus-form,
+p,
+label,
+input,
+li {
+  color: #293941;
+  font: 500 16px "freight-sans-pro", Verdana, sans-serif;
+  line-height: 1.538461538461538;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 1.15;
+  font-weight: 700;
+  color: #00358E;
+  margin-top: 0;
+  margin-bottom: 1.6rem;
+}
+
+/*  Add graphic device below header */
+.header-block::after {
+  background-color: #eef0f1;
+  content: '';
+  display: block;
+  height: 0.5rem;
+  margin: 2rem auto;
+  width: 3.8rem;
+}
+
+span.req {
+  float: none;
+  display: inline-block;
+  width: 0.9em;
+  color: #333333;
+  text-indent: 0;
+  background: none;
+}
+
+a,
+a:link {
+  color: #293941;
+  text-decoration: none;
+  background-size: 1px 1em;
+  box-shadow: inset 0 -0.125em #009ed0;
+  -webkit-transition: color, 0.2s;
+  -moz-transition: color, 0.2s;
+  transition: color, 0.2s;
+}
+
+a:focus {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #009ed0;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 769px) {
+  .for-mobile-only {
+    display: none;
+  }
+}
+
+.for-desktop-only {
+  display: none;
+}
+
+@media screen and (min-width: 769px) {
+  .for-desktop-only {
+    display: inherit;
+  }
+}
+
+.group::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ====[ End Body, Global, and Elements ]==================================== */
+
+/* =============================================================================
+    Page Structure
+============================================================================= */
+
+/*
+body
+--- #wrapper
+------ #page
+--------- #page-content
+-------#page-footer
+*/
+
+#wrapper {
+  margin-top: 4.9rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 769px) {
+  #wrapper {
+    margin-top: 6.4rem;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  #wrapper {
+    margin-top: 8.1rem;
+  }
+}
+
+#page {
+  background-color: #FFFFFF;
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 200rem;
+  /* 2000px */
+}
+
+/* Medium screen / tablet */
+@media screen and (min-width: 600px) {
+  #page-content {
+    grid-template-columns: 1fr 60rem 1fr !important;
+  }
+}
+
+/* ====[ End Page Structure ]================================================ */
+
+/* =============================================================================
+    Page Header
+============================================================================= */
+
+.logo-header-wrapper {
+  background: #EEF0F1;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.09);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  height: 4.9rem;
+}
+
+@media (min-width: 769px) {
+  .logo-header-wrapper {
+    height: 6.4rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .logo-header-wrapper {
+    height: 8.1rem;
+  }
+}
+
+.logo-header {
+  margin: auto;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.logo-header a.hsus-logo {
+  background-image: url('//secure.humanesociety.org/assets/images/logos/hsus-logo-blue.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  box-shadow: none;
+  display: inline-block;
+  width: 20rem;
+  float: none;
+  margin-top: 1rem;
+  height: 54.5%;
+}
+
+@media (min-width: 769px) {
+  .logo-header a.hsus-logo {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .logo-header a.hsus-logo {
+    margin-top: 1.5rem;
+  }
+}
+
+.logo-header span {
+  text-indent: -9999px;
+  float: left;
+  display: inline;
+}
+
+/* ====[ End Page Header ]=================================================== */
+
+
+/* =============================================================================
+    Form Elements
+============================================================================== */
+
+/* Note: If you add the class "hsus-form" to a form element that uses this wrapper,
+   you'll get the form element styles listed here.
+*/
+
+.hsus-form input[type="text"],
+.hsus-form input[type="email"],
+.hsus-form input[type="tel"],
+.hsus-form textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.hsus-form input,
+.hsus-form textarea,
+.hsus-form select {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #293941;
+  border: 1px solid #979797;
+  border-radius: 2px;
+  outline: 0;
+  padding: 0.5em 5px 0.5em 0.7em;
+}
+
+select.form-control:not([size]):not([multiple]),
+.hsus-form select {
+  height: 4rem;
+}
+
+.hsus-form input:focus,
+.hsus-form textarea:focus,
+.hsus-form select:focus {
+  color: #293941;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 2px solid #009ED0;
+  outline: 0;
+  padding: 8px 5px 8px 11px;
+}
+
+.hsus-form textarea {
+  padding: 24px 15px;
+  width: 98%;
+}
+
+.hsus-form input[type="checkbox"] {
+  padding: 0;
+  margin-top: 2px;
+}
+
+.hsus-form .checkbox {
+  float: left;
+  display: inline-block;
+  margin-top: 2px 0.75rem 3rem 1px;
+  height: auto;
+  width: auto;
+  -webkit-transform: scale(1);
+  /* Safari and Chrome */
+  -moz-transform: scale(1.5);
+  /* FF */
+}
+
+.hsus-form label {
+  margin-bottom: 0.5rem;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.1;
+  display: block;
+  text-align: left;
+  white-space: normal;
+}
+
+.hsus-form label.form-required::after {
+  content: '';
+  vertical-align: super;
+  display: inline-block;
+  background-image: url("../../images/icons/required.svg");
+  background-repeat: no-repeat;
+  background-size: 6px 6px;
+  width: 6px;
+  height: 6px;
+  margin: 0 0.1em;
+}
+
+.hsus-form .submit-button {
+  background: #009ED0;
+  border: none;
+  border-radius: 2px;
+  font-family: "freight-sans-pro", Verdana, sans-serif;
+  font-size: 18px;
+  line-height: 1;
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: 600;
+  width: 100%;
+  padding: 11px 0 12px;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.hsus-form .submit-button:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: 0;
+}
+
+.hsus-form .submit-button:hover {
+  background-color: #008DBA;
+}
+
+/* ----[ Select2 ]----------------------------------------------------------- */
+
+.select2-container {
+  width: 100% !important;
+}
+
+/* Select2 styles */
+.select2-container--default .select2-selection--single {
+  border-radius: 2px;
+  border: solid 1px #979797;
+  height: 4.1rem;
+}
+
+.select2-container--default.error .select2-selection--single {
+  border-color: #D83C2D;
+  border-width: 2px;
+}
+
+.select2-container--default .select2-selection--single:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 2px solid #009ED0;
+  outline: 0;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+  color: #909090;
+  font-size: 18px;
+  line-height: 21px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.select2-container--default.error .select2-selection--single .select2-selection__placeholder {
+  /* color: #D83C2D; */
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 500;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.7em;
+  color: #293941;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.select2-container--default.error .select2-selection--single .select2-selection__rendered {
+  /* line-height: 44px; */
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 45px;
+}
+
+.select2-container--default .select2-results__option {
+  font-size: 18px;
+  color: #293941;
+}
+
+.select2-container--default .select2-results__option[aria-selected=true] {
+  background-color: #EEF0F1;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: #009ED0;
+}
+
+.select2-container--default .select2-results__group {
+  font-size: 14px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  border-color: #293941 transparent transparent transparent;
+  border-style: solid;
+  border-width: 8px 7px 0 7px;
+  height: 0;
+  left: 50%;
+  margin-left: -16px;
+  margin-top: -6px;
+  position: absolute;
+  top: 50%;
+  width: 0;
+}
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+  border-color: transparent transparent #293941 transparent;
+  border-width: 0 7px 8px 7px;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  font-size: 18px;
+  line-height: 21px;
+  color: #293941;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field:focus {
+  outline-color: #009ED0;
+}
+
+/* ----[ End Select2 ]------------------------------------------------------- */
+
+/* ----[ Errors ]------------------------------------------------------------------- */
+
+.hsus-form .ErrorMessage,
+.hsus-form label.error {
+  display: block;
+  color: #D83C2D;
+  font-size: 14px;
+  line-height: 1.16666666;
+  font-weight: 600;
+  text-align: left;
+  margin-top: 0.5em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hsus-form input[type="text"].error,
+.hsus-form input[type="text"].invalid,
+.hsus-form input[type="email"].error,
+.hsus-form input[type="email"].invalid,
+.hsus-form input[type="tel"].error,
+.hsus-form input[type="tel"].invalid,
+.hsus-form textarea.error,
+.hsus-form textarea.invalid {
+  border-color: #D83C2D;
+  border-width: 2px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 11px;
+}
+
+.hsus-form input[type="text"]:focus.error,
+.hsus-form input[type="email"]:focus.error,
+.hsus-form input[type="tel"]:focus.error,
+.hsus-form textarea:focus.error {
+  border-color: #009ED0;
+  border-width: 2px;
+}
+
+/* ----[ End Errors ]------------------------------------------------------------------- */
+
+/* ====[ End Form Fields ]=================================================== */
+
+/* =============================================================================
+    Page Footer
+============================================================================= */
+
+.page-footer {
+  max-width: 800px;
+  margin: 8rem auto 0;
+  background-color: #EEF0F1;
+  padding: 2.8rem 0 2rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+@supports (display: grid) {
+  .page-footer {
+    max-width: none;
+    margin: 0;
+    grid-template-columns: 1fr 30rem 1fr !important;
+  }
+
+  /* Medium screen / tablet */
+  @media screen and (min-width: 769px) {
+    .page-footer {
+      display: grid;
+      grid-template-columns: 1fr 60rem 1fr !important;
+    }
+
+    .page-footer-wrap {
+      grid-column-start: 2;
+    }
+  }
+
+  /* Large screen / desktop */
+  @media screen and (min-width: 1100px) {
+    .page-footer {
+      display: grid;
+      grid-template-columns: 1fr 93rem 1fr;
+      margin-top: 2rem;
+    }
+  }
+}
+
+.page-footer .footer-nav {
+  list-style: none;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 24rem;
+  padding-left: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.page-footer .footer-nav li {
+  border-left: solid 1px #333333;
+  line-height: 0.85em;
+  -webkit-flex-grow: 2;
+  flex-grow: 2;
+  font-size: 15px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.page-footer .footer-nav li:first-child {
+  border-left: none;
+}
+
+.page-footer .footer-nav a {
+  color: #333333;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.page-footer .footer-nav a:hover {
+  color: #009ed0;
+}
+
+.page-footer .copyright {
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 18px;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 350px) {
+  .page-footer .copyright {
+    font-size: 13px;
+  }
+}
+
+/* ====[ End Page Footer ]=================================================== */
+
+/* =============================================================================
+    Miscellaneous
+============================================================================== */
+.AutoOptInWarningMessage {
+  font-size: 12px !important;
+  margin-top: 1rem;
+}
+
+/* ----[ Popovers ]------------------------------------------------------------------- */
+
+.popover {
+  border-radius: 0;
+  border: none;
+}
+
+.popover-title {
+  font-size: 16px;
+}
+
+.popover-body {
+  color: white;
+  background-color: #00358E;
+  font-family: "freight-sans-pro", Verdana, sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  padding: 1rem 1.5rem 1.5rem;
+}
+
+/* Style links inside popover. */
+.popover a {
+  text-decoration: underline;
+  color: white;
+  box-shadow: none;
+}
+
+.popover a:hover {
+  color: white;
+}
+
+.popover.bs-popover-auto[x-placement^=top] .arrow::after,
+.popover.bs-popover-top .arrow::after {
+  border-top-color: #00358E;
+}
+
+.popover.bs-popover-auto[x-placement^="left"] .arrow::after,
+.popover.bs-popover-left .arrow::after {
+  border-left-color: #00358E;
+}
+
+.popover.bs-popover-auto[x-placement^="right"] .arrow::after,
+.popover.bs-popover-right .arrow::after {
+  border-right-color: #00358E;
+}
+
+.popover.bs-popover-auto[x-placement^="bottom"] .arrow::after,
+.popover.bs-popover-bottom .arrow::after {
+  border-bottom-color: #00358E;
+}
+
+.popover .close-button {
+  display: inline-block;
+  float: right;
+  color: white;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: -0.25rem;
+  margin-right: .75rem;
+}
+
+/* ----[ End Popovers ]--------------------------------------------------------------- */
+
+/* ====[ End Miscellaneous ]======================================================== */

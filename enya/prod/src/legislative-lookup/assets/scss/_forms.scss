@@ -1,0 +1,53 @@
+input[type="text"] {
+  @extend %enya-input;
+  /*font-family: "freight-sans-pro", Verdana, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  height: 44px;
+  font-size: 18px;
+  line-height: 1.42857143;
+  color: $input-text-color;
+  margin: 0;
+  padding: 8px 12px 6px 12px;
+  border-radius: 0px;
+  border: 1px solid #979797;
+  min-width: initial;
+  appearance: none;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;*/
+  &:focus {
+    @extend %enya-input-focus;
+    /*box-shadow: none;
+    border-width: 2px;
+    border-color: $bright-blue;
+    outline: 0;*/
+  }
+}
+
+.container__places-autocomplete {
+  @extend %leg-max-width;
+  display: flex;
+  flex-wrap: wrap;
+  label {
+    flex: 0 0 100%;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 3px;
+  }
+  input {
+    flex: 1 1 auto;
+    color: $label-color;
+    //margin-right: 20px;
+    max-width: 420px;
+  }
+  button {
+    cursor: pointer;
+    flex: 0 0 100px;
+    background-color: $bright-blue;
+    color: $white;
+    border: none;
+    &:hover {
+      background-color: $hover-blue;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+a.button-link {
+  align-items: center;
+  display: inline-flex;
+  box-shadow: none;
+  color: $humane-blue;
+  font-size: 1.25rem;
+  &::after {
+    width: 16.65px;
+    height: 20.26px;
+    content: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2253/arrow-small.svg?v=1624485005000);
+    margin-left: .5rem;
+  }
+}
+
+.en__submit, a {
+  button, &.button {
+    @include font-family('freight-regular');
+    background-color: $bright-blue;
+    border: 0;
+    border-radius: 2px;
+    font-size: 1.25em;
+    line-height: 1;
+    color: $white;
+    font-weight: 500;
+    //letter-spacing: 0.05em;
+    padding: .9444em 0 1em;
+    text-transform: none;
+    user-select: none;
+    width: 100%;
+    &:hover {
+      background-color: $hover-blue;
+    }
+  }
+}
+
+a.button {
+  display: inline-block;
+  width: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: rem(20);
+  margin-top: rem(24);
+  box-shadow: none;
+}
+
+.no-redirect-btn {
+  text-align: center;
+  button {
+    @include font-family('freight-regular');
+    background-color: $bright-red;
+    border: 0;
+    border-radius: 2px;
+    color: $white;
+    font-size: 1.125em;
+    font-weight: 200;
+    line-height: 1;
+    //letter-spacing: 0.05em;
+    padding: 1rem 2rem;
+    user-select: none;
+    cursor: pointer;
+    &:hover {
+      background-color: $hover-red;
+    }
+  }
+}

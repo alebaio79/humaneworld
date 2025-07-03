@@ -1,0 +1,107 @@
+// -----------------------------------------------------------------------------
+// _page.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: This file contains styles related to the page structure.
+// -----------------------------------------------------------------------------
+
+#page-container {
+  background-color: #FFFFFF;
+  margin: rem(43) auto 0;
+  overflow: hidden;
+
+  @include mq($md) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 3rem;
+    margin-top: rem(64);
+  }
+  
+  @include mq($lg) {
+    margin-top: rem(81);
+    width: 95%;
+    max-width: rem(2000);
+  }  
+}
+
+#page-content {
+  @include mq($md) {
+    display: grid;
+    grid-template-columns: 1fr rem(560) 1fr;
+  }
+
+  @include mq($lg) {
+    grid-template-columns: 1fr minmax(rem(960), rem(1180))  1fr;
+  }
+
+  @include mq($xxl) {
+    grid-template-columns: 1fr rem(1180) 1fr;
+  }
+}
+
+#main-container {
+  @include mq($md) {
+    grid-column: 2 / 3;
+  }
+}
+
+#main-content {
+}
+
+// This is the main EN block container on the page. There should be only one.
+.en__component--row.en__component--advrow {
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @include mq($lg) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  @include mq($xl) {
+    justify-content: space-between;
+  }
+}
+
+.en__component--column.en__component--advcolumn.hero-column {
+  flex-basis: 100%;
+  flex-grow: 0;
+  margin-top: rem(28);
+
+  @include mq($md) {
+    flex-basis: 50%;
+    margin-top: rem(36);
+  }
+
+  @include mq($lg) {
+    margin-top: rem(88);
+  }
+
+  @include mq($xl) {
+    flex-basis: rem(650);
+  }
+}
+
+.en__component--column.en__component--advcolumn.form-column {
+  width: auto;
+  flex-basis: rem(464);
+  flex-shrink: 0;
+  flex-grow: 0;
+  margin: rem(46) 2% 0;
+  padding: rem(21) rem(12) rem(12);
+  background-color: $form-bg-color;
+  scroll-margin-top: rem(65);
+
+  @include mq($md) {
+    margin: rem(42) 0 0;
+    padding: rem(44) rem(72) rem(30);
+    border: 1px solid $gray1;
+  }
+
+  @include mq($lg) {
+    flex-basis: rem(455);
+    margin: rem(88) 0 0 rem(15);
+    padding: rem(43) rem(55) rem(25);
+  }
+}

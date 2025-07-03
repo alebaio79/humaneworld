@@ -1,0 +1,171 @@
+<html>
+
+<head>
+  <title>Transaction Receipt | Humane Society Wildlife Land Trust</title>
+</head>
+
+<body data-gramm="false">
+  <div class="page-wrapper" style="margin-left: 30px; margin-top: 0;">
+    <div style="text-align: center;"><img alt="WLT Logo" class="emailImage wlt-logo" width="160" height="58"
+        src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2254/wlt-logo-on-white.jpg"
+         /></div>
+
+    <h1 style="color: #1D3C34; font-size: 18px; line-height: 22px; font-weight: bold;">Transaction receipt</h1>
+
+    <p style="color: #293941; font-size: 12px; line-height: 14px;">Please print a copy of this receipt for your records.
+    </p>
+    <!-- Donor information table -->
+
+    <table border="0" cellpadding="0" cellspacing="0" style="width: 500px;">
+      <thead>
+        <tr>
+          <th colspan="2" scope="col">
+            <h2
+              style="color: #1D3C34; font-size: 14px; line-height: 16px; margin-top: 10px; margin-bottom: 10px; text-align: left;">
+              Donor information</h2>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td width="25%">
+            <h3 style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">Name</h3>
+          </td>
+          <td>
+            <p style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">{user_data~First name}
+              {user_data~Last name}</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3 style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">Email</h3>
+          </td>
+          <td>
+            <p style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">{user_data~Email address}</p>
+          </td>
+        </tr>
+        <tr>
+          <td rowspan="2" valign="top">
+            <h3 style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">Street</h3>
+          </td>
+          <td>
+            <p style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">{user_data~Street address}</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">{user_data~Address 2}</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3 style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">City</h3>
+          </td>
+          <td>
+            <p style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">{user_data~City}</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3 style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">State/Province</h3>
+          </td>
+          <td>
+            <p style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">{user_data~State}</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3 style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">Postal code</h3>
+          </td>
+          <td>
+            <p style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">{user_data~Zip code}</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3 style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">Country</h3>
+          </td>
+          <td>
+            <p style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">{user_data~Country}</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- End Donor information table -->
+
+    <!-- Transaction information table -->
+    <table border="0" cellpadding="0" cellspacing="0" style="width: 500px; margin-top: 10px;">
+      <thead>
+        <tr>
+          <th colspan="2" scope="col">
+            <h2
+              style="color: #1D3C34; font-size: 14px; line-height: 16px; margin-top: 10px; margin-bottom: 10px; text-align: left;">
+              Transaction information</h2>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td width="25%">
+            <h3 style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">Amount</h3>
+          </td>
+          <td>
+            <p style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">{receipt_data~amount~[en1]}</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3 style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">Date</h3>
+          </td>
+          <td>
+            <p style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">{receipt_data~createdOn~[MM/dd/yy]}
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3 style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">Transaction ID</h3>
+          </td>
+          <td>
+            <p style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">{receipt_data~txId}</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3 style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">Payment type</h3>
+          </td>
+          <td>
+            <p style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">{user_data~Payment Source}</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- End Transaction information table -->
+    <!-- Additional information table -->
+
+    <table border="0" cellpadding="0" cellspacing="0" style="width: 500px; margin-top: 10px;">
+      <thead>
+        <tr>
+          <th colspan="2" scope="col">
+            <h2
+              style="color: #1D3C34; font-size: 14px; line-height: 16px; margin-top: 10px; margin-bottom: 10px; text-align: left;">
+              Additional information</h2>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td width="25%">
+            <h3 style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">Organization tax ID</h3>
+          </td>
+          <td>
+            <p style="color: #293941; font-size: 12px; line-height: 1.5; margin: 0;">52-1808517</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- End Additional information table -->
+  </div>
+</body>
+
+</html>

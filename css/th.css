@@ -1,0 +1,401 @@
+.topBanner {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI_testata-landing_desktop_lion.jpg?v=1652971560000) no-repeat center center !important;
+	background-size: cover !important;
+	height: 80vh  !important
+
+}
+
+.th.IT .topBanner,
+.th.PL .topBanner{
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI_testata-landing_desktop_lion.jpg?v=165297156000) no-repeat center center !important;
+	background-size: cover !important;
+	
+	height: 75vh !important;
+	box-shadow: none
+}
+
+.th.DE .topBanner {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI_testata-landing_desktop_lion.jpg?v=165297156000) no-repeat center center !important;
+	background-size: cover !important;
+	
+	height: 75vh !important;
+	box-shadow: none
+}
+.testata-thank-you-petizione {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/THANKYOU-PAGE-th.jpg?v=1624292593000) center 40% no-repeat !important;
+}
+
+.firmaora {
+	    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/volpe-quote.jpg?v=1610459639000) 50% 80% no-repeat !important;
+	background-size: cover;
+	padding: 15% 0 !important;
+	position: relative
+	
+}
+.firmaora:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: -moz-linear-gradient(left, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0) 100%);
+    background: linear-gradient(to right, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
+}
+.firmaora h3 {
+	width: 55%;
+    padding: 0 0 0 40px;
+    color: #fff !important;
+}
+.grazie img {
+	filter: brightness(0) invert(1);
+} 
+
+.green {
+	color: #024731
+}
+.sloganarea h1 {
+    font-size: 2.1em !important;
+    color: #fff;
+    font-weight: 700;
+}
+.th.IT .right,
+.th.DE .right,
+.th.PL .right{
+	box-shadow: -5px 0px 8px 2px rgb(0 0 0 / 20%);
+	color: #024731
+}
+.th.DE .right,
+.th.PL .right {
+	padding: 0 20px !important
+}
+.th.DE .right,
+.th.PL .right h3 {
+	line-height: 1em
+}
+
+
+.th.IT  h1,
+.th.DE  h1,
+.th.PL  h1{
+    font-size: 2.1em !important;
+    color: #fff;
+    font-weight: 700;
+}
+
+.th.IT h2.hashtag,
+.th.DE h2.hashtag,
+.th.PL h2.hashtag{
+    font-size: 1.4em;
+    color: #fff;
+    font-weight: 500;
+    margin-top: 15px;
+}
+h2.join{
+font-size: 1.6rem;
+    font-weight: 800;
+    text-align: left;
+    padding: 0;
+}
+.grazie {
+    padding: 2em 20px 2em 20px !important;
+    background: #024731;
+}
+.grazie h1 {
+	margin-bottom: 10px !important
+}
+.grazie ul {
+	color: #fff;
+    list-style: none;
+}
+.en__field--opt-in-trophy-hunting label,
+.en__field--opt-in-trophy-hunting-en label,
+.en__field--opt-in-trophy-hunting-pl label,
+.en__field--opt-in-trophy-hunting-fr label,
+.en__field--opt-in-trophy-hunting-es label,
+.en__field--opt-in-trophy-hunting-de label,
+.en__field--opt-in-trophy-hunting-it label{ 
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    font-size: 10px !important;
+    line-height: 1.5em;
+}
+.en__field--opt-in-trophy-hunting,
+.en__field--opt-in-trophy-hunting-en,
+.en__field--opt-in-trophy-hunting-pl,
+.en__field--opt-in-trophy-hunting-fr,
+.en__field--opt-in-trophy-hunting-es,
+.en__field--opt-in-trophy-hunting-de,
+.en__field--opt-in-trophy-hunting-it {
+	padding-bottom: 0
+}
+
+.en__field__label.en__field__label--item:before {
+    top: 0;
+}
+.IT .en__field__label.en__field__label--item:before{
+    top: inherit;
+}
+.DE .en__field--628318 .en__field__label.en__field__label--item:before {
+    top: inherit;
+}
+
+.en__field--553181 .en__field--privacy-policy-opt-in-de .en__field__label.en__field__label--item:before {
+    top: 7px;
+}
+
+.en__field--country {
+	clear: both
+}
+.en__submit {
+	margin-bottom: 30px;
+}
+.btn-white {
+	background: #fff;
+	border-color:#fff;
+	color: #024731;
+	text-transform: uppercase;
+	font-weight: 600
+}
+.btn-white:hover {
+	background: #024731;
+	border-color:#fff;
+	color: #fff
+}
+
+.right a {
+	color: #024731
+}
+
+.form-petizione input {
+    height: 35px !important;
+}
+
+.ES .en__field--1008930 label {
+	padding: 0 !important
+}
+
+@media (min-width : 768px) and (max-width:1250px) {
+	.en__field--checkbox {
+	margin-bottom: 15px
+}
+
+.en__submit {
+	margin-bottom: 30px;
+		margin-top:30px;
+}
+	.en__field__input--select {
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+}
+.en__field_supporter_questions_1008930 {
+	margin-left:0 !important;
+	padding: 0 !important
+}
+.en__field__element--checkbox label {
+    width: 90% !important;
+    margin-left: 10% !important;
+    font-size: 10px !important;
+    line-height: 1.5em;
+    margin-top: -7px !important;
+}
+	.en__field--question label{
+		padding: 0 !important
+	}
+	.DE .en__field--1008148 label {
+		padding-left: 20px !important
+	}
+}
+
+@media (max-width: 1024px) {
+.en__component--advrow .en__component--advcolumn {
+    flex-basis: 100% !important;
+}
+.right {
+    flex-basis: 100% !important;
+    position: relative !important;
+    /* max-width: 482px; */
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+}
+	.en__field__element--checkbox label {
+    width: 100% !important;
+    margin-left: 23px !important;
+    font-size: 10px !important;
+    line-height: 1.5em;
+    margin-top: -5px !important;
+}
+	.right .en__field__element--text,
+	.right .en__field__element--email,
+	.right input[type=text],
+	.right input[type=mail]{
+    width: 100% !important
+}
+}
+@media (max-width : 767px)  {
+.en__field__element--checkbox label {
+    width: 100% !important;
+    margin-left: 23px !important;
+    font-size: 10px !important;
+    line-height: 1.5em;
+    margin-top: -5px;
+}
+.firmaora {
+	    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/volpe-quote.jpg?v=1610459639000) 30% 80% no-repeat !important;
+
+}	
+.firmaora h3 {
+    width: 75%;
+    margin-left: 0;
+    padding: 60px 30px 0 30px;
+    color: #fff !important;
+    /* position: absolute; */
+    /* height: 100%; */
+}
+	
+	.th.IT .topBanner,
+	.th.PL .topBanner{
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI_testata-landing_mobile_lion.jpg?v=1652971567000) center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    height: 80vh !important;
+	}
+	
+		.th.DE .topBanner {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI_testata-landing_mobile_lion.jpg?v=1652971567000) center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    height: 80vh !important;
+	}
+	
+	.th.IT .fascia-verde-mobile  h1,
+		.th.DE .fascia-verde-mobile  h1,
+	.th.PL .fascia-verde-mobile  h1{
+		font-size: 1.4em !important
+	}
+	.th.IT .fascia-verde-mobile h2,
+	.th.DE .fascia-verde-mobile h2,
+	.th.PL .fascia-verde-mobile h2{
+		font-size: 1.2em
+	}
+}
+
+.en__field--1008012  .en__field__label,
+.en__field--1007787  .en__field__label,
+.en__field--1008148  .en__field__label{
+	padding:  0 !important
+}
+
+.en__field--1010033 .en__field__label--positionbeside,
+.en__field--1010034 .en__field__label--positionbeside,
+.en__field--1008930 .en__field__label--positionbeside,
+.en__field--1008012 .en__field__label--positionbeside,
+.en__field--1007787 .en__field__label--positionbeside,
+.en__field--1008148 .en__field__label--positionbeside
+  {
+	display: none
+}
+
+@media (min-width : 1025px)  {
+	.img-reverse .testo {
+		padding-right: 0
+	}
+	.img-reverse .testo p {
+		padding-right: 30px
+	}
+	.img-reverse .img {
+		padding-left: 0
+	}
+	
+
+	.img-reverse:nth-child(even) .img {
+    padding-right: 0;
+    padding-left: 15px;
+	}
+	.img-reverse:nth-child(even) .testo {
+		order:2
+	}
+	.img-reverse:nth-child(even) .testo p {
+		padding: 0 30px
+	}
+}
+
+
+.grazie .h3 {
+	margin-bottom: 20px !important
+}
+.grazie p {
+	text-align: center !important
+}
+.grazie img {
+	filter: brightness(0) invert(1);
+} 
+.ralph-share-left p, 
+.ralph-share-right p {
+	font-size: 18px !important
+}
+.num {
+font-size: 35px !important;
+    font-weight: 700;
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin-top: 20px;
+    line-height: 65px;
+}
+.ralph-share-left p.num,
+.ralph-share-right p.num {
+	font-size: 35px !important;
+}
+.ralph-share-left,
+.ralph-share-right {
+	padding-top: 30px !important
+}
+
+.btn-white {
+		background: #fff;
+    border-radius: 0;
+    padding: 5px 45px;
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+@media (min-width : 1025px)  {
+	.ralph-share-left {
+		padding-left: 18% !important;
+		position: relative
+	}
+	.ralph-share-left:after {
+content: '';
+    position: absolute;
+    right: 0;
+    width: 1px;
+    height: calc(100% - 80px);
+    border-left: 2px solid #fff;
+    top: 20px;
+	}
+	.ralph-share-right {
+		padding-right: 18% !important
+	}	
+
+}
+
+@media (min-width : 1900px)  {
+	.ralph-share-left {
+		padding-left:28% !important;
+		position: relative
+	}
+
+	.ralph-share-right {
+		padding-right: 28% !important
+	}	
+
+}

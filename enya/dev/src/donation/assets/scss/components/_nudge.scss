@@ -1,0 +1,71 @@
+// -----------------------------------------------------------------------------
+// _nudge.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: This file contains styles related to the monthly or one-time nudge.
+// HSUS and HSI use a monthly nudge. WLT uses a one-time nudge. 
+// -----------------------------------------------------------------------------
+
+.monthly-nudge,
+.one-time-nudge {
+  margin: rem(15) 0 rem(14);
+
+  p {
+    font-size: rem(18);
+    line-height: 1.25;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  img {
+    float: left;
+    width: rem(25);
+    height: auto;
+    max-width: 25px;
+    margin: rem(-6) rem(6) rem(2) rem(4);
+    transform: scaleX(-1);
+  }
+}
+
+.one-time-nudge img {
+  height: rem(48);
+  margin-top: rem(-21);
+}
+
+// This is the new-style nudge.
+.monthly-nudge-v2 {
+  display: flex;
+
+  img.nudge-arrow {
+    float: none;
+    transform: none;
+    margin: rem(1) rem(6) rem(2) rem(10);
+    align-self: flex-start;
+  }
+
+  img.nudge-heart {
+    float: none;
+    transform: none;
+    width: rem(15);
+    margin: 0 0 0 0.25rem;
+  }
+}
+
+.monthly-nudge-v2 p {
+  color: $bright-blue;
+  @include font-family('humane-script');
+  font-size: rem(22);
+  margin-top: rem(2);
+
+  body.enya-hsi & {
+    color: $hsi-green;
+  }
+
+  body.enya-hsi.is-lang-french & {
+    letter-spacing: -0.5px;
+  }
+
+  @include mq($ph) {
+    font-size: rem(27);
+  }
+}

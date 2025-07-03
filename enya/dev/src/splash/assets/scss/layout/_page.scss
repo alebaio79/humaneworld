@@ -1,0 +1,27 @@
+// -----------------------------------------------------------------------------
+// _page.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: Styles for splash page layout.
+// -----------------------------------------------------------------------------
+
+.en__component--page {
+  max-width: none;
+  padding: 0;
+}
+
+.en__component--row.en__component--advrow {
+  margin: 0;
+}
+
+.en__component--column.en__component--advcolumn {
+  padding: 0;
+}
+
+.splash-section-container {
+  text-align: center;
+}
+
+#page-footer {
+  margin-top: rem(20);
+}

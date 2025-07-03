@@ -1,0 +1,35 @@
+.topBanner {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI_furfree_testata-lp.jpg?v=1668610780000) no-repeat center center !important;
+    background-size: cover !important;
+}
+.testata-thank-you-petizione {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI_furfree_testata-tp-EN.jpg?v=1668608533000) center center no-repeat !important;
+}
+
+.sloganarea {
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    max-width: 80%;
+}
+
+@media (max-width: 767px) {
+	.en__component--column.en__component--advcolumn, .en__component--row--2 .en__component--column {
+    width: 100%;
+}
+	#main-content .en__component--advrow .en__component--column {
+		flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 100% !important;
+	}
+	.right {
+    flex-basis: 100%;
+    position: relative !important;
+    /* max-width: 482px; */
+    width: 100% !important;
+    flex: 0 0 100%;
+    max-width: 100% !important;
+    height: auto !important;
+
+}
+}

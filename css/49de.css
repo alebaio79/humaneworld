@@ -1,0 +1,22 @@
+.topBanner {
+    background-image:  url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/testata_deu.jpg?v=1674219586000) !important;
+    background-position: 100% 50%;
+    box-shadow: none;
+    position: relative;
+    height: 87vh !important;
+} 
+.topBanner:before {
+	display: none
+}
+
+
+@media (max-width: 767px) {
+.topBanner {
+    height: 92vh !important;
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/mobile_deu.jpg?v=1674468440000) !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+
+}
+}

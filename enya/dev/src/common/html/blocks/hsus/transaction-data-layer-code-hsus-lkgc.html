@@ -1,0 +1,112 @@
+<script>
+  if (typeof window.Enya !== "undefined") {
+    initDataLayerConversionValues();
+  } else {
+    document.addEventListener("enyaReady", function() {
+      initDataLayerConversionValues();
+    });
+  }
+
+  function initDataLayerConversionValues() {
+    // Note that some of HSI's user data fields have slightly different names
+    // than HSUS's. Like "First Name" for HSI and "First name" for HSUS.
+    window.donationConversionValues = {
+      trackingCode: "{receipt_data~txId}",
+      giftType: getGiftType(),
+      giftFrequency: "{receipt_data~recurringFrequency}",
+      giftAmount: "{receipt_data~amount~[en1]}",
+      giftAmountFB: formatGiftAmountForFacebook("{receipt_data~amount~[en1]}"),
+      // We're using EN's pageName value for this.
+      campaignName: getPageJsonFor("pageName"),
+      // We're using EN's campaignPageId value for this.
+      campaignId: getPageJsonFor("campaignPageId"),
+      trackingId: getPageJsonFor("trackingId"),
+      paymentSource: "{user_data~Payment Source}".toLowerCase(),
+      paymentType: getPageJsonFor("paymentType"),
+      firstName: "{user_data~First name}",
+      lastName: "{user_data~Last name}",
+      email: "{user_data~Email address}",
+      street1: "{user_data~Street address}",
+      street2: "{user_data~Address 2}",
+      city: "{user_data~City}",
+      state: "{user_data~State}",
+      zip: "{user_data~Zip code}",
+      country: "{user_data~Country}",
+      supporterId: getPageJsonFor("supporterId"),
+      currency: getPageJsonFor("currency")
+    };
+
+    // See this page for details:
+    // https://support.google.com/tagmanager/answer/6107169?hl=en
+    window.eCommerceConversionValues = {
+      transactionId: "{receipt_data~txId}",
+      transactionAffiliation: "" + window.pageJson.campaignPageId,
+      transactionTotal: window.pageJson.amount,
+      transactionProducts: [{
+        name: "" + window.pageJson.campaignPageId,
+        sku: "" + window.pageJson.donationLogId,
+        category: getGiftType(),
+        price: window.pageJson.amount,
+        quantity: 1
+      }]
+    };
+
+    const dataLayer = window.dataLayer = window.dataLayer || [];
+    dataLayer.push(window.donationConversionValues);
+    dataLayer.push(window.eCommerceConversionValues);
+  }
+
+  function getGiftType() {
+    if (window.Enya.state.thisPage.isOneTimeGift) {
+      return "one-time";
+    } else if (window.Enya.state.thisPage.isMonthlyGift) {
+      return "monthly";
+    } else {
+      return "";
+    }
+  }
+
+  // Function that formats gift amount according to FB guidelines.
+  function formatGiftAmountForFacebook(giftAmount) {
+    if (typeof giftAmount === "undefined") {
+      giftAmount = "";
+    }
+
+    let formattedGiftAmount = giftAmount;
+
+    // Make sure amount is not blank.
+    if (formattedGiftAmount.trim() === "") {
+      formattedGiftAmount = "0.00";
+    }
+
+    // Strip commas from amount
+    // Strip dollar sign from amount
+    formattedGiftAmount = formattedGiftAmount.replace(/\$|,/g, "");
+
+    // After we strip dollar sign and comma, if we don't have a number, 
+    // set to 0.00.
+    if (isNaN(formattedGiftAmount)) {
+      formattedGiftAmount = "0.00";
+    }
+
+    // If the number has no decimal, add ".00"
+    if (formattedGiftAmount.indexOf(".") === -1) {
+      formattedGiftAmount += ".00";
+    } else if (formattedGiftAmount.charAt(formattedGiftAmount.length - 1) === ".") {
+      // If the string ends in a decimal, add two zeros.
+      formattedGiftAmount += "00";
+    }
+
+    return formattedGiftAmount;
+  }
+
+  // Wrap pageJson lookups with error checking.
+  function getPageJsonFor(key) {
+    if (!key) return "";
+    if (typeof window.pageJson[key] !== "undefined") {
+      return window.pageJson[key];
+    } else {
+      return "";
+    }
+  }
+</script>

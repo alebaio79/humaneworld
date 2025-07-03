@@ -1,0 +1,43 @@
+<script>
+  (() => {
+    /*
+     * Disallow past dates and set value to current date
+     */
+    let today = new Date();
+    let mm = today.getMonth() + 1;
+    let dd = today.getDate();
+    const yyyy = today.getFullYear();
+
+    // add leading zeros if needed
+    if (dd < 10) dd = '0' + dd;
+    if (mm < 10) mm = '0' + mm;
+    // build date string
+    today = yyyy + '-' + mm + '-' + dd;
+
+    document.querySelectorAll('.en__field__input--calendar').forEach(el => {
+      el.setAttribute('min', today);
+      el.value = new Date().toISOString().substr(0, 10);
+    });
+
+    /*
+     * EN has no way of customizing Question error messages
+     */
+    const ecardSendDate = document.querySelector('.en__field--ecard-delivery-send-ecard-date');
+
+    if (ecardSendDate) {
+      const observer = new MutationObserver((mutations) => {
+        const validError = ecardSendDate.querySelector('.valid-error');
+
+        // Replace default error message
+        if (ecardSendDate.classList.contains('en__field--validationFailed') && validError) {
+          validError.textContent = 'Please choose a date that is not in the past.';
+        }
+      });
+
+      observer.observe(ecardSendDate, {
+        // en__field--validationFailed class will be added if past date is entered
+        attributeFilter: ['class']
+      });
+    }
+  })();
+</script>

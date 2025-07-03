@@ -1,0 +1,74 @@
+// -----------------------------------------------------------------------------
+// _fields.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: This file contains styles related to form fields.
+// See the common abstracts for base styles.
+// For more specific styles, say for form elements inside certain sections,
+// see the applicable individual Sass file.
+// For example, _amount-section.scss has styles for elements in the amount
+// section.
+// -----------------------------------------------------------------------------
+// Donation form fields need flex display so we can make error messages
+// appear below the form field.
+.enya .en__field:not(.en__hidden) {
+  display: flex;
+  flex-direction: column;
+}
+
+.en__field__input--calendar,
+.en__field__input.en__field__input--text,
+.en__field__input.en__field__input--email,
+.en__field__input.en__field__input--telephone,
+.en__field__input.en__field__input--other,
+.en__field__input.en__field--textarea,
+.en__field__input.en__field__input--textarea {
+  @extend %enya-input-text;
+
+  &:focus {
+    @extend %enya-input-focus;
+
+    .enya-wlt & {
+      border-color: $wlt-light-green;
+    }
+
+    .enya-hsi & {
+      border-color: $hsi-green;
+    }
+  }
+}
+
+select,
+select.en__field__input--select,
+select.en__field__input--splitselect,
+select.en__field__input--tripleselect {
+  @extend %enya-input-select;
+}
+
+.enya .en__field__label,
+label.en__field__label {
+  @extend %enya-label;
+}
+
+.en__mandatory:not(.en__field--donationAmt) label::after {
+  content: "*";
+  display: inline-block;
+  font-size: rem(13);
+  vertical-align: text-top;
+}
+
+.enya input[type="checkbox"] {
+  accent-color: $bright-blue;
+
+  &:focus {
+    @extend %enya-input-focus;
+  }
+}
+
+.enya-wlt input[type="checkbox"] {
+  accent-color: $wlt-light-green;
+}
+
+.enya-hsi input[type="checkbox"] {
+  accent-color: $hsi-green;
+}

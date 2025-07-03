@@ -1,0 +1,32 @@
+
+<script>
+  $(document).ready(function() {
+    updateEmailShareLink();
+  });
+
+
+  function getAlertId() {
+    return "[[S80:Thisid]]";
+  }
+
+  function updateEmailShareLink() {
+    //1. get current email share link
+    var $emShareLink = $("a.emShareLink");
+
+    //2. get the cleaned-up title of this page
+    //3. encode the title
+    var encodedTitle = encodeURIComponent(getDocumentTitle());
+
+    //3a. get the page default description
+    var encodedDescription = encodeURIComponent(getDefaultDescription());
+
+    var encodedUrl = encodeURIComponent(getDefaultUrl() + "&s_src=sh_emty_[[S334:id]]");
+
+    //4. update the "subject" and "body" params of the email share link with the title
+    $emShareLink.attr("href", updateQueryString("subject", encodedTitle, $emShareLink.attr("href")));
+    $emShareLink.attr("href", updateQueryString("body", encodedDescription + " " + encodedUrl, $emShareLink.attr(
+      "href")));
+
+  }
+
+</script>

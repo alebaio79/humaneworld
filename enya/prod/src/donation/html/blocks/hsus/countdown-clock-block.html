@@ -1,0 +1,42 @@
+<!--The CSS and JS code for the clock comes from the countdown-clock repo.-->
+<!--https://github.com/ckweb/countdown-clock-->
+<link href="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2253/main.07e660e4.css?v=1697740683000"
+  rel="stylesheet">
+<style>
+  #countdown-clock-app-root {
+    position: absolute;
+    bottom: 2rem;
+    right: 1rem;
+  }
+
+  /* Hide the clock on very narrow viewports. */
+  @media (max-width: 370px) {
+    #countdown-clock-app-root {
+      display: none;
+      visibility: hidden;
+    }
+  }
+</style>
+
+<div id="countdown-clock-app-root"></div>
+
+<script>
+  // Set the date here for the day after the deadline.
+  // The clock will end on midnight of the day you enter here.
+  window.countdownDate = new Date("January 1, 2024").getTime();
+
+  // If you want to hide the days, and show all the remaining hours in the
+  // hours slot, set this to true. You usually want to leave this as false.
+  window.showDaysInHours = false;
+
+  const clockContainer = document.getElementById("countdown-clock-app-root");
+  const heroContainer = document.querySelector(".hero-container");
+
+  if (clockContainer && heroContainer) {
+    heroContainer.style.position = "relative";
+    heroContainer.appendChild(clockContainer);
+  }
+</script>
+
+<script
+  src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2253/main.21a3c5f2.js?v=1697747977000"></script>

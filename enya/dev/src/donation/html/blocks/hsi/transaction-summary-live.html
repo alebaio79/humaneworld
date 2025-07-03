@@ -1,0 +1,62 @@
+<!-- Wrapper is needed to make a full-bleed background. -->
+<div class="transaction-summary-wrapper">
+  <div class="transaction-summary-container">
+    <h2>Gift summary</h2>
+    <p class="transaction-summary-intro">Your gift summary has been emailed to {user_data~Email~your email address}.</p>
+    <div class="transaction-summary-entries">
+      <div class="transaction-summary-entry">
+        <span class="entry-value">{user_data~First Name} {user_data~Last Name}</span>
+      </div>
+      <div class="transaction-summary-entry">
+        <span class="entry-value">{user_data~Address 1}</span>
+      </div>
+      <div class="transaction-summary-entry entry-address-2">
+        <span class="entry-value">{user_data~Address 2}</span>
+      </div>
+      <div class="transaction-summary-entry">
+        <span class="entry-value">{user_data~City}, {user_data~Province} {user_data~Postal Code} {user_data~Country}</span>
+      </div>
+      <div class="transaction-summary-entry top-25">
+        <span class="entry-label">Contribution date:</span>
+        <span class="entry-value">{receipt_data~createdOn~[MM/dd/yyyy]}</span>
+      </div>
+      <!-- This field is visually hidden, but we use its value for other purposes. -->
+      <div class="transaction-summary-entry entry-transaction-type hidden">
+        <span class="entry-label">Transaction type:</span>
+        <span class="entry-value">{receipt_data~type}</span>
+      </div>
+      <div class="transaction-summary-entry">
+        <span class="entry-label">Gift amount:</span>
+        <span class="entry-value">{receipt_data~amount~[en1]} </span>
+        <span class="entry-value entry-flag-monthly">monthly</span>
+      </div>
+      <!-- Note that we're using the Payment Source value here, not EN's payment type. -->
+      <div class="transaction-summary-entry entry-payment-type">
+        <span class="entry-label">Payment type:</span>
+        <span class="entry-value">{user_data~Payment Source}</span>
+      </div>
+      <div class="transaction-summary-entry">
+        <span class="entry-label">Transaction ID:</span>
+        <span class="entry-value">{receipt_data~txId}</span>
+      </div>
+      <div class="transaction-summary-entry top-25">
+        <span class="entry-label">Humane Society International Tax ID:</span>
+        <span class="entry-value">52-1769464</span>
+      </div>
+    </div>
+
+    <!-- This section is hidden by default, and revealed only for monthly gifts. -->
+    <div class="transaction-cancellation">
+      <h5>Cancellation Policy</h5>
+      <p>Your monthly donation may be cancelled by contacting our Donor Care team at 1-866-614-4371 Monday through Friday 8 a.m. to 11 p.m.
+        or Saturday and Sunday 9 a.m. to 6 p.m. EST. If any of the details shown here are incorrect, please contact us immediately at
+        1-866-614-4371. If the details are correct, you do not need to do anything further and your monthly donation will start within 3
+        business days.</p>
+    </div>
+    <!-- This section is hidden by default, and revealed only for UK donors. -->
+    <div class="thanks-gift-aid-text">
+      <p>If you agreed to Gift Aid your donation, Humane Society International will reclaim tax back on any donations you make in the future
+        or have made in the past four years. Thank you.</p>
+    </div>
+  </div> <!-- /.transaction-summary-container -->
+</div> <!-- /.transaction-summary-wrapper -->

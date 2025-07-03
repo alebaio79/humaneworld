@@ -1,0 +1,208 @@
+.topBanner {
+    background-image:  url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/LP_foulard_testata.jpg?v=1679996849000) !important;
+    background-position: 100% 50%;
+    box-shadow: none;
+    position: relative;
+    height: 87vh !important;
+} 
+.topBanner:before {
+	display: none
+}
+
+.en__field--1541160.en__field--withOther .en__field__item:nth-of-type(1),
+.en__field--1541160.en__field--withOther .en__field__item:nth-of-type(3) {
+	margin-right: 0!important;
+	    flex: 0 0 100%;
+    max-width: 100%;
+}
+.en__field--1541160.en__field--withOther .en__field__item:nth-of-type(2) {
+	display: none
+}
+
+
+/*.en__field--1541160.en__field--withOther .en__field__item:nth-of-type(3) {
+    margin-top: 3px;
+    display: none;
+}*/
+
+.en__field--withOther .en__field__item:nth-of-type(5) {
+    height: 54px;
+	width: 100%;
+    display: contents !important;
+}
+
+.en__field--withOther.en__field--1542804  .en__field__item--other {
+	display: none !important
+}
+input#en__field_supporter_questions_606300,
+input#en__field_supporter_questions_757012,
+input#en__field_supporter_questions_553181 {
+    display: none;
+}
+
+
+
+.donation-amount .en__field--1542804   .en__field__item:nth-child(4) {
+	display: block !important;
+	margin-top: -2px;
+    margin-bottom: 0;
+}
+
+
+.donation-amount .en__field--1542804    label {
+	font-size: 22px !important;
+    line-height: normal;
+    text-align: left;
+	padding-left: 55px;
+	position: relative;
+	color: #024731;
+	background: none;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+	height: 55px
+}
+.donation-amount .en__field--1542804   .en__field__item:nth-child(1) label:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: url(https://www.hsi-europe.org/engaging-networks/img/cagnolini-pop.jpg) left center no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 55px;
+
+    
+
+} 
+
+.bg-grey h3:after {
+	display: none
+}
+.donation-amount .en__field--1542804   .en__field__item:nth-child(2) label:before{
+	content: '';
+	background: url(https://www.hsi-europe.org/engaging-networks/img/bassotti.jpg) left center no-repeat;
+    background-size: contain;
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+    width: 50px;
+    height: 55px;
+} 
+
+
+.donation-amount .en__field--1542804   .en__field__item:nth-child(3) label:before{
+	background: url(https://www.hsi-europe.org/engaging-networks/img/gattini-pop.jpg) left center no-repeat;
+    background-size: contain;
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+    width: 50px;
+    height: 55px;
+
+} 
+
+
+.donation-amount .en__field--1542804  .en__field__item:nth-child(4) label:before{
+	background: url(https://www.hsi-europe.org/engaging-networks/img/cagnolini.jpg) left center no-repeat;
+    background-size: contain;
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+    width: 50px;
+    height: 55px;
+
+} 
+
+/*.donation-amount .en__field--1542804   .en__field__item:nth-child(3) label,
+.donation-amount .en__field--1542804  .en__field__item:nth-child(4) label{
+display: none
+
+} 
+*/
+
+
+
+
+.donation-amount input[type="radio"]:checked+label {
+    color: #fff;
+}
+.en__field--606300{
+	padding-bottom: 0 !important
+}
+.en__field--checkbox.en__field--question.en__field--606300 label.en__field__label.en__field__label--positionbeside {
+	display: none !important
+}
+
+.en__field--checkbox.en__field--question.en__field--606300 label,
+.en__field--checkbox.en__field--question.en__field--757012 label {
+	font-size: 12px;
+	color: #024731;
+	    padding-bottom: 0;
+    margin-bottom: 0;
+	transform: scale(0.9) translate(2%, 0)
+}
+.en__field--checkbox.en__field--question.en__field--606300 label a,
+.en__field--checkbox.en__field--question.en__field--757012 label a {
+		color: #024731 !important
+}
+.en__field--checkbox.en__field--question.en__field--606300 label:before,
+.en__field--checkbox.en__field--question.en__field--757012 label:before {
+    content: "";
+    border-color: transparent;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    /* text-align: center; */
+    vertical-align: middle;
+    position: absolute;
+    left: -25px;
+    width: 20px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    height: 20px;
+    border: 1px solid #999;
+}
+
+.en__submit button:hover {
+	background: #C83021 !important;
+	border-color: #C83021 !important
+}
+
+.en__field--1382917 .en__field__item--other {
+	display: none
+}
+
+.en__field--1382917 input[type="radio"] {
+    display: none;
+}
+
+.en__field--1382917  input[type="radio"]:checked+label {
+    background: #6F9E00;
+
+}
+.sceltacartolina div {
+	display: none
+}
+
+.sceltacartolina .cartolinasceltaattiva {
+	display: block
+}
+@media (max-width: 767px) {
+.topBanner {
+    height: 92vh !important;
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/foulard-testata.jpg?v=1679474706000) !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+.bg-grey,
+.bg-white{
+    padding: 30px 0;
+
+}
+}

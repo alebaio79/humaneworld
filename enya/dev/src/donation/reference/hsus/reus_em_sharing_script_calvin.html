@@ -1,0 +1,278 @@
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://secure.humanesociety.org/assets/js/libs/purl/purl.js"></script>
+<script>
+  $(document).ready(function () {
+    updateTwitterShareLink();
+    updateEmailShareLink();
+
+    setUIFacebookShareText(getDefaultDescription());
+    setUITwitterShareText();
+    setUIMailtoShareText(getDefaultDescription());
+
+    $(".taf-facebook-share-box, .addthis_button_facebook").on("click", function () {
+      window.open($("a.fbShareLink").attr("href"), "_blank");
+    });
+
+    $(".taf-twitter-share-box, .addthis_button_twitter").on("click", function () {
+      window.open($("a.twShareLink").attr("href"), "_blank");
+    });
+
+    $(".taf-mailto-share-box, .addthis_button_email").on("click", function () {
+      window.open($("a.emShareLink").attr("href"), "_blank");
+    });
+  });
+
+  var twitterTitleMax = 95; //Set the max length of the page title to be sent to Twitter
+
+  //Function definitions
+  function getDefaultDescription() {
+    var defaultDescription = $("meta[name=Description]").attr("content");
+    return defaultDescription;
+  }
+
+  function getDefaultUrl() {
+    var currentUrl = window.location.href;
+    var defaultUrl = currentUrl.replace("OnScreenThanks", "UserAction");
+    defaultUrl = defaultUrl.replace("ActionAlertTakenPage", "UserAction");
+    return defaultUrl;
+  }
+
+  function getAlertId() {
+    return "[[S80:Thisid]]";
+  }
+
+  function getUserEmail() {
+    return "[[S1:primary_email]]";
+  }
+
+  function getSessionPageTitle(encoded) {
+    var sessionPageTitle = "[[S80:thisPageTitle]]";
+    //encode the tweet text from the twShareLink href, if requested
+    if (typeof encoded !== "undefined" && encoded === true) {
+      sessionPageTitle = urlencodeConvioStyle(sessionPageTitle);
+    }
+    return sessionPageTitle;
+  }
+
+  function getDefaultTwitterText(encoded) {
+    //by default, use the session page title as the tweet text
+    var defaultTwitterText = getSessionPageTitle();
+
+    //But if the session variable is empty, use the document page title, shortened
+    if (defaultTwitterText == "") {
+      defaultTwitterText = getDocumentTitle(twitterTitleMax);
+    }
+
+    if (typeof encoded !== "undefined" && encoded === true) {
+      defaultTwitterText = urlencodeConvioStyle(defaultTwitterText);
+    }
+    return defaultTwitterText;
+  }
+
+  function getCustomTweet() {
+    var customTweet = "";
+    //compare tweet text from twShareLink to session page title
+    var tweetText = getTwitterShareText();
+    var sessionPageTitle = getSessionPageTitle();
+    //CMK02042015: hack to make sure we ain't tweeting about a colon
+    //Effectively removes the custom tweet text, if it's just a single colon character
+    if (tweetText == ":") {
+      tweetText = sessionPageTitle;
+    }
+    if (tweetText !== sessionPageTitle) {
+      //we have a custom tweet
+      customTweet = tweetText;
+    }
+    return customTweet;
+  }
+
+  function getDocumentTitle(titleLimit) {
+    var cleanShortTitle;
+    var currentTitle = document.title;
+    cleanShortTitle = currentTitle.replace(": Thank You ", "");
+    cleanShortTitle = cleanShortTitle.replace("- The Humane Society of the United States", "");
+    cleanShortTitle = cleanShortTitle.replace(": Alert Taken ", "");
+    //Shorten title if nec.
+    if (cleanShortTitle.length > titleLimit) {
+      cleanShortTitle = cleanShortTitle.substring(0, titleLimit);
+    }
+    return cleanShortTitle;
+  }
+
+  function setUIFacebookShareText(description) {
+    $("#taf-facebook-share-textarea").val(description);
+  }
+
+  function setUITwitterShareText() {
+    var dummy_bitly = "http://bit.ly/PcK0t2";
+    var ui_twitter_share_text;
+    if ((typeof getCustomTweet() === "undefined") || getCustomTweet() == "") {
+      ui_twitter_share_text = getDefaultTwitterText() + " " + dummy_bitly + " " + "(via @HumaneSociety)"
+    } else {
+      ui_twitter_share_text = getCustomTweet() + " " + dummy_bitly + " via @HumaneSociety";
+    }
+    $("#taf-twitter-share-textarea").val(ui_twitter_share_text);
+  }
+
+  function setUIMailtoShareText(description) {
+    var ui_mailto_share_text = description;
+    $("#taf-mailto-share-textarea").val(ui_mailto_share_text);
+  }
+
+  function getSharingSourceCode(service) {
+    var sourceCode = "";
+    switch (service) {
+      case "twitter":
+        sourceCode = "sh_tw_" + getPageTypeCode() + getAlertId();
+        break;
+      case "email":
+        sourceCode = "sh_mailto_" + getPageTypeCode() + getAlertId();
+        break;
+      default:
+        //do nothing
+        break;
+    }
+    return sourceCode;
+  }
+
+  function getTwitterShareText(encoded) {
+    var $twShareLink = $("a.twShareLink");
+    var twShareLinkHref = $twShareLink.attr("href");
+    var twitterShareText = $.url(twShareLinkHref).param("text");
+    //encode the tweet text from the twShareLink href, if requested
+    if (typeof encoded !== "undefined" && encoded === true) {
+      twitterShareText = urlencodeConvioStyle(twitterShareText);
+    }
+    return twitterShareText;
+  }
+
+  function getPageTypeCode() {
+    var pageTypeCode = "";
+    var currentUrl = window.location.href;
+    if (currentUrl.indexOf("page=UserAction") != -1) {
+      pageTypeCode = "alert";
+    } else if ((currentUrl.indexOf("page=OnScreenThanks") != -1) || (currentUrl.indexOf("page=ActionAlertTakenPage") !=
+        -1)) {
+      pageTypeCode = "ty";
+    }
+    return pageTypeCode;
+  }
+
+  function updateTwitterShareLink() {
+    var dummy_bitly = "http://bit.ly/PcK0t2"; //we may need this
+    //1. get current twitter share link
+    var $twShareLink = $("a.twShareLink");
+
+    //2. get the twitter text for this page and update the "text" param of the twitter share link with the title
+    var encodedTwitterText = "";
+
+    if ((typeof getCustomTweet() === "undefined") || getCustomTweet() == "") {
+      //there's no custom tweet, so get the default (and encoded)
+      encodedTwitterText = getDefaultTwitterText(true);
+    } else {
+      encodedTwitterText = urlencodeConvioStyle(getCustomTweet());
+    }
+
+    $twShareLink.attr("href", updateQueryString("text", encodedTwitterText, $twShareLink.attr("href")));
+
+    //3. Get the long Url for the Twitter share and turn it into a bitly
+    var longUrlForTwitterShare = $.url($twShareLink.attr("href")).param("url");
+
+    //3a. Call Bitly API to shorten the url we're gonna share on Twitter
+
+    callBitlyAPI(longUrlForTwitterShare, function (bitlyForTwitterShare) {
+      //3b. update the "url" param of the twitter share link with the bitly
+      $twShareLink.attr("href", updateQueryString("url", bitlyForTwitterShare, $twShareLink.attr("href")));
+    });
+  }
+
+  function updateEmailShareLink() {
+    //1. get current email share link
+    var $emShareLink = $("a.emShareLink");
+
+    //2. get the cleaned-up title of this page
+    //3. encode the title
+    var encodedTitle = encodeURIComponent(getDocumentTitle());
+
+    //3a. get the page default description
+    var encodedDescription = encodeURIComponent(getDefaultDescription());
+
+    var encodedUrl = encodeURIComponent(getDefaultUrl() + "&s_src=sh_emty_[[S334:id]]");
+
+    //4. update the "subject" and "body" params of the email share link with the title
+    $emShareLink.attr("href", updateQueryString("subject", encodedTitle, $emShareLink.attr("href")));
+    $emShareLink.attr("href", updateQueryString("body", encodedDescription + " " + encodedUrl, $emShareLink.attr(
+      "href")));
+
+  }
+
+  function callBitlyAPI(url, callback) {
+    var accessToken = "e09205d53b6a1d6f1f2e6e44503672c311cf1775";
+    var url = "https://api-ssl.bitly.com/v3/shorten?access_token=" + accessToken + "&longUrl=" + encodeURIComponent(
+    url);
+
+    $.getJSON(
+      url, {},
+      function (response) {
+        if (callback) {
+          callback(response.data.url);
+        }
+      }
+    );
+  }
+
+  // Usage:
+  //   var data = { 'first name': 'George', 'last name': 'Jetson', 'age': 110 };
+  //   var querystring = encodeQueryData(data);
+  //
+  // Source: http://stackoverflow.com/questions/111529/create-query-parameters-in-javascript
+  function encodeQueryData(data) {
+    var ret = [];
+    for (var d in data)
+      ret.push(encodeURIComponent(d) + "=" + encodeURIComponent(data[d]));
+    return ret.join("&");
+  }
+
+
+  //Improved helper function for updating query param -- handles hashes in URL correctly
+  //http://stackoverflow.com/a/11654596/135196
+
+  function updateQueryString(key, value, url) {
+    "use strict";
+    if (!url) {
+      url = window.location.href;
+    }
+    var re = new RegExp("([?&])" + key + "=.*?(&|#|$)(.*)", "gi"),
+      hash = url.split("#"),
+      separator = url.indexOf("?") !== -1 ? "&" : "?";
+    if (re.test(url)) {
+      if (typeof value !== "undefined" && value !== null) {
+        return url.replace(re, "$1" + key + "=" + value + "$2$3");
+      }
+      url = hash[0].replace(re, "$1$3").replace(/(&|\?)$/, "");
+      if (typeof hash[1] !== "undefined" && hash[1] !== null) {
+        url += "#" + hash[1];
+      }
+      return url;
+    }
+
+    if (typeof value !== "undefined" && value !== null) {
+      url = hash[0] + separator + key + "=" + value;
+      if (typeof hash[1] !== "undefined" && hash[1] !== null) {
+        url += "#" + hash[1];
+      }
+      return url;
+    }
+
+    return url;
+  }
+
+  //source: http://stackoverflow.com/a/4458580/135196
+  function urldecode(str) {
+    return decodeURIComponent((str + "").replace(/\+/g, "%20"));
+  }
+
+  function urlencodeConvioStyle(str) {
+    return encodeURIComponent((str + "")).replace(/'%20'/g, "+");
+  }
+</script>

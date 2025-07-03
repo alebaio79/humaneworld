@@ -1,0 +1,19 @@
+
+
+.topBanner {
+			background-image: linear-gradient(to bottom, rgba(0,0, 0, 0) 40%, rgba(0, 0, 0, 0.2) 100%), url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/dog-fighting-testata.jpg?v=1640333872000) !important;
+	    background-position: 100% 50%;
+
+}
+
+
+.topBannerThankyou {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/IMG_7631.JPG?v=1637258309000) no-repeat center center;
+	background-size: cover;
+}
+
+@media (max-width: 767px) {
+.topBanner {
+    background-position: 35% 100%;
+}
+}

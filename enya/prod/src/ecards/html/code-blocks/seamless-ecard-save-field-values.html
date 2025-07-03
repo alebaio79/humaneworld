@@ -1,0 +1,44 @@
+<script>
+  /**
+   * This code block saves ecard related field values
+   * to localStorage for use on the ecard form
+   */
+  (() => {
+    const ecard = {
+      select: document.querySelector('.en__field--ecard-delivery-ecard-selection .en__field__input'),
+      name: document.querySelector('.en__field--ecard-delivery-ecard-recipient-name .en__field__input'),
+      email: document.querySelector('.en__field--ecard-delivery-ecard-recipient-email-address .en__field__input'),
+      message: document.querySelector('.en__field--ecard-delivery-ecard-message .en__field__input'),
+      date: document.querySelector('.en__field--ecard-delivery-send-ecard-date .en__field__input'),
+      excludeAmount: document.querySelector('.en__field--ecard-delivery-exclude-amount-on-ecard .en__field__input')
+    };
+    let ecardValues = null;
+
+    // EN page hooks are throwing errors
+    // window.enOnSubmit = function() {
+    // need to hook into submit button since EN page hooks are not working
+    document.querySelector('.en__submit button').addEventListener('click', e => {
+      // do all required field exist?
+      if (ecard.select && ecard.name && ecard.email && ecard.message && ecard.date && ecard.excludeAmount) {
+        // save for use on ecard form
+        ecardValues = {
+          select: ecard.select.value,
+          name: ecard.name.value,
+          email: ecard.email.value,
+          message: ecard.message.value,
+          date: ecard.date.value,
+          excludeAmount: ecard.excludeAmount.checked
+        };
+        localStorage.setItem('ecardValues', JSON.stringify(ecardValues));
+      }
+    });
+
+    // Add class to Hide donation amount checkbox field, to fix styling.
+    const hideAmountField = document.querySelector(
+      ".en__field--ecard-delivery-exclude-amount-on-ecard"
+    );
+    if (hideAmountField) {
+      hideAmountField.classList.add("visible-opt-in");
+    }
+  })();
+</script>

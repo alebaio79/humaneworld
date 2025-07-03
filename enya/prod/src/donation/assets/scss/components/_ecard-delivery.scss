@@ -1,0 +1,30 @@
+// -----------------------------------------------------------------------------
+// _ecard-delivery.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: Responsible for styling the ecard delivery elements.
+// Note that the Other amount field has its own partial: _other-amounts.
+// -----------------------------------------------------------------------------
+// Larger textareas
+.en__field--ecard-delivery-ecard-message .en__field__input--textarea {
+  min-height: 5.5em;
+}
+
+.en__field--ecard-delivery-send-ecard-date .en__field__input--calendar {
+  width: 100%;
+
+  @include mq($md) {
+    width: 50%;
+  }
+}
+
+// HSI ecard forms show an image picker. We keep the select element hidden.
+body:not(#en__pagebuilder).enya-hsi .en__field--ecard-delivery-ecard-selection {
+  display: none;
+  visibility: hidden;
+}
+
+body#en__pagebuilder.enya-hsi .en__field--ecard-delivery-ecard-selection {
+  display: block;
+  visibility: visible;
+}

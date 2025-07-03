@@ -1,0 +1,33 @@
+// -----------------------------------------------------------------------------
+// _error-landing-page.scss
+// HSUS/HSI Engaging Networks Forms - Enya 2022
+// Created: Spring 2022
+// Purpose: Styles for the Error Landing Page.
+// -----------------------------------------------------------------------------
+
+.error-landing-page-content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
+  padding-top: 2.5rem;
+  text-align: center;
+
+  @include mq(lg) {
+    padding-top: 2rem;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+  }
+
+  a {
+    font-style: italic;
+  }
+}
+
+// This div is inserted over the main content and prevents any interaction
+body>div[style="position:absolute; left:0; right:0; top:0; bottom:0; z-index:9999"] {
+  display: none !important;
+}

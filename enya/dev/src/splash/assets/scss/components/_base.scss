@@ -1,0 +1,17 @@
+// -----------------------------------------------------------------------------
+// _base.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Summer 2021
+// Purpose: Base styles for splash pages.
+// -----------------------------------------------------------------------------
+
+// Show certain content on F2F page only.
+.for-splash-f2f-only {
+  display: none;
+  visibility: hidden;
+
+  .enya-splash.splash-f2f & {
+    display: block;
+    visibility: visible;
+  }
+}

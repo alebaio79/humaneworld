@@ -1,0 +1,80 @@
+<!-- HSUS Dev-only advo: https://secure.humanesociety.org/site/Advocacy?cmd=display&page=UserAction&id=7432 -->
+<style>
+  .advo-intro-body-text.collapsed {
+    max-height: 22rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .no-hero .advo-intro-body-text.collapsed {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .advo-intro-body-text.expanded {
+    max-height: none;
+    overflow: auto;
+  }
+
+  .has-hero .advo-intro-body-text.collapsed::after {
+    position: absolute;
+    bottom: 0;
+    height: 10rem;
+    width: 100%;
+    content: "";
+    background: linear-gradient(to top,
+        rgba(255, 255, 255, 1) 10%,
+        rgba(255, 255, 255, 0) 40%);
+    pointer-events: none;
+    /* so the text is still selectable */
+  }
+
+  .read-more-button {
+    cursor: pointer;
+    color: #00358E;
+    font-size: 17px;
+  }
+
+  .not-small .read-more-button {
+    font-size: 16px;
+  }
+</style>
+<script>
+  /* ====[ Read More from Luminate Advos]==================================== */
+  function initIntro() {
+    var $advoIntroContainer = $(".advo-intro-container");
+    if (thisPage.hasHero) {
+      //Add Read More button to end of advo body text, but only if needed
+      if (doWeNeedToReadMore()) {
+        $("<div class='read-more-button'>Read More +</div>").insertAfter(".advo-intro-body-text");
+
+        //Expand the body text when users click on the read more button
+        $(".read-more-button").on("click", function () {
+          $(".advo-intro-body-text").removeClass("collapsed").addClass("expanded");
+          $(this).hide();
+        });
+      } else {
+        //The intro text is short, so we don't need to collapse it.
+        $(".advo-intro-body-text").removeClass("collapsed");
+      }
+    } else {
+      //For pages that have no hero image, move intro container up to top of page.
+      $advoIntroContainer.prependTo("#page");
+    }
+  }
+
+  //Function that determines whether or not we need to show the Read More button for the advo intro text.
+  function doWeNeedToReadMore() {
+    var weNeedReadMore, introTextElement, introTextTotalHeight, introTextCSSMaxHeight;
+    weNeedReadMore = false;
+    introTextElement = document.querySelector(".advo-intro-body-text.collapsed");
+    if (introTextElement !== null) {
+      introTextTotalHeight = introTextElement.scrollHeight;
+      introTextCSSMaxHeight = parseInt(getComputedStyle(introTextElement).maxHeight, 10);
+      if (introTextTotalHeight > introTextCSSMaxHeight) {
+        weNeedReadMore = true;
+      }
+    }
+    return weNeedReadMore;
+  }
+</script>

@@ -1,0 +1,41 @@
+// -----------------------------------------------------------------------------
+// _template.scss
+// HSUS Signup and Survey Forms - Enya 2021
+// Author: Vishnu Singamsetty
+// Created: Winter 2021
+// Purpose: This file contains styles related to the Survey and signup Header and Footer structure.
+// -----------------------------------------------------------------------------/*-------------------------- Header Logo-------------------------------*/
+
+#page-header {
+  position: relative;
+
+}
+
+
+
+//Humanepro template  header image
+.logo-header a.hsus-humaneprologo {
+ display: inline-block;
+  width: 32%;
+  height: 109%;
+  background-image: url("#{$hsus-base-files}/hsus-hpo-logo-header.svg?v=1617986331000");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  box-shadow: none;
+
+  @include mq1(600) {
+   width: 90%;
+   height: 120%;  
+   margin-top: 0;
+  }
+@include mq2(){
+  width: 42%;
+}
+
+}
+
+
+   
+
+ 

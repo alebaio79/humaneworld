@@ -1,0 +1,108 @@
+// -----------------------------------------------------------------------------
+// _hsi-web-site-signup.scss
+// HSUS Engaging Networks Forms - Enya 2023
+// Created: Spring 2023
+// Purpose: Styles for the embedded signup form at the bottom of the HSI web 
+// site.
+// -----------------------------------------------------------------------------
+
+.enya.enya-hsi.is-hsi-web-site-signup {
+  background: $hsi-dark-green;
+
+  #page-header {
+    display: none;
+  }
+
+  #page-footer {
+    display: none;
+  }
+
+  #page-container {
+    margin-top: rem(15);
+
+    @include mq($six) {
+      margin-top: rem(10);
+    }
+  }
+
+  #page-content {
+    background: $hsi-dark-green;
+  }
+
+  #main-container {
+    padding-left: 0;
+    padding-right: 6.9%;
+
+    @include mq($six) {
+      padding: 0;
+    }
+  }
+
+  .en__component--formblock {
+    display: table-cell;
+  }
+
+  .en__component--column {
+    width: 129%;
+  }
+
+  .en__field:not(.en__hidden) {
+    display: inline-flex;
+    width: 80%;
+    margin-right: 45px;
+    margin-bottom: 10px;
+    color: $white;
+
+    @include mq($six) {
+      width: 35%;
+    }
+  }
+
+  .en__mandatory .en__field__label:after {
+    color: $white;
+  }
+
+  // This is the email opt-in.
+  .en__field.en__field--374 {
+    width: 80%;
+
+    @include mq($six) {
+      max-width: 75%;
+    }
+  }
+
+  .en__captcha {
+    padding-top: rem(12);
+    padding-bottom: rem(30);
+  }  
+
+  .en__submit button {
+    width: auto !important;
+    min-width: 11rem !important;
+
+    &:hover {
+      background-color: $white;
+      color: $hsi-light-green;
+    }
+  }
+
+  .en__errorList {
+    display: none;
+  }
+
+  .en__field__error,
+  .valid-error {
+    color: $gold;
+  }
+
+  .en__field--validationFailed {
+    .en__field__input {
+      &.en__field__input--text,
+      &.en__field__input--email,
+      &.en__field__input--select {
+        border-color: $gold;
+      }
+    }
+  }
+}
+

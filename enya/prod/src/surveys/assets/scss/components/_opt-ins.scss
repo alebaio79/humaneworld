@@ -1,0 +1,44 @@
+// -----------------------------------------------------------------------------
+// _opt-ins.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: Responsible for opt-in and question styles for surveys.
+// -----------------------------------------------------------------------------
+
+// Hide certain fields when not in page-builder.
+body:not(#en__pagebuilder) {
+  // Enya's optInsManager adds this class to opt-ins that we don't show to the
+  // user.
+  .hidden-opt-in {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+// Gray out the hidden fields in page-builder, but show them and add a message
+// so that form editors know they're there.
+// Our hidden-opt-in class isn't getting added in page-builder. Don't know why.
+// Spelling out field IDs here to make sure this works in PB.
+body#en__pagebuilder {
+  .hidden-opt-in,
+  .en__field--sms,
+  .en__field--general-email {
+    opacity: 0.5;
+
+    label {
+      width: auto;
+    }
+
+    &::before {
+      content: "[Hidden Opt-in]";
+      display: block;
+    }
+  }
+}
+
+body:not(#en__pagebuilder) {
+  &.enya-hsi.is-hsi-web-site-signup.is-selected-country-us .en__field--opt-in {
+    display: none;
+    visibility: hidden;
+  }
+}

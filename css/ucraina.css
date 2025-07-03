@@ -1,0 +1,54 @@
+
+
+.topBanner {
+			background-image:url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/Ukraine_uanimals_carry_dog_-_blurred_559696.jpg?v=1646830418000) !important;
+	    background-position: 100% 50%;
+
+}
+.cane {
+    background-image: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/IMG_6307_517552.jpg?v=1621010154000);
+
+}
+
+.cane.refresh {
+    background-image: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/fascia-wide-dogmeat-60.jpg?v=1628765714000 );
+	padding: 17em 0 3em 0!important
+
+}
+.topBannerThankyou {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/thankyoupage.JPG?v=1646303390000) no-repeat center center;
+	background-size: cover;
+}
+.noafter:after {
+	display: none
+}
+@media (max-width: 767px) {
+.topBanner {
+	    background-position: 35% 100%;
+
+}
+	.sloganarea {
+		bottom: 0 !important
+	}
+	.cane {
+		padding: 15em 0 0 0 !important;
+		background-position: 10% !important
+	}
+	.cane .vertical-align{
+		font-size: 20px !important;
+		zoom:0.8 !important
+	}
+}
+@media (max-width: 520px) {
+
+	.cane {
+		padding: 15em 0 0 0 !important;
+		background-position: 43% !important
+	}
+
+}
+
+.custom_donation_content {
+	display: none !important
+}
+

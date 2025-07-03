@@ -1,0 +1,172 @@
+// -----------------------------------------------------------------------------
+// _payment-section.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: Styles for the payment section.
+// -----------------------------------------------------------------------------
+
+.payment-heading-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: rem(33) 0 rem(13);
+
+  h4.payment-heading {
+    margin: 0;
+  }
+
+  .secure-marker span {
+    text-transform: uppercase;
+    color: $gray1;
+    font-size: rem(14);
+    line-height: rem(17); // match line height of h4 on same line
+    font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+
+  .secure-marker::before {
+    display: inline-block;
+    width: rem(10);
+    height: rem(10);
+    margin-right: rem(2);
+    content: " ";
+    background-image: url("#{$hsus-base-files}/secure-lock.svg");
+    background-repeat: no-repeat;
+
+    .enya-hsi & {
+      background-image: url("#{$hsi-base-files}/secure-lock.svg");
+    }
+  }
+}
+
+.payment-source-section {
+  .en__field__element--radio {
+    display: flex;
+  }
+
+  .en__field__item {
+    flex: 1 0 30%;
+    margin: 0 4.99% rem(4) 0;
+    max-width: 30%;
+  }
+
+  // Give less margin to the Bank item.
+  .en__field__item:nth-of-type(2) {
+    margin-right: 2%;
+  }
+
+  .en__field__input--radio {
+    @extend %enya-input-hidden-radio;
+
+    & + .en__field__label--item::before {
+      @extend %enya-input-radio-large-before;
+    }
+
+    &:focus + .en__field__label--item::before {
+      @extend %enya-input-focus;
+    }
+  
+    &:checked + .en__field__label--item::before {
+      @extend %enya-input-radio-large-before-checked;
+
+      .enya-wlt & {
+        background-color: $wlt-light-green;
+        border-color: $wlt-dark-green;
+      }
+      .enya-hsi & {
+        background-color: $hsi-green;
+        border-color: $hsi-dark-green;
+      }
+    }
+  }
+
+  .en__field__label--item {
+    @extend %enya-input-radio-large-label;
+    text-transform: uppercase;
+    word-break: normal;
+    line-height: 0.72727272;
+    width: 100%;
+  }
+}
+
+body:not(#en__pagebuilder) .en__field--paymenttype {
+  display: none;
+  visibility: hidden;
+}
+
+// Gray out this visually hidden field in page-builder.
+// Show a message so that form editors know this field is there.
+body#en__pagebuilder .en__field--paymenttype {
+  opacity: 0.5;
+
+  label {
+    width: auto;
+  }
+
+  &::before {
+    content: "[Visually Hidden Field]";
+    display: block;
+  }
+}
+
+.expire-cvv-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  .en__field--ccexpire {
+    flex-basis: 60%;
+    margin-right: rem(8);
+  }
+
+  .en__field--ccvv {
+    flex-basis: 40%;
+  }
+}
+
+// Make the expiration dropdowns equal width.
+.en__field--ccexpire .en__field__element--splitselect .en__field__item {
+  width: 45%;
+  display: inline-block;
+}
+
+// For now, the event pages are missing the payment heading. So we need this
+// additional style.
+.enya-event .payment-section-block {
+  margin-top: 1rem;
+}
+
+body:not(#en__pagebuilder) .bank-note-block {
+  display: none;
+  visibility: hidden;
+}
+
+body:not(#en__pagebuilder).is-payment-bank .bank-note-block {
+  display: block;
+  visibility: visible;
+
+  & .bank-note p {
+    color: $text-color;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+}
+
+body:not(#en__pagebuilder).enya-hsi .payment-choice-bank {
+  display: none;
+  visibility: hidden;
+}
+
+body:not(#en__pagebuilder).enya-hsi.is-currency-usd .payment-choice-bank {
+  display: block;
+  visibility: visible;
+}
+
+body:not(#en__pagebuilder).enya-hsi.is-lang-french {
+  .payment-source-section .en__field__item.payment-choice-credit {
+    flex-basis: 65%;
+    max-width: 65%;
+  }
+}
+

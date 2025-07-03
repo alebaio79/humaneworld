@@ -1,0 +1,4 @@
+$24~24
+$31~31
+$45~45
+Other amount~other

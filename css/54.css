@@ -1,0 +1,45 @@
+.topBanner {
+    background-image: linear-gradient(to bottom, rgba(0,0, 0, 0) 40%, rgba(0, 0, 0, 0.2) 100%), url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/LiveSealPup9_56633.jpg?v=1683703539000) !important;
+    background-position: 100% 50%;
+    box-shadow: none;
+    position: relative;
+    height: 87vh !important;
+}
+
+.testata-thank-you-petizione {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/IMG_0077_22657.jpg?v=1679498109000) no-repeat center center !important;
+    background-size: cover !important;
+} 
+
+
+.en__contactMessage__htmlDisplay iframe, .en__contactMessage__plainText {
+    height: 1200px !important;
+
+} 
+@media (min-width: 768px) and (max-width: 1300px)  {
+	#main-content .en__component--column.fixed_div_right {
+		height: 100vh;
+		overflow-x: hidden
+	}
+	
+}
+@media (max-width: 1300px) {
+
+.en__contactMessage__htmlDisplay iframe, .en__contactMessage__plainText {
+    height: 1500px !important;
+	 overflow-y: scroll
+} 
+	
+	
+}
+
+
+@media (max-width: 1300px) {
+
+.en__contactMessage__htmlDisplay iframe, .en__contactMessage__plainText {
+    height:3000px !important;
+	 overflow-y: scroll
+} 
+	
+	
+}

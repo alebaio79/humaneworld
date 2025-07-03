@@ -1,0 +1,128 @@
+<style>
+  /* TODO: maybe move this into donation.css */
+  .transaction-summary-wrapper {
+    width: calc(100vw - 17px);
+  }
+
+  .en__ecarditems__showprev {
+    cursor: pointer;
+    max-width: 30rem;
+    margin-bottom: 1rem;
+    margin-top: .5rem;
+    width: auto;
+  }
+
+  .en__ecarditems__preview {
+    outline: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 9999;
+  }
+
+  .en__ecarditems__prevbg {
+    position: fixed;
+  }
+
+  .en__ecarditems__prevwrap {
+    align-items: center;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    margin: 1rem !important;
+    max-width: calc(100% - 2rem);
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+  }
+
+  .en__ecarditems__preview.overflow--width .en__ecarditems__prevwrap {
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
+
+  .en__ecarditems__prevclose {
+    font-size: 1.25rem;
+    font-weight: 700;
+    height: auto;
+    right: 0.5rem;
+    top: 0.25rem;
+    width: auto;
+  }
+
+  .en__ecarditems__preview .en__component--column {
+    margin-top: 2rem;
+  }
+
+  .en__ecarditems__preview .enya-donation-submit {
+    margin: auto auto 1rem;
+    width: auto;
+  }
+
+  .en__ecarditems__prevwrap iframe {
+    height: auto;
+    min-width: 100%;
+    width: 1px;
+  }
+
+  @media (min-width: 640px) {
+    .en__ecarditems__prevwrap {
+      margin: 1.75rem auto !important;
+      max-width: 602px;
+    }
+  }
+</style>
+<!-- allow messaging between page and preview iframe -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.min.js"
+  integrity="sha512-dnvR4Aebv5bAtJxDunq3eE8puKAJrY9GBJYl9GC6lTOEC76s1dbDfJFcL9GyzpaDW4vlI/UjR8sKbc1j6Ynx6w==" crossorigin="anonymous"
+  referrerpolicy="no-referrer"></script>
+<script>
+  /**
+   * Loads the ecard preview URL saved on page 1 into
+   * an iframe and allows printing of the preview contents
+   */
+  (() => {
+    const previewUrl = localStorage.getItem('previewUrl');
+    const previewButton = document.querySelector('.en__ecarditems__showprev');
+    const previewContainer = document.querySelector('.en__ecarditems__preview');
+    const previewIframe = document.getElementById('previewIframe');
+    const previewClose = document.querySelector('.en__ecarditems__prevclose');
+    const printButton = document.getElementById('printEcardButton');
+
+    if (previewUrl && previewButton && previewContainer && previewIframe && previewClose && printButton) {
+      previewButton.classList.remove('en__hidden');
+      previewButton.addEventListener('click', e => {
+        previewContainer.classList.add('preview--show');
+        // preview src gets reset incorrectly after popping up
+        setTimeout(() => {
+          previewIframe.src = previewUrl;
+        }, 100);
+      });
+      previewClose.addEventListener('click', e => {
+        previewContainer.classList.remove('preview--show');
+        // avoid a triple iframe load
+        previewIframe.src = '';
+      });
+      printButton.addEventListener('click', e => {
+        previewIframe.contentWindow.print();
+      });
+    }
+    if (window.iFrameResize) {
+      iFrameResize({
+        log: false
+      }, '#previewIframe');
+    }
+
+    setTimeout(() => {
+      // Update email share button with URL pointing to donation form.
+      const emailShareButton = document.querySelector("a.email-share");
+      console.log(emailShareButton);
+      if (emailShareButton) {
+        emailShareButton.href =
+          "mailto:?subject=Will%20you%20help%20animals%3F&body=Every%20animal%20deserves%20a%20life%20free%20from%20cruelty%20and%20neglect.%20That's%20why%20I%20stand%20with%20the%20Humane%20Society%20of%20the%20United%20States.%20Will%20you%20help%20us%20in%20creating%20a%20better%20world%20for%20all%20animals%20by%20making%20a%20gift%20today%3F%20Click%20here%3A%20https%3A%2F%2Fsecured.humanesociety.org%2Fpage%2F95561%2Fdonate%2F1%3Fea.tracking.id%3Dsh_emty_donate";
+      }
+    }, 1000);
+  })();
+</script>

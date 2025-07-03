@@ -1,0 +1,239 @@
+<div id="Cardinal-ElementContainer">
+  <div id="Cardinal-Modal" class="cardinalOverlay-content shadow-effect cardinalOverlay-open fade-and-drop ">
+    <div id="Cardinal-ModalHeader">
+      <div id="Cardinal-MerchantContent">
+
+      </div>
+      <button id="Cardinal-CloseButton" class="cardinalOverlay-closeButton close-button cardinal-hide">×</button>
+    </div>
+    <div id="Cardinal-ModalContent" class="size-02" tabindex="-1">
+      <html>
+      <head>
+        <title>Challenge</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <style>
+          /* General Styling*/
+          body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 11pt;
+          }
+
+          #page-wrapper {
+            max-width: 360px;
+            margin: auto;
+            padding: 15px;
+            border: 1px solid #eee;
+          }
+
+          ol,
+          ul {
+            list-style: none;
+            padding-left: 0px;
+          }
+
+          div.related-container {
+            margin-top: 50px;
+          }
+
+          .expander {
+            float: right;
+          }
+
+          p.getmoreinfo {
+            padding: 7px 10px 7px 10px;
+            /* background: #f4f4f4; */
+
+            margin-bottom: 0px;
+          }
+
+          .button {
+            background-color: #4684c2;
+            border-radius: 5px;
+            border: 0;
+            color: #ffffff;
+            cursor: pointer;
+            display: inline-block;
+            font-weight: 400;
+            height: 2.5em;
+            line-height: 2.5em;
+            text-align: center;
+            text-decoration: none;
+            white-space: nowrap;
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+          }
+
+          .button.primary {
+            background-color: #4684c2;
+          }
+
+          .button:hover {
+            background-color: #5aa1e9;
+          }
+
+          .button:active {
+            background-color: #3d6b99;
+          }
+
+          .canvas {
+            padding: 15px;
+            border: 1px solid #eee;
+            margin-bottom: 15px;
+          }
+
+          #content h2 {
+            margin-top: 0px;
+          }
+
+          .input-field {
+            background: #fff;
+            border: solid 1px #e0e0e0;
+            border-radius: 5px;
+            color: inherit;
+            display: block;
+            outline: 0;
+            padding: 7px 0px 7px 0px;
+            text-decoration: none;
+            width: 100%;
+            margin-bottom: 15px;
+          }
+
+          .form-check {
+            padding: 7px 0px 7px 0px;
+            margin-bottom: 15px;
+          }
+
+          .logo-container {
+            width: 50%;
+            display: inline-block;
+          }
+
+          .logo-issuer {
+            width: 120px;
+            max-width: 85%;
+            float: right;
+          }
+
+          .logo-cardnetwork {
+            width: 105px;
+            max-width: 85%;
+            text-align: left;
+          }
+
+          .challengeinfotext {
+            white-space: pre-wrap;
+          }
+
+          .alert {
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+            margin: 15px;
+            color: red;
+          }
+
+          .help-label {
+            display: block;
+          }
+
+          .toggler {
+            display: none;
+          }
+
+          .toggler+.toggler-content {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: all .4s ease-in-out;
+          }
+
+          .toggler:checked+.toggler-content {
+            max-height: 1000px;
+            opacity: 1;
+          }
+
+          footer {
+            margin-top: 20px;
+          }
+        </style>
+
+      </head>
+
+      <body class="" onload="javascript:document.cardholderInput['challengeDataEntry'].focus();">
+        <div id="page-wrapper">
+          <!-- Header Section -->
+          <header id="header" class="canvas">
+            <div class="logo-container"><img
+                src="https://merchantacsstag.cardinalcommerce.com/MerchantACSWeb/screens/images/Card_Network.png" class="logo-cardnetwork">
+            </div>
+            <div class="logo-container"><img
+                src="https://merchantacsstag.cardinalcommerce.com/MerchantACSWeb/screens/images/AnyBank_512.png" class="logo-issuer"></div>
+          </header>
+
+          <!-- Main Content Section -->
+          <section id="content" class="canvas">
+            <div class="row">
+              <h2>Purchase Authentication</h2>
+              <p class="challengeinfotext">We have sent you a text message with a code to your registered mobile number ending in 5329.
+
+                You are paying DEV Centre the amount of 15.00 using card ************1109.
+
+                (OTP: 1234)</p>
+            </div>
+            <div class="row">
+              <p><strong>Enter your code below</strong></p>
+              <form action="https://0merchantacsstag.cardinalcommerce.com/MerchantACSWeb/creq.jsp" method="post" name="cardholderInput">
+                <input type="text" class="input-field" name="challengeDataEntry" placeholder=" Enter Code Here" />
+
+                <input type="submit" class="button primary" value="SUBMIT">
+                <input type="hidden" name="acsTransId" value="f3ba3af8-4314-419b-9f24-cc0df832f715" />
+                <input type="hidden" name="threeDSSessionData" value="MF85ZGRjZTc5NC1mNjQ4LTQ3YWMtODJhMS04OGI2YjQ5ZjM2MTA" />
+              </form>
+              <form action="https://0merchantacsstag.cardinalcommerce.com/MerchantACSWeb/creq.jsp" method="post" name="resendChallengeData">
+                <input type="hidden" name="resendChallengeData" value="true">
+                <input type="submit" class="button" value="RESEND CODE">
+                <input type="hidden" name="acsTransId" value="f3ba3af8-4314-419b-9f24-cc0df832f715" />
+                <input type="hidden" name="threeDSSessionData" value="MF85ZGRjZTc5NC1mNjQ4LTQ3YWMtODJhMS04OGI2YjQ5ZjM2MTA" />
+              </form>
+
+
+              <form action="https://0merchantacsstag.cardinalcommerce.com/MerchantACSWeb/creq.jsp" method="post" name="cancel">
+                <input type="hidden" name="challengeCancel" value="true">
+                <input type="submit" class="button" value="CANCEL">
+                <input type="hidden" name="acsTransId" value="f3ba3af8-4314-419b-9f24-cc0df832f715" />
+                <input type="hidden" name="threeDSSessionData" value="MF85ZGRjZTc5NC1mNjQ4LTQ3YWMtODJhMS04OGI2YjQ5ZjM2MTA" />
+              </form>
+
+            </div>
+          </section>
+
+          <section id="help" class="container">
+            <div>
+              <label for="toggler-id-1" class="help-label">Need some help?<span class="expander">&#709;</span></label>
+              <input type="checkbox" id="toggler-id-1" class="toggler" />
+              <p class="toggler-content">Help content will be displayed here.</p>
+            </div>
+            <div>
+              <label for="toggler-id-2" class="help-label">Learn more about authentication<span class="expander">&#709;</span></label>
+              <input type="checkbox" id="toggler-id-2" class="toggler" />
+              <p class="toggler-content">Authentication information will be displayed here.</p>
+            </div>
+          </section>
+
+          <!-- Footer -->
+          <footer id="footer">
+
+          </footer>
+
+        </div>
+      </body>
+
+      </html>
+
+    </div>
+  </div>
+  <div id="Cardinal-Overlay" class="cardinalOverlay-mask cardinalOverlay-open "></div>
+</div>

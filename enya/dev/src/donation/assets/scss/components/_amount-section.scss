@@ -1,0 +1,230 @@
+// -----------------------------------------------------------------------------
+// _amount-section.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: Responsible for styling the amount section elements.
+// Note that the Other amount field has its own partial: _other-amounts.
+// -----------------------------------------------------------------------------
+
+.enya .en__field.en__field--paycurrency {
+  margin-bottom: rem(24);
+}
+
+// One-time and monthly buttons and labels.
+.en__field--recurrpay {
+  .en__field__element--radio {
+    display: flex;
+  }
+
+  .en__field__item {
+    flex: 1 0 48%;
+  }
+
+  .en__field__input--radio {
+    @extend %enya-input-hidden-radio;
+
+    & + .en__field__label--item::before {
+      @extend %enya-input-radio-large-before;
+    }
+  
+    &:focus + .en__field__label--item::before {
+      @extend %enya-input-focus;
+    }
+    &:checked + .en__field__label--item::before {
+      @extend %enya-input-radio-large-before-checked;
+
+      .enya-wlt & {
+        background-color: $wlt-light-green;
+        border-color: $wlt-dark-green;
+      }
+      .enya-hsi & {
+        background-color: $hsi-green;
+        border-color: $hsi-dark-green;
+      }
+    }
+  }
+
+  .en__field__label--item {
+    @extend %enya-input-radio-large-label;
+    text-transform: uppercase;
+  }
+}
+
+// Donation amount container.
+.en__field--donationAmt {
+
+  body.enya.is-hidden-premium & {
+    margin-bottom: 0;
+  }
+
+  // The gift amount label.
+  & > label.en__field__label {
+    font-size: rem(14);
+    line-height: 1.25;
+    font-weight: 500;
+    color: $gray4;
+    text-transform: uppercase;
+    margin-bottom: rem(7);
+  }
+
+  // The container for all the radios and labels.
+  & .en__field__element--radio {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: rem(10);
+  }
+
+  // The wrapper for each input and its label.
+  // On small viewports, set buttons two across.
+  & .en__field__item {
+    flex: 1 0 48%;
+    margin: 0 3.88% rem(15) 0;
+    max-width: 48%;
+
+    // To fill the container, remove right margin from the last button in the row. This gets complicated, because we do 3-up on medium screens.
+    &:nth-child(2n + 2) {
+      margin-right: 0;
+
+      @include mq($md) {
+        margin-right: 1.85%;
+      }
+
+      @include mq($lg) {
+        margin-right: 0;
+      }
+    }
+
+    &:nth-child(3n) {
+      @include mq($md) {
+        margin-right: 0;
+      }
+
+      @include mq($lg) {
+        margin-right: 3.88%;
+      }
+    }
+
+    &:nth-last-child(2),
+    &:last-child {
+      margin-bottom: 0;
+      margin-right: 0;
+    }
+
+    // On tablet, set amount buttons three across.
+    @include mq($md) {
+      flex: 1 0 32%;
+      margin: 0 1.85% rem(12) 0;
+      max-width: 32%;
+    }
+
+    // At larger sizes, set back to two across.
+    @include mq($lg) {
+      flex: 1 0 48%;
+      margin: 0 3.88% rem(15) 0;
+      max-width: 48%;
+    }
+  }
+
+  // We hide the radio inputs and transform the labels to look like buttons.
+  & .en__field__input--radio {
+    @extend %enya-input-hidden-radio;
+  }
+
+  // Donation amount buttons.
+  & .en__field__label--item {
+    display: block;
+    background-color: $humane-blue;
+    border: 1px solid $humane-blue;
+    border-radius: 3px;
+    color: $white;
+    font-size: rem(22);
+    line-height: 0.818181818181818;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    min-width: 75px;
+    padding: 11px 0;
+    text-align: center;
+    transition: background-color 0.2s linear, border-color 0.2s linear, color 0.2s linear;
+    cursor: pointer;
+    user-select: none;
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: $bright-blue;
+      outline: none;
+    }
+
+    &:focus {
+      box-shadow: 0 0 5px rgba(18, 168, 224, 0.6);
+    }
+  }
+
+  .enya-wlt & .en__field__label--item {
+    background-color: $wlt-dark-green;
+    border-color: $wlt-dark-green;
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: $wlt-light-green;
+      outline: none;
+    }
+
+    &:focus {
+      box-shadow: 0 0 5px rgba(132, 189, 0, 0.6);
+    }
+  }
+
+  .enya-hsi & .en__field__label--item {
+    background-color: $hsi-dark-green;
+    border-color: $hsi-dark-green;
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: $hsi-green;
+      outline: none;
+    }
+
+    &:focus {
+      box-shadow: 0 0 5px rgba(132, 189, 0, 0.6);
+    }
+  }
+
+  // Selected buttons look different.
+  & .en__field__input--radio:checked + .en__field__label--item {
+    background-color: $bright-blue;
+
+    .enya-wlt & {
+      background-color: $wlt-light-green;
+    }
+
+    .enya-hsi & {
+      background-color: $hsi-green;
+    }
+  }
+}
+
+// Hide these fields on the live forms.
+body:not(#en__pagebuilder) .en__field--appealCode,
+body:not(#en__pagebuilder) .en__field--current-profile-id {
+  display: none;
+  visibility: hidden;
+}
+
+// Gray out these visually hidden fields in page-builder.
+// Show a message so that form editors know this field is there.
+body#en__pagebuilder .en__field--appealCode,
+body#en__pagebuilder .en__field--current-profile-id {
+  opacity: 0.5;
+
+  label {
+    width: auto;
+  }
+
+  &::before {
+    content: "[Visually Hidden Field]";
+    display: block;
+  }
+}

@@ -1,0 +1,204 @@
+// -----------------------------------------------------------------------------
+// _top-section.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Summer 2021
+// Purpose: Styles for the top section of splash pages.
+// -----------------------------------------------------------------------------
+
+.top-section-block {
+  max-width: rem(1392);
+
+  @include mq($md) {
+    height: rem(405);
+    background-size: cover;
+    background-position-x: 10%;
+    background-repeat: no-repeat;
+  }
+
+  @include mq($md) {
+    &.splash-main,
+    &.splash-animal-rescue,
+    &.splash-direct,
+    &.splash-f2f {
+      background-image: url("#{$hsus-base-files}/splash-hero-ART-dog-490381-d.jpg");
+    }
+    &.splash-animals-in-research {
+      background-image: url("#{$hsus-base-files}/splash-hero-rabbit-507357.jpg");
+    }
+    &.splash-farm {
+      background-image: url("#{$hsus-base-files}/bb-fap-splash-d.jpg");
+    }
+    &.splash-fur {
+      background-image: url("#{$hsus-base-files}/splash-hero-fur-farm-fox-304223.jpg");
+    }
+    &.splash-puppy-mills {
+      background-image: url("#{$hsus-base-files}/bb-puppymill-splash-d.jpg");
+    }
+    &.splash-trophy-hunting {
+      background-image: url("#{$hsus-base-files}/splash-hero-mountain-lion-364479.jpg");
+    }
+  }
+
+  @include mq($lg) {
+    height: rem(600);
+    background-size: rem(1392);
+    background-position-x: 60%;
+  }
+
+  h2 {
+    @include font-family('freight-regular');
+    font-size: rem(34);
+    line-height: rem(38);
+    color: $humane-blue;
+    margin: rem(16) auto rem(11);
+    padding: 0;
+
+    @include mq($lg) {
+      font-size: rem(36);
+      line-height: rem(42);
+    }
+  }
+}
+
+.top-section-donate-box {
+  background-color: $gray3;
+  padding-bottom: rem(28);
+
+  margin: 0;
+
+  @include mq($md) {
+    margin: 2% 5% 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding-top: rem(10);
+  }
+
+  @include mq($lg) {
+    margin: 5% 8% 0;
+  }
+
+}
+
+.top-section-donate-form {
+  @include mq($lg) {
+    margin-top: rem(15);
+  }
+}
+
+#other-box {
+  @extend %enya-input-text;
+  padding: rem(10) rem(12) rem(9) rem(25);
+  height: rem(48);
+
+  &:focus {
+    @extend %enya-input-focus;
+  }
+}
+
+// Add $ inside other field.
+.other-box-wrapper::before {
+  display: block;
+  content: "$";
+  position: relative;
+  width: 0;
+  height: 0;
+  left: rem(13);
+  top: rem(11);
+  color: $black1;
+  font-weight: 500;
+  font-size: rem(18);
+}
+
+.top-donate-button-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 rem(3);
+}
+
+p.top-donate-one-time-link-para,
+p.top-donate-monthly-link-para {
+  font-size: rem(12);
+  line-height: rem(13);
+  color: $black1;
+  margin-top: rem(10);
+  margin-bottom: rem(10);
+  
+  @include mq($lg) {
+    align-self: flex-end;
+  }
+}
+
+p.top-donate-one-time-link-para {
+  // Hide on one-time splash pages.
+  .enya.is-one-time-selected & {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+p.top-donate-monthly-link-para {
+  // Hide on monthly splash pages.
+  .enya.is-monthly-selected & {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.top-section-text {
+  margin-top: rem(10);
+  padding: 0 rem(15);
+
+  p {
+    font-size: rem(20);
+    line-height: rem(28);
+    color: $black1;
+    margin-bottom: 0;
+    text-align: left;
+
+    @include mq($md) {
+      font-size: rem(16);
+      line-height: rem(22);
+    }
+
+    @include mq($lg) {
+      font-size: rem(20);
+      line-height: rem(28);
+    }
+  }
+}
+
+// F2F, fur, and puppy mills have extra-long text here. Reduce the size on
+// tablet to prevent overflow.
+.splash-f2f .top-section-text p,
+.splash-fur .top-section-text p,
+.splash-puppy-mills .top-section-text p {
+
+  @include mq($md) {
+    font-size: rem(16);
+    line-height: rem(22);
+  }
+
+  @include mq($lg) {
+    font-size: rem(20);
+    line-height: rem(28);
+  }
+}
+
+
+.hero-credit-section-block {
+  max-width: rem(1392);
+}
+
+.hero-credit-wrapper-small,
+.hero-credit-wrapper-large {
+  padding-left: rem(15);
+}
+
+p.hero-credit {
+  @include font-family("freight-regular-italic");
+  font-size: rem(11);
+  line-height: 1.363636;
+  margin: rem(5) auto 0;
+  padding: 0;
+  color: $photo-credit-color;
+  text-align: left;
+}

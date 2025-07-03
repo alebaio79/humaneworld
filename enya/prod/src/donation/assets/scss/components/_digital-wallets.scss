@@ -1,0 +1,89 @@
+// -----------------------------------------------------------------------------
+// _digital-wallets.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Summer 2021
+// Purpose: Styles for Apple Pay.
+// -----------------------------------------------------------------------------
+
+.enya-donation.has-apple-pay-payment-type.is-apple-pay-enabled {
+  
+  .payment-source-section .en__field__item {
+    flex-basis: 20%;
+    max-width: 20%;
+
+    &:last-of-type {
+      flex-basis: 35%;
+      max-width: 35%;
+    }
+  }
+
+  .payment-source-section .en__field__label--item {
+    font-size: rem(16);
+    align-items: center;
+  }
+
+  .payment-source-section .en__field__input--radio + 
+    .en__field__label--item::before {
+    margin-right: 4px;
+    margin-top: 2px;
+  }
+}
+
+// Hide the Apple Pay source radio when Apple Pay is not available.
+.enya-donation.has-apple-pay-payment-type:not(.is-apple-pay-enabled) .apple-pay-source-option-field {
+    display: none;
+    visibility: hidden;
+}
+
+@supports (-webkit-appearance: -apple-pay-button) { 
+  #apple-pay-button {
+    -webkit-appearance: -apple-pay-button;
+    -apple-pay-button-type: donate;
+    --apple-pay-button-width: 100%;
+    --apple-pay-button-box-sizing: border-box;
+    border-radius: 2px;
+    height: rem(46);
+    cursor: pointer;
+  }
+}
+
+@supports not (-webkit-appearance: -apple-pay-button) {
+  #apple-pay-button {
+    background-image: url("https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2253/button-donate-apple-pay.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 5px;
+    margin: 0 auto 10px;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
+}
+
+// For upsell, we need to disable clicks on button.
+#apple-pay-button {
+  pointer-events: none;
+}
+
+#apple-pay-section {
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+#apple-pay-section p {
+  font-size: .875rem;
+  color: $bright-red;
+  margin: 0 0 1rem;
+  line-height: 1.5;
+}
+
+#apple-pay-section.disabled {
+  display: none;
+}
+
+.enya-donation.is-payment-apple-pay {
+  .en__submit {
+    display: none;
+  }
+} 

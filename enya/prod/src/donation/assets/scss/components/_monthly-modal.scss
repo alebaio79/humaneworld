@@ -1,0 +1,239 @@
+// -----------------------------------------------------------------------------
+// _monthly-modal.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: This file contains styles related to the monthly modal.
+// -----------------------------------------------------------------------------
+
+#monthly-modal {
+  width: 100%;
+  overflow: hidden;
+
+  .dialog-content {
+    width: rem(305);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+
+    @include mq($md) {
+      width: rem(662);
+    }
+  }
+
+  .modal-content {
+    border: 0;
+    border-radius: 0;
+    position: relative;
+  }
+}
+
+.monthly-modal-image {
+  width: 100%;
+  height: rem(157);
+  background-image: url("#{$hsus-base-files}/monthly-modal-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0;
+
+  .enya-hsi & {
+    background-image: url("#{$hsi-base-files}/hsi-monthly-modal-mobile.jpg");
+  }
+
+  @include mq($md) {
+    background-image: url("#{$hsus-base-files}/monthly-modal-desktop.jpg");
+    height: rem(442);
+
+    .enya-hsi & {
+      background-image: url("#{$hsi-base-files}/hsi-monthly-modal-desktop.jpg");
+    }
+  }
+}
+
+.monthly-modal-text {
+  background: white;
+  padding: 0 rem(15);
+
+  @include mq($md) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    padding: rem(10);
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.75);
+  }
+
+  p {
+    font-size: rem(18);
+    line-height: 1.333333333333333;
+    padding: 0 rem(30);
+    font-weight: 500;
+    color: $text-color;
+    text-align: center;
+
+    .enya-hsi & {
+      font-size: rem(17);
+      line-height: rem(21);
+    }
+
+    @include mq($md) {
+      padding: 0;
+    }
+  }
+}
+
+h1#monthly-modal-title {
+  font-size: rem(26);
+  line-height: 1.076923076923077;
+  font-weight: 500;
+  margin: rem(15) 0 rem(10);
+  text-align: center;
+  color: $text-color;
+
+  .enya-hsi & {
+    color: $hsi-dark-green;
+  }
+
+  @include mq($md) {
+    font-size: rem(36);
+    line-height: 1.111111111111111;
+    margin-bottom: rem(15);
+  }
+
+  &::after {
+    background-color: #c5c5c5;
+    content: "";
+    display: block;
+    height: rem(7);
+    margin: rem(17) auto rem(16);
+    width: rem(52);
+  }
+}
+
+.monthly-modal-button-wrapper {
+  padding: 0;
+  margin-top: rem(20);
+  text-align: center;
+
+  @include mq($md) {
+    padding: 0 rem(16);
+    margin-top: rem(30);
+  }
+
+  button {
+    width: 98%;
+    height: rem(55);
+    margin: 0 auto;
+    overflow: hidden;
+    color: white;
+    padding: 0 rem(12) rem(6);
+    user-select: none;
+    @include font-family("freight-regular");
+    font-size: rem(14);
+    line-height: 1.42857143;
+    font-weight: 400;
+    border-radius: 2px;
+    background-color: $bright-red;
+    border: none;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+
+    @include mq($md) {
+      width: 78%;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+#monthly-modal-yes {
+  &:hover {
+    background-color: $hover-red;
+  }
+
+  @include mq($md) {
+    width: 100%;
+  }
+
+  span.yes-text {
+    display: block;
+    margin-top: rem(6);
+    font-size: rem(22);
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: -0.25px;
+    text-transform: uppercase;
+
+    @include mq($md) {
+      font-size: rem(24);
+    }
+  }
+
+  span.more-yes-text {
+    display: block;
+    font-size: rem(15);
+    line-height: 1.133333333333333;
+    font-weight: 400;
+    margin-top: rem(4);
+
+    @include mq($md) {
+      margin-top: rem(3);
+      font-size: rem(17);
+      line-height: 1;
+    }
+  }
+}
+
+#monthly-modal-no {
+  width: auto;
+  height: auto;
+  margin: rem(7) 0 rem(18);
+  overflow: hidden;
+  background-color: transparent;
+  border-bottom: solid 1px $bright-red;
+  border-radius: 0;
+  padding: 0;
+  line-height: 1;
+
+  &:active {
+    box-shadow: none;
+  }
+
+  @include mq($md) {
+    margin-top: rem(18);
+  }
+
+  span.no-text,
+  span.more-no-text {
+    display: inline-block;
+    margin-top: 0;
+    font-size: rem(15);
+    line-height: 1.066666666666667;
+    color: $bright-red;
+    font-weight: 600;
+
+    @include mq($md) {
+      margin-top: rem(5);
+    }
+  }
+}
+
+#monthly-modal span.change-cancel {
+  font-size: rem(12);
+  line-height: 1.083333333333333;
+  color: $text-color;
+  font-weight: 500;
+
+  @include mq($md) {
+    font-size: rem(13);
+    line-height: 1.076923076923077;
+  }
+}
+
+#monthly-modal-note {
+  width: rem(102);
+  font-size: rem(10);
+  line-height: 1.2;
+}

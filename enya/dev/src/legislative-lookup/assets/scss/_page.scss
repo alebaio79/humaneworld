@@ -1,0 +1,50 @@
+%leg-max-width {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  width: 485px;
+}
+
+#page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+#main-content {
+  min-height: 0;
+}
+
+.en__component--row {
+  max-width: 800px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//.signup-h3 {
+//  font-size: 35px;
+//  line-height: 40px;
+//  margin-bottom: 12px !important;
+//  margin-top: 0;
+//}
+.section.leg-lookup-intro {
+  @extend %leg-max-width;
+}
+
+p.signup-para {
+  font-size: 19.15px;
+  line-height: 28px;
+  margin-bottom: 27px;
+  margin-left: 0;
+  width: 100%;
+}
+
+.container__elected-official-list {
+  clear: both;
+}
+
+.js-elected-officials-results {
+  @extend %leg-max-width;
+}

@@ -1,0 +1,52 @@
+// -----------------------------------------------------------------------------
+// _submit-section.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: Styles for the submit button and surrounding section.
+// -----------------------------------------------------------------------------
+
+.submit-section-block {
+  margin-top: rem(13);
+}
+
+// The submitSection component adds this class to the submit button.
+.enya-donation-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include font-family('freight-regular');
+  font-size: rem(21);
+  font-weight: 500;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  background-color: $bright-red;
+  width: 100%;
+  height: rem(52);
+  margin-top: 0;
+  padding: 6px 12px 9px;
+  user-select: none;
+
+  &:hover {
+    background-color: $hover-red;
+  }
+
+}
+
+.trust-seals-block {
+  margin-top: rem(35);
+}
+
+.enya-hsi .trust-seals-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+// Visually hide the spam trap field.
+.enya-donation .en__field.en__field--NOT_TAGGED_83,
+.enya-donation.enya-wlt .en__field.en__field--NOT_TAGGED_46,
+.enya-donation.enya-hsi .en__field.en__field--NOT_TAGGED_175 {
+  display: none;
+  visibility: hidden;
+}

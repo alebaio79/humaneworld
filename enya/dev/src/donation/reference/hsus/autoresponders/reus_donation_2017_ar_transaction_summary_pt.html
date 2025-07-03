@@ -1,0 +1,56 @@
+[[?//::COMMENT::
+    Set some session variables that we'll need for this transaction summary.
+::]]
+[[?//::COMMENT:: Set one-time or monthly::]]
+[[U0:thanksGiftType=]]
+[[?xx::x[[S120:dc:recurringTotalPaymentAmount]]x::
+    [[U0:thanksGiftType=One-time]]
+    [[U0:thanksGiftTypeLowercase=one-time]]
+::
+    [[U0:thanksGiftType=Monthly]]
+    [[U0:thanksGiftTypeLowercase=monthly]]
+]]
+[[?//::COMMENT:: Set payment type::]]
+[[U0:thanksPaymentType=[[S120:dc:paymentMode]]]]
+[[?//::COMMENT:: We want to use some different words from what the Convio paymentMode spits out.
+  - PayPal paymentMode comes out as XCheckout. Reword to "PayPal".
+  - Change "Credit Card" to "Credit card"
+  - Change "ACH" to "Bank"
+::]]
+[[?xXCheckoutx::x[[S80:thanksPaymentType]]x::
+  [[U0:thanksPaymentType=PayPal]]
+::
+  [[?xCredit Cardx::x[[S80:thanksPaymentType]]x::
+    [[U0:thanksPaymentType=Credit card]]
+  ::
+    [[?xACHx::x[[S80:thanksPaymentType]]x::
+        [[U0:thanksPaymentType=Bank]]
+    ::]]
+  ]]
+]]
+GIFT SUMMARY:
+
+[[S120:dc:name]]
+[[S120:dc:street1]]
+[[?//::COMMENT:: Show this entry only when street2 is not blank.::]][[?xx::x[[S120:dc:street2]]x::::
+[[S120:dc:street2]]
+]][[S120:dc:city]], [[S120:dc:stateProvince]] [[S120:dc:postalCode]]
+[[?//::COMMENT:: Show this entry only if not blank.::]][[?xx::x[[S120:dc:country]]x::::
+[[S120:dc:country]]
+]]
+
+Contribution date: [[S120:dc:transactionDate]]
+Gift amount: [[S120:dc:giftAmount]] [[S80:thanksGiftTypeLowercase]]
+[[?//::COMMENT::
+    Show this entry only when payment is recurring.
+    Note that our t-shirt premium is a custom field in the Donations module.
+    See this KB article for how to find the custom string value:
+    https://kb.blackbaud.com/articles/Article/66760
+::]][[?xMonthlyx::x[[S80:thanksGiftType]]x::Humane Hero shirt size: [[S120:dc:custom:custom_string100]]::]]
+Payment type: [[S80:thanksPaymentType]]
+[[?//::COMMENT:: Show these entries only when payment type is credit card.::]][[?xCredit cardx::x[[S80:thanksPaymentType]]x::Card type: [[S120:dc:creditCardType]]
+Card number: [[S120:dc:creditCardNumber]]
+::]][[?//::COMMENT:: Show this entry only when payment type is bank and when echeckAccountNumber is not blank.::]][[?xBankx::x[[S80:thanksPaymentType]]x::    [[?xx::x[[S120:dc:echeckAccountNumber]]x::::Bank account number: [[S120:dc:echeckAccountNumber]]]]::]]
+
+The Humane Society of the United States Tax ID: [[S0:SITE_TAX_ID]]
+Tracking code: [[S120:dc:trackingCode]]

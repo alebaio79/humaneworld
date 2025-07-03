@@ -1,0 +1,65 @@
+// -----------------------------------------------------------------------------
+// _credit-card.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: Styles for the credit card section.
+// -----------------------------------------------------------------------------
+
+#en__field_transaction_ccnumber {
+  background-image: url("#{$hsus-base-files}/cc-images-sprite-2022.png");
+  background-position: right rem(-10) top rem(-138);
+  background-size: rem(70) rem(700);
+  background-repeat: no-repeat;
+  padding-right: rem(100);
+
+  &.visa {
+    background-position-y: rem(-197);
+  }
+
+  &.mastercard {
+    background-position-y: rem(-313);
+  }
+
+  &.discover {
+    background-position-y: rem(-430);
+  }
+  
+  &.amex {
+    background-position-y: rem(-488);
+  }
+  
+  &.maestro {
+    background-position-y: rem(-372);
+  }  
+  
+  &.visaelectron {
+    background-position-y: rem(-255);
+  }
+
+  &.dinersclub {
+    background-position-y: rem(-546);
+  }
+
+}
+
+// Add static image of cc logos above cc field.
+label[for="en__field_transaction_ccnumber"]::before {
+  content: "";
+  display: block;
+  width: 280px;
+  height: 50px;
+  background-image: url("#{$hsus-base-files}/credit-card-logos-set.svg");
+  background-repeat: no-repeat;
+  background-size: 80%;
+
+  body.enya-hsi & {
+    background-image: url("#{$hsi-base-files}/credit-card-logos-set.svg");
+  }
+
+  body.enya-hsi.is-uk-form & {
+    background-image: url("#{$hsi-base-files}/credit-card-logos-no-amex-set.svg");
+    background-size: 60%;
+  }
+}
+
+

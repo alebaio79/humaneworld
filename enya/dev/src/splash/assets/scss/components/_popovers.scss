@@ -1,0 +1,26 @@
+// -----------------------------------------------------------------------------
+// _popovers.scss
+// HSUS Engaging Networks Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: Styles for splash page popovers.
+// -----------------------------------------------------------------------------
+
+.popover {
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 0;
+  max-width: 100%
+}
+
+.popover-header,
+.popover-body {
+  @include font-family("freight-regular");
+  color: $text-color;
+}
+
+.popover-header {
+  background-color: $gray3;
+}
+
+
+

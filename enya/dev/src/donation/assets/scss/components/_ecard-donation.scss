@@ -1,0 +1,150 @@
+// -----------------------------------------------------------------------------
+// _ecard-donation.scss
+// HSUS Engaging Networks Forms - Enya 2022
+// Created: Fall 2022
+// Purpose: Styles for donation form where ecard details are entered.
+// -----------------------------------------------------------------------------
+
+.enya.is-ecard-donation {
+  .your-info-heading {
+    margin-top: 0;
+  }
+
+  .send-ecard-heading,
+  .payment-heading-block {
+    margin-top: 2.5rem;
+  }
+
+  .ecard-print-text {
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.enya.is-ecard-donation.is-thanks-page {
+  .en__ecarditems__preview {
+    outline: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 9999;
+  }
+  
+  .en__ecarditems__prevbg {
+    position: fixed;
+  }
+  
+  .en__ecarditems__prevwrap {
+    align-items: center;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    margin: 1rem !important;
+    max-width: calc(100% - 2rem);
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+
+    @include mq(640) {
+      margin: 1.75rem auto !important;
+      max-width: 602px;
+    }
+  }
+  
+  .en__ecarditems__preview.overflow--width .en__ecarditems__prevwrap {
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
+  
+  .en__ecarditems__prevclose {
+    font-size: 1.25rem;
+    font-weight: 700;
+    height: auto;
+    right: 0.5rem;
+    top: 0.25rem;
+    width: auto;
+  }
+  
+  .en__ecarditems__preview .en__component--column {
+    margin-top: 2rem;
+  }
+  
+  .en__ecarditems__preview .enya-donation-submit {
+    margin: auto auto 1rem;
+    width: auto;
+  }
+  
+  .en__ecarditems__prevwrap iframe {
+    height: auto;
+    min-width: 100%;
+    width: 1px;
+  }
+}
+
+.enya.enya-hsi.is-thanks-page.is-ecard-donation {
+  .thanks-intro-container {
+    margin-bottom: 1em;
+  }
+
+  .thanks-shares-container {
+    margin-top: 0;
+  }
+
+  .share-intro-container p {
+    margin-top: 0;
+  }
+}
+
+#printEcardButton {
+  cursor: pointer;
+}
+
+.enya.is-ecard-donation-processor .en__submit {
+  button {
+    @include font-family("freight-regular");
+    background-color: $bright-blue;
+    border: 0;
+    border-radius: 2px;
+    font-size: 1.125em;
+    line-height: 1;
+    color: $white;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding: 0.9444em 0 1em;
+    text-transform: capitalize;
+    transition: $transition-button;
+    user-select: none;
+    width: rem(300);
+    margin-top: 1rem;
+
+    &:hover {
+      background-color: $hover-blue;
+      color: $white;
+    }
+  }
+}
+
+.enya-hsi.is-ecard-donation-processor .en__submit button {
+  background-color: $hsi-dark-green;
+
+  &:hover {
+    background-color: $hsi-green;
+  }
+}
+
+.enya.is-ecard-donation-processor.is-error-page {
+  .error-message-container p, .error-contact p {
+    font-size: rem(20);
+  }
+}
+
+.enya.is-ecard-donation-processor #main-content {
+  padding: 0 1.5rem;
+  max-width: rem(700);
+  margin: 0 auto;
+}
+
+

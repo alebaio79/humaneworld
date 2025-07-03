@@ -1,0 +1,58 @@
+// -----------------------------------------------------------------------------
+// _en-overrides.scss
+// HSUS EN Forms - Enya 2021
+// Created: Winter 2021
+// Purpose: Reset some styles from enPage.css.
+// Note: Enya forms have a class named "enya" added to the body element.
+// That allows us to override these EN styles.
+// -----------------------------------------------------------------------------
+
+.enya .en__field {
+  padding-bottom: 0;
+  margin-bottom: rem(12);
+}
+
+.enya .en__field.en__hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.enya .en__field__element--email,
+.enya .en__field__element--number,
+.enya .en__field__element--select,
+.enya .en__field__element--splitselect,
+.enya .en__field__element--splittext,
+.enya .en__field__element--telephone,
+.enya .en__field__element--text,
+.enya .en__field__element--textarea,
+.enya .en__field__element--tripleselect,
+.enya .en__field__element--tripletext {
+	display: block;
+}
+
+.enya .en__field__item {
+  padding: 0;
+}
+
+.enya .en__pg__image {
+  max-width: 100%;
+}
+
+.enya select:focus,
+.enya .en__field__input--select:focus {
+  box-shadow: none;
+  border: 2px solid $bright-blue;
+  outline: 0;
+}
+
+.enya-wlt select:focus,
+.enya-wlt .en__field__input--select:focus {
+  border-color: $wlt-light-green;
+}
+
+.enya-hsi select:focus,
+.enya-hsi .en__field__input--select:focus {
+  border-color: $hsi-green;
+}
+
+

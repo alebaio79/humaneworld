@@ -1,0 +1,450 @@
+@import url(https://use.typekit.net/zbh3jtp.css);
+
+body,
+p, li {
+	font-family: freight-sans-pro, sans-serif !important;
+	 font-weight: normal!important;
+    font-style: normal!important;
+	line-height: 1.4em !important;
+	font-size: 18px !important
+}
+
+.solo-mensile .en__field--recurrpay {
+	display: none
+}
+h1,h2,h3 {
+		font-family: freight-sans-pro, sans-serif !important;
+	font-weight: bold !important
+}
+h2 {
+	font-size: 1.3em !important;
+}
+.sloganarea h1 {
+    font-size: 2.5em;
+    line-height: 1em;
+    font-weight: 300 !important;
+}
+#main-content .en__component--column.fixed_div_right {
+    padding-top: 30px !important;
+}
+.topBanner {
+			background-image:  url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI_cartoline-testata.jpg?v=1664272560000) !important;
+	    background-position: center;
+	background-size: cover;
+	box-shadow: none;
+	position: relative;
+	height: 87vh !important
+
+}
+
+
+.topBanner:before {
+display: none
+}
+
+.sloganarea {
+    bottom: auto;
+    top: 170px;
+} 
+
+.green {
+	color: #024731 !important
+}
+.bg-green h3:after {
+	display: none
+}
+
+.bg-light h3 {
+	color: #024731 !important 
+}
+.bg-green {
+	color: #fff !important
+}
+
+
+#vaialform h1 {
+font-weight: bold;
+    font-size: 35px;
+    color: #024731;
+    text-transform: uppercase;
+}
+#vaialform p {
+line-height: 1.4rem !important;} 
+.img-box picture { 
+	position: relative;
+	float: left;
+    margin-bottom: 25px;
+}
+
+.bg-pattern { 
+	background: url('https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI_card-pattern_1920x1280.jpg?v=1662541497000') no-repeat center center;
+	background-size: cover;
+	box-shadow:  -5px 5px 8px 0px rgb(0 0 0 / 20%);
+	margin-bottom: 15px
+}
+.pattern-inner {
+	    margin:  1em;
+    background: #fff;
+}
+.cartoline-big {
+	margin-top: -5px
+}
+
+.media-container{
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    position: relative;
+	clear: both
+}
+.media-container iframe,
+.media-container object,
+.media-container embed {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.form-petizione {
+	clear: both 
+}
+
+#vaialform h2 {
+	font-size: 1.6em !important;
+}
+.fixed_div_right {
+overflow-y: scroll;
+    height: 100vh;
+}
+.form-petizione .en__field__label {
+    font-weight: bold;
+    font-family: freight-sans-pro, sans-serif !important;
+}
+
+input#en__field_supporter_questions_606300,
+input#en__field_supporter_questions_757012,
+input#en__field_supporter_questions_553181 {
+    display: none;
+}
+.en__field--606300{
+	padding-bottom: 0 !important
+}
+.en__field--checkbox.en__field--question.en__field--606300 label.en__field__label.en__field__label--positionbeside {
+	display: none !important
+}
+
+.en__field--checkbox.en__field--question.en__field--606300 label,
+.en__field--checkbox.en__field--question.en__field--757012 label {
+	font-size: 12px;
+	color: #024731;
+	    padding-bottom: 0;
+    margin-bottom: 0;
+	transform: scale(0.9) translate(2%, 0)
+}
+.en__field--checkbox.en__field--question.en__field--606300 label a,
+.en__field--checkbox.en__field--question.en__field--757012 label a {
+		color: #024731 !important
+}
+.en__field--checkbox.en__field--question.en__field--606300 label:before,
+.en__field--checkbox.en__field--question.en__field--757012 label:before {
+    content: "";
+    border-color: transparent;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    /* text-align: center; */
+    vertical-align: middle;
+    position: absolute;
+    left: -25px;
+    width: 20px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    height: 20px;
+    border: 1px solid #999;
+}
+
+.en__submit button:hover {
+	background: #C83021 !important;
+	border-color: #C83021 !important
+}
+
+.en__field--1382917 .en__field__item--other {
+	display: none
+}
+
+.en__field--1382917 input[type="radio"] {
+    display: none;
+}
+
+.en__field--1382917  input[type="radio"]:checked+label {
+    background: #6F9E00;
+
+}
+
+.en__field--firstName,
+.en__field--lastName {
+	margin-top: 30px !important
+}
+
+.sceltacartolina div {
+	display: none
+}
+
+.sceltacartolina .cartolinasceltaattiva {
+	display: block
+}
+
+@media (min-width: 1025px) { 
+.en__field--city {
+	float: left !important;
+	width: 48% !important;
+	margin: 0 5px 0 0;
+}
+	.en__field--postcode {
+	float: right !important;
+	width: 48% !important;
+	margin: 0 5px 0 0;
+}
+}
+/*
+.img-box picture:before {
+	content: '';
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	height: 100%;
+	width: 100%;
+	border: 1px solid #fff
+}
+*/
+
+
+.cane {
+    background-image: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/IMG_6307_517552.jpg?v=1621010154000);
+		box-shadow: none;
+	padding: 10em 0 2em 0 !important;
+	font-weight: bold !important
+}
+
+.cane span {
+		font-weight: bold !important;
+	letter-spacing: 1.2px;
+}
+
+b{
+	font-weight: bold !important
+}
+
+
+.topBannerThankyou {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/1bb68cc6-dadd-4281-8f7e-f4baabcd9a4e_517592.JPG?v=1621010643000) no-repeat center center;
+	background-size: cover;
+}
+
+#main-content .custom_donation_content img {
+	border-radius: 50%;
+	width: 70px !important
+
+}
+.custom_donation_content p {
+	font-weight: bold !important;
+color: #024731;
+	line-height: 1em !important;
+    max-width: 90%;
+	margin-top: 15px;
+	text-transform: uppercase
+}
+
+
+.step span{
+	font-weight: bold;
+	
+}
+div#FormStepSlider ul:before {
+
+    top: 30px;
+
+}
+div#FormStepSlider ul:after {
+    top: 30px;
+	box-shadow: none
+}
+.paymentDetails .button-group a.btn-theme:hover, .paymentDetails .button-group a.btn-theme.active {
+	box-shadow: none
+}
+.donation-amount input[type="radio"]:checked+label,
+.donation-amount input[is_selected=true]+label{
+	box-shadow: none
+}
+
+.donation-amount .en__field {
+    padding-bottom: 0;
+}
+
+.donation-amount .en__field__item {
+
+	margin-bottom: 0
+}
+
+.en__field--withOther .en__field__element--radio .en__field__item:nth-of-type(3) {
+	padding-top:6px !important
+}
+.en__field--withOther .en__field__item--other {
+	padding-top: 0 !important
+}
+.footer-copyright {
+font-size: 14px
+}
+
+.donation-amount .en__field__item label {
+	border: none
+}
+.en__field__element--layouthorizontal {
+	display: flex !important;
+    flex-wrap: wrap;
+}
+.en__field--recurrpay  .en__field__item {
+    /* width: 33.33%; */
+    text-align: center;
+    flex: 0 0 48%;
+    max-width: 48%;
+    margin-bottom: 5px;
+}
+.en__field--recurrpay  .en__field__item:nth-of-type(1) {
+	margin-right: 4%
+}
+.en__field--withOther .en__field__item {
+    text-align: center;
+    flex: 0 0 48%;
+    max-width: 48%;
+    margin-bottom: 0;
+    margin-top: 0;
+    color: #fff;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.en__field--withOther .en__field__item label {
+	transform: none !important;
+    margin-bottom: 0;
+    padding: 10px;
+	background: #A7A8A7;
+	width: 100%;
+	    font-family: freight-sans-pro, sans-serif !important;
+    font-weight: bold;
+	cursor: pointer
+
+}
+.en__field--1382917 .en__field__label.en__field__label--positionbeside {
+text-align: center;
+    font-size: 18px;
+	margin-bottom: 18px
+}
+.etichetta {
+	font-size: 18px;
+	width:100%;
+	text-align:center;
+	font-weight: bold;
+	font-family: freight-sans-pro, sans-serif !important;
+	margin-top:25px;
+}
+.en__field--withOther .en__field__item:hover label {
+	background: #6F9E00
+}
+
+.donation-amount input[type="radio"]:checked+label {
+    background: #029359;
+    -moz-box-shadow: inset 0 0 10px rgba(0,0,0,.5);
+    -webkit-box-shadow: inset 0 0 10px rgb(0 0 0 / 50%);
+    box-shadow: inset 0 0 10px rgb(0 0 0 / 50%);
+}
+.en__field--withOther .en__field__item:nth-of-type(1) {
+	margin-right: 4%
+}
+.en__field--withOther  .en__field__item:nth-of-type(3)  {
+max-width: 100%;
+    flex: 0 0 100%;
+}
+.en__field--withOther  .en__field__item:nth-of-type(4) {display: none !important} 
+.en__field--withOther  .en__field__item--other  {
+	margin-top:2px !important
+}
+.en__field--withOther  .en__field__item--other input {
+	border-radius: 0 !important;
+	    border: 1px solid #ccc;
+	    margin-left: 0;
+}
+
+.testata-thank-you-petizione {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/tp-postcard.jpg?v=1664358159000) center center no-repeat;
+    background-size: cover !important;
+    height: 60vh;
+}
+.grazie .en__socialShares img {
+    filter: brightness(0) invert(1);
+}
+.grazie h1 {
+     margin-bottom: 0
+}
+@media (max-width: 767px) { 
+.topBanner {
+	    background-position: 35% 100%;
+	height: 92vh !important
+
+}
+
+.en__component--advrow .en__component--advcolumn .en__component--copyblock {
+    padding: 0  !important
+}
+	.sloganarea h1 {
+    font-size: 1.6em !important;
+
+}
+		.sloganarea h1 br {
+    display: none !important;
+
+}
+
+.sloganarea {
+    bottom: 25px;
+	    padding: 0 25px;
+}
+	.sloganarea h3  {
+   font-size: 1.5rem
+		
+}
+	.cane {
+		padding: 15em 0 0 0 !important;
+		background-position: 10% !important
+	}
+	.cane .vertical-align{
+		font-size: 20px !important;
+		zoom:0.8 !important
+	}
+	
+	.img-siamo-hsi {
+		height: 450px;
+		    margin-bottom: 20px;
+	}
+	.cane span {
+		text-align: center !important
+	}
+}
+@media (max-width: 520px) {
+
+	.cane {
+		padding: 15em 0 0 0 !important;
+		background-position: 43% !important
+	}
+ 
+}
+
+.en__field__error {
+    position: relative;
+}
+
+.en__component.en__component--socialshareblock {
+	clear: both !important
+}

@@ -1,0 +1,37 @@
+.topBanner {
+    background-image: linear-gradient(to bottom, rgba(0,0, 0, 0) 40%, rgba(0, 0, 0, 0.2) 100%), url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/20240425_HSI_00037_642672_testata.jpg?v=1715614016000) !important;
+    background-position: 100% 50%;
+    box-shadow: none;
+    position: relative;
+    height: 87vh !important;
+}
+
+.topBannerThankyou {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/20240425_HSI_00024_642646_TP.jpg?v=1715614005000) no-repeat center center !important;
+    background-size: cover !important
+}
+
+
+.cane {
+    background-image: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/20240425_HSI_00084_642766_wide.jpg?v=1715614000000) !important;
+    box-shadow: none;
+    padding: 26em 0 2em 0 !important;
+    font-weight: bold !important;
+}
+
+ @media (max-width: 768px) {
+.topBanner {
+		background-position: 75% 50%;
+    background-size: cover;
+}
+	 
+.topBanner:before {
+   background: -moz-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 45%);
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 45%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 45%);
+ 
+}
+	.sloganarea {
+    width: 100%;
+}
+}

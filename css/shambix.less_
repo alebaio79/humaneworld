@@ -1,0 +1,93 @@
+// "out": "shambix.css", "compress": true, "groupmedia": true, "sourceMap": false, "sourceMapFileInline": false
+
+@import (reference) "custom_mixins";
+
+/*------------------------------------------------------
+|
+|	Debug styles only
+|
+|_______________________________________________________ */
+
+#en__pagebuilder #main-content .d-none {
+display: block!important;
+}
+#en__pagebuilder #main-content .en__component.en__component--formblock.credit_card_form.d-none {
+display: block!important;
+}
+#en__pagebuilder #main-content .en__component.en__component--formblock.form-second-part {
+display: block!important;
+}
+#en__pagebuilder #main-content .cost_custom_wrapper .placeholder_content {
+display: block!important;
+}
+body.page-pages .en__component.en__component--formblock.form-second-part, body.page-pages .en__component.en__component--formblock.credit_card_form.d-none, body.page-pages .paypalButton.d-none {
+   	display: block!important;
+}
+
+/*------------------------------------------------------
+|
+|	Live Page
+|
+|_______________________________________________________ */
+
+/* 27 Feb 2020 */
+   
+/* Stripe - built-in button style */
+#main-content .credit_card_form .en__submit {
+	display: block;
+overflow: hidden;
+float: left;
+width: 100%;
+	padding-bottom:20px;
+}
+#main-content .credit_card_form .en__submit button {
+	background-color: #F5363B;
+	color: white;
+	font-weight: bold;
+	font-size: 22px;
+	padding: 0 10px;
+	border: none;
+	display:block;
+	border: 1px solid transparent;
+	line-height: 1.5;
+	border-radius: .25rem;
+	transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	vertical-align: middle;
+	width:100%;
+}
+
+#main-content .credit_card_form .en__submit button.disabled, #main-content .credit_card_form .en__submit button:disabled {
+	cursor: no-drop;
+	background-color: #f5a2a5;
+}
+
+/* 20 Mag 2020 */
+#main-content .credit_card_form .en__submit button.disabled, #main-content .credit_card_form .en__submit button:disabled, .btn.next-btn:disabled {
+	cursor: no-drop;
+	background-color: #f5a2a5;
+}
+
+/* 29 Ott 2020 */
+#main-content .cost_custom_wrapper .custom_donation_content div {display:none;}
+#main-content .cost_custom_wrapper .placeholder_content {display:none;}
+
+/* 5 Nov 2020 */
+.donation-amount input[is_selected="true"]+label {
+    background: #029359;
+    -moz-box-shadow: inset 0 0 10px rgba(0,0,0,.5);
+    -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,.5);
+    box-shadow: inset 0 0 10px rgba(0,0,0,.5);
+}
+
+.donation-amount input[type="radio"][is_selected="false"]+label {
+    background: #a8a8a8;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+/* 23 Giu 2021 */
+.disable_btn {cursor: no-drop; opacity: .6;}
+
+/* 7 Mar 2023 */
+.en__error.en__error__gateway {color:red;}

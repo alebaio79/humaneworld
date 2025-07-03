@@ -1,0 +1,36 @@
+<style>
+  body#en__pagebuilder .en__field--paymenttype {
+    opacity: 1 !important;
+  }
+
+  body#en__pagebuilder .en__field--paymenttype::before {
+    content: "" !important;
+  }
+
+  body:not(#en__pagebuilder) .en__field--paymenttype {
+    display: flex !important;
+    visibility: visible !important;
+  }
+
+  /* In Page Builder, display these fields grayed out, with a note saying that they're hidden. */
+  body#en__pagebuilder .en__field--recurrfreq,
+  body#en__pagebuilder .en__field--recurrpay,
+  body#en__pagebuilder .en__field--recurrday {
+    opacity: 0.5;
+  }
+
+  body#en__pagebuilder .en__field--recurrfreq::before,
+  body#en__pagebuilder .en__field--recurrpay::before,
+  body#en__pagebuilder .en__field--recurrday::before {
+    content: "[Visually Hidden Field]";
+    display: block;
+  }
+
+  /* On the real page—not in Page Builder—hide the recurring fields. */
+  body:not(#en__pagebuilder) .en__field--recurrfreq,
+  body:not(#en__pagebuilder) .en__field--recurrpay,
+  body:not(#en__pagebuilder) .en__field--recurrday {
+    display: none;
+    visibility: hidden;
+  }
+</style>

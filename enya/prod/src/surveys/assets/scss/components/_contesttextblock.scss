@@ -1,0 +1,36 @@
+.contest-img {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  border-style: none;
+  display: block;
+  margin-left: initial;
+  margin-right: auto;
+  width: auto;
+  height: auto;
+  @include mq2() {
+    margin-left: 19%;
+  }
+  @include mq1(600) {
+    margin-left: 3%;
+    padding-left: 0px;
+  }
+}
+
+
+
+.contest-img-credit {
+  @include font-family("freight-regular-italic");
+  font-size: rem(11);
+  line-height: 1.363636;
+  margin-bottom: 2rem;
+  color: $photo-credit-color;
+  margin-left: auto;
+  margin-top: -1rem;
+
+  @include mq1(600) {
+    margin-top: -4%;
+  }
+  @include mq2() {
+    margin-left: 19%;
+  }
+}

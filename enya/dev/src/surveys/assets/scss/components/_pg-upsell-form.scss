@@ -1,0 +1,282 @@
+// -----------------------------------------------------------------------------
+// _pg-upsell-form.scss
+// HSUS Engaging Networks Forms - Enya 2022
+// Created: Summer 2022
+// Purpose: 
+// -----------------------------------------------------------------------------
+
+// NOTE: Some of the x-axis paddings in the design comps are not symmetrical so
+// you will see some uneven numbers, especially on the x-axis.
+//
+// Also, in an attempt to match the design comps some numbers may seem
+// arbitrary. The rem() mixin is used throughout heavy use to accommodate
+// non-standard numbers.
+
+.enya-pg-upsell {
+  min-height: 0;
+
+  // HACK:
+  // Something unknown is pulling the body contents up above the window frame.
+  // *position:relative and *top:0px and the min-height on #page-container seems to fix it for the larger breakpoint only.
+  // Will be good to find the cause.
+  position: relative;
+  top: 0px;
+
+  #page-container {
+    display: block;
+    margin: 0;
+  }
+
+  #main-container {
+    padding: 0;
+  }
+
+  #main-content {
+    min-height: 0;
+    width: 100%;
+  }
+
+  .en__component--row.en__component--advrow {
+    display: flex;
+    padding-top: 0;
+  }
+
+  .en__component--advcolumn.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .form {
+    p {
+      font-size: rem(18);
+      margin: 0;
+    }
+  }
+
+  // HSUS specific color
+  &.enya-hsus-iframe .form p {
+    color: $humane-blue;
+  }
+
+  // HSI specific color
+  &.enya-hsi-iframe .form p {
+    color: $hsi-dark-green;
+  }
+
+  // This pulls the form up if left visible
+  .page-error-container {
+    display: none;
+  }
+
+  .en__component--formblock {
+    margin-inline: auto !important;
+    width: 100% !important;
+  }
+
+  // Hide other fields if not in pagebuilder
+  &:not(#en__pagebuilder) .en__field:not(.en__field--planned-giving-question):not(.en__field--planned-giving-question-2022) {
+    display: none !important;
+  }
+
+  .en__field--planned-giving-question,
+  .en__field--planned-giving-question-2022 {
+    .en__field__label {
+      line-height: rem(22);
+      font-size: rem(16);
+      width: 100%;
+      font-weight: 500;
+    }
+  }
+
+  .en__submit button {
+    align-items: center;
+    font-weight: 700;
+  }
+
+  .photo-credit {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    p {
+      font-style: italic;
+      font-weight: 500;
+      font-size: rem(11);
+      line-height: rem(15);
+      color: white;
+      margin: rem(-18) rem(8) rem(5) 0;
+      text-shadow: 0 0 3px #000;
+      text-align: right;
+    }
+  }
+
+  @media screen and (max-width: 664px) {
+    .en__component--advcolumn.form {
+      line-height: rem(24);
+      padding-block-end: rem(22);
+      padding-block-start: rem(44);
+      padding-inline: rem(24);
+    }
+
+    .form {
+      p {
+        line-height: rem(24);
+      }
+
+      + .modal-image {
+        display: none;
+      }
+    }
+
+    .en__component--formblock {
+      margin-block-start: rem(9);
+    }
+
+    .en__field--planned-giving-question,
+    .en__field--planned-giving-question-2022 {
+      margin-inline: rem(-7);
+      width: calc(100% + rem(14));
+
+      .en__field__element--radio .en__field__item:not(:last-child) {
+        margin-block-end: rem(12);
+      }
+    }
+
+    .en__submit {
+      margin-inline: rem(-3);
+      width: calc(100% + #{rem(6)});
+    }
+
+    .en__submit button {
+      font-size: rem(17);
+      height: rem(45);
+      margin-block-start: rem(14);
+      min-width: 100%;
+    }
+
+    .thank-you {
+      min-height: rem(256);
+      text-align: center;
+
+      h2 {
+        margin-bottom: rem(8) !important;
+      }
+
+      p {
+        text-align: inherit;
+      }
+    }
+  }
+
+  @media screen and (min-width: 665px) {
+    height: rem(445);
+
+    .en__component--row.en__component--advrow {
+      flex-direction: row;
+    }
+
+    .en__component--advcolumn.form {
+      padding-inline: rem(20);
+      max-width: 50%;
+    }
+
+    .form {
+      p {
+        line-height: rem(25);
+      }
+    }
+
+    .en__component--formblock {
+      margin-block-start: rem(12);
+    }
+
+    .en__field--planned-giving-question,
+    .en__field--planned-giving-question-2022 {
+      margin-inline: rem(-1);
+      width: calc(100% + #{rem(2)});
+
+      .en__field__item:not(:last-child) {
+        margin-block-end: rem(6);
+      }
+    }
+
+    .en__submit button {
+      font-size: rem(16);
+      height: rem(39);
+      margin-block-start: rem(2);
+      min-width: 0;
+      padding-inline: rem(36);
+    }
+  }
+
+  // Thank you page
+  &.is-thanks-page {
+    .thank-you {
+      h2 {
+        font-size: rem(18);
+        margin-bottom: rem(8) !important;
+        margin-top: 0;
+        width: 100%;
+      }
+
+      p {
+        font-size: rem(16);
+        font-weight: 500;
+        line-height: rem(22);
+        margin: 0;
+      }
+    }
+
+    @media screen and (max-width: 664px) {
+      .thank-you {
+        order: 1;
+        padding: rem(28) rem(14);
+        min-height: rem(240);
+        text-align: center;
+
+        h2 {
+          line-height: 1.2;
+          margin-bottom: rem(8);
+          max-width: 11em;
+        }
+
+        p {
+          text-align: inherit;
+        }
+      }
+
+      .modal-image {
+        min-height: rem(240);
+        position: relative;
+
+        .en__component--imageblock {
+          height: 100%;
+          overflow: hidden;
+          position: absolute;
+          width: 100%;
+        }
+      }
+    }
+
+    @media screen and (min-width: 665px) {
+      height: rem(445);
+
+      .thank-you {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 50%;
+        padding-left: rem(22);
+        padding-right: rem(38);
+      }
+    }
+  }
+}
+
+.enya-pg-upsell.enya-hsi .en__field__input--radio {
+  &:checked + .en__field__label--item::before {
+    background-color: $hsi-light-green;
+    border-color: $hsi-dark-green;
+  }
+}

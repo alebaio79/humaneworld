@@ -1,0 +1,69 @@
+// -----------------------------------------------------------------------------
+// _email-to-target.scss
+// HSUS Engaging Networks Forms - Enya 2022
+// Created: Spring 2022
+// Purpose: Styles for email to target pages.
+// -----------------------------------------------------------------------------
+
+.enya {
+  .en__component.en__component--contactblock {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .en__singleMessage {
+    padding: 0;
+    .en__contactSubject {
+      padding-top: rem(1);
+      margin-bottom: 0;
+    }
+
+    .en__contactSection__content--uneditable {
+      margin-bottom: rem(12);
+
+      .en__contactMessage {
+        @extend %enya-auto-resize-textarea-container;
+
+        &::after {
+          line-height: normal;
+          margin-bottom: 0.75rem;
+        }
+      }
+    }
+
+    .en__contactSection__content--editable {
+      .en__contactMessage {
+        padding-top: rem(1);
+
+        .textarea-container {
+          @extend %enya-auto-resize-textarea-container;
+        }
+
+        .textarea-container::after,
+        textarea {
+          font-size: rem(16);
+          line-height: rem(22);
+          font-weight: 400;
+          padding: rem(18);
+        }
+      }
+    }
+  }
+
+  textarea[readonly].en__field--textarea.en__contactMessage__plainText {
+    font-weight: 500;
+  }
+
+  .sender-address-block p {
+    font-size: rem(16);
+  }
+
+  .en__contactSection__label {
+    @extend %enya-label;
+
+    &::after {
+      content: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2253/pen.svg?v=1616451926000);
+      vertical-align: middle;
+    }
+  }
+}

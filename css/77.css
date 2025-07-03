@@ -1,0 +1,14 @@
+.topBanner {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/599270_JH205639.jpg?v=1724836183000) no-repeat center center !important;
+    background-size: cover !important;
+}
+
+.testata-thank-you-petizione {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/597111_Antakyasecondday005.jpg?v=1724836268000) center center no-repeat !important;
+	background-size: cover !important
+}
+
+
+.socialshare-footer .en__socialShares {
+    filter: brightness(0) invert(1);
+}

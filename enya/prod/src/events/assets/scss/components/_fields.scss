@@ -1,0 +1,314 @@
+// -----------------------------------------------------------------------------
+// _fields.scss
+// HSUS Event Forms - Enya 2021
+// Author: Jeremy Hatter
+// Created: Winter 2021
+// Purpose: This file contains styles related to the Events fields structure.
+// -----------------------------------------------------------------------------
+
+%enya-select-width {
+  min-width: 0;
+  min-width: initial;
+  max-width: 100%;
+  @include mq1(600) {
+    width: 100%;
+  }
+}
+.enya .en__field {
+  padding-top: 0rem !important;
+}
+.en__mandatory,
+.en__field--registrant--mandatory {
+  label.en__field__label {
+    &:not(.en__field__label--item) {
+      &::after {
+        width: 0.375rem;
+        height: 0.375rem;
+        margin: 0 0.1em;
+        content: "*";
+        color: $black2;
+      }
+    }
+  }
+}
+.enya .en__component--svblock label.en__field__label::after {
+  display: none;
+}
+.enya .en__component--formblock,
+.en__component.en__component--eventregistrants,
+.page-2 .en__component--copyblock,
+.page-2 .en__component--eventtickets,
+.enya .mobile-msg {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mq1(600) {
+    width: 100%;
+    padding-left: rem(10);
+    padding-right: rem(10);
+  }
+}
+.enya .mobile-msg {
+  @include font-family("freight-regular");
+  @include mq2() {
+    width: 62%;
+  }
+  @include mq1(600) {
+    padding-bottom: 1rem;
+    padding-left: 0;
+  }
+}
+.enya .en__field__input--other {
+  display: none;
+}
+
+.enya .show-other {
+  .en__field--withOther--active {
+    .en__field__input--other {
+      display: block;
+    }
+  }
+}
+
+.enya .en__field--withOther.en__field--question {
+  .en__field__element,
+  .en__field__item {
+    margin-top: 0.5rem;
+  }
+}
+
+.enya .en__field__label {
+  line-height: 1.1;
+  text-align: left;
+  white-space: normal;
+  width: auto;
+
+  @include font-family("freight-semibold");
+}
+.enya .en__field--phoneNumber2 {
+  > .en__field__label {
+    width: auto;
+  }
+}
+
+.enya .en_format {
+  padding-left: 2px;
+}
+.enya .en__field--checkbox {
+  > .en__field__label:not(:empty) + .en__field__element--checkbox {
+    margin-top: 0.5rem;
+  }
+  .en__field__label {
+    font-weight: 500;
+    width: 94%;
+  }
+}
+.enya .en__component--svblock--numbered .en__field > .en__field__label::before {
+  float: left;
+  margin-left: -18px;
+  @include mq1(600) {
+    margin-left: -2px;
+  }
+}
+.enya .en_format {
+  padding-left: 2px;
+}
+
+/* -- Optins */
+.visible-opt-in label {
+  position: relative;
+
+  padding-left: 27px;
+}
+.enya .visible-opt-in {
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+.hidden-opt-in {
+  display: none;
+  visibility: none;
+}
+.visible-opt-in-checkbox {
+  .visible-opt-in {
+    .en__field__input--checkbox {
+      display: block !important;
+    }
+    .en__field__label {
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+.enya .en__field--radio {
+  .en__field__label {
+    font-weight: 500;
+  }
+}
+.enya .en__field--textarea {
+  .en__field__label {
+    font-weight: 600;
+  }
+}
+
+.enya .en__field__input--radio {
+  @extend %enya-input-hidden-radio;
+
+  & + .en__field__label--item::before {
+    @extend %enya-input-radio-large-before;
+    min-width: 14px;
+  }
+
+  &:checked + .en__field__label--item::before {
+    @extend %enya-input-radio-large-before-checked;
+  }
+}
+
+$en_filed_inputs: en__field__input--calendar, en__field__input--email, en__field__input--number, en__field__input--password, en__field__input--range,
+  en__field__input--telephone, en__field__input--text, en__field__input--textarea, en__rangeFieldLabels;
+
+@each $en_filed_input in $en_filed_inputs {
+  .enya .#{$en_filed_input} {
+    @extend %enya-input;
+    background-color: $white;
+    width: 100%;
+    &:focus {
+      @extend %enya-input-focus;
+    }
+    @include mq1(600) {
+      width: 100%;
+    }
+  }
+}
+$en_field_ele: en__field__element--calendar, en__field__element--checkbox, en__field__element--email, en__field__element--number, en__field__element--password,
+  en__field__element--radio, en__field__element--range, en__field__element--rating, en__field__element--select, en__field__element--splitselect,
+  en__field__element--splittext, en__field__element--telephone, en__field__element--text, en__field__element--textarea, en__field__element--tripleselect,
+  en__field__element--tripletext, en__field__item;
+@each $en_field_el in $en_field_ele {
+  .enya .#{$en_field_el} {
+    display: block;
+  }
+}
+.enya .en__field__input--checkbox {
+  margin-top: 0.125em;
+  vertical-align: top;
+}
+
+.enya .en__component--svblock--numbered {
+  .en__field__input--select {
+    @extend %enya-input-select;
+    @extend %enya-select-width;
+  }
+}
+.enya .en__field__input--select {
+  @extend %enya-input-select;
+  @extend %enya-select-width;
+  width: 100%;
+  @include mq1(600) {
+    width: 100%;
+  }
+}
+.enya .en__component--svblock {
+  .en__field__label {
+    font-weight: 500;
+    font-size: 19px;
+  }
+  .enya .en__field__input--calendar {
+    width: 66.6%;
+    @include mq1(600) {
+      width: 89.8%;
+    }
+  }
+  .enya .en__field__input--text {
+    width: 95.6%;
+    @include mq1(600) {
+      width: 89.8%;
+    }
+  }
+  @include mq1(600) {
+    width: 89.8%;
+  }
+}
+
+.enya .en__component--svblock--displayAll {
+  font-size: 1.19em;
+  font-variant-numeric: lining-nums !important;
+  line-height: 1.4;
+  font-weight: 500;
+  color: $black1;
+  @include font-family("freight-regular");
+  text-align: left;
+  width: 41.6%;
+  margin-left: 29%;
+  padding-bottom: 2%;
+
+  @include mq1(600) {
+    width: 100% !important;
+    margin-left: 2% !important;
+    margin-right: 1% !important;
+  }
+  @include mq2() {
+    width: 62%;
+    margin-left: 19%;
+  }
+}
+.enya .en__field {
+  padding-top: 1rem;
+}
+
+/*.enya .en__component--formblock {
+  @include mq1(600) {
+    width: 100% !important;
+    margin-left: 2% !important;
+    margin-right: 1% !important;
+  }
+  @include mq2() {
+    width: 62%;
+  }
+}*/
+.enya .en__field__label--item {
+  @include mq1(600) {
+    width: 82%;
+  }
+}
+
+.enya.enya-event .en__field__input--radio + .en__field__label--item::before {
+  min-width: rem(20);
+}
+
+.enya .en__submit {
+  button {
+    background: $bright-blue;
+
+    @include font-family("freight-regular");
+
+    height: 3.25rem;
+    margin-top: 2.5rem;
+    padding: 9px 12px 9px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    font-weight: 500;
+    font-size: 1.3125rem;
+    font-weight: 500;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    display: inline-flex;
+    justify-content: center;
+    min-width: 19rem;
+    text-align: center;
+
+    &:hover {
+      background-color: #008dba;
+    }
+  }
+}
+
+// We always want to hide the ally primary state on event pages.
+// When this field is included on an event form, it will always
+// receive the value of the state field, via JS.
+.enya.enya-event .en__field:not(.enya .en__hidden).en__field--state-affairs-ally-primary-state {
+  display: none;
+  visibility: hidden;
+}

@@ -1,0 +1,126 @@
+<!--
+[[?//::COMMENT:: Link to manage this file in Convio:
+    https://secure3.convio.net/humane/admin/PageBuilderAdmin?page_id=6073&pagebuilder=page_manage&action=manage
+::]]
+-->
+
+<style>
+  .monthly_donate {
+    display: block;
+    color: #00358E;
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom: 0 !important;
+    margin-top: 15px;
+    text-align: left;
+  }
+  
+  .bluearrow {
+    height: 20px;
+    width: auto;
+    margin-left: 10px;
+  }
+  </style>
+  
+  [[?//::COMMENT:: This reusable serves dual roles: it fills in the content for
+    the alert thank you page, and for the alert taken page.
+    Most of the content is the same on both pages. But there are
+    some differences: in the text, and in sourcing.
+    First we need to find out which type of page we're on. We'll test for the
+    thanks page, and if not true, we'll assume we're on the alert taken page.
+  ::]]
+  
+  [[?x1x::x[[?[[?x[[S334:page]]x::OnScreenThanks::1::0]][[?x[[S334:advocacyPageType]]x::displayThankYou::1::0]]::1::1::0]]x::
+    [[U0:pageType=thanksPage]]
+    [[U0:sourceSuffix=ty]]
+  ::
+    [[U0:pageType=takenPage]]
+    [[U0:sourceSuffix=tkn]]
+  ]]
+  <!-- Page Type: [[S80:pageType]] -->
+  
+  [[?//::COMMENT:: If the alertShareTitle session var is empty, use the alertTitle session var instead.::]]
+  [[?xx::x[[S80:alertShareTitle]]x::
+    [[U0:alertShareTitle=[[S80:alertTitle]]]]
+  ::]]
+  
+  [[?//::COMMENT:: Remove certain special characters from variables, because they cause problems for the T1 encoding tag.::]]
+  [[U0:alertShareTitle=[[E130:"[[S80:alertShareTitle]]" "é" "e" replaceall]]]]
+  
+  [[?//::COMMENT:: Set up session variables for share links.::]]
+  [[U0:alertShareLinkFacebook=https://www.facebook.com/sharer/sharer.php?u=[[T1:https://secure.humanesociety.org/site/Advocacy?cmd=display&page=UserAction&id=[[S334:id]]&s_src=sh_fb[[S80:sourceSuffix]]]]]]
+  
+  [[U0:alertShareLinkTwitter=https://twitter.com/intent/tweet?url=[[T1:https://secure.humanesociety.org/site/Advocacy?cmd=display&page=UserAction&id=[[S334:id]]&s_src=sh_tw[[S80:sourceSuffix]]]]&ct=0&via=HumaneSociety&text=[[T1:[[S80:alertShareTitle]]]]]]
+  
+  [[U0:alertShareLinkEmail=mailto:?subject=[[E130:"[[T1:[[S80:alertShareTitle]]]]" "+" "%20" replaceall]]&body=[[E130:"[[T1:[[S80:alertShareDescription]] https://secure.humanesociety.org/site/Advocacy?cmd=display&page=UserAction&id=[[S334:id]]&s_src=sh_em[[S80:sourceSuffix]]]]" "+" "%20" replaceall]]]]
+  
+  <div class="advo-main">
+    [[?xthanksPagex::x[[S80:pageType]]x::
+      <!-- Thanks page -->
+      <h3>You just took action to help animals&#8212;<br class="d-break"> thank you!</h3>
+      <p>Every action brings us one step closer to a brighter future for all animals. Here&#8217;s what you can do right now to make an even bigger impact:</p>
+    ::
+      <!-- Alert Taken page -->
+      <h3>You have already taken this action<br class="d-break"> to help animals&#8212;thank you!</h3>
+      <p>Advocates like you are leading the fight to ensure that all animals have a bright future. Looking to have an even bigger impact? Share this alert with your family and friends, or make a gift today.</p>
+    ]]
+  </div>
+  <div class="advo-mid group">
+      <div class="advo-share">
+          <div class="advo-share-icon"></div>
+          <div class="advo-share-text">
+              <p>Share on <a href="[[S80:alertShareLinkFacebook]]" target="share">Facebook</a>.</p>
+              <p>Share on <a href="[[S80:alertShareLinkTwitter]]" target="share">Twitter</a>.</p>
+              <p>Send an <a href="[[S80:alertShareLinkEmail]]">Email</a>.</p>
+          </div>
+      </div>
+      <div class="supertaf-donate-section">
+          <div class="supertaf-donate-form">
+              <div class="advo-donate-icon"></div>
+              <div class="advo-donate-text">
+                  <p>Help make all of our animal protection work possible with a one-time gift.</p>
+                  <p class="form-heading">Select your one-time gift amount</p>
+                  <form action="https://secure.humanesociety.org/site/Donation2" id="taf-donate" method="get">
+                      <input name="df_id" style="display: none;" type="hidden" value="23356" />
+                      <input name="23356.donation" style="display: none;" type="hidden" value="form1" />
+                      <input name="s_src" style="display: none;" value="advo_[[S80:sourceSuffix]]_onetime_[[S334:id]]" />
+                      <input name="s_pFreq" style="display: none;" value="o" />
+                      <div class="supertaf-donate-amounts">
+                          <label class="donate-container">
+                              $35
+                              <input id="supertaf-amount-2" name="Level" type="radio" class="supertaf-donate-select" value="45598" checked/>
+                              <span class="checkmark"></span>
+                          </label>
+                          <label class="donate-container">
+                              $60
+                              <input id="supertaf-amount-3" name="Level" type="radio" class="supertaf-donate-select" value="45599" />
+                              <span class="checkmark"></span>
+                          </label>
+                          <label class="donate-container">
+                              $100
+                              <input id="supertaf-amount-4" name="Level" type="radio" class="supertaf-donate-select" value="45601" />
+                              <span class="checkmark"></span>
+                          </label>
+                          <label class="otherLevel donate-container">
+                              <input id="supertaf-amount-other" class="supertaf-donate-select" name="Level" type="radio" value="45605" />
+                              <input id="supertaf-box" class="supertaf-donate-select" name="PREFILL_AMOUNT" onclick="document.getElementById('onetime-other').checked='true';" type="text" placeholder="$ Other" />
+                              <span class="checkmark"></span>
+                          </label>
+                          <input type="submit" class="supertaf-donate-button" value="Continue">
+                          <a class="monthly_donate" href="http://action.humanesociety.org/site/Donation2?df_id=23356&s_pFreq=m&s_src=advo_[[S80:sourceSuffix]]_monthly_[[S334:id]]">Or make a monthly gift<img class="bluearrow" src="../images/content/pagebuilder/humane-bright-blue-arrow.png"></a>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="advo-bottom">
+      <div class="advo-bottom-wrap">
+          <div class="advo-bottom-icon"></div>
+          <div class="advo-bottom-text">
+              <p>Interested in on-the-ground opportunities to help animals?
+                  <br><a href="http://www.humanesociety.org/community/volunteers/">Join us as a volunteer.</a></p>
+          </div>
+      </div>
+  </div>
+  

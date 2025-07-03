@@ -1,0 +1,35 @@
+.en__component--ecardblock .en__ecarditems__showprev,
+.en__component--ecardblock .en__ecarditems__addrecipient,
+.en__submit button {
+  @include font-family('freight-regular');
+  background-color: $bright-blue;
+  border: 0;
+  border-radius: 2px;
+  display: block;
+  font-size: 1.125rem;
+  line-height: 1;
+  color: $white;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: .9444em 3.25rem 1em;
+  user-select: none;
+  width: 100%;
+
+  body.enya-hsi & {
+    background-color: $hsi-dark-green;
+  }
+
+  &:hover {
+    background-color: $hover-blue;
+  }
+
+  body.enya-hsi &:hover {
+    background-color: $hsi-green;
+  }
+
+  @include mq($md) {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+  }
+}

@@ -1,0 +1,34 @@
+<!-- Begin HSI Monthly Modal -->
+<!-- a11y-dialog sample markup here: https://a11y-dialog.netlify.app/usage/markup -->
+<div class="page-builder-note">[Monthly Upsell Modal]</div>
+<div id="monthly-modal" aria-hidden="true" class="dialog-container" role="alertdialog">
+  <!-- The dialog overlay -->
+  <div class="dialog-overlay"></div>
+  <!-- The actual dialog -->
+  <div class="dialog-content" aria-labelledby="monthly-modal-title">
+    <div role="document">
+      <div class="modal-content">
+        <div class="monthly-modal-image"></div>
+        <div class="monthly-modal-text">
+          <h1 id="monthly-modal-title">Become a monthly donor</h1>
+          <p class="for-desktop-only">Giving monthly is the best way to provide ongoing support in our fight to protect all animals, including ending the dog meat trade, protecting wildlife at risk and confronting animal cruelty worldwide. Become an Animal Defender now!</p>
+          <p class="for-mobile-only">Will you join as an Animal Defender by making your gift monthly to help all animals worldwide?</p>
+          <div class="monthly-modal-button-wrapper">
+            <button type="button" class="" id="monthly-modal-yes">
+              <span class="yes-text">Yes!</span>
+              <span class="more-yes-text">Change my gift to <span id="monthly-modal-amount" class="live-giving-upsell-amount">&nbsp;</span>
+                a month.</span>
+            </button>
+            <span class="change-cancel">You can change or cancel at any time.</span>
+            <button type="button" class="" id="monthly-modal-no">
+              <span class="no-text">No thanks.</span>
+              <span class="more-no-text">Process my <span id="one-time-modal-amount" class="live-giving-amount">&nbsp;</span> one&#8209;time
+                gift.</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Monthly Modal -->
