@@ -873,15 +873,20 @@ input[type='checkbox']:checked:after {
     max-width: 35%;
 }
 .fancybox-content  h3 {
-    font-weight:700;
-    color:#024731;
+color: #00352C;
+    font-family: "Sharp Grotesk Bold", sans-serif !important;
+}
+
+.fancybox-content p,
+.fancybox-content h4 {
+	color: #000
 }
 .fancybox-content  h4 a {
     font-weight:700;
-    color:rgb(1, 116, 198);
+    color:#002B70
 }
 .fancybox-content  a {
-    color:rgb(1, 116, 198);;
+    color:#002B70;
 }
 .fancybox-slide--html .fancybox-close-small {
     color: currentColor;
