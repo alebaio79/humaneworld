@@ -67,7 +67,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.19.0",
-    "@sentry/browser": "^7.73.0",
+    "@sentry/browser": "^7.119.1",
     "@sentry/tracing": "^7.73.0",
     "a11y-dialog": "^7.5.2",
     "bootstrap": "^5.2.1",
