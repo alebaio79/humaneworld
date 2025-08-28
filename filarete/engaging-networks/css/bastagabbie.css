@@ -1,0 +1,153 @@
+.topBanner {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/img+scrofa+per+header.png?v=1646836793000) no-repeat center center !important;
+	background-size: cover !important;
+
+}
+.testata-thank-you-petizione {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/Thank+you+page+-+Italia+contro+le+gabbie.JPG?v=1646064677000) center center no-repeat !important;
+	background-size: cover !important;
+}
+.letter-style .en__component--copyblock {
+	border: 5px solid #ccc;
+padding: 20px;
+    /*max-height: 300px;
+    overflow-y: scroll;*/
+    margin-top: 40px;
+	 margin-bottom: 40px;
+	background: #fff
+}
+
+.letter-style ::-webkit-scrollbar {
+  width: 0.5em;
+}
+ 
+.letter-style ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+.letter-style ::-webkit-scrollbar-thumb {
+  background-color: #024731;
+  outline: 1px solid slategrey;
+}
+.firmaora {
+	    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/volpe-quote.jpg?v=1610459639000) 50% 80% no-repeat !important;
+	background-size: cover;
+	padding: 15% 0 !important;
+	position: relative
+	
+}
+.firmaora:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: -moz-linear-gradient(left, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0) 100%);
+    background: linear-gradient(to right, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
+}
+.firmaora h3 {
+	width: 55%;
+    padding: 0 0 0 40px;
+    color: #fff !important;
+}
+
+.grazie .h3 {
+	margin-bottom: 20px !important
+}
+.grazie p {
+	text-align: center !important
+}
+.grazie img {
+	filter: brightness(0) invert(1);
+} 
+.ralph-share-left p, 
+.ralph-share-right p {
+	font-size: 18px !important
+}
+.num {
+font-size: 35px !important;
+    font-weight: 700;
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin-top: 20px;
+    line-height: 65px;
+}
+.ralph-share-left p.num,
+.ralph-share-right p.num {
+	font-size: 35px !important;
+}
+.ralph-share-left,
+.ralph-share-right {
+	padding-top: 30px !important
+}
+
+.btn-white {
+		background: #fff;
+    border-radius: 0;
+    padding: 5px 45px;
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+@media (min-width : 1025px)  {
+	.ralph-share-left {
+		padding-left: 18% !important;
+		position: relative
+	}
+	.ralph-share-left:after {
+content: '';
+    position: absolute;
+    right: 0;
+    width: 1px;
+    height: calc(100% - 80px);
+    border-left: 2px solid #fff;
+    top: 20px;
+	}
+	.ralph-share-right {
+		padding-right: 18% !important
+	}	
+
+}
+
+@media (min-width : 1900px)  {
+	.ralph-share-left {
+		padding-left:28% !important;
+		position: relative
+	}
+
+	.ralph-share-right {
+		padding-right: 28% !important
+	}	
+
+}
+@media (max-width : 767px)  {
+.firmaora {
+	    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/volpe-quote.jpg?v=1610459639000) 30% 80% no-repeat !important;
+
+}	
+.firmaora h3 {
+    width: 75%;
+    margin-left: 0;
+    padding: 60px 30px 0 30px;
+    color: #fff !important;
+    /* position: absolute; */
+    /* height: 100%; */
+}
+	.letter-style {
+		padding: 10px !important
+	}
+}
+
+
+.enWidget__fill__count {
+    display: block;
+    visibility: visible !important;
+    font-size: 16px;
+}

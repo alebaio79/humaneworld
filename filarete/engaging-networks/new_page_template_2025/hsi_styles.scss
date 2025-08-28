@@ -1,0 +1,785 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: 'Sharp Grotesk Bold';
+    src: url('https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/SharpGroteskBold-16.woff2?v=1734420586000') format('woff2'),
+         url('https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/SharpGroteskBold-16.woff?v=1734419570000') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+$color-primary-blue: #009CEB;
+$color-form-gray: #979797;
+$color-hyperlink: #017ACD;
+$color-quaternary-blue: #002B70;
+$color-primary-green: #00352C;
+$font-body: "Noto Sans", sans-serif !important;
+$font-heading: 'Sharp Grotesk Bold', sans-serif !important;
+.en__component--page{
+    display: flex !important;
+    flex-wrap: wrap;
+}
+body, p, li{
+    font-family: $font-body;
+    font-size: 1rem !important;
+    @media(min-width: 768px){
+        font-size: 1.125rem !important;
+    }
+}
+%customRadioButtons{
+    color: #000000;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0px;
+    box-shadow: none;
+    background-color: transparent;
+    padding-left: calc(16px + 5.95px);
+    line-height: normal;
+    position: relative;
+    font-weight: normal;
+    &:before{
+        content: '';
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border: 1px solid $color-form-gray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        position: absolute;
+        left: 0px;
+    }
+    &:after{
+        content: '';
+        border-radius: 50%;
+        width: 8px;
+        height: 8px;
+        background-color: $color-primary-blue;
+        opacity: 0;
+        transition: 0.3s ease opacity;
+        position: absolute;
+        left: 4.25px;
+    }
+}
+#main-content {
+    background-color: #FFFFFF;
+    h1, h2, h3, h4, h5, h6{
+        color: $color-primary-green;
+        font-family: $font-heading;
+    }
+    .credit_card_form {
+        .en__submit{
+            margin: 7px 0 0px;
+            padding: 0px !important;
+        }
+    }
+    @media(min-width: 1024px){
+        .form_fixed_right{
+            position: fixed;
+            right: 0px;
+            top: 132px;
+            left: unset;
+            width: 30%;
+            height: calc(100% - 132px);
+            overflow-y: auto;
+            z-index: 9;
+            background-color: white;
+            scrollbar-width: thin;
+            &.top0{
+                height: 100%;
+            }
+        }
+    }
+    .header_row{
+        background: #F8F8F8;
+        box-shadow: 0px 2px 2px 0px #00000018;
+        padding-block: 0px;
+        width: 100%;
+        img{
+            max-width: min(100%, 312px) !important;
+            margin: auto;
+            display: block;
+            height: auto !important;                 
+        }
+        @media(min-width: 768px){                        
+            padding-block: 11.51px 3.18px;
+            img{
+                max-width: 444px !important;
+            }
+        }
+    }
+    // .en__component--row{
+    //     &:first-of-type{
+    //         padding-block: 16.83px 13.16px;
+    //         width: 100%;
+    //         justify-content: center;
+    //         display: flex;
+    //         gap: 50px;
+    //         flex-wrap: wrap;
+    //         align-items: center;
+    //         background: #F8F8F8;
+    //         box-shadow: 0px 2px 2px 0px #00000018;
+    //         .logo_title{
+    //             position: absolute;
+    //             top: 0px;
+    //             text-align: center;
+    //             p{
+    //                 line-height: 1.625rem !important;
+    //                 font-size: 0.375rem !important;                    
+    //                 margin: auto !important;
+    //                 @media(min-width: 768px){
+    //                     font-size: 0.688rem !important;
+    //                     line-height: 2.938rem !important;
+    //                 }
+    //             }
+    //         }
+    //         .en__component--column{
+    //             flex: 1;
+    //             float: none;
+    //             img{
+    //                 margin: 0px;                    
+    //             }
+    //         }
+    //     }
+    //     @media(min-width: 768px){                        
+    //         &:first-of-type{
+    //             padding-block: 32.51px 24.18px;
+    //             &:after{
+    //                 height: calc(100% - calc(32.51px + 24.18px));
+    //             }
+    //         }
+            
+    //     }
+    // }
+    .landing_mail_sec{
+        .col1{
+            @media(min-width: 1024px){
+                display: flex;
+                flex-wrap: wrap;
+                .en__component--imageblock{
+                    order: 1;
+                    width: 100%;
+                }
+                .land_img_caption {
+                    order: 2;
+                }
+                .landing_title, .landing_title_2{
+                    order: 3;
+                }
+            }
+        }
+    }
+    .mail_col_wrapper{
+        .col1{
+            img{
+                margin: 0px;
+            }
+        }
+        .col2{
+            padding: 14px 20px; 
+            h1, h2{
+                font-size: 2rem;
+                text-transform: none;
+            }
+            @media(min-width: 768px){
+                padding: 28px 42px;
+                border: none;
+                min-width: 1px !important;
+            }
+        }
+    }
+    .landing_mail_sec{
+        .credit_card_form .en__field__label, .form-second-part .en__field__label{
+            color: #000000 !important;
+        }
+        .en__field{
+            padding-bottom: 8px;
+        }
+        .en__field--firstName, .en__field--lastName{
+            max-width: 100% !important;
+        }
+        a[data-src="#hidden-content"], .cursor-pointer{
+            color: $color-hyperlink !important;
+        }
+        button{
+            width: 100%;
+            padding-block: 11.95px !important;
+            padding-inline: 32px;
+            text-align: center !important;
+            font-size: 1.125rem !important;
+            line-height: 1.533rem !important;
+            font-family: $font-body;
+        }
+        input, select {
+            &:not([type="radio"]):not([type="checkbox"]):not([type="submit"]) {
+              border-radius: 8px !important;
+              padding: 13.93px 13.84px;
+              border: 1px solid $color-form-gray;
+              min-height: 41px;
+              max-height: none;
+              margin: 0px;
+              font-size: 0.875rem;
+              line-height: 1.192rem;
+            }
+          }
+          .en__field__input--vgs{
+            width: 100%;
+            border: none;
+            min-height: 40px;
+          }
+          .en__field--iban{            
+            &>.en__field__element{
+                display: grid;
+                &>input{
+                    position: relative !important;
+                }
+                input, .en__field__iban{
+                    grid-column-start: 1;
+                    -ms-grid-column: 1;
+                    grid-column-end: 2;
+                    grid-row-start: 1;
+                    -ms-grid-row: 1;
+                    grid-row-end: 2;
+                }
+            }
+          }
+          iframe{
+            width: 100%;
+            border: none;
+            input{
+                border-radius: 8px !important;
+              padding: 13.93px 13.84px;
+              border: 1px solid $color-form-gray;
+              min-height: 41px;
+              max-height: none;
+              margin: 0px;
+            }
+          }
+        #vaialform p{
+            font-size: 0.875rem !important;
+            margin-top: 20px;
+            font-weight: 500 !important;
+            margin-bottom: 28px !important;
+            line-height: 1.25rem !important;
+            color: #000000;
+            @media(max-width: 767px){
+                margin-top: 0px;
+            }
+        }
+        div#FormStepSlider ul{
+            li{
+                text-align: center !important;
+                span{
+                    color: #000000;
+                    font-size: 0.875rem !important;
+                }
+            }
+        }
+        div#FormStepSlider ul:after{
+            background-color: #BABABA;
+        }
+        div#FormStepSlider ul:before{
+            background: $color-primary-blue;
+        }
+        div#FormStepSlider ul:after, div#FormStepSlider ul:before{
+            height: 2px;
+        }
+        .en__field--recurrpay{
+            .en__field__element--radio{
+                gap: 18px;
+            }
+            .en__field__item {
+                flex: 0 0 auto;
+                width: auto;
+                margin-right: 0px;
+                input[type="radio"]{
+                    &:checked{
+                        &+label{
+                            &:after{
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+                label{
+                    @extend %customRadioButtons;
+                }
+            }
+        }
+        .en__field--donationAmt{
+            label{
+                border-radius: 8px;
+                font-family: $font-body;
+                background-color: $color-quaternary-blue;
+                @media(max-width: 767px){
+                    font-size: 1.125rem !important;
+                    line-height: 1.533rem;
+                    padding: 11px 19.5px;
+                }
+            }
+            input[type="radio"]{
+                &:checked{
+                    &+label{
+                        background-color: $color-primary-blue;
+                    }
+                }
+            }
+        }
+        .form-second-part{
+            zoom: unset !important;
+            padding: 0px;
+            @media (max-width: 1036px) {                
+                width: 100% !important;
+                padding-inline: 15px;
+                float: left !important;
+            }
+            &>label{
+                width: 100%;
+                position: relative;
+                margin: 10px 0px 0px;
+                padding: 0px 0px 10px;
+                font-size: 14px;
+                font-family: "Noto Sans";
+                color: #000;
+                line-height: normal;
+                font-weight: 700;
+                text-align: left;
+            }
+        }
+        .form-second-part, .en__field--ccexpire{
+            input, select {
+                &:not([type="radio"]):not([type="checkbox"]):not([type="submit"]) {
+                  padding-block: 7.5px;
+                  padding-inline: 12.5px;
+                  font-family: $font-body;
+                }
+              }
+              label[for*="en__field_"]:not([for^="en__field_supporter_questions_"]) { font-family: Noto Sans; font-size: 0.813rem; font-weight: 700; line-height: 1.107rem; text-align: left; margin-bottom: 4px; color: #000000; position: relative; padding: 0px; margin-bottom: 3px;}
+              div[class*="en__field--privacy-policy-acceptance"]{
+                label{
+                    font-size: 0.75rem;
+                    line-height: 1.125rem;
+                    transform: none;
+                    margin-left: 6.5px;
+                    color: #000000;
+                    font-family: $font-body;
+                    position: relative;
+                    flex: 1;
+                    margin: 0px;
+                }
+                input[type='checkbox']{
+                    width: 16px !important;
+                    height: 16px !important;
+                    outline-color: $color-form-gray !important;
+                }
+                .en__field__item{
+                    padding: 0px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 7px;
+                    align-items: flex-start;
+                }
+              }
+              
+        }
+        .en__field--paymenttype{
+            display: block !important;
+            .en__field__element--radio{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            label[for="en__field_transaction_paymenttype"]{
+                font-family: "Noto Sans", sans-serif !important;
+                color: #024731 !important;
+                font-size: 1.25rem;
+                margin-bottom: .5rem;
+                font-weight: 700;
+                line-height: 1.2;
+            }
+            .en__field__item{
+                .en__field__input--radio{
+                    width: 16px;
+                    height: 16px;
+                }
+                label{
+                    font-family: "Noto Sans", sans-serif !important;
+                    font-size: 1rem;
+                    font-weight: 400;
+                }
+            }
+        }
+        .paymentDetails{
+            margin-top: 16px !important;
+            display: none;
+            .button-group{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 27px;
+                a[id*="payVia"]{
+                    color: #000000 !important;
+                    @extend %customRadioButtons;
+                    text-transform: none !important;
+                    font-size: 1.125rem !important;
+                    padding: 0px !important;
+                    padding-left: 21.95px !important;
+                    &.active{
+                        &:after{
+                            opacity: 1;
+                        }
+                    }
+                }
+                @media(min-width: 768px){
+                    gap: 30px;
+                }
+            }            
+        }
+        .credit_card_form{
+            padding: 0px;
+            border: none;
+            margin-block: 15px 13px;
+            @media(max-width: 1036px){
+                padding-inline: 15px;
+            }
+            label[for="en__field_transaction_iban"]{
+                margin-bottom: 0px !important;
+            }
+        }
+        .blocco-iban{
+            width: 100% !important;
+            margin-block: 0px !important;
+            .action-button{
+                margin-block: 30px 13px !important;
+            }
+            button{
+                text-align: center !important;
+            }
+        }
+        .donation-amount{
+            margin-bottom: 20px;
+            @media (max-width: 1036px) {
+                width: 100%;
+                padding-inline: 15px;
+                label{
+                    width: 100%;
+                }
+            }
+            .en__field--donationAmt{
+                &>label.en__field__label{
+                    transform: translateY(10px);
+                    padding: 0px !important;
+                    font-size: 14px !important;
+                    font-family: "Noto Sans" !important;
+                    color: #000;
+                    text-align: left;
+                    &:after{
+                        content: none;
+                    }
+                }
+            }
+            .en__field{
+                &>label{
+                    &.en__field__label{
+                        background: transparent;
+                        font-size: 14px;
+                        font-family: 'Noto Sans';
+                        color: #000;
+                        margin: 0px;
+                        line-height: normal;
+                        font-weight: 700;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+        .cost_custom_wrapper{
+            margin: 0px !important;
+        }
+        .custom_donation_content{
+            &:empty{
+                margin: 0px !important;
+            }
+            img{
+                border-radius: 0px !important;
+                @media(max-width: 567px){
+                    width: 100% !important;
+                    margin: 0px 0px 9.8px 0px !important;
+                }
+            }
+            p{
+                font-weight: normal !important;
+                text-transform: none !important;
+                font-size: 0.75rem !important;
+                line-height: 1.125rem !important;
+                margin: 0px;
+            }
+            div[class*="transaction_donation"]{
+                margin: 0px !important;
+            }
+        }
+    }
+    .landing_pad{
+        padding-inline: 35px;
+        @media(min-width: 768px){
+            padding-inline: 53px;
+        }
+    }
+    .land_img_caption{
+        margin-top: 7.78px;
+        font-style: italic;
+        font-size: 0.75rem;
+        line-height: 0.938rem;
+        color: #000000;
+    }
+    .landing_title{
+        &.landing_pad{
+            padding-inline: 11px;
+            @media(min-width: 768px){
+                padding-inline: 53px;
+            }
+        }
+        h1{
+            font-size: 2.125rem;
+            margin-bottom: 8px;
+            margin-top: 29px;
+            @media(min-width: 768px){
+                font-size: 4.25rem;
+                margin-bottom: 33px;
+                margin-top: 33px;
+            }
+        }
+    }
+    .landing_title_2{
+        font-size: 1.25rem;
+        margin-bottom: 14px;
+        font-weight: bold;
+        line-height: normal;
+        color: #000000;
+        @media(min-width: 768px){
+            font-size: 1.875rem;
+            margin-bottom: 15px;
+        }
+        &.landing_pad{
+            padding-inline: 11px;
+            @media(min-width: 768px){
+                padding-inline: 53px;
+            }
+        }
+    }
+    .landing_text_block{
+        color: #000000;
+    }
+}
+.benefits_sec{
+    padding-block: 7px 27.32px !important;
+    padding-inline: 34px !important;
+    @media(min-width: 567px){
+        padding-block: 58.4px 54px !important;
+        padding-inline: 53px !important;
+    }
+    h2{
+        text-align: center;
+        margin-bottom: 28.4px;
+    }
+    .benefits_col{
+        word-wrap: break-word;
+        gap: 19px;
+        display: grid !important;
+        &>div{
+            display: grid !important;
+            grid-template-columns: auto;    
+            grid-template-columns: 100px 1fr;
+            gap: 20px;
+            align-items: center;    
+        }
+        h2{
+            text-align: center
+        }
+        p{
+            margin: 0px;
+        }
+        img{
+            width: 100% !important;
+            height: auto !important;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            object-fit: cover;
+            max-width: 300px;
+            margin-inline: auto;
+        }
+        @media(min-width: 567px){
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            align-items: start;
+            text-align: center !important;
+            gap: 26px 35px;
+            &>div{
+                display: block !important;
+                img{
+                    margin-bottom: 20px !important;
+                }
+            }
+            p{
+                &:nth-child(odd){
+                    grid-row: 1/1;
+                }
+                &:nth-child(even){
+                    grid-row: 2/2;
+                }
+            }
+        }
+        @media(min-width: 768px){
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+        }
+    }
+}
+
+#main-content{
+   .sec_cta_blue{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    p{
+        color: #000000;
+    }
+    .content_wrap{
+        div[class*="col"]{
+            &:first-of-type{
+                padding-inline: 35px;
+                order: 2;
+            }
+            &:last-of-type{
+                order: 1;
+            }
+        }
+    }
+    h2{
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 1.473rem;
+    }
+    img{
+        object-fit: cover;
+        object-position: center;
+        width: 100% !important;
+        height: 100% !important;
+        aspect-ratio: 4/3;
+        margin: 0px !important
+    }
+    @media(min-width: 768px){
+        h2{
+            text-align: left;
+            margin-top: 0px;
+        }        
+        text-align: left;
+        align-items: unset;
+        .content_wrap{
+            div[class*="col"]{
+                &:first-of-type{
+                    padding-block: 35px 48px;
+                    padding-inline: 66px;
+                    order: 1;
+                    background-color: #0696e1;
+                    p{
+                        margin: 0px;
+                    }
+                }
+                &:last-of-type{
+                    order: 2;
+                    img{
+                        width: 100% !important;
+                        height: 100% !important;
+                        aspect-ratio: unset;
+                        position: absolute;
+                        inset: 0px;
+                    }
+                } 
+            }
+        }
+        }
+    } 
+    .sec_pie_chart{
+        width: 100%;
+        padding-inline: 21px;
+        h2{
+            text-align: center;
+        }
+        a{
+            color: #0696e1;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        img{
+            margin-bottom: 29px;
+        }
+        @media(max-width: 767px){
+            h2{
+                display: none !important;
+            }
+        }
+        @media(min-width: 768px){
+            padding-block: 65px 65px;
+            padding-inline: 53px;            
+            img{
+                margin-block: 72px 55px;
+                max-width: 709px;
+            }
+        }
+    }
+    .footer_wrap{
+        width: 100%;
+        border-top: 1.5px solid #eef0f1;
+        background-color: white;
+        padding-block: 30px 60px;
+        margin-top: 1rem;
+        @media(min-width: 768px){
+            padding-block: 30px 44px;
+            a{
+                margin: 28px auto 41px;
+            }
+        }
+        .en__component--copyblock{
+            text-align: center;
+        }
+        img{
+            height: 74.72px !important;
+            width: 173.74px !important;
+        }
+        a{
+            text-decoration: underline;
+            font-weight: bold;
+            color: #0696e1;            
+        }
+        p{
+            a{
+                margin: 18.96px auto 30px;
+                display: block;
+                width: fit-content;
+            }
+            &:last-of-type{
+                font-size: 0.75rem !important;
+                line-height: 1.125rem !important;
+                color: #000;
+            }
+        }
+        ul{
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 0;
+            justify-content: center;
+            margin-bottom: 25px;
+            li{
+                a{
+                    font-size: 0.75rem !important;
+                    line-height: 1.125rem !important;
+                }
+            }
+        }
+        p{
+            margin: 0px;
+        }
+    }
+}

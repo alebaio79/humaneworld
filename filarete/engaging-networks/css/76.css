@@ -1,0 +1,90 @@
+.topBanner {
+    background-image: linear-gradient(to bottom, rgba(0,0, 0, 0) 40%, rgba(0, 0, 0, 0.2) 100%), url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/header-CATS-2024.jpg?v=1718874494000) !important;
+    background-position: 100% 50%;
+    box-shadow: none;
+    position: relative;
+    height: 87vh !important;
+}
+
+.topBannerThankyou {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/tp-CATS-2024.jpg?v=1718874488000) no-repeat center center !important;
+    background-size: cover;
+}
+
+.sloganarea {
+	width: 90%
+}
+.cane {
+    background-image: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/home-wide-CATS-2024.jpg?v=1718874484000) !important;
+    box-shadow: none;
+    padding: 26em 0 2em 0 !important;
+    font-weight: bold !important;
+}
+
+@media (min-width: 1000px) and (max-width: 1480px) {
+.h-50vh  h1 {
+ font-size: 1.3rem
+}
+	
+	.h-50vh  h2 {
+ font-size: 1.2rem
+}
+	.h-25vh p {
+    font-size: 14px !important;
+    font-weight: 600;
+}
+	
+.topBanner {
+    background-position: 100% 100%;
+}
+	.sloganarea h1 {
+    font-size: 1.8em;
+    line-height: 1em;
+}
+}
+
+
+
+/*.transaction_donationAmt0.img-custom-amount,
+.transaction_donationAmt1.img-custom-amount,
+.transaction_donationAmt2.img-custom-amount,
+.transaction_donationAmt3.img-custom-amount{
+	display: none !important
+}
+
+.transaction_donationAmt0.img-custom-amount.active,
+.transaction_donationAmt1.img-custom-amount.active,
+.transaction_donationAmt2.img-custom-amount.active,
+.transaction_donationAmt3.img-custom-amount.active{
+	display: block !important
+}
+*/
+
+x
+#main-content .cost_custom_wrapper .custom_donation_content div {
+    display: none !important;
+}
+#main-content .cost_custom_wrapper .custom_donation_content.mostra div.active {
+    display: block !important;
+}
+
+.leva {
+	display: none !important
+}
+
+
+.mostra .active {
+	display: block !important
+}
+@media (max-width: 767px) {
+.topBanner {
+    background-position: -215px center !important;
+}
+.topBannerThankyou {
+    background-position:  center !important;
+    background-size: cover !important;
+}
+	.en__socialShares {
+		margin-top: 0 !important
+	}
+}

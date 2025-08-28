@@ -1,0 +1,221 @@
+body {
+background: rgb(0,97,74);
+background: -moz-linear-gradient(top, rgba(0,97,74,1) 0%, rgba(0,51,33,1) 100%) !important;
+background: -webkit-linear-gradient(top, rgba(0,97,74,1) 0%,rgba(0,51,33,1) 100%) !important;
+background: linear-gradient(to bottom, rgba(0,97,74,1) 0%,rgba(0,51,33,1) 100%) !important;
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00614a', endColorstr='#003321',GradientType=0 );
+	position: relative
+}
+
+body:before {
+    content: '';
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI_ecard_decoro-sx-up.png?v=1671012026000) top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 175px;
+    height: 365px;
+    top: 30px;
+    left: 0;
+    position: absolute;
+}
+body:after {
+    content: '';
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI_ecard_decoro-dx-up.png?v=1671012027000) top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 175px;
+    height: 365px;
+    top: 30px;
+    right: 0;
+    position: absolute;
+}
+
+#main-content-wrapper:before {
+    content: '';
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI_ecard_decoro-sx-down.png?v=1671012028000) top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 175px;
+    height: 430px;
+    bottom: 30px;
+    left: 0;
+    position: absolute;
+}
+
+#main-content-wrapper:after {
+    content: '';
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI_ecard_decoro-dx-down.png?v=1671012029000) top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 175px;
+    height: 430px;
+    bottom: 30px;
+    right: 0;
+    position: absolute;
+}
+
+#main-content-wrapper {
+	position: relative
+}
+.en__component.en__component--ecardblock {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+	color: #024731 !important
+}
+
+#main-content {
+	background-color: transparent !important
+}
+#main-content button {
+    display: block;
+    width: 100%;
+    margin: 0 0 1rem 0;
+    font-family: inherit;
+    padding: 0.85rem 1rem;
+    -webkit-appearance: none;
+    border: 1px solid transparent;
+    border-radius: 0.1875rem;
+    -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
+    transition: background-color 0.25s ease-out, color 0.25s ease-out;
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+    background-color: #024731;
+    color: #fefefe;
+	border-radius: 5px
+}
+#main-content button:hover,
+#main-content button:focus {
+    background-color: #024731;
+}
+.en__ecardrecipients__email, .en__ecardrecipients__name {
+    flex: initial;
+    width: 49%;
+    position: relative;
+}
+.en__ecarditems__button.en__ecarditems__showprev,
+.en__ecarditems__button.en__ecarditems__addrecipient{
+	background: #bd966b !important
+}
+.en__ecarditems__button.en__ecarditems__addrecipient {
+	height: 40px;
+}
+
+.en__ecarditems__button.en__ecarditems__showprev:hover,
+.en__ecarditems__button.en__ecarditems__addrecipient:hover{
+	    background: #024731  !important;
+}
+
+.en__ecarditems__button.en__ecarditems__showprev {
+	text-transform: uppercase;
+	font-weight: 600
+}
+.en__ecardmessage {
+	margin-top: 3em
+}
+
+.en__ecardrecipients__list {
+    min-height: 200px;
+    border: 1px solid #F6F6F6;
+    padding: 10px;
+    margin: 20px 0 0;
+    background: #F6F6F6;
+}
+.en__ecarditems__thumb img {
+    border: 1px solid #024731;
+}
+.en__ecardrecipients__futureDelivery {
+	margin-bottom: 2em
+}
+iframe {
+	width: 660px !important
+}
+.en__ecarditems__prevclose{
+	width: 10% !important
+}
+#main-content input[type="date"], #main-content input[type="datetime"], #main-content input[type="datetime-local"], #main-content input[type="email"], #main-content input[type="month"], #main-content input[type="number"], #main-content input[type="password"], #main-content input[type="range"], #main-content input[type="search"], #main-content input[type="tel"], #main-content input[type="text"], #main-content input[type="time"], #main-content input[type="url"], #main-content input[type="week"], #main-content textarea {
+	
+
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+.en__submit:hover button {
+    background: #CAAA95 !important;
+    border-color: #84BD00 !important;
+}
+
+.h-100vh {
+	height: 100vh
+}
+
+.h-100vh .en__component--copyblock {
+		display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+@media (max-width: 991px) {
+	body {
+		text-align: center
+	}
+	body:before {
+    display: none
+}
+body:after {
+display: none
+}
+
+	iframe {
+		width: 85% !important
+	}
+	
+	iframe table {
+		zoom:0.8 !important
+	}
+#main-content-wrapper:before {
+display: none
+}
+
+#main-content-wrapper:after {
+display: none
+}
+
+#main-content-inner {
+    margin: 0 auto;
+    padding: 0 1.875rem;
+}
+	.logo-cont img {
+		    width: 90px !important;
+    height: auto;
+    padding-top: 20px;
+	}
+#main-content input[type="date"], #main-content input[type="datetime"], #main-content input[type="datetime-local"], #main-content input[type="email"], #main-content input[type="month"], #main-content input[type="number"], #main-content input[type="password"], #main-content input[type="range"], #main-content input[type="search"], #main-content input[type="tel"], #main-content input[type="text"], #main-content input[type="time"], #main-content input[type="url"], #main-content input[type="week"], #main-content textarea {
+    width: 85%;
+    margin: auto;
+}
+	#main-content h1 {
+		padding-top: 15px
+	}
+#main-content h2 {
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    color: #024731;
+    font-size: 1.6rem !important;
+    padding: 0 10px;
+}
+.en__ecardrecipients__email, .en__ecardrecipients__name {
+    flex: initial;
+    width: 100%;
+    position: relative;
+}
+#main-content button {
+    display: block;
+    width: 85%;
+    margin: 20px auto;
+}
+	
+}

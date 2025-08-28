@@ -1,0 +1,45 @@
+.en__component.en__component--widgetblock {
+	clear: both
+}
+
+
+.topBanner {
+    background-image: linear-gradient(to bottom, rgba(0,0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%), url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI-pledge-testata.jpg?v=1694794536000) !important;
+		    background-size: cover !important;
+	background-position: 0 -135px!important;
+}
+
+.testata-thank-you-petizione {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/petizione-testata.jpg?v=1573667651000) center center no-repeat;
+}
+.cane {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/Landing+DOG+MEAT+16+-+2.png?v=1582553542000) center center no-repeat;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
+
+}
+
+.sloganarea h1 {
+	background: none !important
+}
+
+.sloganarea h1:before {
+	display: none !important
+}
+
+.sloganarea h2 span {
+	color: #fff  !important;
+	background: none !important
+}
+
+
+@media (max-width: 767px) {
+	.topBanner {
+		background: none !important 
+	}
+	.testata-img {
+		    background-image: linear-gradient(to bottom, rgba(0,0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%), url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI-pledge-testata.jpg?v=1694794536000) !important;
+		    background-size: cover !important;
+		background-position: center center !important
+	}
+	
+}

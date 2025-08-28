@@ -1,0 +1,151 @@
+.mappainterattiva svg {
+	max-width: 100%
+}	
+
+#AMERICANORD,
+	#AMERICASUD,
+	#EUROPA1,
+	#EUROPA2,
+	#ASIA,
+	#AFRICA{
+		cursor:pointer
+	}
+	
+	.mappainterattiva svg {
+		max-width:100% !important;
+		    height: 550px;
+	}
+@media (min-width: 1024px) {	
+	#AMERICANORD.markerattivo path {
+	transform: scale(1.1);
+      transform-origin: 750px 500px;
+
+	}
+	#AMERICASUD.markerattivo path {
+	transform: scale(1.1);
+	transform-origin: 955px 905px
+
+	}
+	
+	#AFRICA.markerattivo path {
+	transform: scale(1.1);
+	transform-origin:1290px 678px;
+
+	}
+	
+	#EUROPA2.markerattivo path {
+	transform: scale(1.1);
+	transform-origin:330px 195px;
+
+	}
+	
+	#EUROPA1.markerattivo path {
+	transform: scale(1.1);
+	transform-origin:1315px 520px;
+
+	}
+	
+	#ASIA.markerattivo path {
+	transform: scale(1.1);
+	transform-origin:1630px 582px;
+
+	}
+}
+
+	.mappaattiva path {
+		fill:#84BD00;
+		-webkit-transition: all 0.4s ease-in-out;
+-moz-transition: all 0.4s ease-in-out;
+-ms-transition: all 0.4s ease-in-out;
+-o-transition: all 0.4s ease-in-out;
+transition: all 0.4s ease-in-out;
+	}
+	
+@media (min-width: 1024px) {
+.modal-dialog {
+    max-width: 800px;
+}
+	
+}
+.modal h2 {
+	font-size: 2.8rem;
+	color: #054631 !important;
+	margin-bottom: 0;
+	    margin-top: 30px;
+
+}
+.modal p {
+	color: #054631;
+	font-weight: 500 !important;
+}
+.modal h2:after {
+	display: none
+}
+	.modal a.btn-green,
+	a.btn-green{
+		background: #054631;
+		border: 1px solid  #054631;
+		padding: 10px 50px;
+		font-weight: 600;
+		color: #fff !important
+	}
+	.modal a.btn-green:hover,
+	 a.btn-green:hover{
+		background: #84BD00;
+		border: 1px solid  #84BD00;
+		padding: 10px 50px;
+		font-weight: 600;
+		color: #fff !important
+	}
+	.modal img {
+		height: 350px;
+		object-fit: cover;
+		border-radius: 5px 5px 0 0;
+	}
+	.close {
+		position: absolute;
+    top: 5px;
+    right: 15px;
+    color: #fff;
+    opacity: 1;
+    font-weight: 400;
+    font-size: 30px;
+	}
+	.modal-content {
+		border-radius: 5px;
+		box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+	}
+	
+	#rmp_menu_trigger-17345 {
+		display: none
+	}
+	
+@media (max-width: 767px) {	
+	.fixed-header {
+    padding: 0 15px !important;
+}
+	.btn-red {
+    padding: 5px 20px !important;
+	}
+.scroll nav .btn {
+    top: 10px !important;
+}
+h1 {
+    font-size: 1.8em;
+    line-height: 1.1em;
+}
+	.mappainterattiva svg {
+    max-width: 100%;
+    height: 80px;
+    /* transform: scale(1.8); */
+    margin: 5px 0 0;
+    zoom: 3.5;
+	}
+	.mappainterattiva {
+		padding: 0
+	}
+	.mappa {
+		margin-top: 0
+	}
+}
+

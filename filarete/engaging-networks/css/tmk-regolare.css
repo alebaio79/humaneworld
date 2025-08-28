@@ -1,0 +1,15 @@
+.topBanner {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/JC_HAEMI+FARM+17_OCTOBER_344_527804.JPG?v=1621346272000) no-repeat center center !important;
+	background-size: cover !important
+
+}
+ .en__captcha {
+	position: relative !important;
+	float: left
+}
+
+.en__error.en__error__gateway {
+	    clear: both;
+    position: relative;
+    margin-top: 25px;
+} 

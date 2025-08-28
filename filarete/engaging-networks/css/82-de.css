@@ -1,0 +1,56 @@
+.topBanner {
+    background-image: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/desktop_header-image_hsi_bobicraft.jpg?v=1732716346000) !important;
+    background-position: center center;
+    box-shadow: none;
+    position: relative;
+    height: 80vh !important;
+}
+
+.h-25vh {
+    height: 40vh;
+	
+}
+/*.donation-amount .en__field--1913506    .en__field__item:nth-child(4),
+.donation-amount .en__field--1905155    .en__field__item:nth-child(4),
+.donation-amount .en__field--2023237    .en__field__item:nth-child(4),
+.donation-amount .en__field--2023164    .en__field__item:nth-child(4),
+.donation-amount .en__field--2026714    .en__field__item:nth-child(4),
+.donation-amount .en__field--2040382    .en__field__item:nth-child(4),
+.donation-amount .en__field--2033343    .en__field__item:nth-child(4),
+.donation-amount .en__field--2033365    .en__field__item:nth-child(4)
+{
+	display: block !important;
+
+}
+*/
+.topBannerThankyou {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/20240425_HSI_00024_642646_TP.jpg?v=1715614005000) no-repeat center center;
+    background-size: cover;
+}
+@media (max-width: 767px) {
+.topBanner {
+    height: 72vh !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-image: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/mobile_header-image_hsi_bobicraft.jpg?v=1732716340000) !important;
+}
+	
+}
+
+.cardmissioni .foche-esaurito picture:after,
+.cardmissioni .cani-esaurito picture:after,
+.cardmissioni .pellicce-esaurito picture:after,
+.cardmissioni .gabbie-esaurito picture:after,
+.cardmissioni .carne-esaurito picture:after,
+.cardmissioni .trofeo-esaurito picture:after,
+.cardmissioni .carnedue-esaurito picture:after,
+.cardmissioni .trofeodue-esaurito picture:after{
+    content: 'Ausverkauft';
+    position: absolute;
+    left: 0;
+    padding: 5px;
+    background: #024731;
+    color: #fff;
+    font-weight: 600;
+}

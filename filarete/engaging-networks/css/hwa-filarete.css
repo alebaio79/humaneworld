@@ -1,0 +1,532 @@
+/*2025*/
+
+#main-content .landing_mail_sec .credit_card_form .en__field--iban input {
+	background: none !important;
+	border: 1px solid #979797 !important
+}
+
+
+.form-petizione-2025 .en__field__element,
+.form-petizione-2025 .en__field__element input{
+	width: 100%
+}
+
+.form-petizione-2025 label {
+	margin-bottom: 0;
+	font: normal normal bold 13px/18px Noto Sans;
+}
+
+
+#main-content .form-petizione-2025  .en__submit button {
+    height: 58px;
+    background: #029CEB 0% 0% no-repeat padding-box !important;
+	    border-radius: 8px !important;
+    opacity: 1;
+    border: none !important;
+}
+
+#main-content .landing_mail_sec .form-petizione-2025  .en__field--question .en__field__item {
+    padding: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 7px;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+#main-content .landing_mail_sec .form-petizione-2025  .en__field--question .en__field__label.en__field__label--item {
+font: normal normal normal 12px/18px Noto Sans;
+    transform: none;
+    margin-left: 6.5px;
+    color: #000000;
+    font-family: "Noto Sans", sans-serif !important;
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin: 0px;
+	font-weight: normal
+}
+
+
+.partedestraform .enWidget__progress,
+.partedestraform .enWidget__fill{
+    background:none !important;
+    border: none !important;
+	    text-align: center;
+    width: 100% !important;
+
+}
+
+.partedestraform .enWidget__fill__count {
+	text-align: center;
+font: normal normal normal 42px/88px Sharp Grotesk Bold;
+letter-spacing: 0px;
+color: #00352C !important;
+opacity: 1;
+}
+.partedestraform .enWidget__copy--below {
+    margin-top: 0px;
+    text-align: center;
+    font: normal normal bold 18px / 24px Noto Sans;
+    letter-spacing: 0px;
+    color: #000000;
+}
+
+.partedestraform .enWidget__copy--below p {
+   font-weight: 600 !important;
+    margin-bottom: 0;
+}
+
+
+.nofloat {
+	float:none !important
+}
+
+.grey-bg {
+	background: #F2EFEA
+}
+
+#main-content a {
+    color: #1a5cc7 ;
+}
+
+.landing_pad.w-100 .en__socialShare__image,
+.landing_pad.w-100.en__socialShares {
+    width: auto !important;
+    height: auto !important;
+}
+
+.fomrdonazionede .en__field--privacy-policy-opt-in-de .en__field__item {
+	padding: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 7px;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.fomrdonazionede .en__field--privacy-policy-opt-in-de .en__field__item label.en__field__label.en__field__label--item {
+	font-size: 0.75rem !important;
+    line-height: 1.125rem;
+    -webkit-transform: none;
+    transform: none;
+    margin-left: 6.5px;
+    color: #000000;
+    font-family: "Noto Sans", sans-serif !important;
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin: 0px;
+	transform: none
+}
+
+
+
+
+
+
+
+ a.default_red_btn {
+width: 300px;
+    height: 58px !important;
+    background: #e50913 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+    opacity: 1;
+    text-align: center;
+    font: normal normal bold 24px / 33px Noto Sans;
+    letter-spacing: 0px;
+    color: #FFFFFF !important;
+    opacity: 1;
+    display: block;
+    margin: auto;
+    line-height: 58px;
+    text-decoration: none;
+	}
+a.default_red_btn:hover {
+	    background: #b4080f 0% 0% no-repeat padding-box;
+}
+
+	.credit_card_form .en__field__label,
+	.form-second-part .en__field__label {
+		pointer-events: auto !important
+	}
+
+input[type='checkbox'] {
+-webkit-appearance: auto;
+    -moz-appearance: auto;
+    -o-appearance: auto;
+    appearance: auto;
+}
+input[type='checkbox']:checked:after {
+    content: '✔';
+    color: #024731;
+    display: block;
+    position: absolute;
+    /* margin: auto; */
+    left: 0;
+    right: 0;
+    width: 16px;
+    height: 16px;
+		display:none
+}
+
+.en__field--validationFailed input[type='checkbox']:checked:after {
+content: '✔';
+    color: #024731;
+    display: block;
+    position: absolute;
+    /* margin: auto; */
+    left: -1px;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    top: 6px;
+	display:none
+}
+	.en__field--validationFailed { 
+		position: relative;
+    padding-bottom: 25px !important;
+	}
+ .en__field__error {
+		position: absolute !important;
+		bottom: 0;
+	     line-height: normal;
+	     font-weight: 600;
+	}
+.en__field--privacy-policy-acceptance-pl.en__field--validationFailed input[type='checkbox']:checked:after {
+    top: 36px;
+}
+.en__field--validationFailed input {
+	border:2px solid #E50913 !important
+}
+
+input {
+	    font-family: "Noto Sans", sans-serif !important;
+    font-size: 14px !important;
+}
+
+#main-content .paymentDetails.mt-4 h5 {
+		font-family: "Noto Sans", sans-serif !important;
+}
+
+#main-content .credit_card_form .en__submit button {
+    background-color: #e50913 !important;
+	
+}
+.action-button:hover button,
+#main-content .credit_card_form .en__submit button:hover {
+    background-color: #b4080f !important;
+	
+}
+
+#main-content {
+	 font-family: "Noto Sans", sans-serif !important;
+}
+
+.en__field--privacy-policy-opt-in-swi  label.en__field__label,
+.en__field--privacy-policy-opt-in-aus  label.en__field__label{
+	display: none
+}
+.en__field--privacy-policy-opt-in-swi label.en__field__label.en__field__label--item,
+.en__field--privacy-policy-opt-in-aus label.en__field__label.en__field__label--item{
+	display: block
+}
+
+#main-content .en__field--iban iframe {
+	height: 20px !important
+}
+
+.testofooter {
+	font-size: 12px !important;
+   line-height: 1.125rem !important;
+
+}
+
+#main-content .footer_wrap p a {
+    margin: 0 auto !important;
+}
+
+
+@media (min-width : 1650px)  {
+	#main-content .sec_cta_blue .content_wrap div[class*=col]:first-of-type {
+        padding-block: 110px 110px;
+}
+}
+
+@media (min-width : 1025px)  {
+	.img-reverse .testo {
+		padding-right: 0
+	}
+	.img-reverse .testo p {
+		padding-right: 30px;
+		margin-bottom:0;
+		font-size: 1rem !important;
+        line-height: 1.6rem !important;
+	}
+	.img-reverse .img {
+		padding-left: 0
+	}
+	
+
+	.img-reverse:nth-child(even) .img {
+    padding-right: 0;
+    padding-left: 15px;
+	}
+	.img-reverse:nth-child(even) .testo {
+		order:2
+	}
+	.img-reverse:nth-child(even) .testo p {
+		padding: 0 30px;
+		margin-bottom:0;
+		font-size: 1rem !important;
+        line-height: 1.6rem !important;
+	}
+	
+
+} 
+@media (min-width: 768px) {
+#main-content .landing_mail_sec .paymentDetails .button-group {
+        gap: 8px;
+        /* font-size: 15px; */
+    }
+	#main-content .landing_mail_sec .paymentDetails .button-group a[id*=payVia] {
+		font-size: 15px !important
+	}
+}
+@media (min-width: 768px) and (max-width:1200px) {
+    #main-content .form_fixed_right {
+        position: relative !important;
+        right: 0px;
+        top: 0;
+        left: unset;
+        width: 100% !important;
+        height: auto !important;
+        overflow-y: auto;
+        z-index: 9;
+        background-color: white;
+        scrollbar-width: thin;
+    }
+}
+
+/* Portrait */
+@media only screen 
+  and (min-width: 1024px) 
+  and (max-height: 1366px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+	    #main-content .form_fixed_right {
+        position: relative !important;
+        right: 0px;
+        top: 0;
+        left: unset;
+        width: 100% !important;
+        height: auto !important;
+        overflow-y: auto;
+        z-index: 9;
+        background-color: white;
+        scrollbar-width: thin;
+    }
+}
+
+@media only screen 
+  and (min-device-width: 767px) 
+  and (max-device-width: 1200px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+#main-content .form_fixed_right {
+        position: fixed !important;
+        right: 0px;
+        top: 132px;
+        left: unset;
+        width: 30% !important;
+        height: calc(100% - 132px) !important;
+        overflow-y: auto;
+        z-index: 9;
+        background-color: white;
+        scrollbar-width: thin;
+    }
+}
+@media (min-width: 1200px) {
+	
+	.img-testata img {
+		height: 575px !important;
+		object-fit: cover
+	} 
+	.container-750 {
+		max-width: 750px !important
+	}
+	
+}
+
+@media (max-width: 1550px) {
+   .formde  .en__field--628318,
+	.en__field--628318{
+        margin-bottom: 0.5em !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .benefits_sec .benefits_col.col3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+@media (max-width: 767px) {
+	#main-content .landing_title.landing_pad {
+    padding-inline: 35px !important
+}
+	/*#main-content .en__field--iban iframe {
+	min-height: 50px !important
+}*/
+	.en__field__iban {
+		height: 50px !important;
+		clear: both
+	}
+	
+	.en__field--iban .en__field__element--text {
+    height: 40px !important;
+}
+	.paymentDetails .button-group {
+		gap:8px !important
+	}
+	#main-content .landing_mail_sec .paymentDetails .button-group a[id*=payVia] {
+    font-size: 15px !important;
+
+}
+	.petizione-testata .col1 {
+		display: flex;
+		flex-direction: column
+	}
+	
+	.petizione-testata .col1 .landing_title {
+		order: 1
+	}
+
+	.petizione-testata .col1 .en__component--imageblock {
+		order: 2
+	}
+
+	.petizione-testata .col1 .land_img_caption {
+		order: 3
+	}
+	
+	.sec_pie_chart .col-12.m-auto.d-block.d-md-none.text-center {
+		padding-top: 40px
+	}
+    #main-content .landing_mail_sec .custom_donation_content img {
+        max-width: 50px !important;
+        margin: 0 !important;
+    }
+	#main-content .landing_mail_sec .custom_donation_content p {
+		padding-left:15px
+	}
+	
+	#main-content .sec_cta_blue {
+		background-color: #0696e1;
+	}
+		#main-content .sec_cta_blue .col-12.col-md-7 {
+		padding: 20px 0
+	}
+	
+	
+	.img-reverse .img,
+	.img-reverse .testo{
+    padding:10px 15px !important
+	}
+#main-content .landing_title_2.landing_pad {
+    padding-inline: 35px;
+} 
+	
+	.container.nofloat img {
+		margin-bottom: 30px !important
+	}
+	.en__socialShares a {
+		margin-bottom: 25px !important
+	}
+}
+
+.en__digitalWalle{
+	display: none !important
+}
+
+
+
+.en__field--paymenttype label[for="en__field_transaction_paymenttype"]{
+	width: 100% !important
+}
+
+label[for="en__field_transaction_recurrpay"] {
+	display: none
+}
+
+label[for="en__field_supporter_questions_628318"] {
+font-size: 0.75rem !important;
+    line-height: 1.125rem !important;
+    -webkit-transform: none;
+    transform: none !important;
+    margin-left: 6.5px;
+    color: #000000; 
+    font-family: "Noto Sans", sans-serif !important;
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin: 0px;
+width: 92% !important;
+    /* float: left !important; */
+    margin-top: 10px !important;
+    margin-left: 25px;
+}
+
+
+#en__digitalWallet {
+    font-size: 0 !important;
+    display: none !important;
+	}
+
+@media (min-width : 991px)  and (max-width:1400px){
+
+.donation-amount .en__field__item label {
+	font-size:14px !important
+	}
+}
+
+	.en__field--privacy-policy-opt-in-de .en__field__error {
+		bottom: -22px !important
+	}
+.action-button .next-btn:after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="%23FFFFFF" d="M285.48 273L91.32 467a23.94 23.94 0 01-33.94 0l-22.68-22.68a23.94 23.94 0 010-33.94L180.52 256 34.7 100.62a23.94 23.94 0 010-33.94L57.38 44a23.94 23.94 0 0133.94 0l194.16 194a24 24 0 010 34z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 10px;
+	vertical-align: middle;
+}
+
+.clear-all {
+    clear:both !important
+}
+
+
+label[for="en__field_supporter_questions_1333077"] {
+	    line-height: 15px;
+    padding-top: 5px;
+}
+
+input[type=checkbox],
+input[type=radio] {
+    accent-color: #0696e1;
+}

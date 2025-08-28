@@ -1,0 +1,60 @@
+.en__field__element--radio label {
+    padding-left: 5px;
+    position: relative;
+}
+#main-content-inner .en__field__input--radio:checked+.en__field__label:before, #main-content-inner .en__field__input--checkbox:checked+.en__field__label:before {
+    border-color: #024731;
+    background-color: #024731;
+}
+.en__field__item {
+    padding: 0px 0;
+    width: 100%;
+} 
+.en__field__element--radio .en__field__label.en__field__label--item:before {
+    left: 0;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    /* top: 10px; */
+    position: absolute;
+    top: 5px;
+}
+.en__field__element--radio .en__field__item:nth-of-type(3) .en__field__label {
+    padding-left:20px !important;
+}
+.en__field__element--radio .en__field__item:nth-of-type(3) .en__field__label.en__field__label--item:before{
+    left:0;
+}
+
+.en__field__element--radio .en__field__item:nth-of-type(3) {
+    margin-top:-55px
+}
+
+.en__field__element--radio label {
+    padding-left: 20px !important;
+    position: relative;
+}
+#main-content-inner .en__field__input--radio:checked+.en__field__label:before, #main-content-inner .en__field__input--checkbox:checked+.en__field__label:before {
+    border-color: #024731;
+    background-color: #024731;
+}
+.en__field__item {
+    padding: 0px 0;
+    width: 100%;
+}
+.topBanner {
+    background-image: linear-gradient(to bottom, rgba(0,0, 0, 0) 40%, rgba(0, 0, 0, 0.2) 100%), url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/Landing+Page+Image.jpg?v=1726758147000) !important;
+    background-position: center center;
+    background-size: cover;
+}
+.topBanner:before { 
+	display: none
+}
+
+@media (max-width: 767px) {
+   .topBanner {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.2) 100%), url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/Landing-Page-Image_mobile.jpg?v=1728033571000) !important;
+    background-position: center center !important;
+    background-size: cover !important;
+}
+}

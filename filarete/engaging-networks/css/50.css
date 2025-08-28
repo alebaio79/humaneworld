@@ -1,0 +1,14 @@
+.topBanner {
+    background-image: linear-gradient(to bottom,rgba(0,0, 0, 0) 40%, rgba(0, 0, 0, 0.2) 100%), url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/testata-dog-meat-18.jpg?v=1675871801000) !important;
+}
+.cane {
+    background-image: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/JC_ASAN+DOG+MEAT+FARM_06_595303.jpg?v=1675874244000) !important;
+    box-shadow: none;
+    padding: 10em 0 2em 0 !important;
+    font-weight: bold !important;
+}
+
+.topBannerThankyou {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/JC_ASAN+DOG+MEAT+FARM_84_595479.jpg?v=1675874256000) no-repeat center center !important;
+    background-size: cover !important;
+} 

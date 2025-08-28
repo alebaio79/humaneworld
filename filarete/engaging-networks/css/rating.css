@@ -1,0 +1,7 @@
+.en__field__element--rating {
+    display: flex;
+}
+
+input[type=checkbox], input[type=radio] {
+    visibility: hidden;
+}

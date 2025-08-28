@@ -1,0 +1,25 @@
+.th.IT .topBanner {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/TH_LeopardDesktop.png?v=1681806200000) no-repeat center center !important;
+	background-size: cover !important;
+	height: 80vh  !important
+
+}
+.testata-thank-you-petizione {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/iStock-618454706_550549.jpg?v=1680710517000) center center no-repeat !important;
+	background-size: cover !important
+}
+@media (min-width: 1024px) {
+.img-reverse img {
+	height: 550px !important;
+	object-fit: cover
+
+	}
+}
+@media (max-width: 768px) {
+.th.IT .topBanner {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/TH_LeopardMobile.png?v=1681806184000) no-repeat center center !important;
+	background-size: cover !important;
+	height: 80vh  !important
+
+}
+}

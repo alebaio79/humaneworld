@@ -1,0 +1,28 @@
+.topBanner {
+    background-image: linear-gradient(to bottom,rgba(0,0, 0, 0) 40%, rgba(0, 0, 0, 0.2) 100%), url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/dogmeat-testata.jpg?v=1688481288000) !important;
+	background-size: cover !important;
+	    height: 70vh !important;
+}
+
+.testata-thank-you-petizione {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/Thank-you.jpg?v=1688482125000) no-repeat center center !important;
+    background-size: cover !important;
+} 
+.img-siamo-hsi {
+height: 300px;
+	
+    margin-bottom: 25px
+}
+
+.enWidget__fill__count {
+	display: none
+}
+
+.en__field--628318 label:after {
+	    content: "*";
+    color: red;
+}
+
+.form-petizione input {
+    height: 35px !important;
+}

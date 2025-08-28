@@ -1,0 +1,76 @@
+
+
+.topBanner {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/img-testata-landing-hsi_DEU.png?v=1644335249000) no-repeat center top;
+      box-shadow: none;
+    background-size: cover !important;
+	 height: 73vh !important;
+
+}
+.topBannerThankyou {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/thank-testata.jpg?v=1575036713000) no-repeat center center;
+	background-size: cover !important;
+}
+.cane {
+    background-image: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/fascia-citazione.jpg?v=1614180533000);
+    padding: 18em 0 2em 0 !important;
+    box-shadow: inset 0 0 0 2000px rgb(0 10 10 / 30%);
+	
+}
+
+.en__field--627986 {
+	clear: both;
+	line-height: 20px;
+	margin-bottom: 15px;
+}
+.en__field--628318 {
+	    line-height: 20px;
+}
+#main-content .en__component--column.fixed_div_right {
+    padding-top: 35px !important;
+}
+
+#vaialform p {
+	font-size: 14px
+}
+
+
+.en__field--recurrpay {
+	display: none
+}
+@media (min-width: 1000px) and (max-width: 1480px) {
+
+}
+
+@media (max-width: 1024px) {
+.topBanner {
+
+}
+	
+	#main-content .custom_donation_content img {
+		width: 60px!important
+	}
+
+}
+
+@media (max-width: 767px) {
+.topBanner {
+
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/img-testata-landing-hsi-deu-mobile-check.jpg?v=1644337877000) no-repeat center top !important;
+      box-shadow: none;
+    background-size: cover !important;
+	height: 80vh !important;
+
+}
+	.cane p {
+		font-size: 24px !important
+	}
+	
+	#main-content .custom_donation_content img {
+		width: 60px!important
+	}
+#main-content .footer img {
+    width: 200px !important;
+    margin-bottom: 20px;
+}
+}

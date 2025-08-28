@@ -1,0 +1,259 @@
+.right {
+   padding: 0 20px !important
+}
+.topBanner {
+	background: none !important;
+	box-shadow: none !important;
+	height: 76vh !important;
+	padding: 0 !important
+}
+.testata-img {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/testata-yulin.jpg?v=1619625170000) no-repeat !important;
+    box-shadow: none !important;
+    height: 76vh !important;
+    background-size: cover !important;
+	position: relative
+}
+
+
+.bg-grey  p,
+.bg-white p{
+	color:#004831;
+	font-size: 0.9rem;
+	line-height: 1.6em;
+}
+.bg-green p{
+	font-size: 0.9rem;
+	line-height: 1.6em;
+}
+@media (min-width: 1400px) {
+.h25 {
+	height: 25vh
+}
+}
+.sloganarea h1 {
+font-size: 2.5em;
+    color: #fff;
+    font-weight: 700;
+    background: #024731;
+    width: 75%;
+    position: relative;
+	padding: 5px 0
+}
+.sloganarea h1:before {
+    content: '';
+    left: -10vw;
+    position: absolute;
+    top: 0;
+    background: #024731;
+    height: 100%;
+    width: 10vw;
+
+}
+
+.sloganarea h2 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 15px;
+		width: fit-width;
+ 
+}
+.sloganarea h2 span {
+color: #024731;
+    background: #fff;
+    display: block;
+    position: relative;
+    width: fit-content;
+    margin-bottom: 5px;
+    padding-right: 30px;
+    padding: 5px 30px 5px 0;
+} 
+
+.sloganarea h2 span:before {
+    content: '';
+    left: -10vw;
+    position: absolute;
+    top: 0;
+    background: #fff;
+    height: 100%;
+    width: 10vw;
+
+}
+.macello {
+	    height: 450px !important;
+    width: 2000px;
+    object-fit: cover;
+}
+
+.bloccodati h2 {
+	color: #024731 !important;
+    font-size: 50px;
+    margin-top: 15px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.bloccodati2 h2 {
+	color: #fff !important;
+    font-size: 50px;
+    margin-top: 15px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.bloccodati p,
+.bloccodati2 p {
+	margin-top: 5px
+}
+.condividi {
+	    float: left;
+    width: 70%;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.right { box-shadow: 0px 0px 10px #232931;}
+
+.en__share__button--facebook {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/fb.png?v=1619622165000) center center no-repeat !important;
+	    background-size: cover !important;
+    height: 35px;
+    width: 35px;
+}
+
+.en__share__button--twitter {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/twitter.png?v=1619622166000) center center no-repeat !important;
+	    background-size: cover !important;
+    height: 35px;
+    width: 35px;
+}
+
+.en__component--socialblock {
+	float: left;
+    width: 30%;
+    margin-top: 20px;
+}
+
+.en__share {
+    margin-right: 10px !important ;
+}
+.en__share--twitter {
+	margin-right:  0!important
+}
+
+
+.testata-thank-you-petizione {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/Testata-THANKYOUPAGE.jpg?v=1619777995000) center center no-repeat !important
+}
+
+
+@media (min-width: 1000px) and (max-width: 1480px) {
+.en__share__button--facebook {
+    height: 30px;
+    width: 30px;
+}
+
+.en__share__button--twitter {
+    height: 30px;
+    width: 30px;
+}
+	
+	.condividi {
+    font-size: 12px;
+}
+}
+
+@media (min-width: 768px) and (max-width: 1001px) {
+.topBanner {
+    background-position: center center !important
+
+}
+}
+
+@media (max-width: 991px) {
+	.en__component--column {
+    flex-basis: 100% !important;
+    position: relative !important;
+    /* max-width: 482px; */
+    width: 100% !important;
+    flex: 0 0 100% !important;		
+	}
+.right {
+    flex-basis: 100% !important;
+    position: relative !important;
+    /* max-width: 482px; */
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+	padding-bottom: 30px !important;
+}
+.h25 {
+    height: auto;
+}
+.condividi {
+    font-size: 16px;
+    padding-top: 10px;
+    text-align: center;
+}
+.en__component--socialblock {
+    float: left;
+    width: auto;
+    margin-top: 20px;
+    margin-left: 0;
+}
+.bloccodati h2,
+.bloccodati2 h2{
+    font-size: 2em;
+
+}
+	.img-macello {
+		display: none
+	}
+.form-petizione .en__field--firstName, .form-petizione .en__field--lastName {
+    float: left;
+    width: 48%;
+    margin: 0 5px 0 0;
+}
+}
+
+@media (max-width: 767px) {
+.testata-img {
+
+    height: 90vh !important;
+	    background:url('https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/testata-yulin-mobile.jpg?v=1619786600000') !important
+
+}
+	.sloganarea {
+    bottom: -90px !important;
+		    padding: 0;
+
+}
+	.sloganarea h1 {
+    font-size: 1.7em;
+		width: 100%
+}
+	.sloganarea h1:before {
+		display: none
+	}
+	.sloganarea h2 {
+    font-size: 1.1em;
+    padding: 5px;
+    text-align: center;
+		margin-bottom: 0 !important
+}
+	.sloganarea h2 span {
+
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 5px;
+}
+.sloganarea h2 span:before{
+		display: none !important
+	}
+.macello {
+    height: 250px !important;
+
+}
+}
+

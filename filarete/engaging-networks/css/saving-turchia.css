@@ -1,0 +1,28 @@
+.topBanner {
+    background-image:url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/Antakyafirstday063_597095.jpg?v=1676987239000) !important;
+	box-shadow: none !important;
+	    background-position: center;
+
+}
+
+.topBannerThankyou {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/Antakyafirstday065_597099..jpg?v=1676987534000) no-repeat center center;
+    background-size: cover;
+}
+
+.cane {
+    background-image: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/Antakyasecondday024_597149-fascia.jpg?v=1676987394000);
+    padding: 18em 0 2em 0 !important;
+    box-shadow: inset 0 0 0 2000px rgb(0 10 10 / 30%);
+}
+.cost_custom_wrapper {
+	display: none !important
+}
+
+
+.img-siamo-hsi {
+		background-position:  center center !important;
+    background-size: cover;
+    height: 320px;
+    margin-bottom: 40px;
+}

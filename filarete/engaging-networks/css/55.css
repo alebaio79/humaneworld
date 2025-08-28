@@ -1,0 +1,10 @@
+.topBanner {
+    background-image: linear-gradient(to bottom,rgba(0,0, 0, 0) 40%, rgba(0, 0, 0, 0.2) 100%), url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/Testata-LP-Tomohon.png?v=1684499325000) !important;
+	background-size: cover !important;
+	    height: 70vh !important;
+}
+
+.testata-thank-you-petizione {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/EKY_0894_553029.jpg?v=1656600847000) no-repeat center center !important;
+    background-size: cover !important;
+} 

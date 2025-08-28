@@ -1,0 +1,50 @@
+.topBanner {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/testata-ffa.jpg?v=1609249370000) no-repeat center center !important;
+	background-size: cover !important;
+
+}
+.testata-thank-you-petizione {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/dreamstime_mink_36614341_188311.jpg?v=1609249539000) center 40% no-repeat !important;
+}
+
+.firmaora {
+	    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/volpe-quote.jpg?v=1610459639000) 50% 80% no-repeat !important;
+	background-size: cover;
+	padding: 15% 0 !important;
+	position: relative
+	
+}
+.firmaora:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: -moz-linear-gradient(left, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0) 100%);
+    background: linear-gradient(to right, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
+}
+.firmaora h3 {
+	width: 55%;
+    padding: 0 0 0 40px;
+    color: #fff !important;
+}
+.grazie img {
+	filter: brightness(0) invert(1);
+} 
+@media (max-width : 767px)  {
+.firmaora {
+	    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/volpe-quote.jpg?v=1610459639000) 30% 80% no-repeat !important;
+
+}	
+.firmaora h3 {
+    width: 75%;
+    margin-left: 0;
+    padding: 60px 30px 0 30px;
+    color: #fff !important;
+    /* position: absolute; */
+    /* height: 100%; */
+}
+}

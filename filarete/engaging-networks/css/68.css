@@ -1,0 +1,25 @@
+.topBanner {
+    background-image:  url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/TESTATA+LP.jpg?v=1705575119000) !important;
+    background-position: 100% 50%;
+    box-shadow: none;
+    position: relative;
+    height: 87vh !important;
+} 
+.topBanner:before {
+	display: none
+}
+.cane {
+    background-image: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/fascia-citazione.jpg?v=16141805330000);
+    padding: 18em 0 2em 0 !important;
+    box-shadow: inset 0 0 0 2000px rgb(0 10 10 / 30%);
+}
+
+@media (max-width: 767px) {
+.topBanner {
+    height: 92vh !important;
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/TESTATA+LP+MOBILE.jpg?v=1705575092000) !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+}

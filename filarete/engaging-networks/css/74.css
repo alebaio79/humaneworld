@@ -1,0 +1,32 @@
+.topBanner {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI-pledge-testata.jpg?v=1694794536000) no-repeat center center !important;
+	background-size: cover !important;
+	height: 70vh !important;
+
+}
+
+.cane {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/IMG_6307_517552.jpg?v=1621010154000) center center no-repeat !important;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
+}
+.testata-thank-you-petizione {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/LP-natale-2023.jpg?v=1702567376000) center center no-repeat !important;
+	background-size: cover !important;
+}
+
+.btn-primary, .btn-primary.disabled, .btn-primary:disabled {
+    padding: 0.5rem 2.5rem !important;
+    border: 1px solid #f5363b;
+    background: #f5363b;
+    border-radius: 0;
+    color: #fff !important;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.btn-primary:hover {
+    border: 1px solid #6F9E00;
+    background: #6F9E00;
+}

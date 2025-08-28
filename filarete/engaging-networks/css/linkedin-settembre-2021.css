@@ -1,0 +1,102 @@
+
+.topBannerThankyou {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/079_DSC0383_503300.jpg?v=1602683301000) no-repeat center center !important;
+
+}
+.cane {
+    background-image: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/fascia-citazione.jpg?v=1614180533000);
+    padding: 18em 0 2em 0 !important;
+    box-shadow: inset 0 0 0 2000px rgb(0 10 10 / 30%);
+}
+.en__field--1071996,
+.en__field--1075702{
+	clear: both
+}
+.credit_card_form {
+
+    border: none !important;
+
+    border-radius: 0 !important;
+    clear: both !important;
+}
+.credit_card_form input[type="text"], .credit_card_form input[type="number"], .credit_card_form input[type="date"], .form-second-part input[type="text"], .credit_card_form input[type="email"], .credit_card_form input[type="tel"], .form-second-part input[type="tel"], .form-second-part .en__field__element, .credit_card_form .en__field__element {
+    width: 100%;
+    height: 45px !important;
+}
+.en__field--privacy-policy-acceptance-ita {
+	margin-top: 20px
+}
+.en__field--privacy-policy-acceptance-ita  label,
+.en__field--privacy-policy-opt-in-de label{
+	padding-left: 10px ;
+	margin-left: 0 !important
+}
+.en__field--privacy-policy-acceptance-ita .en__field__label.en__field__label--item:before,
+.en__field--privacy-policy-opt-in-de .en__field__label.en__field__label--item:before{
+	left: -25px !important
+}
+.credit_card_form .en__field__label, .form-second-part .en__field__label {
+	pointer-events: inherit;
+}
+.en__field__input--checkbox:checked+.en__field__label:before {
+    font-size: 18px !important;
+    padding-left: 3px;
+    padding-top: 2px;
+}
+.en__field--privacy-policy-acceptance-ita a {
+	color:#024731
+}
+#main-content .credit_card_form .en__submit {
+    padding-top: 1px;
+}
+
+#en__field_supporter_questions_628318 {
+    float: left;
+    width: auto !important;
+    float: left;
+    margin: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+@media (min-width: 1025px) {
+	.en__field--1071996,
+	.en__field--1075702{
+		width: 48%;
+		float: left
+	}
+	
+	.en__field--1071992,
+	.en__field--1075704{
+				width: 48%;
+		float: right
+	}
+}
+
+@media (min-width: 1000px) and (max-width: 1480px) {
+.topBanner {
+    background-position: center center !important
+
+}
+}
+
+@media (min-width: 768px) and (max-width: 1001px) {
+.topBanner {
+    background-position: center center !important
+
+}
+}
+
+@media (max-width: 767px) {
+.topBanner {
+   background-position: center !important
+}
+}

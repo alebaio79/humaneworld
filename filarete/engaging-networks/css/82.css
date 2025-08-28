@@ -1,0 +1,270 @@
+.cardmissioni img {
+    border-radius: 0;
+}
+
+.primoattivo picture {
+    border-radius: 0;
+}
+.cardattiva {
+    border-radius: 0;
+}
+
+.topBanner {
+    background-image: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/Bobicraft-desktop-hsi.jpg?v=1733933747000) !important;
+    background-position: center center;
+    box-shadow: none;
+    position: relative;
+    height: 80vh !important;
+}
+
+
+
+.en__field__item--other {
+	display: none !important
+}
+
+.en__field--withOther .en__field__item {
+    /* width: 33.33%; */
+    text-align: center;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 5px;
+    margin-top: 0;
+    margin-right: 0 !important;
+}
+
+.en__field--2023170 .en__field__item {
+	display: none
+}
+.en__field--2031484  .en__field__item {
+	display: none
+}
+.en__field--2033344   .en__field__item {
+	display: none
+}
+
+.en__field--2056801   .en__field__item {
+	display: none
+}
+
+.en__field--2033369    .en__field__item {
+	display: none
+}
+.en__field--2040381    .en__field__item {
+	display: none
+}
+
+.en__field--2047852    .en__field__item {
+	display: none
+}
+
+.en__field--2047883    .en__field__item {
+	display: none
+}
+
+.costattivo,
+.donation-amount .en__field__item.costattivo:nth-child(4),
+.donation-amount .en__field__item:nth-child(4) label{
+	display: block !important
+}
+
+.en__field--2029618,
+.en__field--2031586,
+.en__field--2033273  {
+	clear: both;
+	    background: #bc966c;
+    
+    margin-bottom: 5px;
+    padding-bottom: 45px !important;
+    padding-left: 5px;
+}
+
+.en__field--2033328,
+.en__field--2033361{
+	clear: both;
+	    background: #bc966c;
+    
+    margin-bottom: 5px;
+    padding-bottom: 60px !important;
+    padding-left: 5px;
+}
+
+.en__field--2029618 label.en__field__label ,
+.en__field--2031586 label.en__field__label,
+.en__field--2033273 label.en__field__label,
+.en__field--2033328 label.en__field__label,
+.en__field--2033361 label.en__field__label{
+	padding-left: 20px;
+	width: 100%;
+	color: #fff;
+	font-weight: 600;
+	line-height: 18px
+}
+.en__field--2029618 label.en__field__label.en__field__label--item,
+.en__field--2031586 label.en__field__label.en__field__label--item,
+.en__field--2033273 label.en__field__label.en__field__label--item,
+.en__field--2033328 label.en__field__label.en__field__label--item,
+.en__field--2033361 label.en__field__label.en__field__label--item{
+	display: none
+}
+.cardmissioni h3{
+	    color: #024731 !important
+}
+.bg-lighter {
+	background: #FBFBFB
+}
+
+.en__field--2029618 input[type='checkbox'],
+.en__field--2031586 input[type='checkbox'],
+.en__field--2033273 input[type='checkbox'],
+.en__field--2033328 input[type='checkbox'],
+.en__field--2033361 input[type='checkbox']{
+outline: 1px solid #fff !important;
+}
+.regalo .btn-primary {
+    padding: 0.5rem 2.5rem !important;
+    border: 1px solid #f5363b;
+    background: #f5363b;
+    border-radius: 0;
+    color: #fff !important;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.regalo .btn-primary:hover {
+    border: 1px solid #6F9E00;
+    background: #6F9E00;
+}
+
+div#FormStepSlider li.step.two {
+    padding-top: 0
+}
+
+.en__component--socialshareblock {
+	clear: both
+}
+@media (min-width: 1024px) {
+    .cardmissioni h3 {
+        padding: 20px 0;
+    }
+	
+	.h-60 {
+		height: 60vh
+	}
+	.h-40 {
+		height: 20vh
+	}
+	.en__component--socialshareblock {
+	height: 20vh
+}
+}
+
+@media (max-width: 767px) {
+.topBanner {
+    height: 80vh !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: top center !important;
+    background-image: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/Bobicraft-mobile-hsi.jpg?v=1733933750000) !important;
+}
+	
+	.cardmissioni h3 {
+		
+		    clear: both;
+    padding-top: 10px;
+	}
+}
+
+.en__field--2047851   .en__field__item:nth-child(2),
+.en__field--2047851   .en__field__item:nth-child(3),
+.en__field--2047851   .en__field__item:nth-child(4),
+.en__field--2047851   .en__field__item:nth-child(5),
+.en__field--2047851   .en__field__item:nth-child(7),
+.en__field--2047851   .en__field__item:nth-child(8),
+
+.en__field--2040382   .en__field__item:nth-child(2),
+.en__field--2040382   .en__field__item:nth-child(3),
+.en__field--2040382   .en__field__item:nth-child(4),
+.en__field--2040382   .en__field__item:nth-child(5),
+.en__field--2040382   .en__field__item:nth-child(7),
+.en__field--2040382   .en__field__item:nth-child(8),
+
+.en__field--2056799   .en__field__item:nth-child(2),
+.en__field--2056799   .en__field__item:nth-child(3),
+.en__field--2056799   .en__field__item:nth-child(4),
+.en__field--2056799   .en__field__item:nth-child(5),
+.en__field--2056799   .en__field__item:nth-child(7),
+.en__field--2056799   .en__field__item:nth-child(8),
+
+.en__field--2033343   .en__field__item:nth-child(2),
+.en__field--2033343   .en__field__item:nth-child(3),
+.en__field--2033343   .en__field__item:nth-child(4),
+.en__field--2033343   .en__field__item:nth-child(5),
+.en__field--2033343   .en__field__item:nth-child(7),
+.en__field--2033343   .en__field__item:nth-child(8),
+
+.en__field--2047880   .en__field__item:nth-child(2),
+.en__field--2047880   .en__field__item:nth-child(3),
+.en__field--2047880   .en__field__item:nth-child(4),
+.en__field--2047880   .en__field__item:nth-child(5),
+.en__field--2047880   .en__field__item:nth-child(7),
+.en__field--2047880   .en__field__item:nth-child(8) {
+	display: none !important
+}
+
+.cardmissioni picture {
+	position:relative;
+	cursor: pointer;
+}
+
+.cardmissioni .foche-esaurito picture,
+.cardmissioni .cani-esaurito picture,
+.cardmissioni .pellicce-esaurito picture,
+.cardmissioni .gabbie-esaurito picture,
+.cardmissioni .carne-esaurito picture,
+.cardmissioni .trofeo-esaurito picture,
+.cardmissioni .carnedue-esaurito picture,
+.cardmissioni .trofeodue-esaurito picture {
+	cursor: auto
+}
+.cardmissioni .foche-esaurito picture:after,
+.cardmissioni .cani-esaurito picture:after,
+.cardmissioni .pellicce-esaurito picture:after,
+.cardmissioni .gabbie-esaurito picture:after,
+.cardmissioni .carne-esaurito picture:after,
+.cardmissioni .trofeo-esaurito picture:after,
+.cardmissioni .carnedue-esaurito picture:after,
+.cardmissioni .trofeodue-esaurito picture:after{
+    content: 'Esaurito';
+    position: absolute;
+    left: 0;
+    padding: 5px;
+    background: #024731;
+    color: #fff;
+    font-weight: 600;
+}
+
+
+#main-content .en__component--column.fixed_div_right {
+    padding-top: 30px !important;
+    overflow-y: scroll;
+    height: 99vh;
+    overflow-x: hidden;
+}
+
+.en__field--emailAddress  {
+    max-width: 48%;
+    float: left;
+}
+
+.en__field--phoneNumber2 {
+    max-width: 48%;
+    float: right;
+}
+.en__field__input--calendar, .en__field__input--email, .en__field__input--number, .en__field__input--password, .en__field__input--range, .en__field__input--telephone, .en__field__input--text, .en__field__input--textarea, .en__rangeFieldLabels {
+    width: 250px;
+    max-width: 100% !important;
+    width: 100%; !important
+}

@@ -1,0 +1,42 @@
+
+
+.topBanner {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/IMG-TESTATA.jpg?v=1614180296000) no-repeat center center;
+  
+    background-size: cover !important;
+
+}
+.cane {
+    background-image: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/fascia-citazione.jpg?v=1614180533000);
+    padding: 18em 0 2em 0 !important;
+    box-shadow: inset 0 0 0 2000px rgb(0 10 10 / 30%);
+}
+
+.en__field--627986 {
+	clear: both;
+	line-height: 20px;
+	margin-bottom: 15px;
+}
+.en__field--628318 {
+	    line-height: 20px;
+}
+
+@media (min-width: 1000px) and (max-width: 1480px) {
+.topBanner {
+    background-position: center center !important
+
+}
+}
+
+@media (min-width: 768px) and (max-width: 1001px) {
+.topBanner {
+    background-position: center center !important
+
+}
+}
+
+@media (max-width: 767px) {
+.topBanner {
+   background-position: center !important
+}
+}

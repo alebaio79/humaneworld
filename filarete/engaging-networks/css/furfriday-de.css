@@ -1,0 +1,41 @@
+
+.letter-style .en__component--copyblock {
+    margin: 40px;
+
+}
+
+.btn-primary, .btn-primary.disabled, .btn-primary:disabled {
+    padding: 0.5rem 2.5rem !important;
+    border: 1px solid #f5363b;
+    background: #f5363b;
+    border-radius: 0;
+    color: #fff !important;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-primary:hover {
+    border: 1px solid #6F9E00;
+    background: #6F9E00;
+}
+
+.h3:after {
+	display: none
+}
+
+.topBanner {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI_furfree_testata-lp.jpg?v=1668610780000) no-repeat center center !important;
+    background-size: cover !important;
+}
+.testata-thank-you-petizione {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI_furfree_testata-tp-DE.jpg?v=16686085340000) center center no-repeat !important;
+}
+
+.sloganarea {
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    max-width: 80%;
+}

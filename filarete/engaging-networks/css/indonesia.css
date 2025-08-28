@@ -1,0 +1,48 @@
+
+
+.topBanner {
+			background-image: linear-gradient(to bottom, rgba(0,0, 0, 0) 40%, rgba(0, 0, 0, 0.2) 100%), url( https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/ALI_0592_550871.JPG?v=1637842945000) !important;
+	    background-position: 100% 50%;
+
+}
+.cane {
+    background-image: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/IMG_6307_517552.jpg?v=1621010154000);
+
+}
+
+.cane.refresh {
+    background-image: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI_indonesia_LP-citazione.jpg?v=1637842941000);
+	padding: 17em 0 3em 0!important
+
+}
+.topBannerThankyou {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI_indonesia_TP.jpg?v=1637842822000) no-repeat center center;
+	background-size: cover;
+}
+
+@media (max-width: 767px) {
+.topBanner {
+	    background-position: 35% 100%;
+
+}
+	.sloganarea {
+		bottom: 0 !important
+	}
+	.cane {
+		padding: 15em 0 0 0 !important;
+		background-position: 10% !important
+	}
+	.cane .vertical-align{
+		font-size: 20px !important;
+		zoom:0.8 !important
+	}
+}
+@media (max-width: 520px) {
+
+	.cane {
+		padding: 15em 0 0 0 !important;
+		background-position: 43% !important
+	}
+
+}
+

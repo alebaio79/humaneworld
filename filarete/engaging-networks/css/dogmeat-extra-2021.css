@@ -1,0 +1,43 @@
+
+
+.topBanner {
+			background-image: linear-gradient(to bottom, rgba(0,0, 0, 0) 40%, rgba(0, 0, 0, 0.9) 100%), url(https://trello-attachments.s3.amazonaws.com/5b4f2360bb28d588f690c18b/5fd0a484d71c5a8b2504c113/2b018f5450dadcd9eafc85fe9bf12b00/TESTATA.jpg) !important;
+	    background-position: 100% 100%;
+
+}
+.cane {
+    background-image: url(https://trello-attachments.s3.amazonaws.com/5b4f2360bb28d588f690c18b/5fd0a484d71c5a8b2504c113/bd3772404bb7a096001073844ec858d2/FASCIA_TITOLO.jpg);
+
+}
+
+.topBannerThankyou {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/dogmeat-extra-thankyou.jpg?v=1607521455000) no-repeat center center;
+	background-size: cover;
+}
+
+@media (max-width: 767px) {
+.topBanner {
+	    background-position: 35% 100%;
+
+}
+	.sloganarea {
+		bottom: 0 !important
+	}
+	.cane {
+		padding: 15em 0 0 0 !important;
+		background-position: 10% !important
+	}
+	.cane .vertical-align{
+		font-size: 20px !important;
+		zoom:0.8 !important
+	}
+}
+@media (max-width: 520px) {
+
+	.cane {
+		padding: 15em 0 0 0 !important;
+		background-position: 43% !important
+	}
+
+}
+

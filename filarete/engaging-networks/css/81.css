@@ -1,0 +1,15 @@
+.topBanner {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI_nuova-petizione-indonesiaLP_header.jpg?v=1731592712000) no-repeat center center !important;
+	background-size: cover !important;
+	height: 70vh !important;
+
+}
+
+.cane {
+    background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/HSI_indonesia_LP-citazione.jpg?v=1637842941000) center center no-repeat !important;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.2);
+}
+.testata-thank-you-petizione {
+    background: url( https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2207/611277_GAL_0062.jpg?v=1731427234000) center center no-repeat !important;
+	background-size: cover !important;
+}

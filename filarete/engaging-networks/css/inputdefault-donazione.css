@@ -1,0 +1,29 @@
+ .en__field--checkbox.en__field--question input[type='checkbox'] {
+    width: 18px !important;
+    height: 18px !important;
+    appearance: auto !important;
+    outline: none !important;
+    font-size: inherit !important;
+    text-align: center !important;
+    line-height: normal !important;
+    background: none !important;
+    accent-color: #024731;
+}
+ .en__field--checkbox.en__field--question input[type='checkbox']:checked:after {
+    display: none
+}
+
+ .en__field--checkbox.en__field--question label.en__field__label.en__field__label--item {
+    font-size: 12px !important;
+    transform: none !important;
+    transition: none !important;
+    position: relative !important;
+    width: 94% !important;
+    line-height: 18px !important;
+    margin-left: 0 !important;
+    float: right;
+}
+
+.en__field--checkbox.en__field--question  {
+	padding-bottom: 0
+}
