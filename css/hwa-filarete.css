@@ -202,6 +202,7 @@ content: '✔';
 		position: absolute !important;
 		bottom: 0;
 	     line-height: normal;
+	     font-weight: 600;
 	}
 .en__field--privacy-policy-acceptance-pl.en__field--validationFailed input[type='checkbox']:checked:after {
     top: 36px;
@@ -350,7 +351,6 @@ input {
         left: unset;
         width: 30% !important;
         height: calc(100% - 132px) !important;
-
         overflow-y: auto;
         z-index: 9;
         background-color: white;
@@ -524,4 +524,9 @@ width: 92% !important;
 label[for="en__field_supporter_questions_1333077"] {
 	    line-height: 15px;
     padding-top: 5px;
+}
+
+input[type=checkbox],
+input[type=radio] {
+    accent-color: #0696e1;
 }
