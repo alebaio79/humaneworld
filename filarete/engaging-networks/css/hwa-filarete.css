@@ -527,16 +527,16 @@ label[for="en__field_supporter_questions_1333077"] {
 }
 
 input[type=checkbox],
-input[type=radio] {
+input[type=radio]{
     accent-color: #0696e1;
 }
 
-input[type="radio"] {
+.credit_card_form input[type="radio"] {
     display: none;
 }
 
 
-.en__field__element--radio label {
+.credit_card_form .en__field__element--radio label {
     color: #000000;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -557,7 +557,7 @@ input[type="radio"] {
     font-weight: normal;
 }
 
-.en__field__element--radio label:before {
+.credit_card_form .en__field__element--radio label:before {
     content: "";
     width: 16px;
     height: 16px;
@@ -578,10 +578,10 @@ input[type="radio"] {
     left: 0px;
 }
 
-.en__field__element--radio input[type=radio]:checked + label:after {
+.credit_card_form .en__field__element--radio input[type=radio]:checked + label:after {
     opacity: 1;
 }
-.en__field__element--radio label:after {
+.credit_card_form .en__field__element--radio label:after {
     content: "";
     border-radius: 50%;
     width: 8px;
@@ -592,4 +592,9 @@ input[type="radio"] {
     transition: 0.3s ease opacity;
     position: absolute;
     left: 4.25px;
+}
+
+#main-content-inner .en__field__input--radio:checked+.en__field__label:before, #main-content-inner .en__field__input--checkbox:checked+.en__field__label:before {
+    background: none;
+    border: 1px solid #979797;
 }
