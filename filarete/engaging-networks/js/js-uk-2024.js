@@ -886,3 +886,24 @@ jQuery(document).ready(function ($) {
 		}
 	});
 }); // end of jQuery(document).ready(function($){
+
+jQuery(document).ready(function($) {
+    function lockMonthlyIfSelected() {
+        var $monthly = $('#en__field_transaction_recurrpay1');
+
+        if ($monthly.attr('is_selected') === 'true') {
+            // Disabilito il click su quell'opzione
+            $monthly.prop('disabled', true);
+        } else {
+            $monthly.prop('disabled', false);
+        }
+    }
+
+    // Al caricamento
+    lockMonthlyIfSelected();
+
+    // Ogni volta che cambia selezione aggiorno
+    $('input[name="transaction.recurrpay"]').on('change', function() {
+        setTimeout(lockMonthlyIfSelected, 50);
+    });
+});
