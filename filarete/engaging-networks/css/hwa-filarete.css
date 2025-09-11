@@ -598,3 +598,7 @@ input[type=radio]{
     background: none;
     border: 1px solid #979797;
 }
+
+.en__field--vgs {
+      font-family: "Noto Sans", sans-serif !important;
+}
