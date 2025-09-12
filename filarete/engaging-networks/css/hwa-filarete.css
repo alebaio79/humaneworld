@@ -604,16 +604,16 @@ input[type=radio]{
 }
 
 
-.aggiungimensilebottonestile:after {
+.aggiungimensilebottonestile button:after {
 	content: 'mensilmente';
 	padding-left: 5px
 }
 
-.aggiungimensilebottonestile-de:after {
+.aggiungimensilebottonestile-de button:after {
 	content: 'monatlich';
 	padding-left: 5px
 }
-.aggiungimensilebottonestile-uk:after {
+.aggiungimensilebottonestile-uk button:after {
 	content: 'monthly';
 	padding-left: 5px
 }
