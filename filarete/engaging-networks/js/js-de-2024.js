@@ -887,3 +887,28 @@ jQuery(document).ready(function($) {
         setTimeout(lockMonthlyIfSelected, 50);
     });
 });
+
+
+jQuery(document).ready(function($) {
+    var readyToAdd = false; // flag per sapere se dobbiamo aggiungere la classe
+
+    // Radio 1 → se cliccato, prepara aggiunta (toggle solo dopo step two)
+    $(document).on('click', '#en__field_transaction_recurrpay1', function() {
+        readyToAdd = true; // pronto ad aggiungere la classe
+    });
+
+    // Radio 0 → rimuove sempre la classe e resetta il flag
+    $(document).on('click', '#en__field_transaction_recurrpay0', function() {
+        $('.en__submit.aggiungimensilebottonestile-de').removeClass('aggiungimensilebottonestile-de');
+        readyToAdd = false;
+    });
+
+    // Step two → se pronto, aggiunge la classe
+    $(document).on('click', '.step.two', function() {
+        if (readyToAdd) {
+            $('.en__submit').addClass('aggiungimensilebottonestile-de');
+            readyToAdd = false; // resetta il flag per non riaggiungere
+        }
+    });
+});
+
