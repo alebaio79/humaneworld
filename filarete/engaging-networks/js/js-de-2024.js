@@ -564,7 +564,7 @@ jQuery(document).ready(function ($) {
 				// 27 FEB 2020
 
 				// Stripe built-in - Add amount to button
-				$('.credit_card_form .en__submit button').text('Donate' + ' €' + selectdonate);
+				$('.credit_card_form .en__submit button').text('Spende' + ' €' + selectdonate);
 				
 
 				// Remove default red btn from second step (payment)
