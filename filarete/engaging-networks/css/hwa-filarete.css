@@ -617,3 +617,8 @@ input[type=radio]{
 	content: 'monthly';
 	padding-left: 5px
 }
+
+
+.en__component--socialshareblock {
+	clear: both !important
+}
