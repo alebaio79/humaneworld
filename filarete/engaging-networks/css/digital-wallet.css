@@ -1,0 +1,52 @@
+.en__field--paymenttype .en__field__element--radio {
+	-moz-column-gap: .75rem;
+	column-gap: .75rem;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.en__field--paymenttype .en__field__item {
+	flex: 1 0 48%;
+}
+.en__field--paymenttype .en__field__input--radio {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+}
+
+
+.en__field--paymenttype .en__field__label--item {
+    background-color: #fff !important;
+    border: 2px solid #009ceb;
+    border-radius: 8px;
+    color: #000;
+    cursor: pointer;
+    display: block  !important;
+    font-size: 1.5rem  !important; 
+    font-weight: 500  !important;
+    letter-spacing: -.01em  !important;
+    line-height: .8181818182  !important;
+    margin-bottom: 0  !important; 
+    max-width: 100%  !important;
+    min-width: 75px  !important;
+    padding: 18px 0  !important;
+    text-align: center;
+    text-transform: none;
+    transition: background-color .2s linear, border-color .2s linear, color .2s linear;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    width: 100%;
+    word-break: normal;
+}
+.en__field--paymenttype .en__field__input--radio:checked+.en__field__label--item {
+    background-color: #009ceb !important;
+    border-color: #009ceb !important;
+    color: #fff !important;
+}
+
+.credit_card_form .en__field__element--radio label:before,
+.credit_card_form .en__field__element--radio label:after{
+	display: none !important
+}
