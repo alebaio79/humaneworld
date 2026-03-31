@@ -304,7 +304,9 @@ input {
 		font-size: 15px !important
 	}
 }
-@media (min-width: 768px) and (max-width:1200px) {
+
+
+@media (min-width: 768px) and (max-width:1024px) {
     #main-content .form_fixed_right {
         position: relative !important;
         right: 0px;
