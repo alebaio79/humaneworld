@@ -325,7 +325,7 @@ body, p, li {
   margin-bottom: 3px;
 }
 #main-content .landing_mail_sec .form-second-part div[class*=en__field--privacy-policy-acceptance] label, #main-content .landing_mail_sec .en__field--ccexpire div[class*=en__field--privacy-policy-acceptance] label {
-  font-size: 0.75rem;
+  font-size: 0.75rem !important;
   line-height: 1.125rem;
   -webkit-transform: none;
           transform: none;
