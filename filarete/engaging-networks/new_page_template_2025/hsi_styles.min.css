@@ -788,3 +788,11 @@ body, p, li {
 #main-content .footer_wrap p {
   margin: 0px;
 }/*# sourceMappingURL=hsi_styles.min.css.map */
+
+
+
+#main-content .landing_mail_sec .form-second-part div.en__field--privacy-policy-opt-in-de label{
+    font-size: 0.75rem !important;
+    line-height: 1.125rem !important;
+
+}
